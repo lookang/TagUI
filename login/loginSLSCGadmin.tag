@@ -1,4 +1,4 @@
-// preconditions by lookang
+// preconditions by lookang and shaun
 // use the chrome that tagUI open and key in website username and website password
 // chrome will offer to save password, click yes
 //similarly when visiting gmail again enter your gmail and gmail password and save them on the browser that tagUI Opens

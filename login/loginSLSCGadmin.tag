@@ -1,4 +1,4 @@
-//INSTALLTION
+//INSTALLATION
 // https://tagui.readthedocs.io/en/latest/setup.html
 
 // HOW TO USE

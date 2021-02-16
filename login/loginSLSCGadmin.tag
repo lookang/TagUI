@@ -1,3 +1,15 @@
+//INSTALLTION
+// https://tagui.readthedocs.io/en/latest/setup.html
+
+// HOW TO USE
+// copy the text here and create a text file and save it into your TagUI folder
+// for me it was /Users/lookang/Desktop/tagui/flows/lookang/20210208
+// to run the code, 
+// use cmd line
+// cd /Users/lookang/Desktop/tagui/flows/lookang/20210208
+// type tagui loginSLSCGadmin.tag
+// depending on your file name saved as loginSLSCGadmin.tag
+
 // preconditions by lookang and shaun
 // use the chrome that tagUI open and key in website username and website password
 // chrome will offer to save password, click yes

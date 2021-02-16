@@ -5,9 +5,9 @@
 // copy the text here and create a text file and save it into your TagUI folder
 // for me it was /Users/lookang/Desktop/tagui/flows/lookang/20210208
 // to run the code, 
-// use cmd line
+// use cmd line in Windows or terminal in MacOSX
 // cd /Users/lookang/Desktop/tagui/flows/lookang/20210208
-// type tagui loginSLSCGadmin.tag
+// type $  tagui loginSLSCGadmin.tag
 // depending on your file name saved as loginSLSCGadmin.tag
 
 // preconditions by lookang and shaun

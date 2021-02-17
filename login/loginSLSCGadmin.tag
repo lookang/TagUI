@@ -97,6 +97,10 @@ dom begin
 return document.querySelector("#tab0 > div > div >div:nth-child(2)").childElementCount
 dom finish
 
+// writing the headers of the csv file
+write `csv_row(["S/N", "Title", "Subject", "Level", "School", "Date Submitted", "Author", "URL", "Similar", "Resubmitted"])` to pendingreview_list.csv
+
+
 for i from 1 to dom_result
 	read //*[@id="tab0"]/div/div/div[2]/div[`i`]/div[1]/span to title
 	read //*[@id="tab0"]/div/div/div[2]/div[`i`]/div[2]/div to subject
@@ -114,8 +118,21 @@ for i from 1 to dom_result
 	// construct url
 	js begin
 	url = "https://vle.learning.moe.edu.sg/community-gallery/admin/lesson/view/" + dom_result
+	
+	
+	// checking for the 'similar' icon
+	dom return document.querySelector(dom_json.css_path + " > div:nth-child(1) > a.hover-tooltip") ? 1 : -1
+	similar = dom_result == -1 ? 0 : 1
+
+	// checking for the 'resubmitted' label
+	dom return document.querySelector(dom_json.css_path + " > div:nth-child(1) > label.resubmitted") ? 1 : -1
+	resubmit = dom_result == -1 ? 0 : 1
+
+	
+	
+	
 	js finish
 
-	write `csv_row([title, subject, level, school,datesubmitted, author, url])` to pendingreview_list.csv
+	write `csv_row([title, subject, level, school,datesubmitted, author, url, similar, resubmit])` to pendingreview_list.csv
 
 wait 12000

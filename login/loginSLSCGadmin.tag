@@ -113,12 +113,6 @@ for i from 1 to dom_result
 	dom_json = {idx: i}
 	dom begin
 	return document.querySelector("#tab0 > div > div > div:nth-child(2) > div:nth-child(" + dom_json.idx + ")").getAttribute('data-uuid')
-	dom finish
-
-	// construct url
-	js begin
-	url = "https://vle.learning.moe.edu.sg/community-gallery/admin/lesson/view/" + dom_result
-	
 	
 	// checking for the 'similar' icon
 	dom return document.querySelector(dom_json.css_path + " > div:nth-child(1) > a.hover-tooltip") ? 1 : -1
@@ -127,6 +121,15 @@ for i from 1 to dom_result
 	// checking for the 'resubmitted' label
 	dom return document.querySelector(dom_json.css_path + " > div:nth-child(1) > label.resubmitted") ? 1 : -1
 	resubmit = dom_result == -1 ? 0 : 1
+	
+	dom finish
+
+	// construct url
+	js begin
+	url = "https://vle.learning.moe.edu.sg/community-gallery/admin/lesson/view/" + dom_result
+	
+	
+	
 
 	
 	

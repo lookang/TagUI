@@ -1,0 +1,84 @@
+OVERVIEW OF CHANGES:
+--------------------
+
+loginsls5.tag
+-------------
+- FIXED DATE BUG:
+	Before:
+	> line 204: ...date_obj.getMonth()... 
+
+	After:
+	> line 204: ...(date_obj.getMonth() + 1)...
+
+
+- ADDED MORE RIGOUROUS SUBJECT MATCHING BETWEEN LESSONS AND EMAILS
+	Before:
+	> lines 286 - 308: 
+	switch (subject){
+        case 'chinese':
+        case 'chinese n(a)':
+           	 subject = 'chinese language';
+            break;
+
+        case 'english language':
+            subject = 'english';
+            break;
+
+        case 'mathematics':
+        case 'additional mathematics':
+            subject = 'math';
+            break;
+
+    	case 'design & technology':
+       	 subject = 'd&t';
+        	break;
+
+    	case 'physical education':
+        	subject = 'pe';
+        	break;
+    }
+
+    After:
+    > lines 208 - 214:
+	// A function to detect sub-strings
+	function containsSubstring(str, sub_str){
+		var idx = str.indexOf(sub_str);
+		if(idx == -1)
+			return 0;
+		return 1;
+	}
+
+    > lines 298 - 315:
+    // loops through all the available subjects listed in emails.csv
+	for(sub in subject_to_name){
+		// unique cases
+		if(containsSubstring(subject, "design & technology")){
+			subject = 'd&t';
+			break;   
+		}
+		else if(containsSubstring(subject, "physical education")){
+			subject = 'pe';
+			break;
+		}
+		// for eg, if subject = "additional mathematics" and sub = "math"  
+		// or, if sub = 'chinese language', and subject = 'chinese'
+		else if(containsSubstring(subject, sub) || containsSubstring(sub, subject)){
+			subject = sub;
+			break;
+		}
+	}
+
+compose_mail.tag
+----------------
+- CLEARER ERROR MESSAGES
+	> line 119: 
+	error_msg = '\n---------PLEASE REVIEW THE FOLLOWING MESSAGES---------\n';
+
+	> line 133: 
+	error_msg += 'ALERT: Item ' + row[0] + ' has been marked as either "similar" or "resubmitted", skipped.\n';
+
+	> line 143:
+	error_msg += "ERROR: Item " + row[0] + ": No recipient found, skipped.\n";
+
+	> line 194:
+	echo `error_msg`

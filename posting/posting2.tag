@@ -18,10 +18,9 @@
 // another condition is in the gmail, delete all previous  Verification Code for SLS Account Login, the script is not clever to scroll down to find the latest email
 
 // WHAT THIS CODE DOES:
-// 1. Visit SLS to trigger the 2FA, login is handle by Chrome password save 
-// 2. Opens gmail, login is handle by Chrome password save
-// 2b. Open the first email 
-// 3. Get the 2FA code  
+// 1. Visit blogger and read first post
+// 2. read url and title of blogger first post
+// 3. Visit flipboard and post on a particular board
 
 ///////////////////////////////////
 https://weelookang.blogspot.com/?m=1

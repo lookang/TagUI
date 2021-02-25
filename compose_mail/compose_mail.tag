@@ -128,9 +128,11 @@ for(var i = start_from_sn; i < pending.length; i++){
 	var row = pending[i];
    	var similar = row[8], resubmitted = row[9];
 
-	// start from a specific sn, and skip similar or resubmitted questions
-	if(row[0] < start_from_sn || similar == '1' || resubmitted == '1'){ 
-		error_msg += 'ALERT: Item ' + row[0] + ' has been marked as either "similar" or "resubmitted", skipped.\n';
+	// start from a specific sn, and skip similar lessons
+	//if(row[0] < start_from_sn || similar == '1' || resubmitted == '1'){ 
+	if(row[0] < start_from_sn || similar == '1' ){ 
+		//error_msg += 'ALERT: Item ' + row[0] + ' has been marked as either "similar" or "resubmitted", skipped.\n';
+		error_msg += 'ALERT: Item ' + row[0] + ' has been marked as "similar" , skipped.\n';
 		continue;
 	}
 
@@ -225,7 +227,7 @@ for i from 1 to recipient_list.length
 		dom document.getElementById("tagui_table").innerHTML += dom_json.row
 
 	// Send Button
-	// click //div[@role="button"][contains(@data-tooltip, "Send")]
+	 click //div[@role="button"][contains(@data-tooltip, "Send")]
 	wait 5	
     
 

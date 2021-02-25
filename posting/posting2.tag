@@ -40,6 +40,7 @@ click svg.flip-compose-icon
 wait 3
 type flip-compose-flip-url as `variable2`
 type flip-compose__form-caption as `variable`
+type flip-compose-magazine-search as ETD X-Labs
 click flip-magazine__body ui-text--body-2
 //click flip-compose-submit
 //click //button[.="Flip"]

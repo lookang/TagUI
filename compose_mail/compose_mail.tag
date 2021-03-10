@@ -1,4 +1,5 @@
-load body_template.txt to body
+//load body_template.txt to body
+load body_templatemassemail.txt to body
 load pendingreview_list.csv to pending_table
 load emails.csv to admin_table
 
@@ -76,6 +77,18 @@ function CSVToArray(strData, strDelimiter){
 
 ////////////////////////////////////////////////////////
 
+// function to parse DD/MM/YYYY to DD MONTH YYYY
+
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+function convertDate(date_str) {
+  temp_date = date_str.split("/");
+  return temp_date[0] + " " + months[Number(temp_date[1]) - 1] + " " + temp_date[2];
+}
+
+
+////////////////////////////////////////////////////////
+
 // LINKING THE NAME TO THE EMAIL 
 // NOTE: variables with 'var' will not be accessible outside this javascript code block
 name_to_email = {};
@@ -110,9 +123,9 @@ recipient_list = []; // will store a unique list of the recipients
 // emails = {'recipient1': {subject: ..., table_rows: ...}, 'recipient2': {subject: ..., table_rows: ...}, ...}
 emails = {};
 
-var subject_temp = "[For Action: SLS Community Gallery] Lesson Pending Review By "; // add email and date
+var subject_temp = "[For Action: SLS Mass-Email in Preparation of R14 SLS Community Gallery] Lesson Pending Review By "; // add email and date
 
-var no_of_column = 10; // was 8 without similar and resubmitted
+var no_of_column = 8;
 
 var start_from_sn = 1;
 
@@ -127,29 +140,31 @@ for(var i = start_from_sn; i < pending.length; i++){
 
 	var row = pending[i];
    	var similar = row[8], resubmitted = row[9];
+   	var duplicate = row[13], similar_to = row[14]; 
 
-	// start from a specific sn, and skip similar lessons
-	//if(row[0] < start_from_sn || similar == '1' || resubmitted == '1'){ 
-	if(row[0] < start_from_sn || similar == '1' ){ 
-		//error_msg += 'ALERT: Item ' + row[0] + ' has been marked as either "similar" or "resubmitted", skipped.\n';
-		error_msg += 'ALERT: Item ' + row[0] + ' has been marked as "similar" , skipped.\n';
-		continue;
-	}
+   	if(row[0] < start_from_sn)
+   		continue;
+
+   	if(duplicate == '1'){
+   		error_msg += 'ALERT: Item ' + row[0] + ' has been marked as "duplicate", skipped.\n';
+   		continue;
+   	}
 
 	// console logging for clarity
 	for(var k = 0; k < 10; k++){
 		console.log(row[k]);
 	}	
+	console.log('-------------');
+	//console.log('-------------\n');
+
 	// checking if recipient exists
 	if(row[10] == '' || typeof row[10] == 'undefined'){
 		error_msg += "ERROR: Item " + row[0] + ": No recipient found, skipped.\n";
-		console.log('------------------');
 		continue;
 	}
-	console.log('------------------');
 
 	var recipient_name = row[10].trim(), recipient_email = name_to_email[recipient_name];
-	var due_date = row[12];
+	var due_date = convertDate(row[12]);
 
 	// CREATING THE EMAIL SUBJECT
 	// if there isn't an email with this recipient
@@ -171,6 +186,20 @@ for(var i = start_from_sn; i < pending.length; i++){
 
 		row_str += '<td style="border: 1px solid black">' + row[k] + '</td>';
 	}
+
+	// adding an additional remark for similar questions
+	var remark = '<ul>';
+	if(similar != "0"){
+	remark = '<li>Lesson was marked as <b>"similar"</b> in SLS: URL will not be active until lesson <b>"' + similar_to + '"</b> has been featured/returned.</li>';	
+	}
+	// remark for resubmitted questions
+	if(resubmitted != "0"){
+		remark += '<li>Lesson was marked as <b>"resubmitted"</b> in SLS</li>';
+	}
+	remark += '</ul>';
+	row_str += '<td style="border: 1px solid black">' + remark + '</td>';
+
+	// end of row
 	row_str += '</tr>';
 
 	// emails[recipient_name].table_rows contain the HTML code for each row in the table
@@ -212,7 +241,7 @@ for i from 1 to recipient_list.length
 
 	// Adding CC
 	click //span[@role="link"][contains(@data-tooltip, "Add Cc")]
-	type //textarea[@name="cc"] as Lawrence_WEE@moe.gov.sg; Jean_Phua@moe.gov.sg
+	type //textarea[@name="cc"] as Lawrence_WEE@moe.gov.sg; 
 
 	// Subject
 	type //input[@name="subjectbox"] as `emails[recipient_name].subject` 
@@ -226,9 +255,10 @@ for i from 1 to recipient_list.length
 		dom_json = {row: emails[recipient_name].table_rows[k - 1]}
 		dom document.getElementById("tagui_table").innerHTML += dom_json.row
 
+	wait 3	
+
 	// Send Button
-	 click //div[@role="button"][contains(@data-tooltip, "Send")]
-	wait 5	
+	click //div[@role="button"][contains(@data-tooltip, "Send")]
     
 
 

@@ -1,7 +1,9 @@
 Dear CG Admin, 
 <br><br>
-The following lesson(s) is/are pending your review.
-Please login to SLS https://vle.learning.moe.edu.sg/login to review by {}. <br><br>
+
+
+The following lesson(s) is/are pending your review.🙏 Thank you!
+Please login to SLS https://vle.learning.moe.edu.sg/login to review before {}. <br><br>
 
 <table style="border-collapse: collapse; border: 1px solid black;" id="tagui_table">
 	<tr>
@@ -12,8 +14,7 @@ Please login to SLS https://vle.learning.moe.edu.sg/login to review by {}. <br><
 		<th style='border: 1px solid black;'> Date Submitted </th>
 		<th style='border: 1px solid black;'> Author </th>
 		<th style='border: 1px solid black;'> URL </th>
-		<th style='border: 1px solid black;'> Similar </th>
-		<th style='border: 1px solid black;'> Resubmitted </th>
+		<th style='border: 1px solid black;'> Remarks </th>
 	</tr>
 </table>
 <br>
@@ -44,7 +45,7 @@ Once you have reviewed the lesson, please
 
 Thank you. 
 <br>
-Chief CG Admin (2021 XXX and Lawrence_WEE@moe.gov.sg) 
+Chief CG Admin (2021  and Lawrence_WEE@moe.gov.sg) 
 <br>
 On behalf of SLS Office 
 <br><br> 

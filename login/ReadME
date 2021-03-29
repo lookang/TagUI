@@ -1,5 +1,22 @@
 Note:
-
+Prepare:
 emails.csv need to be populate with real data
 body_template.txt need to be edited to suit your needs
+
+
+Run first
+tagui loginsls7newui.tag
+
+a new file will be generated after crawling
+pendingreview_list.csv 
+
+edit the to suit your needs, typically like remove all the old lessons that you dont want to send emails all out, keeping only the the newer lessons
+pendingreview_list.csv 
+
+Run Second
+tagui compose_mail7.tag
+
+it should launch tagui chrome with prepopulated emails and password etc and compose email to be sent out
+
+End.
 

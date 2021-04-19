@@ -22,7 +22,6 @@
 // 2. Opens gmail, login is handle by Chrome password save
 // 2b. Open the first email 
 // 3. Get the 2FA code  
-// 4. share lessons in a folder to an email with view rights
 
 ///////////////////////////////////
 
@@ -102,9 +101,8 @@ for i from 1 to total
 	// click on threee dots to trigger menu to share
 	//click //*[@id="uid-b9f7220b-0181-44b8-9951-de0ac6f5d645-trigger"]
 	//click uid-e3d74f5e-cfa9-4940-9a4d-3204a6af97bc-trigger
-	click //table//tr[`
+	click //table//tr[`i`]/td[5]//button
 	
-	/td[5]//button
 	// click share menu
 	//click //*[@id="uid-e3d74f5e-cfa9-4940-9a4d-3204a6af97bc-menu"]/ul/li[1]/button
 	//click //*[@id="uid-b9f7220b-0181-44b8-9951-de0ac6f5d645-menu"]/ul/li[1]/button/span

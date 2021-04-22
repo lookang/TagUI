@@ -130,7 +130,7 @@ for i from startrow to total
 	//type /html/body/div[3]/div[2]/div/div[2]/div[1]/div[3]/div[1]/div/div[1] as Aaron Koh[enter]
 	keyboard Arron koh[enter]
 	wait 1
-	//type search-toggle sls-icon as Goh Tung Li Adeline 
+	//type search-toggle sls-icon as Adeline 
 	
 	//click /html/body/div[3]/div[2]/div/div[2]/div[1]/div[3]/div[1]/div/div[1]
 	//click Share with Teachers

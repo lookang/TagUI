@@ -26,6 +26,7 @@
 ///////////////////////////////////
 
 //Enter in to SLS
+//https://vle.learning.moe.edu.sg/mrv/my-library/owned-by-me
 https://vle.learning.moe.edu.sg/login
 
 //using TagUI Web Automation
@@ -81,8 +82,9 @@ wait 5 //to load the SLS page correctly first before next step
 ///////////////////////////////////
 
 https://vle.learning.moe.edu.sg/mrv/my-library/owned-by-me
-// click to go inside folder of activity templates
-click //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div[2]/div[1]/table/tbody/tr[5]/td[2]/div/div/a
+// click to go inside folder of activity templates 
+// not clever code always the 6 th rows
+click //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div[2]/div[1]/table/tbody/tr[6]/td[2]/div/div/a
 // sort by title
 click //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div[2]/div[1]/table/thead/tr/th[2]/span
 wait 3
@@ -97,12 +99,13 @@ tableCnt = 0
 pending = []
 
 // always in groups of 20 now in UI
-for i from 1 to total
+startrow = 12 // rename this to suit your purposes
+for i from startrow to total 
 	// click on threee dots to trigger menu to share
 	//click //*[@id="uid-b9f7220b-0181-44b8-9951-de0ac6f5d645-trigger"]
 	//click uid-e3d74f5e-cfa9-4940-9a4d-3204a6af97bc-trigger
 	click //table//tr[`i`]/td[5]//button
-	
+	//click //table//tr[3]/td[5]//button
 	// click share menu
 	//click //*[@id="uid-e3d74f5e-cfa9-4940-9a4d-3204a6af97bc-menu"]/ul/li[1]/button
 	//click //*[@id="uid-b9f7220b-0181-44b8-9951-de0ac6f5d645-menu"]/ul/li[1]/button/span
@@ -112,22 +115,44 @@ for i from 1 to total
 	click add  
 	// click magnifying icon?
 	// first one is dummy wrong one skip
-	click search-toggle sls-icon
+	//click search-toggle sls-icon
 	// reach correct one
-	click search-toggle sls-icon
+	//click search-toggle sls-icon
 	
 
 	// click input please debug why [enter] didnt work?
-	type /html/body/div[3]/div[2]/div/div[2]/div[1]/div[3]/div[1]/div/div[1] as chia_hai_siang@moe.gov.sg[enter] 
+	//type /html/body/div[3]/div[2]/div/div[2]/div[1]/div[3]/div[1]/div/div[1] as Goh Tung Li Adeline 
+
+	click search.png
+	//if present('search.png')
+	//	click search.png	
+	wait 1
+	//type /html/body/div[3]/div[2]/div/div[2]/div[1]/div[3]/div[1]/div/div[1] as Aaron Koh[enter]
+	keyboard Arron koh[enter]
+	wait 1
+	//type search-toggle sls-icon as Goh Tung Li Adeline 
+	
+	//click /html/body/div[3]/div[2]/div/div[2]/div[1]/div[3]/div[1]/div/div[1]
+	//click Share with Teachers
 	//keyboard [enter]
+	echo waiting for human keyboard click to proceed on to next step
+	wait 5 // wait for human enter
 	// click to select all
 	//click /html/body/div[3]/div[2]/div/div[2]/div[1]/div[3]/div[2]/div[2]/div[1]/table/thead/tr/th[1]/div/i
+	wait 1
 	click /html/body/div[3]/div[2]/div/div[2]/div[1]/div[3]/div[2]/div[2]/div[1]/table/thead/tr/th[1]/div
-
+	wait 1
+	// click add
 	click add
+	// assume after adding the permission combobox is the first one tagui finds
+	click bx--list-box__label
+	//change selection
+	click Can Edit
+
+
 	//click save
 	click /html/body/div[3]/div/div/div[1]/div[2]/div/button
-
+	wait 1
 	//click X
 	click button close sls-icon
 

@@ -85,7 +85,10 @@ https://vle.learning.moe.edu.sg/mrv/my-library/owned-by-me
 // click to go inside folder of activity templates 
 // not clever code always the 6 th rows
 click //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div[2]/div[1]/table/tbody/tr[6]/td[2]/div/div/a
-// sort by title
+// sort by title in ascending order
+
+click //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div[2]/div[1]/table/thead/tr/th[2]/span
+// sort by title in decending order by clicking again
 click //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div[2]/div[1]/table/thead/tr/th[2]/span
 wait 3
 
@@ -94,60 +97,68 @@ read //div[@class="v-data-footer__pagination"] to pagination
 js total = parseInt(pagination.split("of")[1].trim());
 
 // creating row counter so that it can loop through the table properly
-rowCnt = 1
+rowCnt = 1 // rename this to suit your purposes 
+// 1 to 13 for team A1 and A2 01-10 include 02a,02b,02c
+// 1 to 9 for team A3 and A4 22-11 
+//js total=11 // enable one of this line to control end of loop table A1 A2
+js total = 9 // enable for A3 A4
+
 tableCnt = 0
 pending = []
 
 // always in groups of 20 now in UI
-startrow = 12 // rename this to suit your purposes
+startrow = rowCnt 
 for i from startrow to total 
 	// click on threee dots to trigger menu to share
-	//click //*[@id="uid-b9f7220b-0181-44b8-9951-de0ac6f5d645-trigger"]
-	//click uid-e3d74f5e-cfa9-4940-9a4d-3204a6af97bc-trigger
+	wait 1 // when reach around 8, must scroll down the page a bit to help find the share button
 	click //table//tr[`i`]/td[5]//button
-	//click //table//tr[3]/td[5]//button
-	// click share menu
-	//click //*[@id="uid-e3d74f5e-cfa9-4940-9a4d-3204a6af97bc-menu"]/ul/li[1]/button
-	//click //*[@id="uid-b9f7220b-0181-44b8-9951-de0ac6f5d645-menu"]/ul/li[1]/button/span
-	//click //table//tr[1]/td[5]//button
-	//click /html/body/div[3]/div/div/div[2]/div[2]/button
-	click //div[@class="bx--overflow-menu-options bx--overflow-menu--flip bx--overflow-menu-options--open"]//ul/li[1]//button
-	click add  
-	// click magnifying icon?
-	// first one is dummy wrong one skip
-	//click search-toggle sls-icon
-	// reach correct one
-	//click search-toggle sls-icon
 	
-
-	// click input please debug why [enter] didnt work?
-	//type /html/body/div[3]/div[2]/div/div[2]/div[1]/div[3]/div[1]/div/div[1] as Goh Tung Li Adeline 
-
+	// click share menu
+	click //div[@class="bx--overflow-menu-options bx--overflow-menu--flip bx--overflow-menu-options--open"]//ul/li[1]//button
+	wait 2 // trying to understand why is it buggy here, increase to 2 sec wait
+	//click add  // slow to find add automatically, repalce with xpath
+	click cv-button add-collaborator-btn bx--btn bx--btn--primary
+	 
+	wait 2 // trying to understand why is it buggy here, increase to 2 sec wait
 	click search.png
 	//if present('search.png')
 	//	click search.png	
-	wait 1
-	//type /html/body/div[3]/div[2]/div/div[2]/div[1]/div[3]/div[1]/div/div[1] as Aaron Koh[enter]
-	keyboard Arron koh[enter]
-	wait 1
-	//type search-toggle sls-icon as Adeline 
+	wait 2
+	// if the keyboard key duplicates character, close the java program on the bottom right corner which was used by computer vision
+	// A1 // names removed, replace Wee Loo Kang with your own requirements
+	//keyboard Wee Loo Kang[enter] 
 	
-	//click /html/body/div[3]/div[2]/div/div[2]/div[1]/div[3]/div[1]/div/div[1]
-	//click Share with Teachers
-	//keyboard [enter]
+	
+	//A2
+	
+	//keyboard Wee Loo Kang[enter]
+	
+	
+
+	//A3
+	//keyboard Wee Loo Kang[enter]
+	
+
+	//A4
+	//keyboard Wee Loo Kang[enter]
+	
+	keyboard Wee Loo Kang[enter]
+
+	wait 1
+	
 	echo waiting for human keyboard click to proceed on to next step
-	wait 5 // wait for human enter
+	wait 1 // wait for human enter
 	// click to select all
-	//click /html/body/div[3]/div[2]/div/div[2]/div[1]/div[3]/div[2]/div[2]/div[1]/table/thead/tr/th[1]/div/i
 	wait 1
 	click /html/body/div[3]/div[2]/div/div[2]/div[1]/div[3]/div[2]/div[2]/div[1]/table/thead/tr/th[1]/div
-	wait 1
-	// click add
-	click add
+	wait 2
+	// click add is not reliable
+	//click add
+	click cv-button add-collaborator-btn bx--btn bx--btn--primary
 	// assume after adding the permission combobox is the first one tagui finds
-	click bx--list-box__label
+	//click bx--list-box__label // uncomment out if need edit rights
 	//change selection
-	click Can Edit
+	//click Can Edit // uncomment out if need edit rights
 
 
 	//click save
@@ -156,7 +167,7 @@ for i from startrow to total
 	//click X
 	click button close sls-icon
 
-
+	js rowCnt++; // row counter increase by 1
 	if (rowCnt == 21)
 		{
 		click //button[@aria-label="Next page"]

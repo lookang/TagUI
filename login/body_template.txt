@@ -1,9 +1,9 @@
 Dear CG Admin, 
 <br><br>
-Happy Greetings 👋 and SLS is in release 14! Our apologies if you receive duplicate requests, We will be sending out for all pending lessons (old and new requests).
-We hope to clear as many CG lessons in the pending review tab (there are only 47 lessons) and it also took some time to fix (new interface and new xPath code) the TagUI robotic process automation.  🙏 Thank you!
 
-The following lesson(s) is/are pending your review.
+
+The following lesson(s) is/are pending your review.🙏 In light of home based learning, the time to publish/return lesson is now three days (one day for emailing CG admins, 2 days for CG admins to review), in line with public service norms. Thank you!
+There are no issues detected in SLS today and have a great day ahead!  
 Please login to SLS https://vle.learning.moe.edu.sg/login to review before {}. <br><br>
 
 <table style="border-collapse: collapse; border: 1px solid black;" id="tagui_table">
@@ -35,13 +35,17 @@ Once you have reviewed the lesson, please
 	</li>
  
 	<li>
-		<i>(Only for lessons that are <b>featured</b> on Community Gallery)</i> update e-Catalogue of Community Gallery lessons via the Google Form at go.gov.sg/cgupdate. We am trying to get this out by April as we found a database way to generate the same XLS. Hopefully, it is an acceptable solution🍀.
+		<i>(Only for lessons that are <b>featured</b> on Community Gallery)</i> update e-Catalogue of Community Gallery lessons via the Google Form at go.gov.sg/cgupdate. 🍀. The e-catalogue is viewable here https://go.gov.sg/cgcmay21
 	</li>
 	<li>
-		Please include a short "Lesson Description" and a "Featured Image" or ask the teacher to do it, as it will enhance the viewership of the lesson.
+		Please include a short "Lesson Description" and a "Featured Image" or ask the teacher to do it, as it will enhance the viewership of the lesson. 
 	</li>
 	<li>
-		For info on the review process, please visit go.gov.sg/cgadmin-guide .
+		Do return lesson(s) that may have graphics and/or themes that are inappropriate, example murder, suicide etc.  
+	</li>
+<li>
+		For info on the review process, please visit go.gov.sg/cgadmin-guide or watch https://www.youtube.com/watch?v=5sAQxxNPoH4 . 
+ 
 	</li>
 </ol>
  
@@ -49,12 +53,12 @@ Once you have reviewed the lesson, please
 
 Thank you. 
 <br>
-Chief CG Admin (2021 Jean_Phua@moe.gov.sg and Lawrence_WEE@moe.gov.sg) 
-
+Chief CG Admin (2021 Jean_Phua@moe.gov.sg, Chang_Hui_Ru@moe.gov.sg and Lawrence_WEE@moe.gov.sg) 
 <br>
 On behalf of SLS Office 
 <br><br> 
 Best Regards, 
+<br>
 PS: the TagUI (a SingaporeAI open sourced project) code to run the automation is here https://github.com/lookang/TagUI/blob/main/login/loginsls7newui.tag for people who are interested to learn 😀. 
 <br>
 {}

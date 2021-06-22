@@ -1,0 +1,42 @@
+SN,level_1,level_2,KU_label,KU_desc,item_no,pre_req,question,answer
+1,P4,P5F,D2.2,"Rounding a decimal to a given number of decimal places (i.e. 1 dp, 2 dp)",DECP4P5FKU2.2_202000001,D1.1,What is the number when 2.64 is rounded to 1 decimal place?,2.6
+2,P4,P5F,D2.2,"Rounding a decimal to a given number of decimal places (i.e. 1 dp, 2 dp)",DECP4P5FKU2.2_202000002,D1.1,What is the number when 469.35 is rounded to 1 decimal place?,469.4
+3,P4,P5F,D2.2,"Rounding a decimal to a given number of decimal places (i.e. 1 dp, 2 dp)",DECP4P5FKU2.2_202000003,D1.1,"What is the number when 196.75 is rounded to 1 decimal place?
+
+196
+196.7
+196.8
+198",3
+4,P4,P5F,D2.2,"Rounding a decimal to a given number of decimal places (i.e. 1 dp, 2 dp)",DECP4P5FKU2.2_202000004,D1.1,What is the number when 234.83 is rounded to 1 decimal place?,234.8
+5,P4,P5F,D2.2,"Rounding a decimal to a given number of decimal places (i.e. 1 dp, 2 dp)",DECP4P5FKU2.2_202000005,D1.1,Round 7.418 to 2 decimal places.,7.42
+6,P4,P5F,D2.2,"Rounding a decimal to a given number of decimal places (i.e. 1 dp, 2 dp)",DECP4P5FKU2.2_202000006,D1.1,Round 8.457 to 2 decimal places.,8.46
+7,P4,P5F,D2.2,"Rounding a decimal to a given number of decimal places (i.e. 1 dp, 2 dp)",DECP4P5FKU2.2_202000007,D1.1,Round 1.947 to 2 decimal places.,1.95
+8,P4,P5F,D2.2,"Rounding a decimal to a given number of decimal places (i.e. 1 dp, 2 dp)",DECP4P5FKU2.2_202000008,D1.1,Round 3.852 to 2 decimal places,3.85
+9,P4,P5F,D2.2,"Rounding a decimal to a given number of decimal places (i.e. 1 dp, 2 dp)",DECP4P5FKU2.2_202000009,D1.1,"Round 89.45 to 1 decimal place.
+
+89.0
+89.4
+89.5
+90.0",3
+10,P4,P5F,D2.2,"Rounding a decimal to a given number of decimal places (i.e. 1 dp, 2 dp)",DECP4P5FKU2.2_202000010,D1.1,"The table shows the time taken by three runners in a race. Round the time taken by the slowest runner to 1 decimal place.
+
+
+
+
+
+41.0   
+41.1   
+49.4  
+49.5",4
+11,P4,P5F,D2.2,"Rounding a decimal to a given number of decimal places (i.e. 1 dp, 2 dp)",DECP4P5FKU2.2_202000011,D1.1,"A number when rounded off to the nearest hundredth is 2.09. What is the smallest possible value of that number?
+
+2.081
+2.085
+2.091
+2.094",2
+12,P4,P5F,D2.2,"Rounding a decimal to a given number of decimal places (i.e. 1 dp, 2 dp)",DECP4P5FKU2.2_202000012,D1.1,"When a number is rounded to the nearest tenth, the answer is 2.0. Which of the following could be the number?
+1.89
+1.95
+2.05
+2.46",2
+13,P4,P5F,D2.2,"Rounding a decimal to a given number of decimal places (i.e. 1 dp, 2 dp)",DECP4P5FKU2.2_202000013,D1.1,"A number has 2 decimal places. When it is rounded to the nearest tenth, it is 2.3.  What is the greatest possible value of that number? ",2.34

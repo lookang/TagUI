@@ -1,0 +1,62 @@
+Dear CG Admin, 
+<br><br>
+
+54 lessons came in from 25-27 June and we need to return/publish these lessons in 5 days, so need your kind help during office hours please. 
+The following lesson(s) is/are pending your review.🙏. 
+Please login to SLS https://vle.learning.moe.edu.sg/mrv/community-gallery/admin to review before {}. <br><br>
+
+<table style="border-collapse: collapse; border: 1px solid black;" id="tagui_table">
+	<tr>
+		<th style='border: 1px solid black;'> Title </th>
+		<th style='border: 1px solid black;'> Type </th>
+		<th style='border: 1px solid black;'> Subject </th>
+		<th style='border: 1px solid black;'> Level </th>
+		<th style='border: 1px solid black;'> School </th>
+		<th style='border: 1px solid black;'> Date Submitted </th>
+		<th style='border: 1px solid black;'> Author </th>
+		<th style='border: 1px solid black;'> URL </th>
+		<th style='border: 1px solid black;'> Remarks </th>
+	</tr>
+</table>
+<br>
+
+<b>Note</b>: 
+<br>
+Once you have reviewed the lesson, please
+<ol>
+	<li>
+		update us on the action you have taken
+		<ul>
+			<li><b>Feature</b> to Gallery,</li>
+			<li>Return to Teacher,</li>
+			<li>Treat as New Lesson,</li>
+			<li>Replace featured lesson and/or renamed the lesson</li>
+		</ul>
+	</li>
+ 
+	<li>
+		<i>(Only for lessons that are <b>featured</b> on Community Gallery)</i> update e-Catalogue of Community Gallery lessons via the Google Form at go.gov.sg/cgupdate. 🍀. The e-catalogue is viewable here https://go.gov.sg/cgcmay21
+	</li>
+	<li>
+		Please include a short "Lesson Description" and a "Featured Image" or ask the teacher to do it, as it will enhance the viewership of the lesson. 
+	</li>
+	<li>
+		Do return lesson(s) that may have inappropriate/sensitive graphics/content (Wuhan virus, suicide, murder etc) or if it requires Adobe Flash player, ask the teacher to provide HTML5/JavaScript interactive/virtual laboratory as SLS aims to be support learning on mobile platforms too.
+	</li>
+<li>
+		For info on the review process, please visit go.gov.sg/cgadmin-guide or watch https://www.youtube.com/watch?v=5sAQxxNPoH4 . 
+ 
+	</li>
+</ol>
+ 
+<br>
+
+Thank you. 
+<br>
+Chief CG Admin (2021 Jean_Phua@moe.gov.sg, Chang_Hui_Ru@moe.gov.sg and Lawrence_WEE@moe.gov.sg) 
+<br>
+On behalf of SLS Office 
+<br><br> 
+Best Regards, 
+
+{}

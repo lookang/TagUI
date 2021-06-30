@@ -1,0 +1,250 @@
+// TagUI script written by Shaun Quek and Loo Kang Wee 
+// dated 20210630
+// for automation of posting questions in MCQ and Free response to SLS R15
+
+//prepare output.csv from pptx to csv into body
+load output.csv to body
+
+// prepare data cleaning into usable form 
+js begin
+
+// CSV PARSER FUNCTION (reference: http://stackoverflow.com/a/1293163/2343)
+function CSVToArray(strData, strDelimiter){
+	strDelimiter = (strDelimiter || ",");
+	// Create a regular expression to parse the CSV values.
+	var objPattern = new RegExp(
+		(
+			// Delimiters.
+			"(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +
+
+			// Quoted fields.
+			"(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +
+
+			// Standard fields.
+			"([^\"\\" + strDelimiter + "\\r\\n]*))"
+		),
+		"gi"
+	);
+
+	// Create an array to hold our data.
+	var arrData = [[]];
+
+	// Create an array to hold our individual pattern
+	// matching groups.
+	var arrMatches = null;
+
+	// Keep looping over the regular expression matches
+	// until we can no longer find a match.
+	while(arrMatches = objPattern.exec(strData)){
+
+		// Get the delimiter that was found.
+		var strMatchedDelimiter = arrMatches[1]; 
+
+		// Check to see if the given delimiter has a length
+		// (is not the start of string) and if it matches
+		// field delimiter. If id does not, then we know
+		// that this delimiter is a row delimiter.
+		if(strMatchedDelimiter.length && strMatchedDelimiter !== strDelimiter){
+			// Since we have reached a new row of data,
+			// add an empty row to our data array.
+			arrData.push([]);
+		}
+
+		var strMatchedValue;
+		// Now that we have our delimiter out of the way,
+		// let's check to see which kind of value we
+		// captured (quoted or unquoted).
+		if(arrMatches[2]){
+
+			// We found a quoted value. When we capture
+			// this value, unescape any double quotes.
+			strMatchedValue = arrMatches[2].replace(
+				new RegExp( "\"\"", "g" ),
+				"\""
+			);
+
+		} 
+		else{
+			// We found a non-quoted value.
+			strMatchedValue = arrMatches[3];
+		}
+
+		// Now that we have our value string, let's add
+		// it to the data array.
+		arrData[arrData.length - 1].push(strMatchedValue);
+	}
+
+	// Return the parsed data.
+	return(arrData);
+}
+
+// load questions_csv 
+questions_csv = CSVToArray(body);
+
+questions = [];
+for(var z = 1; z < questions_csv.length; z++){
+	var row = questions_csv[z];
+	var qn = {
+		// row[7] is question in output.csv 
+		question: row[7],
+		// row[8] is answer in output.csv 
+		answer: row[8],
+		//initialises qn.options to be an empty array at first
+		options : []
+	}
+	// looping through the options in the csv, the next few lines populate the array (if the qn is mcq)
+	for(var i = 9; i < 13; i++){
+		//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim remove whitespace if any
+		if(row[i].trim() != '') // not blank
+			// do this
+			qn.options.push(row[i]);
+	}
+	questions.push(qn);
+	// just to see the qn.options 
+	console.log(qn.options);
+}
+
+js finish
+
+//Enter in to SLS
+https://vle.learning.moe.edu.sg/login
+
+//using TagUI Web Automation
+//type username as XX
+//type password as XX
+click .button.login
+wait 5
+//https://vle.learning.moe.edu.sg/authenticate
+
+///////////////////////////////////
+
+// PRECONDITION: allow popups on SLS site
+// opens gmail in new window
+dom gmail_window = window.open("https://mail.google.com/mail/u/0/#inbox")
+
+code = ""
+
+popup mail
+	// If this is the first time logging into google from this browser, attempt to sign in
+	if url() contains 'https://www.google.com/intl/en-GB/gmail/about/'
+		
+		// Click Sign in 
+		click /html/body/div[2]/div[1]/div[4]/ul[1]/li[2]/a
+		
+
+		popup signin
+			type //*[@id="identifierId"] as xx@gmail.com // replace xx with your own email address
+			click Next
+			type //*[@id="password"]/div[1]/div/div[1]/input as xx // replace xx with your own email password
+			click Next
+			wait 20
+
+
+	wait 5
+	// click the first email by notifications@sls.ufinity.com in the table
+	click //*[@email="notifications@sls.ufinity.com"]/ancestor-or-self::tr
+
+	// read the 2fa code 
+	//line below is what i copied from the developer Xpath full path
+	// read the 2fa code 
+	read //div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
+
+	echo `code`
+	wait 5 // if wrong i can manually copy from browser to continue debugging
+
+// close gmail window
+dom gmail_window.close()
+
+type otp as `code`
+click .field-set.type-button.otp-submit button
+
+wait 5 //to load the SLS page correctly first before next step
+
+///////////////////////////////////
+
+https://vle.learning.moe.edu.sg/mrv/my-library/owned-by-me
+// click on ADD NEW button to start lesson creation process
+click Add New 
+click bx--overflow-menu-options__option-content
+
+//click on Choose Lesson or Course and click Lesson
+click card-footer _vertical
+
+//click on Choose Lesson Template and click Custom
+click card-footer _vertical
+
+// type Lesson Title
+type bx--text-input as [clear]D2.2_Decimal
+//save icon 
+click cv-button bx--btn bx--btn--primary bx--btn--icon-only
+
+// +ADD ACTIVITY
+click cv-button add-activity bx--btn bx--btn--tertiary
+
+// Add New Activity - Custom Activity
+click /html/body/div[3]/div/div/div[2]/div/div[4]/div[1]/div[3]/a
+
+
+// type Activity Title
+type bx--text-input as [clear]D2.2_Decimal[enter]
+//save icon 
+click cv-button bx--btn bx--btn--primary bx--btn--icon-only
+
+// declare a question counter =1
+qn_cnt = 1
+for i from 1 to questions.length
+	qn = questions[i - 1]
+	// we notice the loop element starts at qn_cnt = 2  
+	qn_cnt = qn_cnt + 1
+
+	// +ADD COMPONENT
+	click cv-button add-component bx--btn bx--btn--tertiary bx--btn--field
+
+	if (qn.options.length > 0)
+		// use the option length as a condition for MCQ 
+		click Multiple-Choice 
+		// Enter the question
+		click /html/body/div[1]/main/div/div/div/section[1]/div[2]/div/div/div[`qn_cnt`]/div/div/div/div/div/div/div[2]/div/div/div/div/form/dl[2]/dd/div/div[2]/div
+		type paragraph as `qn.question`
+
+		// Adding the options +ADD OPTIONS cos SLS default is 2 options, so need to add qn.options.length=4 -2 , = 2 more depending on the qn.options.length
+		add_cnt = qn.options.length - 2
+		for j from 1 to add_cnt
+			click cv-button add-option bx--btn bx--btn--tertiary bx--btn--field
+
+		// Filling in the options
+		for j from 1 to qn.options.length
+			click /html/body/div[1]/main/div/div/div/section[1]/div[2]/div/div/div[`qn_cnt`]/div/div/div/div/div/div/div[2]/div/div/div/div/form/dl[5]/dd/div/div/div[`j`]/label/span[2]/div/div[1]/div[2]/div
+			type paragraph as `qn.options[j - 1]`
+
+		// Selecting the correct option
+		click //div[@class="input-radio"][`qn.answer`]//span[@class="input-icon"]
+	
+		// Saving
+		click cv-button bx--btn bx--btn--primary bx--btn--icon-only
+	else
+		// assume else is Free-Response
+		//click component menu
+		click cv-button add-component bx--btn bx--btn--tertiary bx--btn--field
+		
+		//select option FR 
+		click Free-Response
+		// Enter the question
+		//click /html/body/div[1]/main/div/div/div/section[1]/div[2]/div/div/div[`qn_cnt`]/div/div/div/div/div/div/div[2]/div/div/div/div/form/dl[2]/dd/div/div[2]/div
+		//click /html/body/div[1]/main/div/div/div/section[1]/div[2]/div/div/div[1]/div/div/div/div/div/div/div[2]/div/div/div/div/form/dl[2]/dd/div/div[2]/div
+		//click /html/body/div[1]/main/div/div/div/section[1]/div[2]/div/div/div[2]/div/div/div/div/div/div/div[2]/div/div/div/div/form/dl[3]/dd/div/div[2]
+		click /html/body/div[1]/main/div/div/div/section[1]/div[2]/div/div/div[`qn_cnt`]/div/div/div/div/div/div/div[2]/div/div/div/div/form/dl[3]/dd/div/div[2]/div
+		type paragraph as `qn.question`
+
+		// Enter the answer
+		click /html/body/div[1]/main/div/div/div/section[1]/div[2]/div/div/div[`qn_cnt`]/div/div/div/div/div/div/div[2]/div/div/div/div/form/dl[6]/dd/div/div[2]/div[1]/dl/dd/div/div[2]/div
+		//click /html/body/div[1]/main/div/div/div/section[1]/div[2]/div/div/div[3]/div/div/div/div/div/div/div[2]/div/div/div/div/form/dl[6]/dd/div/div[2]/div[1]/dl/dd/div/div[2]
+		type paragraph as `qn.answer`
+
+		// Saving
+		//click //div[@class="input-radio"][`qn.answer`]//span[@class="input-icon"]
+		//click cv-tooltip bx--tooltip__trigger bx--tooltip--a11y bx--tooltip--bottom bx--tooltip--align-center
+		click cv-button bx--btn bx--btn--primary bx--btn--icon-only
+
+// final save tick
+click cv-header-global-action bx--header__action

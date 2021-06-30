@@ -2,7 +2,7 @@ YouTube explainer
 https://www.youtube.com/watch?v=KTExNaIGDfI
 
 credits:
-code written by Shaun Quek and Loo Kang Wee
+code written by Shaun Quek and Loo Kang Wee 
 
 If you have 1000 of questions to post to SLS, this automation tool could be for you!
 
@@ -14,7 +14,7 @@ save the file output.csv
 
 run TagUI file by typing in command prompt
 tagui /Users/lookang/Desktop/tagui/flows/SLS_assessment_automation/posttosls5.tag
-first time prepare the login to SLS and gmail for the otp
+first time prepare the login to SLS and gmail for the otp, means key in your login id and password and the gmail login and password for the OTP, select let Chrome manage the password. So TagUI code will not store the confidential info.
 run TagUI again
 it should be able to populate the questions now.
 Enjoy!

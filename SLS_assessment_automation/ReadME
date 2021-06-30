@@ -6,6 +6,12 @@ code written by Shaun Quek and Loo Kang Wee
 
 If you have 1000 of questions to post to SLS, this automation tool could be for you!
 
+Pre-Conditions:
+computer with admin rights, that means WOG and SSOE are not able to do TagUI!
+I use a Mac but Windows will work too!
+Code editor: Visual Code Studio
+Command Prompt: like Terminal
+
 Recommended use
 download output.csv
 edit output.csv to your own questions

@@ -5,3 +5,16 @@ credits:
 code written by Shaun Quek and Loo Kang Wee
 
 If you have 1000 of questions to post to SLS, this automation tool could be for you!
+
+Recommended use
+download output.csv
+edit output.csv to your own questions
+add new rows if needed but keep the rows and columns in the same position ( dont delete or add new columns, only add new rows)
+save the file output.csv
+
+run TagUI file by typing in command prompt
+tagui /Users/lookang/Desktop/tagui/flows/SLS_assessment_automation/posttosls5.tag
+first time prepare the login to SLS and gmail for the otp
+run TagUI again
+it should be able to populate the questions now.
+Enjoy!

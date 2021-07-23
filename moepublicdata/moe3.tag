@@ -60,7 +60,7 @@ for i from 1 to (total)
     else
         // do ntg see if can be faster 
 
-    js pending.push([rowCnt*tableCnt, title, address, phone, fax, email])
+    js pending.push([i, title, address, phone, fax, email])
     // WRITING TO FILE IMMEDIATELY TO AVOID LOSS
     write `csv_row(pending[i - 1])` to moereview_list.csv
     js console.log(pending[i-1])

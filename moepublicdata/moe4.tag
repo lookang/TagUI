@@ -1,5 +1,26 @@
 https://www.moe.gov.sg/private-education/private-schools
 
+// generate unique file name from date so as not to overwrite or append existing files
+js begin
+function formatDate(date) {
+    var d = new Date(date),
+        mm = '' + (d.getMonth() + 1),
+        dd = '' + d.getDate(),
+        yy = d.getFullYear(),
+        hh = '' + d.getHours(),
+        mins = '' + d.getMinutes();
+        secs = '' + d.getSeconds();
+    return [yy.toString(), (mm>9?'':'0')+mm, (dd>9?'':'0')+dd].join('_') + "_"+ (hh>9?'':'0')+hh+(mins>9?'':'0')+mins+(secs>9?'':'0')+secs;
+}
+datetime = formatDate(new Date());
+js finish
+
+// WRITING TO FILE
+write `csv_row(["S/N", "Title", "Address", "Phone", "Fax", "Email"])` to moereview_list_`datetime`.csv
+
+
+
+
 //manually change
 total = 858
 
@@ -65,7 +86,8 @@ for i from 1 to (total)
 
     js pending.push([i, title, address, phone, fax, email])
     // WRITING TO FILE IMMEDIATELY TO AVOID LOSS
-    write `csv_row(pending[i - 1])` to moereview_list.csv
+    //write `csv_row(pending[i - 1])` to moereview_list.csv
+    write `csv_row(pending[pending.length - 1])` to moereview_list_`datetime`.csv
     js console.log(pending[i-1])
 
     js rowCnt++;

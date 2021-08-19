@@ -1,7 +1,12 @@
 load body_template.txt to body
 //load body_templatemassemail.txt to body
-load pendingreview_list.csv to pending_table
-load emails.csv to admin_table
+//load pendingreview_list.csv to pending_table
+// thanks to python3 code test11.py the new file is output.csv 
+load output.csv to pending_table
+//load emails.csv to admin_table
+// thanks to more idea to full automate, rename emails to Subject Grps for Tracking_05Feb - emails.csv
+load Subject Grps for Tracking_05Feb - emails.csv to admin_table
+
 
 js begin
 
@@ -223,7 +228,7 @@ for i from 1 to recipient_list.length
 		}
 	else 
 		{
-	type //textarea[@name="cc"] as Lawrence_WEE@moe.gov.sg; Jean_Phua@moe.gov.sg;Chang_Hui_Ru@moe.gov.sg
+	type //textarea[@name="cc"] as Lawrence_WEE@moe.gov.sg; Jean_Phua@moe.gov.sg;
 		}
 	// Subject
 	type //input[@name="subjectbox"] as `emails[recipient_name].subject` 

@@ -1,9 +1,9 @@
 Dear CG Admin, 
 <br><br>
-
-54 lessons came in from 25-27 June and we need to return/publish these lessons in 5 days, so need your kind help during office hours please. 
+There are a lot of new Primary English/Math lessons so I may need to assign you.😀 
+Need to return/publish these lessons in 5 working days, so need your kind help during office hours please. 
 The following lesson(s) is/are pending your review.🙏. 
-Please login to SLS https://vle.learning.moe.edu.sg/mrv/community-gallery/admin to review before {}. <br><br>
+Please login to SLS https://vle.learning.moe.edu.sg/mrv/community-gallery/admin to search for the title before {} if the direct link in the table below doesn't work. <br><br>
 
 <table style="border-collapse: collapse; border: 1px solid black;" id="tagui_table">
 	<tr>
@@ -28,9 +28,8 @@ Once you have reviewed the lesson, please
 		update us on the action you have taken
 		<ul>
 			<li><b>Feature</b> to Gallery,</li>
-			<li>Return to Teacher,</li>
-			<li>Treat as New Lesson,</li>
-			<li>Replace featured lesson and/or renamed the lesson</li>
+			<li>Return to Teacher</li>
+			
 		</ul>
 	</li>
  
@@ -38,13 +37,21 @@ Once you have reviewed the lesson, please
 		<i>(Only for lessons that are <b>featured</b> on Community Gallery)</i> update e-Catalogue of Community Gallery lessons via the Google Form at go.gov.sg/cgupdate. 🍀. The e-catalogue is viewable here https://go.gov.sg/cgcmay21
 	</li>
 	<li>
+		Edit the title to be more detailed, some good examples are:
+		<ul>
+		<li>1E 看电影《大圣归来》和《哪吒之魔童降世》学华文</li>
+		<li>Sec 4N History Revision on Communist Russia and defeat of Japan in WWII</li>
+		<li>Video Based Geography: What is the hydrological cycle?</li>
+		</ul>
+	</li>
+	<li>
 		Please include a short "Lesson Description" and a "Featured Image" or ask the teacher to do it, as it will enhance the viewership of the lesson. 
 	</li>
 	<li>
-		Do return lesson(s) that may have inappropriate/sensitive graphics/content (Wuhan virus, suicide, murder etc) or if it requires Adobe Flash player, ask the teacher to provide HTML5/JavaScript interactive/virtual laboratory as SLS aims to be support learning on mobile platforms too.
+		Do return lesson(s) that may have inappropriate/sensitive graphics/content (Wuhan virus🦠, suicide👻, murder🔪, recent RVHS🏫 incident etc) or if it requires Adobe Flash player, ask the teacher to provide HTML5/JavaScript interactive/virtual laboratory🥼 as SLS aims to support learning on mobile platforms too.
 	</li>
 <li>
-		For info on the review process, please visit go.gov.sg/cgadmin-guide or watch https://www.youtube.com/watch?v=5sAQxxNPoH4 . 
+		For info on the review process, please visit go.gov.sg/cgadmin-guide or watch playlist https://www.youtube.com/watch?v=hHGHeaEKmVc&list=PLYIwRBA8ZhdM6pmfDaUhtwTCTLj94552y 🆕R15 versions . 
  
 	</li>
 </ol>
@@ -53,10 +60,10 @@ Once you have reviewed the lesson, please
 
 Thank you. 
 <br>
-Chief CG Admin (2021 Jean_Phua@moe.gov.sg, Chang_Hui_Ru@moe.gov.sg and Lawrence_WEE@moe.gov.sg) 
+Chief CG Admin (2021 Jean_Phua@moe.gov.sg and Lawrence_WEE@moe.gov.sg) 
 <br>
 On behalf of SLS Office 
 <br><br> 
-Best Regards, 
+Best Regards, the bot is open sourced here https://github.com/lookang/TagUI/tree/main/login
 
 {}

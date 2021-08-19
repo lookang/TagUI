@@ -6,9 +6,13 @@ click File
 click Download
 click csv
 
+// the download miss the click on emails tab
+wait 5
 // click the emails tab
 //double click work but not click
 dclick emailsicononsheet.png
 click File
 click Download
 click csv
+// needed for ensuring file is downloaded else it may be too fast
+wait 5 

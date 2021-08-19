@@ -1,22 +1,49 @@
-Note:
-Prepare:
-emails.csv need to be populate with real data
-body_template.txt need to be edited to suit your needs
+#Note:
+#Prepare:
+#emails.csv need to be populate with real data
+#body_template.txt need to be edited to suit your needs
+
+#Blog
+#https://weelookang.blogspot.com/2021/07/almost-full-automation-using-tagui-and.html
+
+#Run first or the latest working file
+#a new file will be generated after crawling SLS pending review
+tagui loginsls4.tag        
+
+# might need to change to if you have other python version in my computer 
+#python test11.py
+#for me, i like to specific the version cos i had python3.8 also, messing up
+# read https://weelookang.blogspot.com/2021/07/how-to-remove-anaconda-python-38-from.html 
+# cannot upgrade to test12 as it stops on 15 july but not add the rest like 16 july
+python3.9 test19.py
 
 
-Run first or the latest working file
-tagui loginsls8newui.tag
 
-a new file will be generated after crawling, remember to rename the exisiting pendingreview_list.csv to pendingreview_list1.csv to avoid appedning the data 
-pendingreview_list.csv 
+# send auto emails to remind officers to review their resubmitted lessons if resubmitted column in pendingreview_list.csv=1
+python3.9 emailresubmitted.py
 
-edit the to suit your needs, typically like remove all the old lessons that you dont want to send emails all out, keeping only the the newer lessons
-pendingreview_list.csv 
 
-Run Second or the latest working file
-tagui compose_mail8.tag
+# send these first to search through lesser emails instead of after compose_mail.tag 
+# send auto emails to remind officers to review their sssigned lessons if the date today is longer to the emails date.
+python3.9 emailsearch11.py
 
-it should launch tagui chrome with prepopulated emails and password etc and compose email to be sent out
 
-End.
+
+
+tagui compose_mail.tag 
+
+# clean up
+# copy output.csv to the https://docs.google.com/spreadsheets/d/1BLkzGm8t_e98i4bztpxJsGdLA_EVD6WZ5W4oPpwjxg0/edit#gid=2115702978
+# look for empty A about 1488 and paste in the data to 
+python3.9 sheets.py 
+
+# download files
+# download 2021_Lessons i think tagui can do
+# download emails 
+# didnt work for emails, compuer vision not accurate?
+tagui copyoutfromsheettofolder.tag 
+
+
+
+#End.
 

@@ -5,24 +5,27 @@ js finish
 
 //visit URL
 https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
-click .button.login
-wait 5
 
-code = ""
-https://mail.google.com/mail/u/0/#inbox"
-// Click Sign in 
-wait 5
-// click the first email by notifications@sls.ufinity.com in the table
-click //*[@email="notifications@sls.ufinity.com"]/ancestor-or-self::tr
-read //div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
-echo `code`
-wait 5
+//assume no login
+if present('.button.login')
+    click .button.login
+    wait 5
 
-// go back to SLS
-https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
-type otp as `code`
-click .field-set.type-button.otp-submit button
-wait 5 
+    code = ""
+    https://mail.google.com/mail/u/0/#inbox"
+    // Click Sign in 
+    wait 5
+    // click the first email by notifications@sls.ufinity.com in the table
+    click //*[@email="notifications@sls.ufinity.com"]/ancestor-or-self::tr
+    read //div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
+    echo `code`
+    wait 5
+
+    // go back to SLS
+    https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
+    type otp as `code`
+    click .field-set.type-button.otp-submit button
+    wait 5 
 
 
 click //a[@id="approved-link"]
@@ -171,28 +174,33 @@ else if (standardfirstword=="Pre U")
 
 //level
 //standard = "Secondary 3 Express, Secondary 4 Express, Secondary 5 Normal (A), Secondary 3 Normal (A), Secondary 4 Normal (A), Secondary 3 Normal (A), Secondary 4 Normal (A)"
-standardArr = standard.split(', '); // to split using 'comma and space'
-echo "standardArr2="`standardArr`
+//standardArr = standard.split(', '); // to split using 'comma and space'
+standardArr = standard.split(','); // to split using 'comma'
+echo "standardArrsplit="`standardArr`
+
 //standardArr = standard.trim() // to remove the first space for 2nd 3rd arrays
 //echo "standardArr1="`standardArr`
 
 echo `standardArr.length`
 // comments line cannot be added everywhere, has to be outside
 // to handle cases when there is only one Primary 1 for example
-if (standardArr.length==1)
-{ 
-firstChunk = standardArr
-}
-else 
-{
-    for i from 1 to (standardArr.length) 
+//if (standardArr.length==1)
+//{ 
+//firstChunk = standardArr
+//}
+//else 
+//{
+    for i from 0 to (standardArr.length-1) 
         //undefined is not an object (evaluating 'standardArr[i].indexOf') when 1
-        index = standardArr[i].indexOf( ' ', standardArr[i].indexOf( ' ' ) + 1 );
-        echo "index="`index`
-        firstChunk = standardArr[i].substr( 0, index );
+        standardArr[i] = standardArr[i].trim(); // to split using 'comma'
+        echo "standardArrtrim="`standardArr`
+        
+        //index = standardArr[i].indexOf( ' ', standardArr[i].indexOf( ' ' ) + 1 );
+        //echo "index="`index`
+        firstChunk = standardArr[i];
         echo "firstChunk="`firstChunk`
         echo "i="`i ``firstChunk`
-}
+//}
 
     if (firstChunk=="Pre-U 1")
     {
@@ -338,6 +346,10 @@ if (word=="Principles of Accounts"){
 // handle Physical Education
 if (word=="Physical Education"){
     word = "PE"
+} 
+// handle English Language
+if (word=="English Language"){
+    word = "English"
 } 
 
 js finish

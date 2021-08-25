@@ -12,3 +12,8 @@ https://docs.google.com/spreadsheets/d/1xSxRqqfgfqIzxBRTH4YanQmrx0seS-B3ItULQ3x0
 
 future CG catalogue
 https://docs.google.com/spreadsheets/d/16q85oHC3Da9yxRxat3Usb85crXUQjRNP/edit#gid=767792340
+
+versions
+1. first attempt with js and tagui using split trim etc
+2. almost pure tagui using if ________ contains " " which simplify the code
+

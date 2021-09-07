@@ -55,8 +55,15 @@ numberoflessonstocrawl = 60
 for i from 1 to numberoflessonstocrawl
     
     // loop to skip the specified number of tables
+    click //a[@id="approved-link"]
+    echo managed to click on approved?  
     for j from 1 to tableCnt
-        click //button[@class='v-btn v-btn--flat v-btn--icon v-btn--round v-btn--text theme--light v-size--default']//i[@class='v-icon notranslate mdi mdi-chevron-right theme--light']
+        click //div[@id='approved']//i[@class='v-icon notranslate mdi mdi-chevron-right theme--light']
+        echo tableCnt = `tableCnt`
+        //click approved .v-icon.notranslate.mdi.mdi-chevron-right.theme--light
+        //click //button[@class='v-btn v-btn--flat v-btn--icon v-btn--round v-btn--text theme--light v-size--default']//i[@class='v-icon notranslate mdi mdi-chevron-right theme--light']
+        //click //div[@id='pending']//i[@class='v-icon notranslate mdi mdi-chevron-right theme--light']
+        //click //button[@class='v-btn v-btn--flat v-btn--icon v-btn--round v-btn--text theme--light v-size--default']//i[@class='v-icon notranslate mdi mdi-chevron-right theme--light']
 
     //read data on table first
     //read /html/body/div[1]/main/div/div/section/div/div[2]/div/div[2]/div[1]/div/div/div/div[1]/table/tbody/tr[1]/td[4]/div/span to course

@@ -3,6 +3,13 @@ https://www.youtube.com/watch?v=QB28qd3uNr8
 
 to go SLS and crawl data out from featured lessons, in theory it can crawl out all the data but i believe that is a limit like 6000 due to the loop didnt work if i increase the numbertocrawl.
 
+current working
+need to key in the numbertocrawl manually as it is not possible to pre determine and easy to read the code.
+
+strengths
+even if stops suddenly, the data crawled is saved as it crawls.
+
+
 output
 publish_list.csv
 

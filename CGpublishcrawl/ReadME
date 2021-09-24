@@ -2,9 +2,12 @@ read
 https://www.youtube.com/watch?v=QB28qd3uNr8
 
 to go SLS and crawl data out from featured lessons, in theory it can crawl out all the data but i believe that is a limit like 6000 due to the loop didnt work if i increase the numbertocrawl.
+indeed thre is a limit to the tagui loop number no larger than 6000
+if need to run large numbers, split the loop into smaller parts
+
 
 current working
-need to key in the numbertocrawl manually as it is not possible to pre determine and easy to read the code.
+need to key in the numbertocrawl manually as it is not possible to run 6500, so just edit to small number for the month
 
 strengths
 even if stops suddenly, the data crawled is saved as it crawls.

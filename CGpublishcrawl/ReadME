@@ -4,6 +4,14 @@ https://www.youtube.com/watch?v=QB28qd3uNr8
 to go SLS and crawl data out from featured lessons, in theory it can crawl out all the data but i believe that is a limit like 6000 due to the loop didnt work if i increase the numbertocrawl.
 indeed thre is a limit to the tagui loop number no larger than 6000
 if need to run large numbers, split the loop into smaller parts
+for i from 1 to 2000
+inside code
+for i from 2001 to 4000
+inside code
+for i from 4001 to 6500
+inside code
+
+for example
 
 
 current working

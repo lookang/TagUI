@@ -7,7 +7,7 @@ js finish
 https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
 
 //assume no login
-if present('.button.login')
+if present('button login bx--btn bx--btn--primary')
     click .button.login
     wait 5
 
@@ -322,4 +322,4 @@ type //input[@type='url'] as `link.replace('admin/','')`
 //assume ok
 click Submit
 // confirm look 
-wait 5
+wait 5000

@@ -65,62 +65,39 @@ category = ""
 //toLowerCase convert all to lower cases
 js subject = subject.trim().toLowerCase()
 
-if subject contains 'english'
+if subject contains 'english' or 'literature'
     category = "English and Literature"
     //click //div[@id='i9']
 
-if subject contains 'literature'
-    category = "English and Literature"
-    click //div[@id='i9']
 
-if subject contains 'math'
+else if subject contains 'math'
     category = "Mathematics"
     click //div[@id='i12']
 
-if subject contains 'science'
+else if subject contains 'science' or 'physic' or 'chem' or 'bio'
     category = "Sciences"
     click //div[@id='i15']
 
 
-if subject contains 'physic'
-    category = "Sciences"
-    click //div[@id='i15']
-
-if subject contains 'chem'
-    category = "Sciences"
-    click //div[@id='i15']
-
-if subject contains 'bio'
-    category = "Sciences"
-    click //div[@id='i15']
-
-if subject contains 'humani'
+else if subject contains 'humani' or 'social' or 'geo' or 'hist'
     category = "Humanities"
     click //div[@id='i18']
 
-if subject contains 'geo'
-    category = "Humanities"
-    click //div[@id='i18']
 
-if subject contains 'hist'
-    category = "Humanities"
-    click //div[@id='i18']
-
-if subject contains 'chin'
+else if subject contains 'chin' or 'mala' or 'tamil'
     category = "Mother Tongue Languages"
     click //div[@id='i21']
 
-if subject contains 'mala'
-    category = "Mother Tongue Languages"
-    click //div[@id='i21']
 
-if subject contains 'tamil'
-    category = "Mother Tongue Languages"
-    click //div[@id='i21']
 
-if subject contains "other"
+else if subject contains 'design' or 'other' or ''
     category = "Other Subjects"
     click //div[@id='i24']
+
+else 
+    category = "Other Subjects"
+    click //div[@id='i24']
+
 
 echo category = `category`
 
@@ -282,16 +259,18 @@ if (word=="English Language"){
 if (word=="Malay N(a)"){
     word = "Malay"
 } 
+if (word=="Design & Technology"){
+    word = "D&T"
+} 
 js finish
-echo `word`
+echo word = `word`
 click //div[@role='option'][normalize-space()='`word`']
 
 
 //course
 
-
 standard= standard.trim().toLowerCase()
-
+echo standard = `standard`
 if standard contains 'express'
     click //div[@id='i96']
 
@@ -304,7 +283,8 @@ if standard contains 'tech'
 if standard contains 'nil'
     click //div[@id='i105']
 
-
+else
+    click //div[@id='i105']
 
 
 // first is Topic/Theme

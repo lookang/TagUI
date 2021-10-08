@@ -67,36 +67,25 @@ js subject = subject.trim().toLowerCase()
 
 if subject contains 'english' or 'literature'
     category = "English and Literature"
-    //click //div[@id='i9']
-
-
+    click //*[@id="i9"]/div[3]/div
 else if subject contains 'math'
     category = "Mathematics"
     click //div[@id='i12']
-
 else if subject contains 'science' or 'physic' or 'chem' or 'bio'
     category = "Sciences"
     click //div[@id='i15']
-
-
 else if subject contains 'humani' or 'social' or 'geo' or 'hist'
     category = "Humanities"
     click //div[@id='i18']
-
-
 else if subject contains 'chin' or 'mala' or 'tamil'
     category = "Mother Tongue Languages"
     click //div[@id='i21']
-
-
-
-else if subject contains 'design' or 'other' or ''
+else if subject contains 'design' or 'other' or 'music'
     category = "Other Subjects"
     click //div[@id='i24']
-
-else 
-    category = "Other Subjects"
-    click //div[@id='i24']
+//else 
+//    category = "Other Subjects"
+//    click //div[@id='i24']
 
 
 echo category = `category`

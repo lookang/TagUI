@@ -32,11 +32,11 @@ click //a[@id="approved-link"]
 //read data on table first
 //read /html/body/div[1]/main/div/div/section/div/div[2]/div/div[2]/div[1]/div/div/div/div[1]/table/tbody/tr[1]/td[4]/div/span to course
 read //*[@id="approved"]/div/div/div/div[1]/table/tbody/tr[1]/td[1]/div/div/span to course
-echo `course`
+echo course is `course`
 
 //read //body[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[3]/div[1]/span[1] to subject
 read //*[@id="approved"]/div/div/div/div[1]/table/tbody/tr[1]/td[3]/div/span to subject
-echo `subject`
+echo subject is `subject`
 
 read //*[@id="approved"]/div/div/div/div[1]/table/tbody/tr[1]/td[4]/div/span to standard
 echo `standard`
@@ -64,11 +64,11 @@ category = ""
 //trim to remove space
 //toLowerCase convert all to lower cases
 js subject = subject.trim().toLowerCase()
-
+echo subject after js is `subject`
 if subject contains 'english' or 'literature'
     category = "English and Literature"
-    click //*[@id="i9"]/div[3]/div
-else if subject contains 'math'
+    click //*[@id="i9"]
+if subject contains 'math'
     category = "Mathematics"
     click //div[@id='i12']
 else if subject contains 'science' or 'physic' or 'chem' or 'bio'
@@ -83,9 +83,7 @@ else if subject contains 'chin' or 'mala' or 'tamil'
 else if subject contains 'design' or 'other' or 'music'
     category = "Other Subjects"
     click //div[@id='i24']
-//else 
-//    category = "Other Subjects"
-//    click //div[@id='i24']
+
 
 
 echo category = `category`

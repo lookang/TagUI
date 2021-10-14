@@ -68,7 +68,7 @@ echo subject after js is `subject`
 if subject contains 'english' or 'literature'
     category = "English and Literature"
     click //*[@id="i9"]
-if subject contains 'math'
+else if subject contains 'math'
     category = "Mathematics"
     click //div[@id='i12']
 else if subject contains 'science' or 'physic' or 'chem' or 'bio'

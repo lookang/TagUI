@@ -65,29 +65,25 @@ category = ""
 //toLowerCase convert all to lower cases
 js subject = subject.trim().toLowerCase()
 echo subject after js is `subject`
-if subject contains 'english' or 'literature'
+if subject contains 'english' or subject contains 'literature'
     category = "English and Literature"
-    click //*[@id="i9"]
+    click //div[@id='i9']
 else if subject contains 'math'
     category = "Mathematics"
     click //div[@id='i12']
-else if subject contains 'science' or 'physic' or 'chem' or 'bio'
+else if subject contains 'science' or subject contains 'physic' or subject contains 'chem' or subject contains 'bio'
     category = "Sciences"
     click //div[@id='i15']
-else if subject contains 'humani' or 'social' or 'geo' or 'hist'
+else if subject contains 'humani' or subject contains 'social' or subject contains 'geo' or subject contains 'hist'
     category = "Humanities"
     click //div[@id='i18']
-else if subject contains 'chin' or 'mala' or 'tamil'
+else if subject contains 'chin' or subject contains 'mala' or subject contains 'tamil'
     category = "Mother Tongue Languages"
     click //div[@id='i21']
-else if subject contains 'design' or 'other' or 'music'
+else if subject contains 'design' or subject contains 'other' or subject contains 'music'
     category = "Other Subjects"
     click //div[@id='i24']
-
-
-
 echo category = `category`
-
 //standard
 //standardfirstword = standard.split(" ")[0]
 //echo `standardfirstword`
@@ -287,6 +283,6 @@ type /html/body/div/div[2]/form/div[2]/div/div[2]/div[9]/div/div/div[2]/div/div[
 type //input[@type='url'] as `link.replace('admin/','')`
 
 //assume ok
-click Submit
+//click Submit
 // confirm look 
 wait 5000

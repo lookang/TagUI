@@ -16,5 +16,5 @@ https://docs.google.com/spreadsheets/d/16q85oHC3Da9yxRxat3Usb85crXUQjRNP/edit#gi
 
 versions
 1. first attempt with js and tagui using split trim etc
-2. almost pure tagui using if ________ contains " " which simplify the code
+2. almost pure tagui using if ________ contains " " which simplify the code. fixed or part of the code with if subject contains 'english' or subject contains 'literature'
 

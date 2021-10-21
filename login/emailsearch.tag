@@ -12,7 +12,7 @@ load pendingreview_list.csv to lines
 //echo `lines`
 array_lines = lines.split('\n')
 //echo `array_lines`
-for (n=0; n<array_lines.length; n++) 
+for (n=1; n<array_lines.length; n++) 
 {
     items = array_lines[n].split(',')
     array_title[n] = items[1].trim()
@@ -43,7 +43,7 @@ echo `difference`
 //7.965694664351852
 //14/10/21
 // assume weekend +2, so 5+2 (margin) = 7
-if (difference > 8) 
+if (difference > 6) 
     type //*[@id="gs_lc50"]/input[1] as `array_url[1]`
     // trigger search, click search icon
     click gb_hf gb_if
@@ -56,7 +56,8 @@ if (difference > 8)
     // some magic code that seems to work need to test more
     click (//tr[@role='row'])[51]
     //rclick (500,270)
-    click Reply all
+    click T-I J-J5-Ji T-I-Js-Gs aap T-I-awG T-I-ax7 L3
+    click Reply to all
     type Message Body as Dear CG Admin, \nThis lesson has been detected as `difference` days after the teacher' submission `date_submitted` date for review. This email serves as a gentle reminder to return/publish this lesson by today or next working day please, in view of the Public Service Commitment of 5 working days https://www.psd.gov.sg/who-we-are/our-service-commitment Thank you. Regards.
     // click Send ‪(⌘Enter)‬
 

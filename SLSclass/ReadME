@@ -1,5 +1,5 @@
 readme
-Goes to SLS to populate the class from the email ofteachers provided in the Excel column E.
+Goes to SLS to populate the class from the email of teachers provided in the Excel column E.
 Typically you can be very painful to key in 100 teachers to a class that you hope to conduct for professional development.
 TagUI provides an easy way to do this.
 

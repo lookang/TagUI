@@ -1,5 +1,8 @@
 // create the xlsm from csv?
-
+// read csv into data
+data = [pendingreview_list.csv]pendingreview_list!A:Z
+// write xlsx
+[pendingreview_list.xlsx]pendingreview_list!A1 = data
 
 
 https://mail.google.com/mail/u/0/#inbox
@@ -10,9 +13,9 @@ https://mail.google.com/mail/u/0/#inbox
 // https://rpa-sg.org/TagUI-Tips-Techniques/how-to-read-a-csv-file-part-2-multiple-columns.php
 // pre process csv to array
 // B2:B50 is based on the xlsm starting, avoid the first header , 50 is just a guess assume no more that 50 lessons
-array_title = [pendingreview_list.xlsm]pendingreview_list!B2:B50 
+array_title = [pendingreview_list.xlsx]pendingreview_list!B2:B50 
 echo `array_title[0]`
-array_date_submitted = [pendingreview_list.xlsm]pendingreview_list!G2:G50 
+array_date_submitted = [pendingreview_list.xlsx]pendingreview_list!G2:G50 
 echo 0 is >`array_date_submitted[0]`
 echo 1 is >>`array_date_submitted[1]`
 echo 2 is >>>`array_date_submitted[2]`
@@ -22,8 +25,8 @@ echo 3 is >>>>`array_date_submitted[3]`
 //2 is >>>date Tuesday
 //3 is >>>>19 October 2021 at 12:00:00 AM
 
-array_url = [pendingreview_list.xlsm]pendingreview_list!I2:I50 
-array_due_date = [pendingreview_list.xlsm]pendingreview_list!N2:N50 
+array_url = [pendingreview_list.xlsx]pendingreview_list!I2:I50 
+array_due_date = [pendingreview_list.xlsx]pendingreview_list!N2:N50 
 //date_submitted = [pendingreview_list.xlsm]pendingreview_list!N2:N50 
 
 for (n=0; n<50; n++) 

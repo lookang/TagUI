@@ -37,15 +37,16 @@ for (n=0; n<50; n++)
     echo reference_cnt = `reference_cnt`
     newstring = array_date_submitted[reference_cnt]
     echo newstring = `newstring`
-    length = newstring.toString().length
-    echo length = `length`
+    //length = newstring.toString().length
+    //echo length = `length`
     // assume string  at 12:00:00 AM is always 15
-    reallength = length - 15
-    echo reallength `reallength`
+    //reallength = length - 15
+    //echo reallength `reallength`
     //js newstrings = newstring.substring(0,reallength)
-    js newstrings = newstring.toString().substring(0,reallength)
-    echo newstrings =  `newstrings` 
-    date_submitted = new Date('`newstrings`')
+    //js newstrings = newstring.toString().substring(0,reallength)
+    //echo newstrings =  `newstrings` 
+    //date_submitted = new Date('`newstring`')
+    date_submitted = new Date('`newstring`')
     //date_submitted = new Date('19 October 2021')
     //echo 1 =>>>>> `date_submitted`
     echo date_submitted = `date_submitted`
@@ -68,8 +69,8 @@ for (n=0; n<50; n++)
     echo difference is `difference`
     //7.965694664351852
     //14/10/21
-    // assume weekend +2, so 5+2 (margin) = 7
-    if (difference > 7) 
+    // assume weekend +2, so 5+2 (margin) = 5
+    if (difference > 5) 
         type //*[@id="gs_lc50"]/input[1] as [clear]`array_url[n]`
         // trigger search, click search icon
         click gb_hf gb_if
@@ -88,7 +89,7 @@ for (n=0; n<50; n++)
             click Reply to all
             type Message Body as Dear CG Admin, \nThis lesson has been detected as `difference` days (includes Sat n Sun so the numbers look bigger than usual) after the teacher' submission `date_submitted` date for review. This email serves as a gentle reminder to return/publish this lesson by today or next working day please, in view of the Public Service Commitment of 5 working days https://www.psd.gov.sg/who-we-are/our-service-commitment Thank you. Regards.
             // dont send immediately for human check
-            // click Send ‪(⌘Enter)‬
+            click //div[@role="button"][contains(@data-tooltip, "Send")] 
 
 
 

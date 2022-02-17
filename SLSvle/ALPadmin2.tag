@@ -9,17 +9,18 @@ js finish
 //visit URL
 https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
 
-//assume no login
+//assume no need to extra login
 if present('button login bx--btn bx--btn--primary')
     click .button.login
     wait 5
 
-    code = ""
+    
     https://mail.google.com/mail/u/0/#inbox"
     // Click Sign in 
     wait 5
     // click the first email by notifications@sls.ufinity.com in the table
     click //*[@email="notifications@sls.ufinity.com"]/ancestor-or-self::tr
+    //code = ""
     read //div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
     echo `code`
     wait 5
@@ -40,7 +41,11 @@ click button submit user-search-submit
 startrow = 1
 // getting total_number of rows
 read DataTables_Table_0_info to page
+//echo page 
+//page = Showing 1 to 20 of 145 result(s)
 js total = parseInt(page.split("of")[1].trim());
+// echo total
+// total = 145
 //total = /html[1]/body[1]/main[1]/div[1]/div[1]/div[1]/div[1]/article[1]/div[2]/section[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[3]/div[2]/span[1]/a[6]
 js pages = Math.ceil(total/20)
 for i from startrow to pages 

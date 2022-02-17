@@ -33,7 +33,8 @@ if present('button login bx--btn bx--btn--primary')
 
 https://ccpm.learning.moe.edu.sg/user/vle
 
-
+click Select SLS Account Status
+click //span[normalize-space()='Activated']
 click Select Role
 click ALP Admin
 click button submit user-search-submit

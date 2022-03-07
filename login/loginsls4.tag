@@ -26,61 +26,30 @@
 ///////////////////////////////////
 
 //Enter in to SLS
-https://vle.learning.moe.edu.sg/login
+//visit URL
+https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
 
-//using TagUI Web Automation
-//type username as XX
-//type password as XX
-click .button.login
-wait 5
-//https://vle.learning.moe.edu.sg/authenticate
-///////////////////////////////////
-
-// PRECONDITION: allow popups on SLS site
-// opens gmail in new window
-dom gmail_window = window.open("https://mail.google.com/mail/u/0/#inbox")
-
-code = ""
-
-popup mail
-	// If this is the first time logging into google from this browser, attempt to sign in
-	if url() contains 'https://www.google.com/intl/en-GB/gmail/about/'
-		
-		// Click Sign in 
-		click /html/body/div[2]/div[1]/div[4]/ul[1]/li[2]/a
-		
-
-		popup signin
-			type //*[@id="identifierId"] as xx@gmail.com // replace xx with your own email address
-			click Next
-			type //*[@id="password"]/div[1]/div/div[1]/input as xx // replace xx with your own email password
-			click Next
-			wait 20
-
-
+//assume no need to extra login
+if present('button login bx--btn bx--btn--primary')
+	click .button.login
+	wait 5
+	// this email is linked to your SLS alternative email for OTP, change this accordingly
+	https://mail.google.com/mail/u/0/#inbox"
+	// Click Sign in 
 	wait 5
 	// click the first email by notifications@sls.ufinity.com in the table
 	click //*[@email="notifications@sls.ufinity.com"]/ancestor-or-self::tr
-
-	// read the 2fa code 
-	//line below is what i copied from the developer Xpath full path
-	// read the 2fa code 
+	//code = ""
 	read //div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
-
 	echo `code`
-	wait 5 // if wrong i can manually copy from browser to continue debugging
+	wait 5
 
-// close gmail window
-dom gmail_window.close()
+	// go back to SLS
+	https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
+	type otp as `code`
+	click .field-set.type-button.otp-submit button
+	wait 5 
 
-type otp as `code`
-click .field-set.type-button.otp-submit button
-
-wait 5 //to load the SLS page correctly first before next step
-
-///////////////////////////////////
-
-https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
 
 // read https://tagui.readthedocs.io/_/downloads/en/latest/pdf/ for documentation
 // idea syntax from https://github.com/kelaberetiv/TagUI/blob/master/flows/samples/4_loops.tag
@@ -90,10 +59,20 @@ wait 3
 // getting total_number of rows
 read //div[@class="v-data-footer__pagination"] to pagination
 js total = parseInt(pagination.split("of")[1].trim());
+echo There are `total` number of lessons.
+
+ask Check SLS CG pending review for the number of lessons. Key in 0 for unattended, all lesson extraction or the number of lesson to start data extraction ?
+echo `ask_result`
+if ask_result contain '0'
+	rowCnt = 1
+else 
+	rowCnt = ask_result 
+
+wait 3
 
 // creating row counter so that it can loop through the table properly
 
-rowCnt = 1
+//rowCnt = 1
 // might want to change this to save time crawling all the assigned
 tableCnt = 0
 //tableCnt = 1
@@ -106,9 +85,21 @@ for i from 1 to tableCnt
 	click //button[@aria-label="Next page"]
 
 pending = []
+teststart = 1
+//testend = 2 // can save pendingreview_list.csv
+testend = 20 // can save pendingreview_list.csv
 
+//testend = 20 // can save pendingreview_list.csv
+//testend = 20
+//testend = 30 failed
+//testend = 34 failed
 // always in groups of 20 now in UI
+// testing if title can be will []
+//for rowCnt from teststart to testend
 for i from 1 to (total-tableCnt*20)
+
+
+
 	// trying to break out if total is not found 
 	if (exist('//*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div/div/span'))
 		read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div/div/span to title
@@ -140,8 +131,8 @@ for i from 1 to (total-tableCnt*20)
 	if (similar == 0)
 		{
 		click //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div//a
-		wait 3
-	
+		//wait 3 // sometimes cannot capture correctly, increase time to 4
+		wait 2
 		js link = url()
 		echo `url()`
 		echo `link`
@@ -410,8 +401,9 @@ for(var i = 0; i < pending.length; i++){
 		latest[author] = sn;
 		// NOTE: Due to inconsistency in subjects between email and pending tables, this is necessary to find the correct admins
 		// HOWEVER, IN THE EVENT THAT IT IS UNABLE TO CAPTURE THE SUBJECT, PLEASE MANUALLY FILL IT IN THE CSV FILE
-
+		console.log(subject_to_name[level].hasOwnProperty(subject))
 		var attempt_counter = 1, subject_found = subject_to_name[level].hasOwnProperty(subject), orig_level = level;
+		
 		while(!subject_found){
 			// loops through all the available subjects listed in emails.csv
 			for(sub in subject_to_name[level]){

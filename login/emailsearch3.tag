@@ -8,7 +8,19 @@ data = [pendingreview_list.csv]pendingreview_list!A:Z
 // write xlsx
 [pendingreview_list.xlsx]pendingreview_list!A1 = data
 // my mac has some kind of bug, need to click mac excel twice to launch, so may need to help manually click excel file
-https://mail.google.com/mail/u/0/#inbox
+// Open gmail (assumes that user has already logged in previously)
+ask 1 slscgbot@gmail.com or 2 wee_loo_kang@moe.edu.sg ?
+echo `ask_result`
+if ask_result contain '1'
+    https://mail.google.com/mail/u/0/#inbox
+else
+    https://mail.google.com/mail/u/1/?ogbl#inbox
+
+wait 3
+
+
+
+//https://mail.google.com/mail/u/0/#inbox
 // load pendingreview_list.xls to pending_table
 // https://rpa-sg.org/TagUI-Tips-Techniques/how-to-read-a-csv-file-part-2-multiple-columns.php
 // pre process csv to array
@@ -116,7 +128,7 @@ for (n=1; n<vartoloop; n++)
             //rclick (500,270)
             click T-I J-J5-Ji T-I-Js-Gs aap T-I-awG T-I-ax7 L3
             click Reply to all
-            type Message Body as Dear CG Admin, \nThis lesson has been detected as `difference` days (includes Sat n Sun so the numbers look bigger than usual) after the teacher' submission `date_submitted` date for review. This email serves as a gentle reminder to return/publish this lesson by today or next working day please, in view of the Public Service Commitment of 5 working days https://www.psd.gov.sg/who-we-are/our-service-commitment Thank you. Regards.
+            type Message Body as Dear CG Admin, \nThis lesson has been detected as `difference` days (includes holidays so the number looks bigger than usual) after the teacher' submission `date_submitted` date for review. This email serves as a gentle reminder to return/publish this lesson by today or next working day please, in view of the Public Service Commitment of 5 working days https://www.psd.gov.sg/who-we-are/our-service-commitment Thank you. Regards.
             // dont send immediately for human check
             click //div[@role="button"][contains(@data-tooltip, "Send")] 
 

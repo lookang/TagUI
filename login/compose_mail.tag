@@ -185,10 +185,11 @@ for(var i = start_from_sn; i < pending.length; i++){
 
 	// emails[recipient_name].table_rows contain the HTML code for each row in the table
 	emails[recipient_name].table_rows.push(row_str); 
-}
+//} // remove by lookang
 
 // CREATING THE BODY MESSAGE (EXLCUDING TABLE ROWS)
-var arg = [due_date, 'Mr Lawrence Wee']; // Strings to replace the {} in body message
+// cannot be dynamic? solved ! can.
+var arg = [ recipient_name, 'Mr Lawrence Wee']; // Strings to replace the {} in body message
 
 // replacing the text
 var idx = 0;
@@ -201,6 +202,7 @@ body = body.replace(/{}/g, function(match){
 	}
 });
 
+} // added by lookang to include textbody dynamic variable
 js finish
 
 echo `error_msg`
@@ -250,7 +252,7 @@ for i from 1 to recipient_list.length
 	wait 3	
 
 	// Send Button
-	click //div[@role="button"][contains(@data-tooltip, "Send")]
+	//click //div[@role="button"][contains(@data-tooltip, "Send")]
 	// Schedule tommorow morning
 	//click G-asx
 	//click J-N yr

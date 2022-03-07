@@ -1,9 +1,8 @@
-Dear CG Admin, 
+Dear {} CG Admin, 
 <br><br>
-There are a lot of new Primary English/Math lessons so I may need to assign you.😀 
-Need to return/publish these lessons in 5 working days, so need your kind help during office hours please. 
-The following lesson(s) is/are pending your review.🙏. 
-Please login to SLS https://vle.learning.moe.edu.sg/mrv/community-gallery/admin to search for the title before {} if the direct link in the table below doesn't work. <br><br>
+
+The following lesson(s)/course(s) is/are pending your review.🙏. <br>
+Please login to <a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/admin">SLS</a>  to do a <a href="https://www.youtube.com/watch?v=bw2lkqpUH-k">KEYBOARD CONTROL-FIND</a> and search for the title before {} if the direct link in the table below doesn't work. <br><br>
 
 <table style="border-collapse: collapse; border: 1px solid black;" id="tagui_table">
 	<tr>
@@ -19,7 +18,7 @@ Please login to SLS https://vle.learning.moe.edu.sg/mrv/community-gallery/admin 
 	</tr>
 </table>
 <br>
-
+Please return/publish this(ese) lesson(s)/course(s) in 5 working days, 😀 during office hours please. <br>
 <b>Note</b>: 
 <br>
 Once you have reviewed the lesson, please
@@ -28,30 +27,47 @@ Once you have reviewed the lesson, please
 		update us on the action you have taken
 		<ul>
 			<li><b>Feature</b> to Gallery,</li>
-			<li>Return to Teacher</li>
+			<li>OR Return to Teacher</li>
 			
 		</ul>
 	</li>
  
+	
 	<li>
-		<i>(Only for lessons that are <b>featured</b> on Community Gallery)</i> update e-Catalogue of Community Gallery lessons via the Google Form at go.gov.sg/cgupdate. 🍀. The e-catalogue is viewable here https://go.gov.sg/cgcmay21
-	</li>
-	<li>
-		Edit the title to be more detailed, some good examples are:
+		Edit the title to be more detailed, good example(s) is/are:
 		<ul>
-		<li>1E 看电影《大圣归来》和《哪吒之魔童降世》学华文</li>
+		
 		<li>Sec 4N History Revision on Communist Russia and defeat of Japan in WWII</li>
-		<li>Video Based Geography: What is the hydrological cycle?</li>
+		
 		</ul>
 	</li>
 	<li>
-		Please include a short "Lesson Description" and a "Featured Image" or ask the teacher to do it, as it will enhance the viewership of the lesson. 
+		
+		Please include a short "Lesson Description" and a <a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/lesson/view/3dc58759-7e61-4684-9b79-c8940ff6d33b/cover">"Featured Image with source cited"</a> , as it will enhance the viewership of the lesson. 
 	</li>
 	<li>
-		Do return lesson(s) that may have inappropriate/sensitive graphics/content (Wuhan virus🦠, suicide👻, murder🔪, recent RVHS🏫 incident etc) or if it requires Adobe Flash player, ask the teacher to provide HTML5/JavaScript interactive/virtual laboratory🥼 as SLS aims to support learning on mobile platforms too.
+		<ul>
+		<li>🌟NEW! Intellectual property citation of free internet resources should satisfy these 6 points and they are 
+				<ol>
+				<li> Work must be free to access from the Internet </li>
+				<li> Internet URL and the date on which the material was accessed must be cited </li>
+				<li> Sufficient acknowledgement must be given (i.e., the author and the title/description etc) </li>   
+				<li> Communication (e.g., uploading) of the work can only be done on a network (e.g. SLS) of the educational institution that is accessible only to the students and staff of that institution </li>
+				<li> Work must not be a known infringing work </li>
+				<li> If any one of the above conditions is not met, the New 2021 November educational exception does not apply.</li>  
+				</ol>
+		<li>SLS sample. <a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/admin/lesson/edit/3dc58759-7e61-4684-9b79-c8940ff6d33b/cover"> Source of Featured Image, https://weelookang.blogspot.com/2022/02/10-steps-to-instantly-improve-your.html, Loo Kang WEE, parachute EJSS simulation animated gif, assessed 21 Feb 2022</a></li>
+		</ul>
+	</li>
+	<li>
+		Do return lesson(s) that 
+		<ul>
+		<li>may have inappropriate/sensitive graphics/content (Wuhan virus🦠, suicide👻, murder🔪, recent RVHS🏫 incident etc)</li>
+		<li>copyright infringements or resources without reasonable citations that respect intellectual property</li>
+		</ul>
 	</li>
 <li>
-		For info on the review process, please visit go.gov.sg/cgadmin-guide or watch playlist https://www.youtube.com/watch?v=hHGHeaEKmVc&list=PLYIwRBA8ZhdM6pmfDaUhtwTCTLj94552y 🆕R15 versions . 
+		For info on the review process, please visit go.gov.sg/cgadmin-guide or watch https://www.youtube.com/watch?v=hHGHeaEKmVc&list=PLYIwRBA8ZhdM6pmfDaUhtwTCTLj94552y 🆕R15-16 versions. 
  
 	</li>
 </ol>
@@ -60,10 +76,9 @@ Once you have reviewed the lesson, please
 
 Thank you. 
 <br>
-Chief CG Admin (2021 Jean_Phua@moe.gov.sg and Lawrence_WEE@moe.gov.sg) 
+Chief CG Admin (since 2021 Jean_Phua@moe.gov.sg and Lawrence_WEE@moe.gov.sg) 
 <br>
 On behalf of SLS Office 
 <br><br> 
-Best Regards, the bot is open sourced here https://github.com/lookang/TagUI/tree/main/login
+PS: the TagUI RPA bot is open sourced here https://github.com/lookang/TagUI/tree/main/login by {}
 
-{}

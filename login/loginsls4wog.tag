@@ -38,11 +38,11 @@ https://vle.learning.moe.edu.sg/login
 wait 5 //WOG slow
 //assume no need to extra login
 if present('loginform')
-	// type username as MOE-00000H change
-	type username as MOE-09615H
+	// type username as MOE-00000A change
+	type username as MOE-00000A
 	click bx--text-input
 	// type password as your_own change
-	type bx--text-input as Shanshan1!!!!!
+	type bx--text-input as ABC
 	click .button.login
 	wait 5
 	// this email is linked to your SLS alternative email for OTP, change this accordingly

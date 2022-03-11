@@ -230,12 +230,12 @@ for i from 1 to recipient_list.length
 	click //*[@id="primaryContainer"]/div[5]/div/div[1]/div/div[5]/div[3]/div/div[5]/div[1]/div/div[3]/div[4]/div/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[3]/div[1]/div/div/div/span/div[1]/form/input
 	if (recipient_name=='Noor Azimah MOHD HAAD'||recipient_name=='Rina Kesumawati MIZZY AHMAD'||recipient_name=='Nurul Farhana MOHAMED KASSIM'||recipient_name=='Salha Mohamed Hussain'||recipient_name=='Norafizah SHARIFF')
 		{
-	//type //textarea[@name="cc"] as Lawrence_WEE@moe.gov.sg; Jean_Phua@moe.gov.sg; Salbiah_ABAS@moe.gov.sg
-	type Cc as Lawrence_WEE@moe.gov.sg; Jean_Phua@moe.gov.sg; Salbiah_ABAS@moe.gov.sg; Jenson_Chen@moe.gov.sg; slscgbot@gmail.com;
+	//
+	type Cc as Lawrence_WEE@moe.gov.sg; slscgbot@gmail.com;
 		}
 	else 
 		{
-	type Cc as Lawrence_WEE@moe.gov.sg; Jean_Phua@moe.gov.sg; Jenson_Chen@moe.gov.sg; slscgbot@gmail.com;
+	type Cc as Lawrence_WEE@moe.gov.sg; slscgbot@gmail.com;
 	//type Cc as Lawrence_WEE@moe.gov.sg; 
 		}
 	// Subject

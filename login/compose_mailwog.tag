@@ -1,3 +1,6 @@
+//https://www.youtube.com/watch?v=LL9BK28Di4k
+//https://github.com/lookang/TagUI/blob/main/login/compose_mailwog.tag
+
 load body_template.txt to body
 //load body_templatemassemail.txt to body
 //load pendingreview_list.csv to pending_table

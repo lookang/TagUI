@@ -47,3 +47,31 @@ tagui copyoutfromsheettofolder.tag
 
 #End.
 
+Update 20220314
+Whole of Government TagUI flow
+
+#data extract working
+https://www.youtube.com/watch?v=j-ABoO5aR0o
+https://github.com/lookang/TagUI/blob/main/login/loginsls4wog.tag
+
+# produce output.csv
+# test19.py working
+
+# sheets not working due to error
+C:\rpa\tagui\flows\lookang\login>python sheets.py
+Traceback (most recent call last):
+  File "C:\rpa\tagui\flows\lookang\login\sheets.py", line 32, in <module>
+    gc = gspread.service_account(filename=client_secret)
+AttributeError: module 'gspread' has no attribute 'service_account'
+
+#compose email working
+https://github.com/lookang/TagUI/blob/main/login/compose_mailwog.tag
+https://www.youtube.com/watch?v=LL9BK28Di4k
+
+
+# copyoutfromsheettofolder.tag not working well, WOG dooes not allow downloading so the workaround is run on personal computer and email the 2 needed files
+Subject Grps for Tracking_05Feb - emails.csv
+Subject Grps for Tracking_05Feb - 2022_Lessons.csv
+
+
+# emailsearch3.tag also not working, cannot triger search easily, need to debug why.

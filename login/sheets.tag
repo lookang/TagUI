@@ -22,5 +22,7 @@ click (120,865)
 wait 3
 keyboard [ctrl]v
 click formatselectorwog.png 
-click splittexttocolumns.png
+wait 2
+click splittexttocolumnswog.png
+wait 5
 wait 500

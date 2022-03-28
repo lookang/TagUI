@@ -1,8 +1,8 @@
-Dear {} CG Admin, 
+Dear CG Admin, 
 <br><br>
 
 The following lesson(s)/course(s) is/are pending your review.🙏. <br>
-Please login to <a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/admin">SLS</a>  to do a <a href="https://www.youtube.com/watch?v=bw2lkqpUH-k">KEYBOARD CONTROL-FIND</a> and search for the title before {} if the direct link in the table below doesn't work. <br><br>
+Please login to <a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/admin">SLS</a>  to do a <a href="https://www.youtube.com/watch?v=bw2lkqpUH-k">KEYBOARD CONTROL-FIND</a> and search for the title if the direct link in the table below doesn't work. <br><br>
 
 <table style="border-collapse: collapse; border: 1px solid black;" id="tagui_table">
 	<tr>
@@ -56,7 +56,7 @@ Once you have reviewed the lesson, please
 				<li> Work must not be a known infringing work </li>
 				<li> If any one of the above conditions is not met, the New 2021 November educational exception does not apply.</li>  
 				</ol>
-		<li>SLS sample. <a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/admin/lesson/edit/3dc58759-7e61-4684-9b79-c8940ff6d33b/cover"> Source of Featured Image, https://weelookang.blogspot.com/2022/02/10-steps-to-instantly-improve-your.html, Loo Kang WEE, parachute EJSS simulation animated gif, assessed 21 Feb 2022</a></li>
+		<li>SLS sample. <a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/lesson/view/3dc58759-7e61-4684-9b79-c8940ff6d33b/cover"> Source of Featured Image, https://weelookang.blogspot.com/2022/02/10-steps-to-instantly-improve-your.html, Loo Kang WEE, parachute EJSS simulation animated gif, assessed 21 Feb 2022</a></li>
 		</ul>
 	</li>
 	<li>
@@ -76,9 +76,9 @@ Once you have reviewed the lesson, please
 
 Thank you. 
 <br>
-Chief CG Admin (since 2021 Jean_Phua@moe.gov.sg and Lawrence_WEE@moe.gov.sg) 
+Chief CG Admin (since 2021 Jean_Phua@moe.gov.sg and {}) 
 <br>
 On behalf of SLS Office 
 <br><br> 
-PS: the TagUI RPA bot is open sourced here https://github.com/lookang/TagUI/tree/main/login by {}
+PS: the TagUI RPA bot is open sourced here https://github.com/lookang/TagUI/tree/main/login
 

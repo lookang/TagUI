@@ -70,7 +70,7 @@ https://github.com/lookang/TagUI/blob/main/login/compose_mailwog.tag
 https://www.youtube.com/watch?v=LL9BK28Di4k
 
 
-tgaui copyoutfromsheettofolderwog.tag 
+tagui copyoutfromsheettofolderwog.tag 
 # not so working well, WOG does not allow downloading so the workaround is run on personal computer and email the 2 needed files
 Subject Grps for Tracking_05Feb - emails.csv
 Subject Grps for Tracking_05Feb - 2022_Lessons.csv

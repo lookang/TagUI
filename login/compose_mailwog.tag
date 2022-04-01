@@ -189,7 +189,7 @@ for(var i = start_from_sn; i < pending.length; i++){
 
 // CREATING THE BODY MESSAGE (EXLCUDING TABLE ROWS)
 // cannot be dynamic? solved ! can.
-var arg = ['Lawrence_Wee2moe.gov.sg']; // Strings to replace the {} in body message
+var arg = ['Lawrence_Wee@moe.gov.sg']; // Strings to replace the {} in body message
 
 // replacing the text
 var idx = 0;

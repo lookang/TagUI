@@ -1,6 +1,3 @@
-//https://www.youtube.com/watch?v=j-ABoO5aR0o
-//https://github.com/lookang/TagUI/blob/main/login/loginsls4wog.tag
-
 //INSTALLATION
 // https://tagui.readthedocs.io/en/latest/setup.html
 
@@ -33,19 +30,28 @@
 //https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
 https://vle.learning.moe.edu.sg/login
 wait 1
-// need to trigger 2 times as WOG is strict or buggy
+// need to trigger 3 times as WOG is strict or buggy
 https://vle.learning.moe.edu.sg/login
 
 // chrome-extension://fpjohbpoggonmepkkifflkmkohefgcei/installation_message.html
 // make sure you check DO NOT SHOW Jaga URL Reporter is a new browser extension that Public Officers can use to easily report suspicious websites that they may encounter while browsing the internet on Government-issued Secure Internet Surfing (SIS) enabled devices.
 wait 5 //WOG slow
 //assume no need to extra login
+https://vle.learning.moe.edu.sg/login
+
+//sometimes after failed login, it is stuck in this OTP page so need to go back to login page
+wait 2
+//if exist('Back to Login')
+//	click Back to Login
+
+//assume normal login page
+wait 1
 if present('loginform')
-	// type username as MOE-00000A change
-	type username as MOE-00000A
+	// type username as MOE-00000H change
+	type username as MOE-09615H
+	wait 3 // give time to type
 	click bx--text-input
-	// type password as your_own change
-	type bx--text-input as ABC
+	type bx--text-input as Shanshan1!!!!!
 	click .button.login
 	wait 5
 	// this email is linked to your SLS alternative email for OTP, change this accordingly
@@ -94,14 +100,25 @@ if present ('walkme-custom-balloon-content')
 // idea syntax from https://github.com/kelaberetiv/TagUI/blob/master/flows/samples/4_loops.tag
 
 wait 3
+// to allow admin to check first the pending review list, type done to exit and continue flow
+//live
 
 // getting total_number of rows
 read //div[@class="v-data-footer__pagination"] to pagination
 js total = parseInt(pagination.split("of")[1].trim());
+echo There are `total` number of lessons.
 
+ask Check SLS CG pending review for the number of lessons. Key in 0 or 1 for unattended, all lesson extraction or the number of lesson to start data extraction ?
+echo `ask_result`
+if ask_result contain '0'
+	rowCnt = 1
+else 
+	rowCnt = Math.floor(ask_result,20) 
+
+wait 3
 // creating row counter so that it can loop through the table properly
 
-rowCnt = 1
+//rowCnt = 1
 // might want to change this to save time crawling all the assigned
 tableCnt = 0
 //tableCnt = 1

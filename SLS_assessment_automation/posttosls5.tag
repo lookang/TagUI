@@ -4,8 +4,12 @@
 
 //prepare output.csv from pptx to csv into body
 load output.csv to body
-
+//echo `body`
 // prepare data cleaning into usable form 
+
+
+
+
 js begin
 
 // CSV PARSER FUNCTION (reference: http://stackoverflow.com/a/1293163/2343)
@@ -80,14 +84,15 @@ function CSVToArray(strData, strDelimiter){
 
 // load questions_csv 
 questions_csv = CSVToArray(body);
-
+//window.print( question_csv = `question_csv`)
+//setTimeout(alert("30 seconds"),30000);
 questions = [];
 for(var z = 1; z < questions_csv.length; z++){
 	var row = questions_csv[z];
 	var qn = {
-		// row[7] is question in output.csv 
+		// actually columns , row[7] is question in output.csv 01234567
 		question: row[7],
-		// row[8] is answer in output.csv 
+		// row[8] is answer in output.csv 012345678
 		answer: row[8],
 		//initialises qn.options to be an empty array at first
 		options : []
@@ -102,9 +107,13 @@ for(var z = 1; z < questions_csv.length; z++){
 	questions.push(qn);
 	// just to see the qn.options 
 	console.log(qn.options);
+	//prompt()
 }
 
 js finish
+
+//echo questions_csv is `questions_csv`
+echo questions is `questions`
 
 //Enter in to SLS
 https://vle.learning.moe.edu.sg/login
@@ -179,11 +188,11 @@ type bx--text-input as [clear]D2.2_Decimal
 click cv-button bx--btn bx--btn--primary bx--btn--icon-only
 
 // +ADD ACTIVITY
-click cv-button add-activity bx--btn bx--btn--tertiary
-
+//click cv-button add-activity bx--btn bx--btn--tertiary
+click cv-button tooltip-button add-activity bx--btn bx--btn--tertiary
 // Add New Activity - Custom Activity
-click /html/body/div[3]/div/div/div[2]/div/div[4]/div[1]/div[3]/a
-
+//click /html/body/div[3]/div/div/div[2]/div/div[4]/div[1]/div[3]/a
+click Custom Activity
 
 // type Activity Title
 type bx--text-input as [clear]D2.2_Decimal[enter]

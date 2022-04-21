@@ -52,7 +52,6 @@ Whole of Government TagUI flow
 double click one file called runallwog.cmd
 call tagui loginsls4wog.tag && python test19.py && tagui compose_mailwog.tag && tagui sheets.tag && tagui copyoutfromsheettofolderwog.tag
 
-
 #data extract working
 https://www.youtube.com/watch?v=j-ABoO5aR0o
 https://github.com/lookang/TagUI/blob/main/login/loginsls4wog.tag
@@ -60,21 +59,24 @@ https://github.com/lookang/TagUI/blob/main/login/loginsls4wog.tag
 # produce output.csv
 python test19.py
 
-#sheets.py remade in tag
-https://www.youtube.com/watch?v=LQcniJ9A4gc
-tagui sheets.tag
 
 #compose email working
 tagui compose_mailwog.tag
 https://github.com/lookang/TagUI/blob/main/login/compose_mailwog.tag
 https://www.youtube.com/watch?v=LL9BK28Di4k
 
+#sheets_replacewog.tag to ovecome lack of computer vision, use human to copy paste download etc
 
-tagui copyoutfromsheettofolderwog.tag 
+
+#sheets.py remade in tag, but not working if not computer vision
+https://www.youtube.com/watch?v=LQcniJ9A4gc
+tagui sheets.tag
+
+tagui copyoutfromsheettofolderwog.tag but not working if not computer vision
 # not so working well, WOG does not allow downloading so the workaround is run on personal computer and email the 2 needed files
 Subject Grps for Tracking_05Feb - emails.csv
 Subject Grps for Tracking_05Feb - 2022_Lessons.csv
 
 
 # emailsearch3.tag also not working, cannot triger search easily, need to debug why probably duw to the weakwe search in wogmail.
-
+need to use slscgbot@gmail.com as google gmail can find the lessons by URL

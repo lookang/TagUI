@@ -48,10 +48,10 @@ if exist('Back to Login')
 wait 1
 if present('loginform')
 	// type username as MOE-00000H change
-	type username as MOE-09615H
+	type username as MOE-01111H
 	wait 3 // give time to type
 	click bx--text-input
-	type bx--text-input as Shanshan1!!!!!
+	type bx--text-input as yourpassword
 	click .button.login
 	wait 5
 	// this email is linked to your SLS alternative email for OTP, change this accordingly

@@ -41,17 +41,17 @@ https://vle.learning.moe.edu.sg/login
 
 //sometimes after failed login, it is stuck in this OTP page so need to go back to login page
 wait 2
-//if exist('Back to Login')
-//	click Back to Login
+if exist('Back to Login')
+	click cancel-2fa
 
 //assume normal login page
 wait 1
 if present('loginform')
 	// type username as MOE-00000H change
-	type username as MOE-012345A
+	type username as MOE-09615H
 	wait 3 // give time to type
 	click bx--text-input
-	type bx--text-input as yourownpasword
+	type bx--text-input as Shanshan1!!!!!
 	click .button.login
 	wait 5
 	// this email is linked to your SLS alternative email for OTP, change this accordingly
@@ -100,13 +100,15 @@ if present ('walkme-custom-balloon-content')
 // idea syntax from https://github.com/kelaberetiv/TagUI/blob/master/flows/samples/4_loops.tag
 
 wait 3
-// to allow admin to check first the pending review list, type done to exit and continue flow
-//live
+
 
 // getting total_number of rows
 read //div[@class="v-data-footer__pagination"] to pagination
 js total = parseInt(pagination.split("of")[1].trim());
 echo There are `total` number of lessons.
+
+echo to allow admin to check first the pending review list, type done to exit and continue flow
+live
 
 ask Check SLS CG pending review for the number of lessons. Key in 0 or 1 for unattended, all lesson extraction or the number of lesson to start data extraction ?
 echo `ask_result`

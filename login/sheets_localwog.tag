@@ -81,7 +81,8 @@ js finish
 
 
 outarray = CSVToArray(out)
-column_A = [Subject Grps for Tracking_05Feb.xlsx]Sheet1!A:A
+//column_A = [Subject Grps for Tracking_05Feb.xlsx]Sheet1!A:A
+column_A = [Subject Grps for Tracking_05Feb.xlsx]2022_Lessons!A:A
 total_row = column_A.length
 echo `total_row`
 //[Subject Grps for Tracking_05Feb.xlsx]Sheet1!A`total_row` = [[1,2,3],[4,5,6]]

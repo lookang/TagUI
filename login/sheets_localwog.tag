@@ -82,9 +82,26 @@ js finish
 
 outarray = CSVToArray(out)
 //column_A = [Subject Grps for Tracking_05Feb.xlsx]Sheet1!A:A
+// find last row value in xlsx
 column_A = [Subject Grps for Tracking_05Feb.xlsx]2022_Lessons!A:A
 total_row = column_A.length
 echo `total_row`
 //[Subject Grps for Tracking_05Feb.xlsx]Sheet1!A`total_row` = [[1,2,3],[4,5,6]]
 //[Subject Grps for Tracking_05Feb.xlsx]Sheet1!A`total_row` =  outarray
-[Subject Grps for Tracking_05Feb.xlsx]2022_Lessons!A`total_row` =  outarray 
+//[Subject Grps for Tracking_05Feb.xlsx]2022_Lessons!A`total_row` =  outarray 
+
+//manually save as csv from the xlsx the 2 csv files needed?
+// update to csv from xlsx
+column_A = [Subject Grps for Tracking_05Feb.xlsx]2022_Lessons!A:A
+total_row = column_A.length
+echo `total_row`
+//Subject Grps for Tracking_05Feb - 2022_Lessons.csv
+data = [Subject Grps for Tracking_05Feb.xlsx]2022_Lessons!A:Q
+dump `data[0]` to abc.csv
+for n from 1 to data.length-1
+	arr = data[n]
+	write `arr` to abc.csv
+
+
+
+//Subject Grps for Tracking_05Feb - emails.csv

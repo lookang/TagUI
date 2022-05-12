@@ -1,0 +1,25 @@
+Automation Anywhere, Inc.
+
+633 River Oaks Parkway, San Jose, CA 95134, USA
+Tel: (509) 222-1234
+
+Sold to
+
+Ship to Invoice no.
+Ultron Inc. Ultron Inc. - Receiving Dock 10268
+1801 Toldeo Beach Rd #1189 6395 N Russel Rd Invoice Date
+La Salle, MI 48145 Oak Harbor, OH 43449 22 Aug 2018
+Purchase Order
+1019 26525
+Quantity Item no. Description Unit Price Tax Amount
+50 | 1001 Widget Type A 22.00 G 1,100.00
+50 | 1005 Bracket - Widget Type B 0.80 G 40.00
+50 | 1003 Widget Type C 82.50 G 4,125.00
+Subtotal 5,265.00
+Tax1 (GST) @7% 368.55
+Invoice Amount 5,633.55
+
+$
+
+Terms: 2% 10 Net 30
+

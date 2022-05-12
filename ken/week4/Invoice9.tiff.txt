@@ -1,0 +1,22 @@
+INVOICE Automation Anywhere, Inc.
+633 River Oaks Parkway, San Jose, CA 95134, USA
+Tel: (509) 222-1234
+
+Sold to Invoice no. 10289
+Ultron Inc.
+1801 Toldeo Beach Rd #1189 Invoice Date 22 Aug 2018
+La Salle, MI 48145
+1019 Purchase Order 26543
+Terms 2% 10 Net 30
+Ship to
+Ultron Inc. - Receiving Dock
+6395 N Russel Rd
+Oak Harbor, OH 43449
+Quantity Item no. Description Unit Price | Tax Amount
+175 |1001 Widget Type A 22.00| G 3,850.00
+175 |1011 Sprocket - Large 38.50] G 6,737.50
+175 | 1004 Bracket - Widget Type A 7.25| G 1,268.75
+Subtotal 11,856.25
+Tax1 (GST) @ 7% 829.94
+Invoice Amount $ 12,686.19
+

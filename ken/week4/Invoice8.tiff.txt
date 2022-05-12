@@ -1,0 +1,21 @@
+Automation Anywhere, Inc.
+
+633 River Oaks Parkway, San Jose, CA 95134, USA | NVO | C E
+
+Tel: (509) 222-1234
+
+Invoice no. 10292 Purchase Order 26545
+Invoice Date 22 Aug 2018 Terms 2% 10 Net 30
+Sold to Ship to
+Ultron Inc. Ultron Inc. - Receiving Dock
+1801 Toldeo Beach Rd #1189 6395 N Russel Rd
+La Salle, MI 48145 Oak Harbor, OH 43449
+1019
+Quantity, Item no. Description Unit Price | Tax Amount
+50 | TYLENOL Tylenol Ex-Strong 100/box 14.95| G 747.50
+100 | PLUG NGK-ZFR5F-11 Spark Plug 2.75] G 275.00
+50 | COOLANT Radiator coolant 5.00} G 250.00
+Subtotal 1,272.50
+Tax1 (GST) @ 7% 89.08
+Invoice Amount = $ 1,361.58
+

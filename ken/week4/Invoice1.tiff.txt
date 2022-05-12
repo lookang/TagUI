@@ -1,0 +1,25 @@
+Automation Anywhere, Inc.
+
+633 River Oaks Parkway, San Jose, CA 95134, USA
+Tel: (509) 222-1234
+
+Sold to
+
+Ship to Invoice no.
+Ultron Inc. Ultron Inc. - Receiving Dock 10266
+1801 Toldeo Beach Rd #1189 6395 N Russel Rd Invoice Date
+La Salle, MI 48145 Oak Harbor, OH 43449 22 Aug 2018
+Purchase Order
+1019 26523
+Quantity Item no. Description Unit Price Tax Amount
+15 |1011 Sprocket - Large 38.50 | G 577.50
+15 | 1010 Sprocket - Med 18.95 | G 284.25
+15 | 1009 Sprocket - Small 8.90 | G 133.50
+Subtotal 995.25
+Tax1 (GST) @7% 69.67
+Invoice Amount 1,064.92
+
+$
+
+Terms: 2% 10 Net 30
+

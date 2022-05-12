@@ -1,0 +1,203 @@
+
+START - automation started - Thu May 12 2022 08:55:17 GMT+0800 (+08)
+
+LIVE MODE - type done to quit
+ [RPA][STARTED]
+[RPA][0] - listening for inputs
+[RPA][1] - https://developer.automationanywhere.com/challenges/automationanywherelabs-invoiceentry.html
+[RPA][1] - listening for inputs
+[RPA][2] - exist_result = exist('#invoiceNumber').toString()
+[RPA][2] - listening for inputs
+[RPA][3] - dump exist_result to rpa_python.txt
+[RPA][3] - listening for inputs
+[RPA][4] - type #invoiceNumber as 10269
+[RPA][4] - listening for inputs
+[RPA][5] - exist_result = exist('#invoiceDate').toString()
+[RPA][5] - listening for inputs
+[RPA][6] - dump exist_result to rpa_python.txt
+[RPA][6] - listening for inputs
+[RPA][7] - type #invoiceDate as 22 Aug 2018
+[RPA][7] - listening for inputs
+[RPA][8] - exist_result = exist('#invoiceTotal').toString()
+[RPA][8] - listening for inputs
+[RPA][9] - dump exist_result to rpa_python.txt
+[RPA][9] - listening for inputs
+[RPA][10] - type #invoiceTotal as 754.35
+[RPA][10] - listening for inputs
+[RPA][11] - exist_result = exist('#quantity_row_1').toString()
+[RPA][11] - listening for inputs
+[RPA][12] - dump exist_result to rpa_python.txt
+[RPA][12] - listening for inputs
+[RPA][13] - type #quantity_row_1 as 12
+[RPA][13] - listening for inputs
+[RPA][14] - exist_result = exist('#description_row_1').toString()
+[RPA][14] - listening for inputs
+[RPA][15] - dump exist_result to rpa_python.txt
+[RPA][15] - listening for inputs
+[RPA][16] - type #description_row_1 as Widget Type A
+[RPA][16] - listening for inputs
+[RPA][17] - exist_result = exist('#price_row_1').toString()
+[RPA][17] - listening for inputs
+[RPA][18] - dump exist_result to rpa_python.txt
+[RPA][18] - listening for inputs
+[RPA][19] - type #price_row_1 as 264.00
+[RPA][19] - listening for inputs
+[RPA][20] - exist_result = exist('//button').toString()
+[RPA][20] - listening for inputs
+[RPA][21] - dump exist_result to rpa_python.txt
+[RPA][21] - listening for inputs
+[RPA][22] - click //button
+[RPA][22] - listening for inputs
+[RPA][23] - exist_result = exist('#quantity_row_2').toString()
+[RPA][23] - listening for inputs
+[RPA][24] - dump exist_result to rpa_python.txt
+[RPA][24] - listening for inputs
+[RPA][25] - type #quantity_row_2 as 12
+[RPA][25] - listening for inputs
+[RPA][26] - exist_result = exist('#description_row_2').toString()
+[RPA][26] - listening for inputs
+[RPA][27] - dump exist_result to rpa_python.txt
+[RPA][27] - listening for inputs
+[RPA][28] - type #description_row_2 as Bracket - Widget Type C
+[RPA][28] - listening for inputs
+[RPA][29] - exist_result = exist('#price_row_2').toString()
+[RPA][29] - listening for inputs
+[RPA][30] - dump exist_result to rpa_python.txt
+[RPA][30] - listening for inputs
+[RPA][31] - type #price_row_2 as 441.00
+[RPA][31] - listening for inputs
+[RPA][32] - exist_result = exist('#fileupload').toString()
+[RPA][32] - listening for inputs
+[RPA][33] - dump exist_result to rpa_python.txt
+[RPA][33] - listening for inputs
+[RPA][34] - click #fileupload
+[RPA][34] - listening for inputs
+[RPA][35] - keyboard Invoice4[enter]
+[RPA][35] - listening for inputs
+[RPA][36] - exist_result = exist('#agreeToTermsYes').toString()
+[RPA][36] - listening for inputs
+[RPA][37] - dump exist_result to rpa_python.txt
+[RPA][37] - listening for inputs
+[RPA][38] - click #agreeToTermsYes
+[RPA][38] - listening for inputs
+[RPA][39] - exist_result = exist('#submit_button').toString()
+[RPA][39] - listening for inputs
+[RPA][40] - dump exist_result to rpa_python.txt
+[RPA][40] - listening for inputs
+[RPA][41] - click #submit_button
+[RPA][41] - listening for inputs
+[RPA][42] - exist_result = exist('#invoiceNumber').toString()
+[RPA][42] - listening for inputs
+[RPA][43] - dump exist_result to rpa_python.txt
+[RPA][43] - listening for inputs
+[RPA][44] - type #invoiceNumber as 10267
+[RPA][44] - listening for inputs
+[RPA][45] - exist_result = exist('#invoiceDate').toString()
+[RPA][45] - listening for inputs
+[RPA][46] - dump exist_result to rpa_python.txt
+[RPA][46] - listening for inputs
+[RPA][47] - type #invoiceDate as 22 Aug 2018
+[RPA][47] - listening for inputs
+[RPA][48] - exist_result = exist('#invoiceTotal').toString()
+[RPA][48] - listening for inputs
+[RPA][49] - dump exist_result to rpa_python.txt
+[RPA][49] - listening for inputs
+[RPA][50] - type #invoiceTotal as 1198.40
+[RPA][50] - listening for inputs
+[RPA][51] - exist_result = exist('#quantity_row_1').toString()
+[RPA][51] - listening for inputs
+[RPA][52] - dump exist_result to rpa_python.txt
+[RPA][52] - listening for inputs
+[RPA][53] - type #quantity_row_1 as 25
+[RPA][53] - listening for inputs
+[RPA][54] - exist_result = exist('#description_row_1').toString()
+[RPA][54] - listening for inputs
+[RPA][55] - dump exist_result to rpa_python.txt
+[RPA][55] - listening for inputs
+[RPA][56] - type #description_row_1 as Bracket - Widget Type A
+[RPA][56] - listening for inputs
+[RPA][57] - exist_result = exist('#price_row_1').toString()
+[RPA][57] - listening for inputs
+[RPA][58] - dump exist_result to rpa_python.txt
+[RPA][58] - listening for inputs
+[RPA][59] - type #price_row_1 as 181.25
+[RPA][59] - listening for inputs
+[RPA][60] - exist_result = exist('//button').toString()
+[RPA][60] - listening for inputs
+[RPA][61] - dump exist_result to rpa_python.txt
+[RPA][61] - listening for inputs
+[RPA][62] - click //button
+[RPA][62] - listening for inputs
+[RPA][63] - exist_result = exist('#quantity_row_2').toString()
+[RPA][63] - listening for inputs
+[RPA][64] - dump exist_result to rpa_python.txt
+[RPA][64] - listening for inputs
+[RPA][65] - type #quantity_row_2 as 25
+[RPA][65] - listening for inputs
+[RPA][66] - exist_result = exist('#description_row_2').toString()
+[RPA][66] - listening for inputs
+[RPA][67] - dump exist_result to rpa_python.txt
+[RPA][67] - listening for inputs
+[RPA][68] - type #description_row_2 as Bracket - Widget Type C
+[RPA][68] - listening for inputs
+[RPA][69] - exist_result = exist('#price_row_2').toString()
+[RPA][69] - listening for inputs
+[RPA][70] - dump exist_result to rpa_python.txt
+[RPA][70] - listening for inputs
+[RPA][71] - type #price_row_2 as 918.75
+[RPA][71] - listening for inputs
+[RPA][72] - exist_result = exist('//button').toString()
+[RPA][72] - listening for inputs
+[RPA][73] - dump exist_result to rpa_python.txt
+[RPA][73] - listening for inputs
+[RPA][74] - click //button
+[RPA][74] - listening for inputs
+[RPA][75] - exist_result = exist('#quantity_row_3').toString()
+[RPA][75] - listening for inputs
+[RPA][76] - dump exist_result to rpa_python.txt
+[RPA][76] - listening for inputs
+[RPA][77] - type #quantity_row_3 as 25
+[RPA][77] - listening for inputs
+[RPA][78] - exist_result = exist('#description_row_3').toString()
+[RPA][78] - listening for inputs
+[RPA][79] - dump exist_result to rpa_python.txt
+[RPA][79] - listening for inputs
+[RPA][80] - type #description_row_3 as Bracket - Widget Type B
+[RPA][80] - listening for inputs
+[RPA][81] - exist_result = exist('#price_row_3').toString()
+[RPA][81] - listening for inputs
+[RPA][82] - dump exist_result to rpa_python.txt
+[RPA][82] - listening for inputs
+[RPA][83] - type #price_row_3 as 20.00
+[RPA][83] - listening for inputs
+[RPA][84] - exist_result = exist('#fileupload').toString()
+[RPA][84] - listening for inputs
+[RPA][85] - dump exist_result to rpa_python.txt
+[RPA][85] - listening for inputs
+[RPA][86] - click #fileupload
+[RPA][86] - listening for inputs
+[RPA][87] - keyboard Invoice2[enter]
+[RPA][87] - listening for inputs
+[RPA][88] - exist_result = exist('#agreeToTermsYes').toString()
+[RPA][88] - listening for inputs
+[RPA][89] - dump exist_result to rpa_python.txt
+[RPA][89] - listening for inputs
+[RPA][90] - click #agreeToTermsYes
+[RPA][90] - listening for inputs
+[RPA][91] - exist_result = exist('#submit_button').toString()
+[RPA][91] - listening for inputs
+[RPA][92] - dump exist_result to rpa_python.txt
+[RPA][92] - listening for inputs
+[RPA][93] - click #submit_button
+[RPA][93] - listening for inputs
+[RPA][94] - exist_result = exist('#invoiceNumber').toString()
+[RPA][94] - listening for inputs
+[RPA][95] - dump exist_result to rpa_python.txt
+[RPA][95] - listening for inputs
+[RPA][96] - type #invoiceNumber as 10268
+[RPA][96] - listening for inputs
+[RPA][97] - exist_result = exist('#invoiceDate').toString()
+[RPA][97] - listening for inputs
+[RPA][98] - dump exist_result to rpa_python.txt
+[RPA][98] - listening for inputs
+[RPA][99] - type #invoiceDate as 22 Aug 2018

@@ -1,5 +1,7 @@
 // start both challenge website and Windows desktop application
 https://developer.automationanywhere.com/challenges/automationanywherelabs-employeedatamigration.html
+//https://github.com/AutomationAnywhere/Employee-Data-Migration/raw/master/EmployeeList.zip
+//unzip the EmployeeList.zip
 //run cmd /c start c:/Users/your_userid/Desktop/EmployeeList.exe
 //run cmd /c start D:\flows\ken\week3\EmployeeList.exe
 // make sure you download the legacy app that run on Windows

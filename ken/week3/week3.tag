@@ -2,6 +2,8 @@
 https://developer.automationanywhere.com/challenges/automationanywherelabs-employeedatamigration.html
 //run cmd /c start c:/Users/your_userid/Desktop/EmployeeList.exe
 //run cmd /c start D:\flows\ken\week3\EmployeeList.exe
+// make sure you download the legacy app that run on Windows
+// put it on the usual C:\rpa\tagui\flows\ location
 run cmd /c start C:\rpa\tagui\flows\ken\week3\EmployeeList.exe
 
 // start automation loop to process all records

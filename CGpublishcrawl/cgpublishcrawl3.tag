@@ -4,8 +4,10 @@
 //visit URL
 https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
 
-//assume no login
-if present('.button.login')
+//assume login needed
+//if present('.button.login')
+wait 1
+if present('//button[@type="button"]')
     click .button.login
     wait 5
 
@@ -89,8 +91,17 @@ for i from 1 to numberoflessonstocrawl
     js reviewer = reviewer.slice(3);
 
     click //*[@id="approved"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/div/a
-
     js link = url()
+    if (link contains 'home') or  (link equals to  'https://vle.learning.moe.edu.sg/mrv/community-gallery/admin')
+        // click again
+        // goes back to previous page
+        dom window.history.back()
+        // change tab
+        click //a[@id="approved-link"]
+        //click open
+        click //*[@id="approved"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/div/a
+        js link = url()
+
     // actual link is without admin/ so need to remove using code
     link = link.replace('admin/','')
     echo `link`

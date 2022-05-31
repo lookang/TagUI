@@ -41,17 +41,17 @@ https://vle.learning.moe.edu.sg/login
 
 //sometimes after failed login, it is stuck in this OTP page so need to go back to login page
 wait 2
-if exist('Back to Login')
+if present('cancel-2fa')
 	click cancel-2fa
 
 //assume normal login page
 wait 1
 if present('loginform')
 	// type username as MOE-00000H change
-	type username as MOE-01111H
+	type username as MOE-09615H
 	wait 3 // give time to type
 	click bx--text-input
-	type bx--text-input as yourpassword
+	type bx--text-input as Shanshan1!!!!!
 	click .button.login
 	wait 5
 	// this email is linked to your SLS alternative email for OTP, change this accordingly
@@ -196,6 +196,9 @@ for i from 1 to (total-tableCnt*20)
 // maybe TagUI can do it well, so using js to convert ot nice table of rows and columns
 //load emails.csv to admin_table
 load Subject Grps for Tracking_05Feb - emails.csv to admin_table
+// trying to convert to xlsx use instead of csv 
+//admin_table =[Subject Grps for Tracking_05Feb.xlsx]emails!A:Q
+echo `admin_table`
 
 js begin
 // CSV PARSER FUNCTION (reference: http://stackoverflow.com/a/1293163/2343)
@@ -323,6 +326,7 @@ for(var i = 0; i < admin_info.length; i++){
    for(var k = 0; k < subject.length; k++){  
 		if(subject[k] == '')
 			break;
+			//console.log("line 329 break")
 
 		// special case for chinese
 		if(containsSubstring(subject[k], 'chinese'))
@@ -330,8 +334,10 @@ for(var i = 0; i < admin_info.length; i++){
 
 		if(!(subject[k] in subject_to_name[level])){
 			subject_to_name[level][subject[k]] = [];
+			//console.log("line 337 what does it do?")
 		}
 		subject_to_name[level][subject[k]].push(name);
+		//console.log("line 340 push what does it do?")
 	}
 }
 
@@ -447,10 +453,12 @@ for(var i = 0; i < pending.length; i++){
 					subject = 'd&t';
 					subject_found = true;  
 				}
+				// may not be needed as physical education is spelled in full now in csv 
 				else if(sub == 'pe' && containsSubstring(subject, "physical education")){
 					subject = 'pe';
 					subject_found = true;
 				}
+				
 				
 				// test for acronyms
 				//checks for the acronyms 'pe' and 'd&t' in the subject name

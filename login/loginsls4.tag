@@ -29,8 +29,14 @@
 //visit URL
 https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
 
+//sometimes after failed login, it is stuck in this OTP page so need to go back to login page
+wait 2
+if present('cancel-2fa')
+	click cancel-2fa
+
 //assume no need to extra login
-if present('button login bx--btn bx--btn--primary')
+//if present('button login bx--btn bx--btn--primary')
+if present('loginform')
 	click .button.login
 	wait 5
 	// this email is linked to your SLS alternative email for OTP, change this accordingly
@@ -66,7 +72,7 @@ echo `ask_result`
 if ask_result contain '0'
 	rowCnt = 1
 else 
-	rowCnt = ask_result 
+	rowCnt = Math.floor(ask_result,20) 
 
 wait 3
 
@@ -85,9 +91,9 @@ for i from 1 to tableCnt
 	click //button[@aria-label="Next page"]
 
 pending = []
-teststart = 1
+//teststart = 1
 //testend = 2 // can save pendingreview_list.csv
-testend = 20 // can save pendingreview_list.csv
+//testend = 20 // can save pendingreview_list.csv
 
 //testend = 20 // can save pendingreview_list.csv
 //testend = 20
@@ -98,17 +104,39 @@ testend = 20 // can save pendingreview_list.csv
 //for rowCnt from teststart to testend
 for i from 1 to (total-tableCnt*20)
 
+	//20220607 due to a new SLS aria-sort = "descending" instead of the old usual aria-sort = "ascending"
+	// need to click once first cos the default value is correct, but order is wrong (latest first)
+	//click //span[normalize-space()='Date Submitted']
+	//read //*[@id="pending"]/div/div/div/div[1]/table/thead/tr/th[6]/@aria-sort to sortorder
+	
+	//echo `sortorder`
+	//temp = 0
+	//while sortorder not equals to "descending"
+	//	click //span[normalize-space()='Date Submitted']
+	//	read //*[@id="pending"]/div/div/div/div[1]/table/thead/tr/th[6]/@aria-sort to sortorder
+	//	temp = 1+temp 
+	//	echo `sortorder` 
+	//	echo `temp`
+		
+		
 
+	
+	click //span[normalize-space()='Date Submitted']
+	click //span[normalize-space()='Date Submitted']
+	click //span[normalize-space()='Date Submitted']
 
 	// trying to break out if total is not found 
-	if (exist('//*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div/div/span'))
-		read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div/div/span to title
-		read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[2]/div/span to type
-		read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[3]/div/span to subject
-		read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[4]/div/span to level
-		read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[5]/div/span[1] to school
-		read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[6]/div/span[1] to datesubmitted
-		read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[6]/div/span[2] to author
+	// R17 20220607 change in xpath 
+	//if (exist('//*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div/div/span'))
+	if (exist('//*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/div[1]/span'))
+		//read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div/div/span to title
+		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/div[1]/span to title
+		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[2]/div/span to type
+		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[3]/div/span to subject
+		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[4]/div/span to level
+		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[5]/div/span[1] to school
+		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[6]/div/span[1] to datesubmitted
+		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[6]/div/span[2] to author
 	else
 		break
 	
@@ -136,6 +164,18 @@ for i from 1 to (total-tableCnt*20)
 		js link = url()
 		echo `url()`
 		echo `link`
+		if (link contains 'home') or  (link equals to  'https://vle.learning.moe.edu.sg/mrv/community-gallery/admin')
+			// click again
+			// goes back to previous page
+			dom window.history.back()
+			// change tab
+			//click //a[@id="approved-link"]
+			//click open
+			click //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div//a
+			js link = url()
+			echo `link` capture second time due to SLS pop up ratings123456
+		
+		
 		wait 1
 		https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
 

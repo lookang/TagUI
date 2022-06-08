@@ -136,15 +136,25 @@ pending = []
 
 // always in groups of 20 now in UI
 for i from 1 to (total-tableCnt*20)
+
+	//20220607 due to a new SLS aria-sort = "descending" instead of the old usual aria-sort = "ascending"
+	// need to click once first cos the default value is correct, but order is wrong (latest first)
+	click //span[normalize-space()='Date Submitted']
+	click //span[normalize-space()='Date Submitted']
+	click //span[normalize-space()='Date Submitted']
+
+
 	// trying to break out if total is not found 
-	if (exist('//*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div/div/span'))
-		read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div/div/span to title
-		read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[2]/div/span to type
-		read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[3]/div/span to subject
-		read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[4]/div/span to level
-		read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[5]/div/span[1] to school
-		read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[6]/div/span[1] to datesubmitted
-		read //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[6]/div/span[2] to author
+	//if (exist('//*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div/div/span'))
+	if (exist('//*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/div[1]/span'))
+		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/div[1]/span to title
+		
+		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[2]/div/span to type
+		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[3]/div/span to subject
+		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[4]/div/span to level
+		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[5]/div/span[1] to school
+		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[6]/div/span[1] to datesubmitted
+		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[6]/div/span[2] to author
 	else
 		break
 	
@@ -172,6 +182,16 @@ for i from 1 to (total-tableCnt*20)
 		js link = url()
 		echo `url()`
 		echo `link`
+		if (link contains 'home') or  (link equals to  'https://vle.learning.moe.edu.sg/mrv/community-gallery/admin')
+			// click again
+			// goes back to previous page
+			dom window.history.back()
+			// change tab
+			//click //a[@id="approved-link"]
+			//click open
+			click //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div//a
+			js link = url()
+			echo `link` capture second time due to SLS pop up ratings123456
 		wait 1
 		https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
 

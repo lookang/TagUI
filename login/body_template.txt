@@ -48,11 +48,11 @@ Once you have reviewed the lesson, please
 	</li>
 	<li>
 		
-		If it is a Mother Tongue Language lesson/course, turn on the localisation to the respective languages for students to read instructions in their languages, under Lesson Details - Edit - Langauge Localosation - 中文, Bahasa Melayu,தமிழ்மொழி   
+		If it is a Mother Tongue Language lesson/course, turn on the localisation to the respective languages for students to read instructions in their languages, under Lesson Details - Edit - Langauge Localisation - 中文, Bahasa Melayu, தமிழ்மொழி   
 	</li>
 	<li>
 		
-		If it is a course, turn on the gamification (students get to receive XP points and levels etc while completing quiz with marks etc), by clicking on the top right corner, pencil (edit) - 3 dots menu - Gamification - select slider to "ON" position. There are 3 MOEHQ gamification template in CG.
+		If it is a course, turn on the gamification (students get to receive XP points and levels etc while completing quiz with marks etc), by clicking on the top right corner, pencil (edit) - 3 dots menu - Gamification - swipe slider to "ON" position. There are 3 MOEHQ gamification template in CG of your reference.
 		<ul>
 		
 		<li><a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/admin/lesson/view/ed4b855e-1c06-49e4-be18-40f266a801de/cover">"Help Captain Sustainability on his Quest - Gamification Template 1 for Teachers"</a></li>

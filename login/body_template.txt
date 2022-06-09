@@ -1,8 +1,7 @@
 Dear CG Admin, 
 <br><br>
-
+SLS Release 17 is live on 7th June 2022. Please <a href="https://docs.google.com/presentation/d/14GxtSHUT4L01u7yTNrpfsiLGkoLUK4r-/edit?usp=sharing&ouid=111507478434537221064&rtpof=true&sd=true">"download this SLS R17 PPTX for your reference"</a> . 
 The following lesson(s)/course(s) is/are pending your review.🙏. <br>
-Please login to <a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/admin">SLS</a>  to do a <a href="https://www.youtube.com/watch?v=bw2lkqpUH-k">KEYBOARD CONTROL-FIND</a> and search for the title if the direct link in the table below doesn't work. <br><br>
 
 <table style="border-collapse: collapse; border: 1px solid black;" id="tagui_table">
 	<tr>
@@ -18,16 +17,18 @@ Please login to <a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/a
 	</tr>
 </table>
 <br>
+
 Please return/publish this(ese) lesson(s)/course(s) in 5 working days, 😀 during office hours please. <br>
 <b>Note</b>: 
 <br>
 Once you have reviewed the lesson, please
 <ol>
 	<li>
-		update us on the action you have taken
+		Update us on the action you have taken
 		<ul>
 			<li><b>Feature</b> to Gallery,</li>
-			<li>OR Return to Teacher</li>
+			<li>OR Return to the teacher</li>
+			<li>OR Replace with newer lesson/course and also return the older copy(push into pending review tab latest) to the teacher</li>
 			
 		</ul>
 	</li>
@@ -44,6 +45,22 @@ Once you have reviewed the lesson, please
 	<li>
 		
 		Please include a short "Lesson Description" and a <a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/lesson/view/3dc58759-7e61-4684-9b79-c8940ff6d33b/cover">"Featured Image with source cited"</a> , as it will enhance the viewership of the lesson. 
+	</li>
+	<li>
+		
+		If it is a Mother Tongue Language lesson/course, turn on the localisation to the respective languages for students to read instructions in their languages, under Lesson Details - Edit - Langauge Localosation - 中文, Bahasa Melayu,தமிழ்மொழி   
+	</li>
+	<li>
+		
+		If it is a course, turn on the gamification (students get to receive XP points and levels etc while completing quiz with marks etc), by clicking on the top right corner, pencil (edit) - 3 dots menu - Gamification - select slider to "ON" position. There are 3 MOEHQ gamification template in CG.
+		<ul>
+		
+		<li><a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/admin/lesson/view/ed4b855e-1c06-49e4-be18-40f266a801de/cover">"Help Captain Sustainability on his Quest - Gamification Template 1 for Teachers"</a></li>
+		<li><a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/admin/lesson/view/8dc9ba5e-3928-4406-9b3c-2ab7eec554d6/cover">"A Gathering of Heroes - Gamification Template 2 for Teachers"</a></li>
+		<li><a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/admin/lesson/view/ba25e1be-cf3c-4e50-b8b1-6198d2879655/cover">"Unlock the Achievements - Gamification Template 3 for Teachers"</a></li>
+		
+		</ul>
+		
 	</li>
 	<li>
 		<ul>
@@ -67,7 +84,7 @@ Once you have reviewed the lesson, please
 		</ul>
 	</li>
 <li>
-		For info on the review process, please visit go.gov.sg/cgadmin-guide or watch https://www.youtube.com/watch?v=hHGHeaEKmVc&list=PLYIwRBA8ZhdM6pmfDaUhtwTCTLj94552y 🆕R15-16 versions. 
+		For info on the review process, please visit go.gov.sg/cgadmin-guide or watch https://www.youtube.com/watch?v=hHGHeaEKmVc&list=PLYIwRBA8ZhdM6pmfDaUhtwTCTLj94552y 🆕R15-16-17 versions. 
  
 	</li>
 </ol>
@@ -80,5 +97,5 @@ Chief CG Admin (since 2021 Jean_Phua@moe.gov.sg and {})
 <br>
 On behalf of SLS Office 
 <br><br> 
-PS: the TagUI RPA bot is open sourced here https://github.com/lookang/TagUI/tree/main/login
+PS: the TagUI RPA Whole of government (WOG) bot is also open sourced here https://github.com/lookang/TagUI/tree/main/login
 

@@ -1,6 +1,6 @@
 Dear CG Admin, 
 <br><br>
-SLS Release 17 is live on 7th June 2022. Please <a href="https://docs.google.com/presentation/d/14GxtSHUT4L01u7yTNrpfsiLGkoLUK4r-/edit?usp=sharing&ouid=111507478434537221064&rtpof=true&sd=true">"download this SLS R17 PPTX for your reference"</a> . 
+SLS Release 17 is live on 7th June 2022. Please <a href="removed on github">"download this SLS R17 PPTX for your reference"</a> . 
 The following lesson(s)/course(s) is/are pending your review.🙏. <br>
 
 <table style="border-collapse: collapse; border: 1px solid black;" id="tagui_table">

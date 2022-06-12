@@ -22,6 +22,7 @@
 
 //or experimental, super human speed
 // tagui compose_mail_wogaa3.tag -turbo
+//FINISH - automation finished - 159.5s for 59 emails
 
 
 filename = "singapore_student_learning_space_(sls)-daily-09_06_2022_filtered"

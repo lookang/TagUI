@@ -22,7 +22,7 @@
 
 //or experimental, super human speed
 // tagui compose_mail_wogaa3.tag -turbo
-//FINISH - automation finished - 159.5s for 59 emails, note it is even faster now after removing wait 1 or 0.5
+//FINISH - automation finished - 159.5s for 59 emails
 
 // need to edit the filename manually
 filename = "singapore_student_learning_space_(sls)-daily-12_06_2022_filtered"
@@ -41,7 +41,7 @@ filename = "singapore_student_learning_space_(sls)-daily-12_06_2022_filtered"
 
 //manually overwrite as the code detect filelength as 131.
 //manually determined as .length fails to get correct answer of 67, gave 131 instead
-filelength = 27-2 
+filelength = 27 
 echo filelength manual = `filelength`
 //wait 100
 //DateTime = [singapore_student_learning_space_(sls)-daily-08_06_2022_filtered.xlsx]singapore_student_learning_spac!A2:A`filelength`
@@ -49,8 +49,8 @@ echo filelength manual = `filelength`
 DateTime = [`filename`.xlsx]singapore_student_learning_spac!A2:A`filelength`
 // DateTime = [singapore_student_learning_space_(sls)-daily-04_01_2021_Filtered.csv]singapore_student_learning_space_(sls)-daily-04_01_2021_Filtered!A2  
 echo  `DateTime`
-filelength = DateTime.length
-echo filelength manual 2 = `filelength`
+//filelength = DateTime.length
+//echo filelength manual 2 = `filelength`
 ServiceName = [`filename`.xlsx]singapore_student_learning_spac!B2:B`filelength` 
 TXNID = [`filename`.xlsx]singapore_student_learning_spac!C2:C`filelength`
 PageURL = [`filename`.xlsx]singapore_student_learning_spac!D2:D`filelength` 
@@ -79,8 +79,8 @@ https://mail.google.com/mail/u/0/#inbox
 
 wait 3
 
-for i from 0 to DateTime.length-2
-	j = i+1
+for i from 0 to filelength-2
+	j = i+2
 	js currentDate = new Date()
 	// Click 'Compose' button
 	click Compose
@@ -95,7 +95,7 @@ for i from 0 to DateTime.length-2
 	type //textarea[@name="cc"] as  zengwei2020work@gmail.com
 	//type //textarea[@name="cc"] as  slscgbot@gmail.com	
 	// Subject
-	type //input[@name="subjectbox"] as Forwarded WOGAA widget email `j`
+	type //input[@name="subjectbox"] as Forwarded WOGAA widget email with cell row `j`
 
 	// Body //div[@id=':11x']
 	//click /html/body/div[24]/div/div/div/div[1]/div[3]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/table/tbody/tr[1]/td/div/div[1]/div[2]/div[1]/div/table/tbody/tr/td[2]/div[2]/div

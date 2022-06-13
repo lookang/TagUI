@@ -24,13 +24,13 @@
 // tagui compose_mail_wogaa3.tag -turbo
 //FINISH - automation finished - 159.5s for 59 emails
 
+// need to edit the filename manually
+filename = "singapore_student_learning_space_(sls)-daily-12_06_2022_filtered"
 
-filename = "singapore_student_learning_space_(sls)-daily-09_06_2022_filtered"
 
-
-column_B = [`filename`.xlsx]singapore_student_learning_spac!B.B
-filelength = column_B.length
-echo filelength = `filelength`
+//column_B = [`filename`.xlsx]singapore_student_learning_spac!B.B
+//filelength = column_B.length
+//echo filelength = `filelength`
 //ask filelength is detected as "see cmd prompt filelength = " type 0 to continue with detected value or manually overwrite with your value (see csv or xls for the last row-1) ?
 //echo `ask_result`
 //if ask_result equals to '0'
@@ -41,14 +41,16 @@ echo filelength = `filelength`
 
 //manually overwrite as the code detect filelength as 131.
 //manually determined as .length fails to get correct answer of 67, gave 131 instead
-filelength = 59 
-
+filelength = 27-2 
+echo filelength manual = `filelength`
 //wait 100
 //DateTime = [singapore_student_learning_space_(sls)-daily-08_06_2022_filtered.xlsx]singapore_student_learning_spac!A2:A`filelength`
 //DateTime = [`filename`.xlsx]singapore_student_learning_spac!A2:A`filelength`
 DateTime = [`filename`.xlsx]singapore_student_learning_spac!A2:A`filelength`
 // DateTime = [singapore_student_learning_space_(sls)-daily-04_01_2021_Filtered.csv]singapore_student_learning_space_(sls)-daily-04_01_2021_Filtered!A2  
 echo  `DateTime`
+filelength = DateTime.length
+echo filelength manual 2 = `filelength`
 ServiceName = [`filename`.xlsx]singapore_student_learning_spac!B2:B`filelength` 
 TXNID = [`filename`.xlsx]singapore_student_learning_spac!C2:C`filelength`
 PageURL = [`filename`.xlsx]singapore_student_learning_spac!D2:D`filelength` 
@@ -77,7 +79,7 @@ https://mail.google.com/mail/u/0/#inbox
 
 wait 3
 
-for i from 0 to DateTime.length
+for i from 0 to DateTime.length-2
 	j = i+1
 	js currentDate = new Date()
 	// Click 'Compose' button
@@ -86,12 +88,12 @@ for i from 0 to DateTime.length
 	
 	// Recipient
 	//type //textarea[@name="to"] as  helpdesk@sls.ufinity.com
-	//type //textarea[@name="to"] as  helpdesk@sls.ufinity.com
+	type //textarea[@name="to"] as  helpdesk@sls.ufinity.com
 	// Adding CC
 	click //span[@role="link"][contains(@data-tooltip, "Add Cc")]
 	
-	//type //textarea[@name="cc"] as  zengwei2020work@gmail.com
-	type //textarea[@name="cc"] as  slscgbot@gmail.com	
+	type //textarea[@name="cc"] as  zengwei2020work@gmail.com
+	//type //textarea[@name="cc"] as  slscgbot@gmail.com	
 	// Subject
 	type //input[@name="subjectbox"] as Forwarded WOGAA widget email `j`
 
@@ -108,7 +110,7 @@ for i from 0 to DateTime.length
 	//put in the text and variables using dom_json
 	dom document.querySelector('div[aria-label="Message Body"]').innerHTML = "Dear SLS Helpdesk, <br> This is an email sent automatically at "+ dom_json[0] + " from WOGAA Sentiment Response Daily File. <br>-------------------------------------------------------------------------- <br>Date/Time: "+dom_json[1]+" <br>Service Name: 	"+dom_json[2]+"<br>TXN ID: "+dom_json[3]+" <br>Page URL: "+dom_json[4]+" <br>Browser Version: "+dom_json[5]+" <br>OS/Device: "+dom_json[6]+" <br>Geographic: "+dom_json[7]+" <br>Rating: "+dom_json[8]+" <br>Email Address: "+dom_json[9]+" <br>Name: "+dom_json[10]+" <br>Message Title:	"+dom_json[11]+" <br>Message Body: "+dom_json[12]+" <br>-------------------------------------------------------------------------- <br><br> Regards, <br>SLS MOE Team"
 	//dom document.querySelector('div[aria-label="Message Body"]').innerHTML = ss.replace(/\n/g, '<br/>');
-	//wait 1
+	//wait 0.5
 
 	//Send Button
 	click //div[@role="button"][contains(@data-tooltip, "Send")]

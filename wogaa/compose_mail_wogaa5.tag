@@ -3,15 +3,22 @@
 //Downloading and updating to latest version of TagUI (v6.110)
 //TagUI successfully updated at //Users/lookang/Desktop/tagui 
 
-// download csv into the tagui folder example: /Users/lookang/Desktop/tagui/flows/wogaa
-// pre condition: convert csv to xlsx on your own (may be unncessary in v6.110)
-// file needed: actual csv and the converted xlsx (manually convert)
-
+// step 0: install Tagui from https://tagui.readthedocs.io/en/latest/setup.html 
+// step 0.5: Windows recommended https://github.com/kelaberetiv/TagUI/releases/download/v6.46.0/TagUI_Windows.exe 
+// step 1: download *.csv into the tagui folder example: /Users/lookang/Desktop/tagui/flows/wogaa or c:/rpa/tagui/flow/wogaa depending on Mac or Windows
+// step 2: navigate in cmd or terminal to the folder say cd /Users/lookang/Desktop/tagui/flows/wogaa/ or cd c:/rpa/tagui/flow/wogaa/
+// step 3: using code editor example VS code to edit the line on filename to the correct file
+// step 4: using cmd type: tagui compose_mail_wogaa5.tag
 // code to run in cmd
 // normal speed
-// tagui tagui compose_mail_wogaa5.tag
+// tagui compose_mail_wogaa5.tag
 //FINISH - automation finished - 1052.7s for 59 emails
-
+// 
+// prepration need to do once only to prepare the TagUI chrome browser with login and password
+// type in cmd: tagui live 
+// use the TagUi chrome browser to login and password to your gmail to send emails out using the RPA, this is invisible in the code and only the browser knows so it is safe.
+// now you can run step 4:
+// step 4b: tagui compose_mail_wogaa5.tag -turbo
 //or experimental, super human speed
 // tagui compose_mail_wogaa5.tag -turbo
 //FINISH - automation finished - 159.5s for 59 emails
@@ -52,7 +59,7 @@ GotContent = [`filename`.csv]singapore_student_learning_spac!N2:N`filelength`
 
 ////////////////////////////////////////////////////////
 
-// Open gmail (assumes that user has already logged in previously)
+// Open gmail (assumes that user has already logged in previously) see line 17
 
 https://mail.google.com/mail/u/0/#inbox
 
@@ -61,7 +68,7 @@ wait 3
 
 // change here for start, sometimes you may want to resend from another number
 // if start = 24, the email row is 26
-start = 24
+start = 0
 for i from start to filelength-2
 	j = i+2
 	js currentDate = new Date()

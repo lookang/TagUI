@@ -17,12 +17,15 @@
 //FINISH - automation finished - 159.5s for 59 emails
 
 // need to edit the filename manually
-filename = "singapore_student_learning_space_(sls)-daily-12_06_2022_filtered"
+filename = "singapore_student_learning_space_(sls)-daily-13_06_2022_filtered"
+filedate = filename.substring(45, 65)
 
+column_A = [`filename`.csv]singapore_student_learning_spac!A:A
+//echo `column_A`
+filelength = column_A.length
+//echo `temp`
+//wait 1000
 
-//manually overwrite as the code detect filelength as 131.
-//manually determined as .length fails to get correct answer of 67, gave 131 instead
-filelength = 27 
 echo filelength manual = `filelength`
 //wait 100
 
@@ -56,7 +59,10 @@ https://mail.google.com/mail/u/0/#inbox
 
 wait 3
 
-for i from 0 to filelength-2
+// change here for start, sometimes you may want to resend from another number
+// if start = 24, the email row is 26
+start = 24
+for i from start to filelength-2
 	j = i+2
 	js currentDate = new Date()
 	// Click 'Compose' button
@@ -67,12 +73,12 @@ for i from 0 to filelength-2
 	//type //textarea[@name="to"] as  helpdesk@sls.ufinity.com
 	type //textarea[@name="to"] as  helpdesk@sls.ufinity.com
 	// Adding CC
-	click //span[@role="link"][contains(@data-tooltip, "Add Cc")]
+	//click //span[@role="link"][contains(@data-tooltip, "Add Cc")]
 	
-	type //textarea[@name="cc"] as  zengwei2020work@gmail.com
+	//type //textarea[@name="cc"] as  zengwei2020work@gmail.com
 	//type //textarea[@name="cc"] as  slscgbot@gmail.com	
 	// Subject
-	type //input[@name="subjectbox"] as Forwarded WOGAA widget email with cell row `j`
+	type //input[@name="subjectbox"] as Forwarded WOGAA widget email with cell row `j` from `filedate`
 
 	
 	dom_json = [currentDate,DateTime[i],ServiceName[i],TXNID[i],PageURL[i],BrowserVersion[i],OSDevice[i],Geographic[i],Rating[i],EmailAddress[i],Name[i],MessageTitle[i],MessageBody[i]]
@@ -81,10 +87,11 @@ for i from 0 to filelength-2
 	//put in the text and variables using dom_json
 	dom document.querySelector('div[aria-label="Message Body"]').innerHTML = "Dear SLS Helpdesk, <br> This is an email sent automatically at "+ dom_json[0] + " from WOGAA Sentiment Response Daily File. <br>-------------------------------------------------------------------------- <br>Date/Time: "+dom_json[1]+" <br>Service Name: 	"+dom_json[2]+"<br>TXN ID: "+dom_json[3]+" <br>Page URL: "+dom_json[4]+" <br>Browser Version: "+dom_json[5]+" <br>OS/Device: "+dom_json[6]+" <br>Geographic: "+dom_json[7]+" <br>Rating: "+dom_json[8]+" <br>Email Address: "+dom_json[9]+" <br>Name: "+dom_json[10]+" <br>Message Title:	"+dom_json[11]+" <br>Message Body: "+dom_json[12]+" <br>-------------------------------------------------------------------------- <br><br> Regards, <br>SLS MOE Team"
 
-	//wait 0.5
+	// try to put a number to wait cos internet could be slow.
+	wait 0.1
 
 	//Send Button
-	//click //div[@role="button"][contains(@data-tooltip, "Send")]
+	click //div[@role="button"][contains(@data-tooltip, "Send")]
 	
 	// Schedule tommorow morning
 	//click G-asx

@@ -2,7 +2,7 @@
 //tagui update in cmd to get the latest bug fix for mac csv width
 //Downloading and updating to latest version of TagUI (v6.110)
 //TagUI successfully updated at //Users/lookang/Desktop/tagui 
-
+// https://www.youtube.com/watch?v=NV9b-pOBggo
 // step 0: install Tagui from https://tagui.readthedocs.io/en/latest/setup.html 
 // step 0.5: Windows recommended https://github.com/kelaberetiv/TagUI/releases/download/v6.46.0/TagUI_Windows.exe 
 // step 1: download *.csv into the tagui folder example: /Users/lookang/Desktop/tagui/flows/wogaa or c:/rpa/tagui/flow/wogaa depending on Mac or Windows
@@ -78,12 +78,12 @@ for i from start to filelength-2
 	
 	// Recipient
 	//type //textarea[@name="to"] as  helpdesk@sls.ufinity.com
-	type //textarea[@name="to"] as  helpdesk@sls.ufinity.com
+	
 	// Adding CC
 	//click //span[@role="link"][contains(@data-tooltip, "Add Cc")]
 	
 	//type //textarea[@name="cc"] as  zengwei2020work@gmail.com
-	//type //textarea[@name="cc"] as  slscgbot@gmail.com	
+	type //textarea[@name="cc"] as  slscgbot@gmail.com	
 	// Subject
 	type //input[@name="subjectbox"] as Forwarded WOGAA widget email with cell row `j` from `filedate`
 

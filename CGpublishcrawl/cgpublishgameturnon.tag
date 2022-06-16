@@ -1,4 +1,5 @@
-
+// YouTube https://www.youtube.com/watch?v=UbXhsmZLXaY
+// GitHub  https://github.com/lookang/TagUI/blob/main/CGpublishcrawl/cgpublishgameturnon.tag
 //https://tagui.readthedocs.io/en/latest/reference.html
 
 

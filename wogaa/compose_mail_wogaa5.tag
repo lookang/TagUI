@@ -6,6 +6,7 @@
 // step 0: install Tagui from https://tagui.readthedocs.io/en/latest/setup.html 
 // step 0.5: Windows recommended https://github.com/kelaberetiv/TagUI/releases/download/v6.46.0/TagUI_Windows.exe 
 // step 1: download *.csv into the tagui folder example: /Users/lookang/Desktop/tagui/flows/wogaa or c:/rpa/tagui/flow/wogaa depending on Mac or Windows
+// step 1.5 if need chinese character support, use UTF-8 see https://weelookang.blogspot.com/2022/06/how-to-make-csv-files-sent-to-be-read.html to convert
 // step 2: navigate in cmd or terminal to the folder say cd /Users/lookang/Desktop/tagui/flows/wogaa/ or cd c:/rpa/tagui/flow/wogaa/
 // step 3: using code editor example VS code to edit the line on filename to the correct file
 // step 4: using cmd type: tagui compose_mail_wogaa5.tag
@@ -48,13 +49,18 @@ BrowserVersion = [`filename`.csv]singapore_student_learning_spac!E2:E`filelength
 OSDevice = [`filename`.csv]singapore_student_learning_spac!F2:F`filelength`
 Geographic = [`filename`.csv]singapore_student_learning_spac!G2:G`filelength`
 Rating = [`filename`.csv]singapore_student_learning_spac!H2:H`filelength`
-EmailAddress = [`filename`.csv]singapore_student_learning_spac!I2:I`filelength`  
+EmailAddress = [`filename`.csv]singapore_student_learning_spac!I2:I`filelength`
+echo  `EmailAddress`
 Name = [`filename`.csv]singapore_student_learning_spac!J2:J`filelength`
 MessageTitle = [`filename`.csv]singapore_student_learning_spac!K2:K`filelength`
 MessageBody = [`filename`.csv]singapore_student_learning_spac!L2:L`filelength`
 // M is blank
 //N is unused
 GotContent = [`filename`.csv]singapore_student_learning_spac!N2:N`filelength`
+
+//testing data is still in chinese
+pending = []
+dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent' ])` to publish_list.csv
 
 
 ////////////////////////////////////////////////////////
@@ -70,6 +76,9 @@ wait 3
 // if start = 24, the email row is 26
 start = 0
 for i from start to filelength-2
+	js pending.push([DateTime[i], ServiceName[i],TXNID[i],PageURL[i],BrowserVersion[i],OSDevice[i],Geographic[i], Rating[i],EmailAddress[i], Name[i],MessageTitle[i],GotContent[i]])
+	// write file line by line so if breaks, still got some runs data done.
+	write `csv_row(pending[pending.length - 1])` to publish_list.csv
 	j = i+2
 	js currentDate = new Date()
 	// Click 'Compose' button

@@ -6,22 +6,22 @@
 // step 0: install Tagui from https://tagui.readthedocs.io/en/latest/setup.html 
 // step 0.5: Windows recommended https://github.com/kelaberetiv/TagUI/releases/download/v6.46.0/TagUI_Windows.exe 
 // step 1: download *.csv into the tagui folder example: /Users/lookang/Desktop/tagui/flows/wogaa or c:/rpa/tagui/flow/wogaa depending on Mac or Windows
-// step 1.5 if need chinese character support, use UTF-8 see https://weelookang.blogspot.com/2022/06/how-to-make-csv-files-sent-to-be-read.html to convert
+// utf-8 support chinese character is automatically understood using javascript and load tagui
 // step 2: navigate in cmd or terminal to the folder say cd /Users/lookang/Desktop/tagui/flows/wogaa/ or cd c:/rpa/tagui/flow/wogaa/
 // step 3: using code editor example VS code to edit the line on filename to the correct file
-// step 4: using cmd type: tagui compose_mail_wogaa5.tag
+// step 4: using cmd type: tagui compose_mail_wogaa6csv.tag
 // code to run in cmd
 // normal speed
-// tagui compose_mail_wogaa5.tag
+// tagui compose_mail_wogaa5csv.tag
 //FINISH - automation finished - 1052.7s for 59 emails
 // 
 // prepration need to do once only to prepare the TagUI chrome browser with login and password
 // type in cmd: tagui live 
 // use the TagUi chrome browser to login and password to your gmail to send emails out using the RPA, this is invisible in the code and only the browser knows so it is safe.
 // now you can run step 4:
-// step 4b: tagui compose_mail_wogaa5.tag -turbo
+// step 4b: tagui compose_mail_wogaa6csv.tag -turbo
 //or experimental, super human speed
-// tagui compose_mail_wogaa5.tag -turbo
+// tagui compose_mail_wogaa5csv.tag -turbo
 //FINISH - automation finished - 159.5s for 59 emails
 
 // need to edit the filename manually
@@ -107,7 +107,7 @@ function CSVToArray(strData, strDelimiter){
 
 pending = CSVToArray(body);
 
-//declare an arrays
+//declare as arrays
 DateTime = [];
 ServiceName = [];
 TXNID = []
@@ -143,7 +143,7 @@ Geographic[k] = row[6]
 Rating[k] = row[7]
 EmailAddress[k] = row[8]
 console.log("EmailAddress = " +EmailAddress[k]);
-// EmailAddress = 瑞恩@gmail.com
+// EmailAddress = 瑞恩@xxxxx.com
 Name[k] = row[9]
 MessageTitle[k] = row[10]
 MessageBody[k] = row[11]

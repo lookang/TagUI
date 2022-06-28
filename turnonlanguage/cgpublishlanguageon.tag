@@ -1,5 +1,5 @@
-// YouTube https://www.youtube.com/watch?v=UbXhsmZLXaY
-// GitHub  https://github.com/lookang/TagUI/blob/main/CGpublishcrawl/cgpublishgameturnon.tag
+// YouTube https://www.youtube.com/watch?v=watgGAB7FTs
+// GitHub  https://github.com/lookang/TagUI/blob/main/turnonlanguage/cgpublishlanguageon.tag
 //https://tagui.readthedocs.io/en/latest/reference.html
 
 filename = "SLS_CG _2022_05Jun"

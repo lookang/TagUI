@@ -118,10 +118,10 @@ echo questions is `questions`
 //Enter in to SLS
 //visit URL
 https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
-
+//live
 //assume no need to extra login
-if present('button login bx--btn bx--btn--primary')
-	click .button.login
+if present('//button[@id="login-button"]')
+	click //button[@id='login-button']
 	wait 5
 	// this email is linked to your SLS alternative email for OTP, change this accordingly
 	// need to change in SLS the alternative email for the OTP

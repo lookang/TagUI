@@ -48,10 +48,10 @@ if present('cancel-2fa')
 wait 1
 if present('loginform')
 	// type username as MOE-00000H change
-	type username as aaa
+	type username as MOE-01245H
 	wait 3 // give time to type
 	click bx--text-input
-	type bx--text-input as aaa
+	type bx--text-input as yourpassword
 	click .button.login
 	wait 5
 	// this email is linked to your SLS alternative email for OTP, change this accordingly
@@ -91,6 +91,7 @@ wait 5 //to load the SLS page correctly first before next step
 ///////////////////////////////////
 
 https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
+echo line 94
 // WOG seems to be recgnise the browser as first time visit everytime
 // click the pop up away
 if present ('walkme-custom-balloon-content')
@@ -139,9 +140,9 @@ for i from 1 to (total-tableCnt*20)
 
 	//20220607 due to a new SLS aria-sort = "descending" instead of the old usual aria-sort = "ascending"
 	// need to click once first cos the default value is correct, but order is wrong (latest first)
-	click //span[normalize-space()='Date Submitted']
-	click //span[normalize-space()='Date Submitted']
-	click //span[normalize-space()='Date Submitted']
+	//click //span[normalize-space()='Date Submitted']
+	//click //span[normalize-space()='Date Submitted']
+	//click //span[normalize-space()='Date Submitted']
 
 
 	// trying to break out if total is not found 
@@ -155,6 +156,7 @@ for i from 1 to (total-tableCnt*20)
 		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[5]/div/span[1] to school
 		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[6]/div/span[1] to datesubmitted
 		read //*[@id="pending"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[6]/div/span[2] to author
+	
 	else
 		break
 	
@@ -176,13 +178,17 @@ for i from 1 to (total-tableCnt*20)
 	// lessons marked as similar will not have an accessible url in SLS
 	if (similar == 0)
 		{
+		wait 2
+		echo trying to click OPEN
 		click //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div//a
+		echo managed to click on the link OPEN
 		wait 3
 	
 		js link = url()
 		echo `url()`
 		echo `link`
 		if (link contains 'home') or  (link equals to  'https://vle.learning.moe.edu.sg/mrv/community-gallery/admin')
+			echo inside if to check home
 			// click again
 			// goes back to previous page
 			dom window.history.back()
@@ -192,8 +198,11 @@ for i from 1 to (total-tableCnt*20)
 			click //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div//a
 			js link = url()
 			echo `link` capture second time due to SLS pop up ratings123456
-		wait 1
+		// need to wait onger due to WOGAA popup on the bottom left
+		wait 3
+		
 		https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
+		echo line 209
 
 		for j from 1 to tableCnt
 			click //button[@aria-label="Next page"]

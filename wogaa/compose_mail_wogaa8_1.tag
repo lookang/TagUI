@@ -24,6 +24,14 @@
 // tagui compose_mail_wogaa5csv.tag -turbo
 //FINISH - automation finished - 159.5s for 59 emails
 
+
+
+// erase file
+//var fs = require('fs');
+//fs.remove('/Users/lookang/Desktop/tagui/flows/wogaa/singapore_student_learning_space_(sls)-daily-24_07_2022.csv');
+
+
+
 //using computer vision engine, must be on primary monitor display
 // make sure all java icon on bottom right corener are closed, due to active engine not closed
 // about_blank_using_tagui_snap.png 
@@ -33,38 +41,40 @@ dclick about_blank_using_tagui_snap.png
 keyboard [clear] file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-24-Jul-2022-singapore-student-learning-space-sls.html [enter]
 
 filename = "singapore_student_learning_space_(sls)-daily-24_07_2022"
-// erase file
-dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent' ])` to `filename`.csv
+
+
 //ask paste file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-24-Jul-2022-singapore-student-learning-space-sls.html into the browser yourself
 // file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-24-Jul-2022-singapore-student-learning-space-sls.html
 click Export to CSV 
 click All Services
 // file created
 
-load `filename`.csv to body1
-echo `body1`
+// need time for file to be found
+wait 3
+load `filename`.csv to body_1
+echo `body_1`
 //create name of different _1 for debugging
 dump  `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent' ])` to `filename`_1.csv
-write `body1` to `filename`_1.csv
+write `body_1` to `filename`_1.csv
 
 click Ratings 4 & below
 click /html/body/div/div[2]/div/div[2]/div/div[1]/div[2]/div/div/span/button
 click /html/body/div/div[2]/div/div[2]/div/div[1]/div[2]/div/div[2]/div/div/a[1]
 // second file created with same name
 // default name of file after export is 
-load `filename`.csv to body2
-echo `body2`
+load `filename`.csv to body_2
+echo `body_2`
 // create blank file
 dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent' ])` to `filename`_2.csv
-write `body2` to `filename`_2.csv
+write `body_2` to `filename`_2.csv
 //live
 
 //delete exisiting data
 dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent' ])` to `filename`.csv
 //combine
 //write `body1` to singapore_student_learning_space_(sls)-daily-24_07_2022.csv
-write `body1` to `filename`.csv
-write `body2` to `filename`.csv
+write `body_1` to `filename`.csv
+write `body_2` to `filename`.csv
 load `filename`.csv to bodyfull
 echo `bodyfull`
 
@@ -75,8 +85,14 @@ column_A = [`filename`.csv]singapore_student_learning_spac!A:A
 //echo `column_A`
 filelength = column_A.length
 
+column_A_1 = [`filename`_1.csv]singapore_student_learning_spac!A:A
+//echo `column_A`
+filelength_1 = column_A_1.length
 
-
+column_A_2 = [`filename`_2.csv]singapore_student_learning_spac!A:A
+//echo `column_A`
+filelength_2 = column_A_2.length
+echo filelength_2 = `filelength_2`
 
 //-------------------------------------------
 js begin
@@ -152,11 +168,24 @@ function CSVToArray(strData, strDelimiter){
 }
 
 pendingfull = CSVToArray(bodyfull);
+pending_1 = CSVToArray(body_1);
+pending_2 = CSVToArray(body_2);
 //declare as arrays
 MessageTitlefull =[]
 MessageBodyfull =[]
 EmailAddressfull =[]
 Namefull = []
+
+MessageTitle_1 =[]
+MessageBody_1 =[]
+EmailAddress_1 =[]
+Name_1 = []
+
+MessageTitle_2 =[]
+MessageBody_2 =[]
+EmailAddress_2 =[]
+Name_2 = []
+
 
 var start =1 
 for(var k = start; k < pendingfull.length; k++){
@@ -164,6 +193,7 @@ for(var k = start; k < pendingfull.length; k++){
 ////console.log(pending[1]);
 //console.log(pending[2]);
 row = pendingfull[k];
+
 //console.log("row = "+ row);
 //DateTime[k] = row[0] 
 //console.log("DateTime = " +DateTime[k]);
@@ -178,7 +208,7 @@ row = pendingfull[k];
 // note that 202206 script is in this order email,name,title, body
 // 20220724 order is body,title,name, email reverse, but it should not matter in email sent
 EmailAddressfull[k] = row[8]
-console.log("EmailAddress = " +EmailAddressfull[k]);
+//console.log("EmailAddress = " +EmailAddressfull[k]);
 // EmailAddress = 瑞恩@xxxxx.com
 Namefull[k] = row[9]
 MessageTitlefull[k] = row[10]
@@ -188,6 +218,67 @@ MessageBodyfull[k] = row[11]
 //GotContent[k] = row [14]
 }
 
+var start_1 =1 
+for(var k = start_1; k < pending_1.length; k++){
+//for(var k = start_from_sn; k < 2; k++){
+////console.log(pending[1]);
+//console.log(pending[2]);
+row_1 = pending_1[k];
+
+//console.log("row = "+ row);
+//DateTime[k] = row[0] 
+//console.log("DateTime = " +DateTime[k]);
+// DateTime = 13/6/22 21:26
+//ServiceName[k] = row[1]
+//TXNID[k] = row[2]
+//PageURL[k] = row[3]
+////BrowserVersion[k] = row[4]
+//OSDevice[k] = row[5]
+//Geographic[k] = row[6]
+//Rating[k] = row[7]
+// note that 202206 script is in this order email,name,title, body
+// 20220724 order is body,title,name, email reverse, but it should not matter in email sent
+EmailAddress_1[k] = row_1[8]
+//console.log("EmailAddress = " +EmailAddress_1[k]);
+// EmailAddress = 瑞恩@xxxxx.com
+Name_1[k] = row_1[9]
+MessageTitle_1[k] = row_1[10]
+MessageBody_1[k] = row_1[11]
+// M is blank
+//N is unused
+//GotContent[k] = row [14]
+}
+
+var start_2 =1 
+for(var k = start_2; k < pending_2.length; k++){
+//for(var k = start_from_sn; k < 2; k++){
+////console.log(pending[1]);
+//console.log(pending[2]);
+row_2 = pending_2[k];
+
+//console.log("row = "+ row);
+//DateTime[k] = row[0] 
+//console.log("DateTime = " +DateTime[k]);
+// DateTime = 13/6/22 21:26
+//ServiceName[k] = row[1]
+//TXNID[k] = row[2]
+//PageURL[k] = row[3]
+////BrowserVersion[k] = row[4]
+//OSDevice[k] = row[5]
+//Geographic[k] = row[6]
+//Rating[k] = row[7]
+// note that 202206 script is in this order email,name,title, body
+// 20220724 order is body,title,name, email reverse, but it should not matter in email sent
+EmailAddress_2[k] = row_2[8]
+//console.log("EmailAddress = " +EmailAddress_2[k]);
+// EmailAddress = 瑞恩@xxxxx.com
+Name_2[k] = row_2[9]
+MessageTitle_2[k] = row_2[10]
+MessageBody_2[k] = row_2[11]
+// M is blank
+//N is unused
+//GotContent[k] = row [14]
+}
 
 
 
@@ -195,12 +286,7 @@ MessageBodyfull[k] = row[11]
 js finish
 //-------------------------------------------
 
-
-
-
-
-
-
+// to create separate file for ease of implementing simple loops with data
 dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent' ])` to  `filename`_filtered.csv
 start = 1
 for i from start to filelength-1
@@ -209,3 +295,26 @@ for i from start to filelength-1
     else 
         write `csv_row(pendingfull[i])` to `filename`_filtered.csv
         echo `pendingfull[i]`
+
+// to create separate file_1 for ease of implementing simple loops with data
+dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent'])` to  `filename`_1_filtered.csv
+start = 1
+for i_1 from start to (filelength_1-2)
+    if EmailAddress_1[i_1] equals to "" or Name_1[i_1] equals to "" or MessageTitle_1[i_1] equals to "" or MessageBody_1[i_1] equals to ""
+        echo skip `i_1`
+    else 
+        write `csv_row(pending_1[i_1])` to `filename`_1_filtered.csv
+        echo `pending_1[i_1]`
+
+
+
+// to create separate file_2 in case other people need the old file data
+dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','GotContent','MessageTitle' ,'Name','EmailAddress' ])` to  `filename`_2_filtered.csv
+start = 1
+echo filelength_2 = `filelength_2`
+for i_2 from start to (filelength_2-2)
+    if EmailAddress_2[i_2] equals to "" or Name_2[i_2] equals to "" or MessageTitle_2[i_2] equals to "" or MessageBody_2[i_2] equals to ""
+        echo skip `i_2`
+    else 
+        write `csv_row(pending_2[i_2])` to `filename`_2_filtered.csv
+        echo `pending_2[i_2]`

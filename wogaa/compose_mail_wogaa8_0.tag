@@ -1,3 +1,8 @@
+//youtube https://www.youtube.com/watch?v=IbwrykGGSlA
+//GitHub https://github.com/lookang/TagUI/blob/main/wogaa/compose_mail_wogaa8_0.tag
+
+
+
 // Open gmail (assumes that user has already logged in previously) 
 
 https://mail.google.com/mail/u/0/#inbox

@@ -286,7 +286,7 @@ MessageBody_2[k] = row_2[11]
 js finish
 //-------------------------------------------
 
-// to create separate file for ease of implementing simple loops with data
+//  with data in case other people need the old file data
 dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent' ])` to  `filename`_filtered.csv
 start = 1
 for i from start to filelength-1
@@ -308,7 +308,7 @@ for i_1 from start to (filelength_1-2)
 
 
 
-// to create separate file_2 in case other people need the old file data
+// to create separate file_2  for ease of implementing simple loops with data
 dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','GotContent','MessageTitle' ,'Name','EmailAddress' ])` to  `filename`_2_filtered.csv
 start = 1
 echo filelength_2 = `filelength_2`

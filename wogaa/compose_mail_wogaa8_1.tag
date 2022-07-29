@@ -1,3 +1,7 @@
+YouTube https://www.youtube.com/watch?v=wgPiQcj-DvY
+GitHub https://github.com/lookang/TagUI/blob/main/wogaa/compose_mail_wogaa8_1.tag
+
+
 // type 
 //tagui update in cmd to get the latest bug fix for mac csv width
 //Downloading and updating to latest version of TagUI (v6.110)
@@ -30,7 +34,42 @@
 //var fs = require('fs');
 //fs.remove('/Users/lookang/Desktop/tagui/flows/wogaa/singapore_student_learning_space_(sls)-daily-24_07_2022.csv');
 
+ask What is the date to be processed ( in DD-MM-YYYY for example 27-07-2022)
+//ask What
+echo `ask_result`
+//https://www.w3schools.com/jsref/jsref_replace.asp
+js temp_underscore = ask_result.replace(/-/g, "_");
+js temp = "singapore_student_learning_space_(sls)-daily-"+ask_result
+echo temp = `temp`
+// may need to edit manually
+//filename = "singapore_student_learning_space_(sls)-daily-27_07_2022"
+filename ="singapore_student_learning_space_(sls)-daily-"+temp_underscore
+echo filename = `filename`
 
+
+//https://www.w3schools.com/jsref/jsref_substring.asp
+js temp_month = ask_result.substring(3, 5);
+echo temp_month = `temp_month`
+
+js begin
+//https://stackoverflow.com/questions/1643320/get-month-name-from-date
+monthNames = ["AAA","Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+];
+js finish
+
+js temp_month_words = monthNames[parseInt(temp_month)]
+echo temp_month_words = `temp_month_words`
+
+// reconstruct back
+js fullmonth = ask_result.substring(0,3) + temp_month_words + ask_result.substring(5)
+echo fullmonth = `fullmonth`
+
+//ask What is the date to be processed? ( in DD-Mmm-YYYY , for example 27-Jul-2022)
+//echo `ask_result`
+//js temp = "file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-"+ask_result+"-singapore-student-learning-space-sls.html"
+//keyboard `ask_result`
+js temp = "file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-"+fullmonth+"-singapore-student-learning-space-sls.html"
 
 //using computer vision engine, must be on primary monitor display
 // make sure all java icon on bottom right corener are closed, due to active engine not closed
@@ -38,10 +77,14 @@
 // snap (144,71)-(221,91) to about_blank_using_tagui_snap.png
 dclick about_blank_using_tagui_snap.png
 //live
-keyboard [clear] file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-24-Jul-2022-singapore-student-learning-space-sls.html [enter]
+//may need to edit manually if wrongly asked the date
+//keyboard [clear] file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-27-Jul-2022-singapore-student-learning-space-sls.html [enter]
+keyboard [clear] `temp` [enter]
 
-filename = "singapore_student_learning_space_(sls)-daily-24_07_2022"
 
+// note something there could be errors in data, need to maually go to excel and clean the data up to remove 
+//skip 392 ERROR - undefined is not an object (evaluating 'cell_data.toString')
+// the data is üëçüëçüëçüëçüëçüëç
 
 //ask paste file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-24-Jul-2022-singapore-student-learning-space-sls.html into the browser yourself
 // file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-24-Jul-2022-singapore-student-learning-space-sls.html
@@ -61,7 +104,8 @@ click Ratings 4 & below
 click /html/body/div/div[2]/div/div[2]/div/div[1]/div[2]/div/div/span/button
 click /html/body/div/div[2]/div/div[2]/div/div[1]/div[2]/div/div[2]/div/div/a[1]
 // second file created with same name
-// default name of file after export is 
+// default name of file after export is
+wait 3
 load `filename`.csv to body_2
 echo `body_2`
 // create blank file
@@ -84,7 +128,7 @@ filedate = filename.substring(45, 65)
 column_A = [`filename`.csv]singapore_student_learning_spac!A:A
 //echo `column_A`
 filelength = column_A.length
-
+echo filelength = `filelength`
 column_A_1 = [`filename`_1.csv]singapore_student_learning_spac!A:A
 //echo `column_A`
 filelength_1 = column_A_1.length

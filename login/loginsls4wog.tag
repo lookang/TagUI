@@ -48,10 +48,10 @@ if present('cancel-2fa')
 wait 1
 if present('loginform')
 	// type username as MOE-00000H change
-	type username as MOE-01245H
+	type username as xxx
 	wait 3 // give time to type
 	click bx--text-input
-	type bx--text-input as yourpassword
+	type bx--text-input as xxx
 	click .button.login
 	wait 5
 	// this email is linked to your SLS alternative email for OTP, change this accordingly
@@ -67,7 +67,11 @@ if present('loginform')
 	// click the first email by notifications@sls.ufinity.com in the table
 	click //*[@email="notifications@sls.ufinity.com"]/ancestor-or-self::tr
 	//code = ""
-	read //div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
+	//live
+	//otp xpath changed on 20220728
+	//read //div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
+	// new otp xpath
+	read /html/body/div[7]/div[3]/div/div[2]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
 	echo `code`
 	wait 5
 

@@ -1,7 +1,3 @@
-//YouTube https://www.youtube.com/watch?v=wgPiQcj-DvY
-//GitHub https://github.com/lookang/TagUI/blob/main/wogaa/compose_mail_wogaa8_1.tag
-
-
 // type 
 //tagui update in cmd to get the latest bug fix for mac csv width
 //Downloading and updating to latest version of TagUI (v6.110)
@@ -29,102 +25,37 @@
 //FINISH - automation finished - 159.5s for 59 emails
 
 
+// this file is created to handle dirty data such as üëçüëçüëçüëçüëçüëç
+// found in file _2 27_07_2022 file cell J33 üëçüëçüëçüëçüëçüëç
+//skip 25
+// ERROR - undefined is not an object (evaluating 'cell_data.toString')
+//27/7/22 20:31	Singapore Student Learning Space (SLS)	null	https://vle.learning.moe.edu.sg/mrv/assignment/attempt/5f71e4a1-6fd6-4226-a811-a61d3364332e/page/43674855	Chrome 103	Unknown ??	Singapore	2	NUHHHNUHHHHNUHHHHNUHHHHNUHHHNUHHHHHNUHHHHHNUHHHHHNUHHHHHNUHHHHNIHHHNUHHHNUHHHHNUHHHHNUHHHHNUHHHNUHHHHHNUHHHHHNUHHHHHNUHHHHHNUHHHHNIHHHNUHHHNUHHHHNUHHHHNUHHHHNUHHHNUHHHHHNUHHHHHNUHHHHHNUHHHHHNUHHHHNIHHHNUHHHNUHHHHNUHHHHNUHHHHNUHHHNUHHHHHNUHHHHHNUHHHHHNUHHH	üëçüëçüëçüëçüëçüëç	TOTOY TOTOY TOTOY TOTOY	armiedt@yahoo.com
+// after data clean up run this file without the download and processing into _1 and _2
 
 // erase file
 //var fs = require('fs');
 //fs.remove('/Users/lookang/Desktop/tagui/flows/wogaa/singapore_student_learning_space_(sls)-daily-24_07_2022.csv');
 
-ask What is the date to be processed ( in DD-MM-YYYY for example 27-07-2022)
+ask What is the date to be processed ( in DD_MM_YYYY for example 27_07_2022)
 //ask What
 echo `ask_result`
-//https://www.w3schools.com/jsref/jsref_replace.asp
-js temp_underscore = ask_result.replace(/-/g, "_");
 js temp = "singapore_student_learning_space_(sls)-daily-"+ask_result
 echo temp = `temp`
 // may need to edit manually
 //filename = "singapore_student_learning_space_(sls)-daily-27_07_2022"
-filename ="singapore_student_learning_space_(sls)-daily-"+temp_underscore
-echo filename = `filename`
+filename = temp
 
 
-//https://www.w3schools.com/jsref/jsref_substring.asp
-js temp_month = ask_result.substring(3, 5);
-echo temp_month = `temp_month`
-
-js begin
-//https://stackoverflow.com/questions/1643320/get-month-name-from-date
-monthNames = ["AAA","Jan", "Feb", "Mar", "Apr", "May", "Jun",
-  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-];
-js finish
-
-js temp_month_words = monthNames[parseInt(temp_month)]
-echo temp_month_words = `temp_month_words`
-
-// reconstruct back
-js fullmonth = ask_result.substring(0,3) + temp_month_words + ask_result.substring(5)
-echo fullmonth = `fullmonth`
-
-//ask What is the date to be processed? ( in DD-Mmm-YYYY , for example 27-Jul-2022)
-//echo `ask_result`
-//js temp = "file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-"+ask_result+"-singapore-student-learning-space-sls.html"
-//keyboard `ask_result`
-js temp = "file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-"+fullmonth+"-singapore-student-learning-space-sls.html"
-
-//ask type this in the prompt `temp`
-//echo `ask_result`
-//using computer vision engine, must be on primary monitor display
-// make sure all java icon on bottom right corener are closed, due to active engine not closed
-// about_blank_using_tagui_snap.png 
-// snap (144,71)-(221,91) to about_blank_using_tagui_snap.png
-//dclick about_blank_using_tagui_snap.png
-//live
-//may need to edit manually if wrongly asked the date
-//keyboard [clear] file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-27-Jul-2022-singapore-student-learning-space-sls.html [enter]
-
-//keyboard [clear] `temp` [enter]
-live
-
-
-// note something there could be errors in data, need to maually go to excel and clean the data up to remove 
-//skip 392 ERROR - undefined is not an object (evaluating 'cell_data.toString')
-// the data is üëçüëçüëçüëçüëçüëç
-
-//ask paste file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-24-Jul-2022-singapore-student-learning-space-sls.html into the browser yourself
-// file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-24-Jul-2022-singapore-student-learning-space-sls.html
-click Export to CSV 
-click All Services
-// file created
-
-// need time for file to be found
+//assume files are there
+// to load back the body.....
 wait 3
-load `filename`.csv to body_1
-echo `body_1`
-//create name of different _1 for debugging
-dump  `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent' ])` to `filename`_1.csv
-write `body_1` to `filename`_1.csv
-
-click Ratings 4 & below
-click /html/body/div/div[2]/div/div[2]/div/div[1]/div[2]/div/div/span/button
-click /html/body/div/div[2]/div/div[2]/div/div[1]/div[2]/div/div[2]/div/div/a[1]
-// second file created with same name
-// default name of file after export is
-wait 3
-load `filename`.csv to body_2
-echo `body_2`
-// create blank file
-dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent' ])` to `filename`_2.csv
-write `body_2` to `filename`_2.csv
-//live
-
-//delete exisiting data
-dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent' ])` to `filename`.csv
-//combine
-//write `body1` to singapore_student_learning_space_(sls)-daily-24_07_2022.csv
-write `body_1` to `filename`.csv
-write `body_2` to `filename`.csv
 load `filename`.csv to bodyfull
 echo `bodyfull`
+load `filename`_1.csv to body_1
+echo `body_1`
+load `filename`_2.csv to body_2
+echo `body_2`
+
 
 
 

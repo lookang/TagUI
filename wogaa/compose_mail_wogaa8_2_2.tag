@@ -25,7 +25,7 @@
 //FINISH - automation finished - 159.5s for 59 emails
 
 // need to edit the filename manually
-filename = "singapore_student_learning_space_(sls)-daily-24_07_2022_2_filtered"
+filename = "singapore_student_learning_space_(sls)-daily-01_08_2022_2_filtered"
 //filename = "singapore_student_learning_space_(sls)-daily-22_07_2022_filtered"
 filedate = filename.substring(45, 68)
 column_A = [`filename`.csv]singapore_student_learning_spac!A:A
@@ -192,7 +192,7 @@ for i from start to filelength-1
 	// 20220725 google gmail change their remove their @name"to" so i use @id=':ur'
 	//type //input[@id=':ur'] as  helpdesk@sls.ufinity.com;
 	//live
-	type //input[@role='combobox'] as slscgbot@gmail.com
+	type //input[@role='combobox'] as helpdesk@sls.ufinity.com;
 	//type //textarea[@name="to"] as zengwei2020work@gmail.com;
 
 	// Adding CC
@@ -202,7 +202,7 @@ for i from start to filelength-1
 	type (//input[@role='combobox'])[2] as zengwei2020work@gmail.com
 	//type //textarea[@name="cc"] as  slscgbot@gmail.com
 	// Subject
-	type //input[@name="subjectbox"] as Forwarded WOGAA widget email `i` with rating lesser than 4
+	type //input[@name="subjectbox"] as Forwarded WOGAA widget email `i` with rating lesser than 4 for `filedate`
 
 	dom_json = [currentDate,DateTime[i],ServiceName[i],TXNID[i],PageURL[i],BrowserVersion[i],OSDevice[i],Geographic[i],Rating[i],EmailAddress[i],Name[i],MessageTitle[i],MessageBody[i]]
 	//control the formatting

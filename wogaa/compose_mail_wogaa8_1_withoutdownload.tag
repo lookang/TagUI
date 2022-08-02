@@ -37,14 +37,17 @@
 //fs.remove('/Users/lookang/Desktop/tagui/flows/wogaa/singapore_student_learning_space_(sls)-daily-24_07_2022.csv');
 
 ask What is the date to be processed ( in DD_MM_YYYY for example 27_07_2022)
-//ask What
-echo `ask_result`
-js temp = "singapore_student_learning_space_(sls)-daily-"+ask_result
+//https://www.w3schools.com/jsref/jsref_replace.asp
+js temp_underscore = ask_result.replace(/-/g, "_");
+js temp = "singapore_student_learning_space_(sls)-daily-"+temp_underscore
 echo temp = `temp`
+echo `ask_result`
+//js temp = "singapore_student_learning_space_(sls)-daily-"+ask_result
+//echo temp = `temp`
 // may need to edit manually
 //filename = "singapore_student_learning_space_(sls)-daily-27_07_2022"
-filename = temp
-
+js filename = temp
+echo filename = `filename`
 
 //assume files are there
 // to load back the body.....
@@ -267,7 +270,7 @@ js finish
 
 //  with data in case other people need the old file data
 dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent' ])` to  `filename`_filtered.csv
-start = 1
+start = 394
 for i from start to filelength-1
     if EmailAddressfull[i] equals to "" or Namefull[i] equals to "" or MessageTitlefull[i] equals to "" or MessageBodyfull[i] equals to ""
         echo skip `i`

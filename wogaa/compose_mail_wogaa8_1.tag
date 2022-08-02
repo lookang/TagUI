@@ -69,7 +69,9 @@ echo fullmonth = `fullmonth`
 //echo `ask_result`
 //js temp = "file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-"+ask_result+"-singapore-student-learning-space-sls.html"
 //keyboard `ask_result`
-js temp = "file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-"+fullmonth+"-singapore-student-learning-space-sls.html"
+//js temp = "file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-"+fullmonth+"-singapore-student-learning-space-sls.html"
+// assume windows and c:/rpa is where tagui is installed
+js temp =  "file:///C:/rpa/tagui/flows/wogaa/daily-sentiments-report-"+fullmonth+"-singapore-student-learning-space-sls.html"
 
 //ask type this in the prompt `temp`
 //echo `ask_result`
@@ -78,12 +80,15 @@ js temp = "file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-repo
 // about_blank_using_tagui_snap.png 
 // snap (144,71)-(221,91) to about_blank_using_tagui_snap.png
 //dclick about_blank_using_tagui_snap.png
+
+// assume windows
+dclick about_window.png
 //live
 //may need to edit manually if wrongly asked the date
 //keyboard [clear] file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-27-Jul-2022-singapore-student-learning-space-sls.html [enter]
 
-//keyboard [clear] `temp` [enter]
-live
+keyboard [clear] `temp` [enter]
+//live
 
 
 // note something there could be errors in data, need to maually go to excel and clean the data up to remove 
@@ -337,7 +342,7 @@ js finish
 //  with data in case other people need the old file data
 dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent' ])` to  `filename`_filtered.csv
 start = 1
-for i from start to filelength-1
+for i from start to filelength-2
     if EmailAddressfull[i] equals to "" or Namefull[i] equals to "" or MessageTitlefull[i] equals to "" or MessageBodyfull[i] equals to ""
         echo skip `i`
     else 

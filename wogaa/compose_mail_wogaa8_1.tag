@@ -84,18 +84,20 @@ echo fullmonth = `fullmonth`
 // about_blank_using_tagui_snap.png 
 // snap (144,71)-(221,91) to about_blank_using_tagui_snap.png
 
-
-home_dir = get_env('HOME')
-if home_dir contains "/Users/"
-	echo `home_dir` assume Users is unique to Mac and not Windows
+os = require('system').os.name
+echo os = `os`
+//live
+//home_dir = get_env('HOME')
+//if home_dir contains "/Users/"
+if os contains "mac"
+	//echo `home_dir` assume Users is unique to Mac and not Windows
 	echo recent Chrome version updated to Version 104.0.5112.79 (Official Build) (x86_64) cause a need to re snap the a.png
 	dclick a.png
 	js temp = "file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-"+fullmonth+"-singapore-student-learning-space-sls.html"
 else
-	echo assume Windows as opposite of Mac without Users
+	echo assume Windows as would not contains mac text
 	dclick about_window.png
 	js temp =  "file:///C:/rpa/tagui/flows/wogaa/daily-sentiments-report-"+fullmonth+"-singapore-student-learning-space-sls.html"
-
 
 
 

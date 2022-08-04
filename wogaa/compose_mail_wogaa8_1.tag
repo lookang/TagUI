@@ -28,28 +28,33 @@
 // tagui compose_mail_wogaa5csv.tag -turbo
 //FINISH - automation finished - 159.5s for 59 emails
 
-
+//live
 
 // erase file
 //var fs = require('fs');
 //fs.remove('/Users/lookang/Desktop/tagui/flows/wogaa/singapore_student_learning_space_(sls)-daily-24_07_2022.csv');
 
-ask What is the date to be processed ( in DD-MM-YYYY for example 27-07-2022)
+ask What is the date to be processed ( in DD_MM_YYYY for example 27_07_2022)
 //ask What
 echo `ask_result`
 //https://www.w3schools.com/jsref/jsref_replace.asp
+// built in extra features to autocorrect to _
 js temp_underscore = ask_result.replace(/-/g, "_");
-js temp = "singapore_student_learning_space_(sls)-daily-"+ask_result
+//js temp = "singapore_student_learning_space_(sls)-daily-"+ask_result
+js temp = "singapore_student_learning_space_(sls)-daily-"+temp_underscore
 echo temp = `temp`
+//expect temp = singapore_student_learning_space_(sls)-daily-02-08-2022
 // may need to edit manually
 //filename = "singapore_student_learning_space_(sls)-daily-27_07_2022"
 filename ="singapore_student_learning_space_(sls)-daily-"+temp_underscore
 echo filename = `filename`
-
+// expect filename = singapore_student_learning_space_(sls)-daily-02-08-2022
 
 //https://www.w3schools.com/jsref/jsref_substring.asp
 js temp_month = ask_result.substring(3, 5);
+
 echo temp_month = `temp_month`
+// expect temp_month = 08
 
 js begin
 //https://stackoverflow.com/questions/1643320/get-month-name-from-date
@@ -60,9 +65,10 @@ js finish
 
 js temp_month_words = monthNames[parseInt(temp_month)]
 echo temp_month_words = `temp_month_words`
+// expect temp_month_words = Aug
 
 // reconstruct back
-js fullmonth = ask_result.substring(0,3) + temp_month_words + ask_result.substring(5)
+js fullmonth = ask_result.substring(0,2)+"-" + temp_month_words +"-" +ask_result.substring(6)
 echo fullmonth = `fullmonth`
 
 //ask What is the date to be processed? ( in DD-Mmm-YYYY , for example 27-Jul-2022)
@@ -70,8 +76,6 @@ echo fullmonth = `fullmonth`
 //js temp = "file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-"+ask_result+"-singapore-student-learning-space-sls.html"
 //keyboard `ask_result`
 //js temp = "file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-"+fullmonth+"-singapore-student-learning-space-sls.html"
-// assume windows and c:/rpa is where tagui is installed
-js temp =  "file:///C:/rpa/tagui/flows/wogaa/daily-sentiments-report-"+fullmonth+"-singapore-student-learning-space-sls.html"
 
 //ask type this in the prompt `temp`
 //echo `ask_result`
@@ -79,10 +83,22 @@ js temp =  "file:///C:/rpa/tagui/flows/wogaa/daily-sentiments-report-"+fullmonth
 // make sure all java icon on bottom right corener are closed, due to active engine not closed
 // about_blank_using_tagui_snap.png 
 // snap (144,71)-(221,91) to about_blank_using_tagui_snap.png
-//dclick about_blank_using_tagui_snap.png
 
-// assume windows
-dclick about_window.png
+
+home_dir = get_env('HOME')
+if home_dir contains "/Users/"
+	echo `home_dir` assume Users is unique to Mac and not Windows
+	echo recent Chrome version updated to Version 104.0.5112.79 (Official Build) (x86_64) cause a need to re snap the a.png
+	dclick a.png
+	js temp = "file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-"+fullmonth+"-singapore-student-learning-space-sls.html"
+else
+	echo assume Windows as opposite of Mac without Users
+	dclick about_window.png
+	js temp =  "file:///C:/rpa/tagui/flows/wogaa/daily-sentiments-report-"+fullmonth+"-singapore-student-learning-space-sls.html"
+
+
+
+
 //live
 //may need to edit manually if wrongly asked the date
 //keyboard [clear] file:///Users/lookang/Desktop/tagui/flows/wogaa/daily-sentiments-report-27-Jul-2022-singapore-student-learning-space-sls.html [enter]
@@ -342,22 +358,22 @@ js finish
 //  with data in case other people need the old file data
 dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent' ])` to  `filename`_filtered.csv
 start = 1
-for i from start to filelength-2
-    if EmailAddressfull[i] equals to "" or Namefull[i] equals to "" or MessageTitlefull[i] equals to "" or MessageBodyfull[i] equals to ""
-        echo skip `i`
-    else 
-        write `csv_row(pendingfull[i])` to `filename`_filtered.csv
-        echo `pendingfull[i]`
+for i from start to filelength-1
+	if EmailAddressfull[i] equals to "" or Namefull[i] equals to "" or MessageTitlefull[i] equals to "" or MessageBodyfull[i] equals to ""
+		echo skip `i`
+	else 
+		write `csv_row(pendingfull[i])` to `filename`_filtered.csv
+		echo `pendingfull[i]`
 
 // to create separate file_1 for ease of implementing simple loops with data
 dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent'])` to  `filename`_1_filtered.csv
 start = 1
 for i_1 from start to (filelength_1-2)
-    if EmailAddress_1[i_1] equals to "" or Name_1[i_1] equals to "" or MessageTitle_1[i_1] equals to "" or MessageBody_1[i_1] equals to ""
-        echo skip `i_1`
-    else 
-        write `csv_row(pending_1[i_1])` to `filename`_1_filtered.csv
-        echo `pending_1[i_1]`
+	if EmailAddress_1[i_1] equals to "" or Name_1[i_1] equals to "" or MessageTitle_1[i_1] equals to "" or MessageBody_1[i_1] equals to ""
+		echo skip `i_1`
+	else 
+		write `csv_row(pending_1[i_1])` to `filename`_1_filtered.csv
+		echo `pending_1[i_1]`
 
 
 
@@ -366,8 +382,8 @@ dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice
 start = 1
 echo filelength_2 = `filelength_2`
 for i_2 from start to (filelength_2-2)
-    if EmailAddress_2[i_2] equals to "" or Name_2[i_2] equals to "" or MessageTitle_2[i_2] equals to "" or MessageBody_2[i_2] equals to ""
-        echo skip `i_2`
-    else 
-        write `csv_row(pending_2[i_2])` to `filename`_2_filtered.csv
-        echo `pending_2[i_2]`
+	if EmailAddress_2[i_2] equals to "" or Name_2[i_2] equals to "" or MessageTitle_2[i_2] equals to "" or MessageBody_2[i_2] equals to ""
+		echo skip `i_2`
+	else 
+		write `csv_row(pending_2[i_2])` to `filename`_2_filtered.csv
+		echo `pending_2[i_2]`

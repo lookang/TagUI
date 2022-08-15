@@ -360,9 +360,18 @@ js finish
 //  with data in case other people need the old file data
 dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent' ])` to  `filename`_filtered.csv
 start = 1
-for i from start to filelength-1
-	if EmailAddressfull[i] equals to "" or Namefull[i] equals to "" or MessageTitlefull[i] equals to "" or MessageBodyfull[i] equals to ""
-		echo skip `i`
+echo filelength = `filelength`
+for i from start to (filelength-2)
+	j = i+2
+	//ERROR - undefined is not an object (evaluating 'cell_data.toString')
+	//echo EmailAddressfull[i] = `EmailAddressfull[i]`
+	//echo Namefull[i] = `Namefull[i]`
+	//echo MessageTitlefull[i] = `MessageTitlefull[i]`
+	//echo MessageBodyfull[i] = `MessageBodyfull[i]`
+	if (EmailAddressfull[i] == undefined)
+		echo skip because data is undefined EmailAddressfull[i] = `EmailAddressfull[i]`
+	else if (EmailAddressfull[i] equals to "") or (Namefull[i] equals to "") or (MessageTitlefull[i] equals to "") or (MessageBodyfull[i] equals to "")
+		echo skip `i`, row = `j`
 	else 
 		write `csv_row(pendingfull[i])` to `filename`_filtered.csv
 		echo `pendingfull[i]`
@@ -371,7 +380,9 @@ for i from start to filelength-1
 dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent'])` to  `filename`_1_filtered.csv
 start = 1
 for i_1 from start to (filelength_1-2)
-	if EmailAddress_1[i_1] equals to "" or Name_1[i_1] equals to "" or MessageTitle_1[i_1] equals to "" or MessageBody_1[i_1] equals to ""
+	if (EmailAddress_1[i] == undefined)
+		echo skip `i_1` because data is undefined EmailAddress_1[i] = `EmailAddress_1[i]`
+	else if (EmailAddress_1[i_1] equals to "") or (Name_1[i_1] equals to "") or (MessageTitle_1[i_1] equals to "") or (MessageBody_1[i_1] equals to "")
 		echo skip `i_1`
 	else 
 		write `csv_row(pending_1[i_1])` to `filename`_1_filtered.csv
@@ -384,7 +395,9 @@ dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice
 start = 1
 echo filelength_2 = `filelength_2`
 for i_2 from start to (filelength_2-2)
-	if EmailAddress_2[i_2] equals to "" or Name_2[i_2] equals to "" or MessageTitle_2[i_2] equals to "" or MessageBody_2[i_2] equals to ""
+	if (EmailAddress_2[i] == undefined)
+		echo skip `i_2` because data is undefined EmailAddress_2[i] = `EmailAddress_2[i]`
+	else if (EmailAddress_2[i_2] equals to "") or (Name_2[i_2] equals to "") or (MessageTitle_2[i_2] equals to "") or (MessageBody_2[i_2] equals to "")
 		echo skip `i_2`
 	else 
 		write `csv_row(pending_2[i_2])` to `filename`_2_filtered.csv

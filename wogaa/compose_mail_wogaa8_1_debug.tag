@@ -269,32 +269,15 @@ js finish
 dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent' ])` to  `filename`_filtered.csv
 start = 1
 echo filelength = `filelength`
-for i from start to filelength-1
-    if EmailAddressfull[i] equals to "" or Namefull[i] equals to "" or MessageTitlefull[i] equals to "" or MessageBodyfull[i] equals to ""
-        echo skip `i`
+for i from start to (filelength-2)
+    j = i+2
+    //ERROR - undefined is not an object (evaluating 'cell_data.toString')
+    echo EmailAddressfull[i] = `EmailAddressfull[i]`
+    echo Namefull[i] = `Namefull[i]`
+    echo MessageTitlefull[i] = `MessageTitlefull[i]`
+    echo MessageBodyfull[i] = `MessageBodyfull[i]`
+    if (EmailAddressfull[i] equals to "") or (Namefull[i] equals to "") or (MessageTitlefull[i] equals to "") or (MessageBodyfull[i] equals to "")
+        echo skip `i`, row = `j`
     else 
         write `csv_row(pendingfull[i])` to `filename`_filtered.csv
         echo `pendingfull[i]`
-
-// to create separate file_1 for ease of implementing simple loops with data
-dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','EmailAddress','Name','MessageTitle','GotContent'])` to  `filename`_1_filtered.csv
-start = 1
-for i_1 from start to (filelength_1-2)
-    if EmailAddress_1[i_1] equals to "" or Name_1[i_1] equals to "" or MessageTitle_1[i_1] equals to "" or MessageBody_1[i_1] equals to ""
-        echo skip `i_1`
-    else 
-        write `csv_row(pending_1[i_1])` to `filename`_1_filtered.csv
-        echo `pending_1[i_1]`
-
-
-
-// to create separate file_2  for ease of implementing simple loops with data
-dump `([ 'DataTime', 'ServiceName','TXNID','PageURL', 'BrowserVersion','OSDevice','Geographic','Rating','GotContent','MessageTitle' ,'Name','EmailAddress' ])` to  `filename`_2_filtered.csv
-start = 1
-echo filelength_2 = `filelength_2`
-for i_2 from start to (filelength_2-2)
-    if EmailAddress_2[i_2] equals to "" or Name_2[i_2] equals to "" or MessageTitle_2[i_2] equals to "" or MessageBody_2[i_2] equals to ""
-        echo skip `i_2`
-    else 
-        write `csv_row(pending_2[i_2])` to `filename`_2_filtered.csv
-        echo `pending_2[i_2]`

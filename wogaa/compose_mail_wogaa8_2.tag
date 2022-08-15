@@ -203,6 +203,8 @@ for i from start to filelength-1
 	// 20220725 google gmail change their remove their @name"to" so i use @id=':ur'
 	//type //input[@id=':ur'] as  helpdesk@sls.ufinity.com;
 	//live
+	// turbo miss first to email recipent , add wait to slow down
+	wait 0.1
 	type //input[@role='combobox'] as helpdesk@sls.ufinity.com;
 	//type //textarea[@name="to"] as zengwei2020work@gmail.com;
 

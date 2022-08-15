@@ -24,8 +24,20 @@
 // tagui compose_mail_wogaa5csv.tag -turbo
 //FINISH - automation finished - 159.5s for 59 emails
 
+ask What is the date to be processed ( in DD_MM_YYYY for example 27_07_2022)
+//ask What
+echo `ask_result`
+//https://www.w3schools.com/jsref/jsref_replace.asp
+js temp_underscore = ask_result.replace(/-/g, "_");
+//js temp = "singapore_student_learning_space_(sls)-daily-"+ask_result
+//echo temp = `temp`
+// may need to edit manually
+//filename = "singapore_student_learning_space_(sls)-daily-27_07_2022"
+filename ="singapore_student_learning_space_(sls)-daily-"+temp_underscore+"_2_filtered"
+echo have you changed the filename manually?
+
 // need to edit the filename manually
-filename = "singapore_student_learning_space_(sls)-daily-01_08_2022_2_filtered"
+//filename = "singapore_student_learning_space_(sls)-daily-01_08_2022_2_filtered"
 //filename = "singapore_student_learning_space_(sls)-daily-22_07_2022_filtered"
 filedate = filename.substring(45, 68)
 column_A = [`filename`.csv]singapore_student_learning_spac!A:A
@@ -192,6 +204,7 @@ for i from start to filelength-1
 	// 20220725 google gmail change their remove their @name"to" so i use @id=':ur'
 	//type //input[@id=':ur'] as  helpdesk@sls.ufinity.com;
 	//live
+	wait 0.1
 	type //input[@role='combobox'] as helpdesk@sls.ufinity.com;
 	//type //textarea[@name="to"] as zengwei2020work@gmail.com;
 

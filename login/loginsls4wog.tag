@@ -48,10 +48,10 @@ if present('cancel-2fa')
 wait 1
 if present('loginform')
 	// type username as MOE-00000H change
-	type username as xxx
+	type username as MOE-09615H
 	wait 3 // give time to type
 	click bx--text-input
-	type bx--text-input as xxx
+	type bx--text-input as Shanshan1!!!!!
 	click .button.login
 	wait 5
 	// this email is linked to your SLS alternative email for OTP, change this accordingly
@@ -191,18 +191,7 @@ for i from 1 to (total-tableCnt*20)
 		js link = url()
 		echo `url()`
 		echo `link`
-		if (link contains 'home') or  (link equals to  'https://vle.learning.moe.edu.sg/mrv/community-gallery/admin')
-			echo inside if to check home
-			// click again
-			// goes back to previous page
-			dom window.history.back()
-			// change tab
-			//click //a[@id="approved-link"]
-			//click open
-			click //*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div//a
-			js link = url()
-			echo `link` capture second time due to SLS pop up ratings123456
-		// need to wait onger due to WOGAA popup on the bottom left
+		
 		wait 3
 		
 		https://vle.learning.moe.edu.sg/mrv/community-gallery/admin

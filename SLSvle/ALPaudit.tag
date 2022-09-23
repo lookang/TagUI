@@ -10,7 +10,7 @@ js finish
 https://vle.learning.moe.edu.sg/account-audit/jobs
 
 //assume no need to extra login
-if present('button login bx--btn bx--btn--primary')
+if present('loginform')
     click .button.login
     wait 5
 
@@ -21,7 +21,9 @@ if present('button login bx--btn bx--btn--primary')
     // click the first email by notifications@sls.ufinity.com in the table
     click //*[@email="notifications@sls.ufinity.com"]/ancestor-or-self::tr
     //code = ""
-    read //div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
+    //read //div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
+    // new otp xpath
+    read /html/body/div[7]/div[3]/div/div[2]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
     echo `code`
     wait 5
 
@@ -33,7 +35,13 @@ if present('button login bx--btn bx--btn--primary')
 
 https://vle.learning.moe.edu.sg/account-audit/jobs
 
-
+ask Key in 0 for Alp admin and 1 for Content Approver
+echo `ask_result`
+if ask_result contain '0'
+    // do ntg default is working
+else
+    click MOE HQ Monthly Role Verification for Alp Admin
+    click MOE HQ Monthly Role Verification for Content Approver
 //click Select Role
 //click ALP Admin
 //click button submit user-search-submit

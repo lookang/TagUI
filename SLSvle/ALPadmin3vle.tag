@@ -24,7 +24,9 @@ if present('//button[@id="login-button"]')
     // click the first email by notifications@sls.ufinity.com in the table
     click //*[@email="notifications@sls.ufinity.com"]/ancestor-or-self::tr
     //code = ""
-    read //div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
+    //read //div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
+    // new otp xpath
+    read /html/body/div[7]/div[3]/div/div[2]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
     echo `code`
     wait 5
 
@@ -38,6 +40,8 @@ if present('//button[@id="login-button"]')
 //https://ccpm.learning.moe.edu.sg/user/vle
 https://vle.learning.moe.edu.sg/mrv/admin/user/manage
 
+//live
+
 click Select Role
 click ALP Admin
 //live
@@ -45,8 +49,9 @@ click ALP Admin
 //click Filter
 click //div[@class='label']
 //click Activated
-click //span[contains(text(),'Select SLS Account Status')]
-click //li[@data-value='ACTIVATED']//span[contains(text(),'Activated')]
+// dont need to select, just crawl all Activated and non activated for CG sheet
+//click //span[contains(text(),'Select SLS Account Status')]
+//click //li[@data-value='ACTIVATED']//span[contains(text(),'Activated')]
 
 click  //span[@data-text='APPLY']
 //click ALP Admin
@@ -83,13 +88,13 @@ for i from startrow to pages
 load page1.csv to temp
 //echo `temp`
 // dump for first line that starts a new file
-dump `temp` to result.csv
+dump `temp` to ALPadmin3vleresult.csv
 //wait 5
 for i from 2 to pages 
     load page`i`.csv to temp
     //echo `temp`
     //write for adding on to the same file
-    write `temp` to result.csv
+    write `temp` to ALPadmin3vleresult.csv
     //wait 5
     
 //load page3.csv to page3

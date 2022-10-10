@@ -29,29 +29,32 @@
 //visit URL
 //https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
 https://vle.learning.moe.edu.sg/login
-wait 1
+//live
+wait 10 //WOG slow, more so after 20221003
 // need to trigger 3 times as WOG is strict or buggy
-https://vle.learning.moe.edu.sg/login
+//https://vle.learning.moe.edu.sg/login
 
 // chrome-extension://fpjohbpoggonmepkkifflkmkohefgcei/installation_message.html
 // make sure you check DO NOT SHOW Jaga URL Reporter is a new browser extension that Public Officers can use to easily report suspicious websites that they may encounter while browsing the internet on Government-issued Secure Internet Surfing (SIS) enabled devices.
-wait 5 //WOG slow
+//wait 20 //WOG slow
+
 //assume no need to extra login
-https://vle.learning.moe.edu.sg/login
+//https://vle.learning.moe.edu.sg/login
 
 //sometimes after failed login, it is stuck in this OTP page so need to go back to login page
-wait 2
+//wait 2
 if present('cancel-2fa')
 	click cancel-2fa
 
 //assume normal login page
+//live
 wait 1
 if present('loginform')
 	// type username as MOE-00000H change
 	type username as MOE-09615H
 	wait 3 // give time to type
 	click bx--text-input
-	type bx--text-input as Shanshan1!!!!!
+	type bx--text-input as Shanshan1!!!!!!
 	click .button.login
 	wait 5
 	// this email is linked to your SLS alternative email for OTP, change this accordingly
@@ -63,7 +66,7 @@ if present('loginform')
 	//type password as xxxxxxxxxxxxxxx
 	//click Next
 	// Click Sign in 
-	wait 5
+	wait 20
 	// click the first email by notifications@sls.ufinity.com in the table
 	click //*[@email="notifications@sls.ufinity.com"]/ancestor-or-self::tr
 	//code = ""
@@ -73,12 +76,12 @@ if present('loginform')
 	// new otp xpath
 	read /html/body/div[7]/div[3]/div/div[2]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
 	echo `code`
-	wait 5
+	wait 10
 
 	// go back to SLS
 	https://vle.learning.moe.edu.sg/authenticate
 	wait 5 
-	type otp as `code`
+	type //*[@id="otp"] as `code`
 	wait 5 
 	click .field-set.type-button.otp-submit button
 	wait 5 
@@ -115,9 +118,15 @@ echo There are `total` number of lessons.
 echo to allow admin to check first the pending review list, type done to exit and continue flow
 live
 
+// getting total_number of rows
+read //div[@class="v-data-footer__pagination"] to pagination
+js total = parseInt(pagination.split("of")[1].trim());
+echo after reviews, There are `total` number of lessons.
+
+
 ask Check SLS CG pending review for the number of lessons. Key in 0 or 1 for unattended, all lesson extraction or the number of lesson to start data extraction ?
 echo `ask_result`
-if ask_result contain '0'
+if ask_result equals to '0'
 	rowCnt = 1
 else 
 	rowCnt = Math.floor(ask_result,20) 

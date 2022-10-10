@@ -213,7 +213,8 @@ echo `error_msg`
 //https://mail.google.com/mail/u/0/#inbox
 //WOG web mail
 https://webmail.sgmail.sgnet.gov.sg/owa/#path=/mail
-wait 3
+wait 15 //WOG slowed down alot 2022 10 05
+live
 
 for i from 1 to recipient_list.length
 	// Click 'Compose' button
@@ -255,7 +256,9 @@ for i from 1 to recipient_list.length
 	wait 3	
 
 	// Send Button
+	//live
 	click Send
+	wait 5 // WOG slowed down alot after 20221003
 	// Schedule tommorow morning
 	//click G-asx
 	//click J-N yr

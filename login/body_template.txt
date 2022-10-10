@@ -1,6 +1,6 @@
 Dear CG Admin, 
 <br><br>
-SLS Release 17 is live on 7th June 2022. Please <a href="removed on github">"download this SLS R17 PPTX for your reference"</a> . 
+SLS Release 17 is live on 7th June 2022. Please <a href="https://docs.google.com/presentation/d/14GxtSHUT4L01u7yTNrpfsiLGkoLUK4r-/edit?usp=sharing&ouid=111507478434537221064&rtpof=true&sd=true">"download this SLS R17 PPTX for your reference"</a> . 
 The following lesson(s)/course(s) is/are pending your review.🙏. <br>
 
 <table style="border-collapse: collapse; border: 1px solid black;" id="tagui_table">
@@ -48,23 +48,14 @@ Once you have reviewed the lesson, please
 	</li>
 	<li>
 		
-		If it is a Mother Tongue Language lesson/course, turn on the localisation to the respective languages for students to read instructions in their languages, under Lesson Details - Edit - Langauge Localisation - 中文, Bahasa Melayu, தமிழ்மொழி   
+		If it is a Mother Tongue Language lesson/course, you can consider to "turn on" the localisation to the respective languages for students to read instructions in their languages, under Lesson Details - Edit - Langauge Localisation - 中文, Bahasa Melayu, தமிழ்மொழி   
+	</li>
+	<li>
+		🌟NEW! If there are questions such as in Quiz, you may consider helping to adding tags in Subject - Content Map - Learning Objectives to prepare for use in Learning Progress and "tagged Question Bank" in the future.
 	</li>
 	<li>
 		
-		If it is a course, turn on the gamification (students get to receive XP points and levels etc while completing quiz with marks etc), by clicking on the top right corner, pencil (edit) - 3 dots menu - Gamification - swipe slider to "ON" position. There are 3 MOEHQ gamification template in CG of your reference.
-		<ul>
-		
-		<li><a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/admin/lesson/view/ed4b855e-1c06-49e4-be18-40f266a801de/cover">"Help Captain Sustainability on his Quest - Gamification Template 1 for Teachers"</a></li>
-		<li><a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/admin/lesson/view/8dc9ba5e-3928-4406-9b3c-2ab7eec554d6/cover">"A Gathering of Heroes - Gamification Template 2 for Teachers"</a></li>
-		<li><a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/admin/lesson/view/ba25e1be-cf3c-4e50-b8b1-6198d2879655/cover">"Unlock the Achievements - Gamification Template 3 for Teachers"</a></li>
-		
-		</ul>
-		
-	</li>
-	<li>
-		<ul>
-		<li>🌟NEW! Intellectual property citation of free internet resources should satisfy these 6 points and they are 
+		 Intellectual property citation of free internet resources should satisfy these 6 points and they are 
 				<ol>
 				<li> Work must be free to access from the Internet </li>
 				<li> Internet URL and the date on which the material was accessed must be cited </li>
@@ -73,18 +64,20 @@ Once you have reviewed the lesson, please
 				<li> Work must not be a known infringing work </li>
 				<li> If any one of the above conditions is not met, the New 2021 November educational exception does not apply.</li>  
 				</ol>
-		<li>SLS sample. <a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/lesson/view/3dc58759-7e61-4684-9b79-c8940ff6d33b/cover"> Source of Featured Image, https://weelookang.blogspot.com/2022/02/10-steps-to-instantly-improve-your.html, Loo Kang WEE, parachute EJSS simulation animated gif, assessed 21 Feb 2022</a></li>
-		</ul>
+	</li>
+	<li>
+		SLS sample. <a href="https://vle.learning.moe.edu.sg/mrv/community-gallery/lesson/view/3dc58759-7e61-4684-9b79-c8940ff6d33b/cover"> Source of Featured Image, https://weelookang.blogspot.com/2022/02/10-steps-to-instantly-improve-your.html, Loo Kang WEE, parachute EJSS simulation animated gif, assessed 21 Feb 2022</a></li>
+		
 	</li>
 	<li>
 		Do return lesson(s) that 
 		<ul>
 		<li>may have inappropriate/sensitive graphics/content (Wuhan virus🦠, suicide👻, murder🔪, recent RVHS🏫 incident etc)</li>
-		<li>copyright infringements or resources without reasonable citations that respect intellectual property</li>
+		<li>copyright infringements or resources without reasonable citations that respect intellectual property of the author</li>
 		</ul>
 	</li>
-<li>
-		For info on the review process, please visit go.gov.sg/cgadmin-guide or watch https://www.youtube.com/watch?v=hHGHeaEKmVc&list=PLYIwRBA8ZhdM6pmfDaUhtwTCTLj94552y 🆕R15-16-17 versions. 
+	<li>
+		For info on the review process, please visit https://go.gov.sg/cgadmin-guide or watch https://www.youtube.com/watch?v=hHGHeaEKmVc&list=PLYIwRBA8ZhdM6pmfDaUhtwTCTLj94552y 🆕R15-16-17 versions. 
  
 	</li>
 </ol>

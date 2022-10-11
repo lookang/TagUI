@@ -1,3 +1,4 @@
+code written by ruth
 https://en.wikipedia.org/wiki/Operation_Hurricane
 dom begin
 function selectElementContents(el) {

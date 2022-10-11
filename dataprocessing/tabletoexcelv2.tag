@@ -1,3 +1,5 @@
+// code written by ryan451 and we took some inspiration from ruth's example
+
 https://www.w3schools.com/html/html_tables.asp
 dom begin
 function table2array(tableId) {

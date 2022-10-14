@@ -17,7 +17,9 @@ if present('//button[@type="button"]')
     wait 5
     // click the first email by notifications@sls.ufinity.com in the table
     click //*[@email="notifications@sls.ufinity.com"]/ancestor-or-self::tr
-    read //div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
+    //read //div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
+    // new otp xpath
+    read /html/body/div[7]/div[3]/div/div[2]/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div/div[1]/div[2]/div[3]/div[3]/div/div[2]/h2 to code
     echo `code`
     wait 5
 
@@ -40,6 +42,7 @@ echo total = `total`
 
 rowCnt = 1
 // might want to change this to save time crawling all the assigned
+// choose 0 first to skip in the loop below
 tableCnt = 0
 
 
@@ -59,6 +62,7 @@ for i from 1 to numberoflessonstocrawl
     
     // loop to skip the specified number of tables
     click //a[@id="approved-link"]
+    //live
     echo managed to click on approved?  
     for j from 1 to tableCnt
         click //div[@id='approved']//i[@class='v-icon notranslate mdi mdi-chevron-right theme--light']
@@ -70,9 +74,11 @@ for i from 1 to numberoflessonstocrawl
 
     //read data on table first
     //read /html/body/div[1]/main/div/div/section/div/div[2]/div/div[2]/div[1]/div/div/div/div[1]/table/tbody/tr[1]/td[4]/div/span to course
-    read //*[@id="approved"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/span to title
+    //read //*[@id="approved"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/span to title
+    read //*[@id="approved"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/div[1]/span to title
     echo `title`
     read //*[@id="approved"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[2]/div/span to typelc
+    //read //*[@id="approved"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[2]/div/span to typelc
     echo `typelc`
     //read //body[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[3]/div[1]/span[1] to subject
     read //*[@id="approved"]/div/div/div/div[1]/table/tbody/tr[`rowCnt`]/td[3]/div/span to subject
@@ -112,6 +118,7 @@ for i from 1 to numberoflessonstocrawl
     https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
     click //a[@id="approved-link"]
     //js pending.push([i, title, typelc, subject, level, school, zone, date, reviewer,link])
+    // Subject Category etc.... can be determined via xls
     js pending.push([typelc, title, subject,'Subject Category',level,'Level Category','Level Type',  date,'Month Featured', 'LEType',link,'View','Status',i])
     // write file line by line so if breaks, still got some runs data done.
     write `csv_row(pending[pending.length - 1])` to publish_list.csv

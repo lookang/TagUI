@@ -32,7 +32,7 @@ else
 //type /html[1]/body[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/input[1] as Wong_Teck_Kiong [enter]
 wait 1
 // change manually the name of person to add
-keyboard Wong_Teck_Kiong [enter]
+keyboard NAMEOFPERSON_THAT_SLS_CAN_FIND_ONLY_ONE_PERSON [enter]
 wait 3
 // to bring mouse away to prepare for findteacher.png
 hover (10,10)

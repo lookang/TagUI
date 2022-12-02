@@ -1,4 +1,5 @@
-
+//to run type
+// tagui addtag.tag adddata.csv
 
 if iteration equals to 1
 	echo login yourself to SLS

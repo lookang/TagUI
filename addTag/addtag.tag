@@ -3,7 +3,10 @@
 
 if iteration equals to 1
 	echo login yourself to SLS
-	live
+	//live
+	https://vle.learning.moe.edu.sg/login
+	click Login with MIMS
+	click Sign in
 else 
 	//do ntg to skip live
 	echo "do ntg"
@@ -36,4 +39,4 @@ click //button[normalize-space()='OK']
 click Play24
 click //span[normalize-space()='OK']
 // set the boolean to false to stop going into live mode
-firsttime = 0
+//firsttime = 0

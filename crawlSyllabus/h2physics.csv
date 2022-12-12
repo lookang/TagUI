@@ -1,0 +1,120 @@
+1,
+2,"1(a) recall the following base quantities and their SI units: mass (kg), length (m), time (s), current (A), temperature (K), amount of substance (mol)."
+3,1(b) state that one mole of of any substance contains  particles and use the Avogadro number
+4,"1(c) express derived units as products or quotients of the base units and use the named units listed in 'Summary of Key Quantities, Symbols and Units' as appropriate."
+5,1(d) use SI base units to check the homogeneity of physical equations.
+6,"1(e) show an understanding of and use the conventions for labelling graph axes and table columns as set out in the ASE publication Signs, Symbols and Systematics (The ASE Companion to 16-19 Science, 2000)."
+7,"1(f) use the following prefixes and their symbols to indicate decimal sub-multiples or multiples of both base and derived units: pico (p), nano (n), micro (μ), milli (m), centi (c), deci (d), kilo (k), mega (M), giga (G), tera (T)."
+8,1(g) make reasonable estimates of physical quantities included within the syllabus.
+9,"1(h) distinguish between scalar and vector quantities, and give examples of each."
+10,1(i) add and subtract coplanar vectors.
+11,1(j) represent a vector as two perpendicular components.
+12,1(k) show an understanding of the distinction between systematic errors (including zero error) and random errors.
+13,1(l) show an understanding of the distinction between precision and accuracy.
+14,"1(m) assess the uncertainty in a derived quantity by addition of actual, fractional, percentage uncertainties or by numerical substitution (a rigorous statistical treatment is not required)."
+15,"2(a) define and use displacement, speed, velocity and acceleration."
+16,"2(b) use graphical methods to represent distance, displacement, speed, velocity and acceleration."
+17,"2(c) identify and use the physical quantities from the gradients of displacement-time graphs and areas under and gradients of velocity-time graphs, including cases of non-uniform acceleration."
+18,"2(d) derive, from the definitions of velocity and acceleration, equations which represent uniformly accelerated motion in a straight line."
+19,"2(e) solve problems using equations which represent uniformly accelerated motion in a straight line, including the motion of bodies falling in a uniform gravitational field without air resistance."
+20,2(f) describe qualitatively the motion of bodies falling in a uniform gravitational field with air resistance.
+21,2(g) describe and explain motion due to a uniform velocity in one direction and a uniform acceleration in a perpendicular direction.
+22,3(a) state and apply each of Newton's laws of motion.
+23,3(b) show an understanding that mass is the property of a body which resists change in motion (inertia).
+24,3(c) describe and use the concept of weight as the effect of a gravitational field on a mass.
+25,3(d) define and use linear momentum as the product of mass and velocity.
+26,3(e) define and use impulse as the product of force and time of impact.
+27,3(f) relate resultant force to the rate of change of momentum.
+28,"3(g) recall and solve problems using the relationship , appreciating that resultant force and acceleration are always in the same direction."
+29,3(h) state the principle of conservation of momentum.
+30,3(i) apply the principle of conservation of momentum to solve simple problems including inelastic and (perfectly) elastic interactions between two bodies in one dimension (knowledge of the concept of coefficient of restitution is not required).
+31,"3(j) show an understanding that, for a (perfectly) elastic collision between two bodies, the relative speed of approach is equal to the relative speed of separation."
+32,"3(k) show an understanding that, whilst the momentum of a closed system is always conserved in interactions between bodies, some change in kinetic energy usually takes place."
+33,"4(a) recall and apply Hooke's law , where  is the force constant) to new situations or to solve related problems."
+34,"4(b) describe the forces on a mass, charge and current-carrying conductor in gravitational, electric and magnetic fields, as appropriate."
+35,"4(c) show a qualitative understanding of normal contact forces, frictional forces and viscous forces including air resistance (no treatment of the coefficients of friction and viscosity is required)."
+36,4(d) show an understanding that the weight of a body may be taken as acting at a single point known as its centre of gravity.
+37,4(e) define and apply the moment of a force and the torque of a couple.
+38,4(f) show an understanding that a couple is a pair of forces which tends to produce rotation only.
+39,4(g) apply the principle of moments to new situations or to solve related problems.
+40,"4(h) show an understanding that, when there is no resultant force and no resultant torque, a system is in equilibrium."
+41,4(i) use a vector triangle to represent forces in equilibrium.
+42,5(a) show an understanding of the concept of work in terms of the product of a force and displacement in the direction of the force.
+43,5(b) calculate the work done in a number of situations.
+44,"5(c) give examples of energy in different forms, its conversion and conservation, and apply the principle of energy conservation."
+45,5(d) show an appreciation for the implications of energy losses in practical devices and use the concept of efficiency to solve problems.
+46,"5(e) derive, from the equations for uniformly accelerated motion in a straight line, the equation ."
+47,5(f) recall and use the equation .
+48,"5(g) distinguish between gravitational potential energy, electric potential energy and elastic potential energy."
+49,5(h) deduce that the elastic potential energy in a deformed material is related to the area under the force-extension graph.
+50,5(i) show an understanding of and use the relationship between force and potential energy in a uniform field to solve problems.
+51,"5(j) derive, from the definition of work done by a force, the equation  for gravitational potential energy changes near the Earth's surface."
+52,5(k) recall and use the equation  for gravitational potential energy changes near the Earth's surface.
+53,5(l) define power as work done per unit time and derive power as the product of a force and velocity in the direction of the force.
+54,6(a) express angular displacement in radians.
+55,6(b) show an understanding of and use the concept of angular velocity to solve problems.
+56,6(c) recall and use  to solve problems.
+57,"6(d) describe qualitatively motion in a curved path due to a perpendicular force, and understand the centripetal acceleration in the case of uniform motion in a circle."
+58,"6(e) recall and use centripetal acceleration , and  to solve problems."
+59,6(f) recall and use centripetal force  and to solve problems
+60,6(g) recall and use Newton's law of gravitation in the form
+61,6 (h) analyse circular orbits in inverse square law fields by relating the gravitational force to the centripetal acceleration it causes.
+62,6 (i) show an understanding of geostationary orbits and their application.
+63,7(a) show an understanding that electric current is the rate of flow of charge.
+64,7(b) recall and solve problems using the equation
+65,7(c) recall and solve problems using the equation
+66,"7(d) recall and solve problems using the equations ,  and"
+67,7(e) recall and solve problems using the equation
+68,"7(f) sketch and explain the  characteristics of various electrical components such as an ohmic resistor, a semiconductor diode, a filament lamp and a negative temperature coefficient (NTC) thermistor."
+69,7(g) sketch the resistance-temperature characteristic of an NTC thermistor.
+70,7(h) recall and solve problems using the equation
+71,7(i) distinguish between electromotive force (e.m.f.) and potential difference (p.d.) using energy considerations.
+72,7(j) show an understanding of the effects of the internal resistance of a source of e.m.f. on the terminal potential difference and output power.
+73,"8(a) recall and use appropriate circuit symbols as set out in the ASE publication Signs, Symbols and Systematics (The ASE Companion to 16-19 Science, 2000)."
+74,"8(b) draw and interpret circuit diagrams containing sources, switches, resistors, ammeters, voltmeters, and/or any other type of component referred to in the syllabus."
+75,8(c) solve problems using the formula for the combined resistance of two or more resistors in series.
+76,8(d) solve problems using the formula for the combined resistance of two or more resistors in parallel.
+77,8(e) solve problems involving series and parallel circuits for one source of e.m.f.
+78,8(f) show an understanding of the use of a potential divider circuit as a source of variable p.d.
+79,8(g) explain the use of thermistors and light-dependent resistors in potential divider circuits to provide a potential difference which is dependent on temperature and illumination respectively.
+80,9(a) show an understanding of the concept of an electric field as an example of a field of force and define electric field strength at a point as the electric force exerted per unit positive charge placed at that point.
+81,9(b) represent an electric field by means of field lines.
+82,9(c) show an understanding that a magnetic field is an example of a field of force produced either by current-carrying conductors or by permanent magnets.
+83,9(c) show an understanding that a magnetic field is an example of a field of force produced either by current-carrying conductors or by permanent magnets.
+84,"9(d) sketch flux patterns due to currents in a long straight wire, a flat circular coil and a long solenoid."
+85,"9(d) sketch flux patterns due to currents in a long straight wire, a flat circular coil and a long solenoid."
+86,9(e) show an understanding that the magnetic field due to a solenoid may be influenced by the presence of a ferrous core.
+87,9(e) show an understanding that the magnetic field due to a solenoid may be influenced by the presence of a ferrous core.
+88,9(f) show an understanding that a current-carrying conductor placed in a magnetic field might experience a force.
+89,9(f) show an understanding that a current-carrying conductor placed in a magnetic field might experience a force.
+90,"9(g) recall and solve problems using the equation , with directions as interpreted by Fleming's left-hand rule."
+91,"9(g) recall and solve problems using the equation , with directions as interpreted by Fleming's left-hand rule."
+92,9(h) define magnetic flux density and the tesla.
+93,9(h) define magnetic flux density and the tesla.
+94,9(i) show an understanding of how the force on a current-carrying conductor can be used to measure the flux density of a magnetic field using a current balance.
+95,9(i) show an understanding of how the force on a current-carrying conductor can be used to measure the flux density of a magnetic field using a current balance.
+96,9(j) explain the forces between current-carrying conductors and predict the direction of the forces.
+97,9(j) explain the forces between current-carrying conductors and predict the direction of the forces.
+98,9(k) predict the direction of the force on a charge moving in a magnetic field.
+99,9(k) predict the direction of the force on a charge moving in a magnetic field.
+100,9(l) recall and solve problems using the equation
+101,9(l) recall and solve problems using the equation
+102,9(m) calculate the forces on charges in uniform electric fields using the equation
+103,9(m) calculate the forces on charges in uniform electric fields using the equation
+104,9(n) describe the effect of a uniform electric field on the motion of charged particles.
+105,10(a) infer from the results of the Rutherford a-particle scattering experiment the existence and small size of the atomic nucleus
+106,10(b) distinguish between nucleon number (mass number) and proton number (atomic number).
+107,10(c) show an understanding that an element can exist in various isotopic forms each with a different number of neutrons in the nucleus.
+108,10(d) use the usual notation for the representation of nuclides and represent simple nuclear reactions by nuclear equations of the form
+109,"10(e) state and apply to problem solving the concept that nucleon number, charge and mass-energy are all conserved in nuclear processes."
+110,10(f) show an understanding of the concept of mass defect.
+111,10(g) recall and apply the equivalence relationship between energy and mass as represented by  to solve problems.
+112,10(h) show an understanding of the concept of nuclear binding energy and its relation to mass defect.
+113,10(i) sketch the variation of binding energy per nucleon with nucleon number.
+114,10(j) explain the relevance of binding energy per nucleon to nuclear fusion and to nuclear fission.
+115,10(k) show an understanding of the spontaneous and random nature of nuclear decay.
+116,10(l) infer the random nature of radioactive decay from the fluctuations in count rate.
+117,10(m) show an understanding of the origin and significance of background radiation.
+118,"10(n) show an understanding of the nature of , and  radiations (knowledge of positron emission is not required)."
+119,10(o) define half-life and use the term to solve problems which might involve information in tables or decay curves.
+120,"10(p) discuss qualitatively the effects, both direct and indirect, of ionising radiation on living tissues and cells."

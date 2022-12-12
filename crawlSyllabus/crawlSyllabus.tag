@@ -1,5 +1,4 @@
-//to run type
-// tagui addtag.tag adddata.csv
+
 //pdftext = [/Users/lookang/Desktop/tagui/flows/addSyllabus/9744_y22_sy.pdf]
 //echo `pdftext`
 //dump [`pdftext`] to text.csv
@@ -36,9 +35,5 @@ for j from 1 to 300
 		echo `text`
 		write `csv_row([j, text ])` to h2physics.csv
 //live
-// example https://tagui.readthedocs.io/en/latest/advanced.html#datatables
-//to run type tagui addtag.tag adddata.csv
-// need computer vision, so need primary monitor only.
-// as this flow doesnt stop, quickly self login to the SLS
-// accuracy is low now, with need for human clicks to assist RPA
+
 

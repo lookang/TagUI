@@ -1,6 +1,6 @@
 //live
 // tagui fullscreen.tag -edge
-// unfortunately Chrome cannot do fullscreen easily on TagUI due to shortcuts stuck on []
+// unfortunately Chrome cannot do fullscreen easily on TagUI due to shortcuts stuck on [fn] key does not exist on Tagui
 
 // assume primary monitor used, need to click to focus the keyboard
 click (500,500)

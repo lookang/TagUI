@@ -1,82 +1,25 @@
 //INSTALLATION
 // https://tagui.readthedocs.io/en/latest/setup.html
 
-// HOW TO USE
-// copy the text here and create a text file and save it into your TagUI folder
-// for me it was /Users/lookang/Desktop/tagui/flows/lookang/20210208
-// to run the code, 
-// use cmd line in Windows or terminal in MacOSX
-// cd /Users/lookang/Desktop/tagui/flows/lookang/20210208
-// type $  tagui loginSLSCGadmin.tag
-// depending on your file name saved as loginSLSCGadmin.tag
 
-// preconditions by lookang
-// use the chrome that tagUI open and key in website username and website password
-// chrome will offer to save password, click yes
-//similarly when visiting gmail again enter your gmail and gmail password and save them on the browser that tagUI Opens
-// when these are all done, there is not need to tagUI username password etc , just pure action code
-// another condition is in the gmail, delete all previous  Verification Code for SLS Account Login, the script is not clever to scroll down to find the latest email
-
-// WHAT THIS CODE DOES:
-// 1. Visit SLS to trigger the 2FA, login is handle by Chrome password save 
-// 2. Opens gmail, login is handle by Chrome password save
-// 2b. Open the first email 
-// 3. Get the 2FA code  
-
-///////////////////////////////////
-
-//Enter in to SLS
-//visit URL
-//https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
+//Enter in to SLS login page
 https://vle.learning.moe.edu.sg/login
-//live
-//wait 20 //WOG slow, more so after 20221003
-// need to trigger 3 times as WOG is strict or buggy
-//https://vle.learning.moe.edu.sg/login
 
-// chrome-extension://fpjohbpoggonmepkkifflkmkohefgcei/installation_message.html
-// make sure you check DO NOT SHOW Jaga URL Reporter is a new browser extension that Public Officers can use to easily report suspicious websites that they may encounter while browsing the internet on Government-issued Secure Internet Surfing (SIS) enabled devices.
-//wait 20 //WOG slow
-
-//assume no need to extra login
-//https://vle.learning.moe.edu.sg/login
-
-//sometimes after failed login, it is stuck in this OTP page so need to go back to login page
-//wait 2
-echo login yourself as requested
+echo login yourself as requested to overcome slow WOG either SLS or MIMS is both fine
 live
 
-//click Login with MIMS
-
-
-
-
-
-// read https://tagui.readthedocs.io/_/downloads/en/latest/pdf/ for documentation
-// idea syntax from https://github.com/kelaberetiv/TagUI/blob/master/flows/samples/4_loops.tag
-
-//wait 3
-
-
-//wait 5 //to load the SLS page correctly first before next step
-
-///////////////////////////////////
-
-// https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
+// https://vle.learning.moe.edu.sg/mrv/community-gallery/admin // old R18
 https://vle.learning.moe.edu.sg/community-gallery/admin?resource=LESSON&location=COMMUNITY_GALLERY&status=PENDING_APPROVAL
 
 wait 10
-echo line 94
-// WOG seems to be recgnise the browser as first time visit everytime
-// click the pop up away
+
 if present ('walkme-custom-balloon-content')
 	click walkme-custom-balloon-button walkme-custom-balloon-weak-button walkme-custom-balloon-cancel-button walkme-action-cancel walkme-click-and-hover
 
-// read https://tagui.readthedocs.io/_/downloads/en/latest/pdf/ for documentation
-// idea syntax from https://github.com/kelaberetiv/TagUI/blob/master/flows/samples/4_loops.tag
-
-//wait 3
-
+//sort back to first in, at the bottom like in R18
+click Date Submitted
+click Date Submitted
+// click twice to get in the order
 
 // getting total_number of rows
 if present('//div[@class="v-data-footer__pagination"]')
@@ -86,7 +29,7 @@ if present('//div[@class="v-data-footer__pagination"]')
 else
 	echo you have no lessons to review! hurray
 
-//echo to allow admin to check first the pending review list, type done to exit and continue flow
+echo to allow admin to check first the pending review list, type done to exit and continue flow
 live
 
 // getting total_number of rows
@@ -122,13 +65,6 @@ pending = []
 
 // always in groups of 20 now in UI
 for i from 1 to (total-tableCnt*20)
-
-	//20220607 due to a new SLS aria-sort = "descending" instead of the old usual aria-sort = "ascending"
-	// need to click once first cos the default value is correct, but order is wrong (latest first)
-	//click //span[normalize-space()='Date Submitted']
-	//click //span[normalize-space()='Date Submitted']
-	//click //span[normalize-space()='Date Submitted']
-
 
 	// trying to break out if total is not found 
 	//if (exist('//*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div/div/span'))

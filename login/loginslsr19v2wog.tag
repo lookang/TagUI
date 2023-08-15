@@ -58,14 +58,15 @@ tableCnt = 0
 //tableCnt = 4
 
 // loop to skip the specified number of tables
+// due to change in CG page no need to click Next anymore, page stays the same
 for i from 1 to tableCnt
-	click //button[@aria-label="Next page"]
+	// click //button[@aria-label="Next page"]
 
 pending = []
 
 // always in groups of 20 now in UI
 for i from 1 to (total-tableCnt*20)
-
+	
 	// trying to break out if total is not found 
 	//if (exist('//*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div/div/span'))
 	if (exist('//*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/span/span'))
@@ -105,11 +106,13 @@ for i from 1 to (total-tableCnt*20)
 	// resubmit = dom_result == -1 ? 0 : 1
 	// echo resubmit = `resubmit`
 	resubmit = 0
-	if (exist ('read //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/div/span'))
+	if (exist ('//*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/div/span'))
 		read //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/div/span to a
 		echo `a`
 		if (a equals to 'Resubmitted')
 			resubmit = 1
+			//echo checking why lesson 11 is not resubmiited
+			//live
 		else
 			resubmit = 0
 	link = ""
@@ -120,35 +123,46 @@ for i from 1 to (total-tableCnt*20)
 		echo trying to click OPEN
 		click //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/a
 		echo managed to click on the link OPEN
-		wait 3
+		//wait 3
+		wait 8
 
 	
 		
-		popup cover
+		// popup cover
+		// strangely can have lesson https://vle.learning.moe.edu.sg/community-gallery/admin/lesson/view/417a1bcf-d631-4205-b3f5-d94ed2a8418e/page/67738538
+		// without the word cover is the URL, changing to use lesson/view/
+		popup lesson/view/
 		{
+		wait 1 
 		js link = url()
-		echo `url()`
+		// read the title
+		read output-text to title
+		echo `title`
 		echo `link`
 		dom window.close()
 		}
-		wait 3
+		//wait 3
 		
 		// 	https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
-		https://vle.learning.moe.edu.sg/community-gallery/admin?resource=LESSON&location=COMMUNITY_GALLERY&status=PENDING_APPROVAL
+		// remove this line as SLS R19 popup a new page so the first page always unchanged after sorting
+		// https://vle.learning.moe.edu.sg/community-gallery/admin?resource=LESSON&location=COMMUNITY_GALLERY&status=PENDING_APPROVAL
 
 		echo line 209
 
 		for j from 1 to tableCnt
-			click //button[@aria-label="Next page"]
+			//click //button[@aria-label="Next page"]
+			//wait 3 // assuming WOG is slow, problem reported on 20230814
 			
 		}
 	// pending is an array collection of different variables
 	js pending.push([i, title, type, subject, level, school, datesubmitted, author, link, similar, resubmit])
+	echo `pending`
 	js rowCnt++;
 	if (rowCnt == 21)
 		{
 		click //button[@aria-label="Next page"]
 		js tableCnt++; // maybe TagUI code has no ++ so use js
+		echo tableCnt = `tableCnt`
 		rowCnt = 1
 		wait 2
 		}

@@ -1,6 +1,8 @@
 // assume self login to SLS
 //live
-
+// first file only click to generate
+// second file only click to download
+// this split is based on the limitation of current SLS behavior 
 https://vle.learning.moe.edu.sg/
 if exist ('Login With SLS')
     click //button[normalize-space()='Login With SLS']
@@ -14,6 +16,8 @@ echo `ask_result`
 row = ask_result
 
 // first name is ADMIRALTY PRIMARY SCHOOL
+// because the data in notication is group by 20, i recommend running by 20 to sync up with the notification page
+// the links also may not lasts so long to run 100s, so 20 per run is optimised.
 ask Start? expecting 1 or 21 or 41 etc depending on the stage of the RPA
 echo `ask_result` 
 start = ask_result

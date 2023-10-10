@@ -33,9 +33,21 @@ echo new p5 is `p5`
 https://vle.learning.moe.edu.sg/login
 wait 3
 
-// Click the "Login With SLS" button if present
-if present('//button[normalize-space()="Login With SLS"]')
-    click //button[normalize-space()='Login With SLS']
+//live
+
+ask 1 for SLS 2 for MIMS login
+echo `ask_result`
+if ask_result equals to 1
+    // Click the "Login With SLS" button if present
+    if present('//button[normalize-space()="Login With SLS"]')
+        click //button[normalize-space()='Login With SLS']
+else if ask_result equals to 2
+    // Click the "Login With MIMS" button if present
+    if present("//button[normalize-space()='Login With MIMS']")
+        click //button[normalize-space()='Login With MIMS']
+        wait 3
+        click (//span[@id='loginButton2'])[1]
+
 wait 3
 // Click the "Login" button if present
 if present("//button[normalize-space()='Login']")

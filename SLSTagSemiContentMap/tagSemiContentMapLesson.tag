@@ -52,9 +52,6 @@ else if ask_result equals to 2
         click (//span[@id='loginButton2'])[1]
 
 wait 3
-
-
-wait 3
 //`p1`
 // https://vle.learning.moe.edu.sg/class-group/lesson/view/1aff6f7f-5deb-41e3-8389-afc856c5a1fb/page/46993472
 https://vle.learning.moe.edu.sg/class-group/lesson/edit/`p1`

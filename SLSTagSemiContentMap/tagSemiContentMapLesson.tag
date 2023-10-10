@@ -1,10 +1,12 @@
 // how to run
 // first p1 is part of the url that forms the id of the lesson, expecting 1aff6f7f-5deb-41e3-8389-afc856c5a1fb/cover
-// p2 is 3 for thrid content syllabus to add, expect 1 , 2 or 3 depending on which content map to add, usually is 1 assuming new lesson
+// p2 is 3 for third content syllabus to add, expect 1 , 2 or 3 depending on which content map to add, usually is 1 assuming new lesson
 // p3 is level of content map, expecting Secondary_2_Express with _ added
 // p4 is subject, expecting 21st_Century_Competencies_-_21CC with _ added
 // p5 is the URL id of the progressive quiz page, expecting   1aff6f7f-5deb-41e3-8389-afc856c5a1fb/page/46993472
-//tagui tagSemiContentMapLesson.tag 1aff6f7f-5deb-41e3-8389-afc856c5a1fb/cover 3 Secondary_2_Express 21st_Century_Competencies_-_21CC 1aff6f7f-5deb-41e3-8389-afc856c5a1fb/page/46993472
+// tagui tagSemiContentMapLesson.tag 1aff6f7f-5deb-41e3-8389-afc856c5a1fb/cover 3 Secondary_2_Express 21st_Century_Competencies_-_21CC 1aff6f7f-5deb-41e3-8389-afc856c5a1fb/page/46993472
+// work best on a computer that auto fill password to SLS, will need some configuration for manual key in passwords machines
+
 echo p1 is `p1`
 echo p2 is `p2`
 echo p3 is `p3`

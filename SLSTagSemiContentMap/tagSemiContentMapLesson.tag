@@ -41,6 +41,9 @@ if ask_result equals to 1
     // Click the "Login With SLS" button if present
     if present('//button[normalize-space()="Login With SLS"]')
         click //button[normalize-space()='Login With SLS']
+    // Click the "Login" button if present
+    if present("//button[normalize-space()='Login']")
+        click //button[normalize-space()='Login']
 else if ask_result equals to 2
     // Click the "Login With MIMS" button if present
     if present("//button[normalize-space()='Login With MIMS']")
@@ -49,9 +52,7 @@ else if ask_result equals to 2
         click (//span[@id='loginButton2'])[1]
 
 wait 3
-// Click the "Login" button if present
-if present("//button[normalize-space()='Login']")
-    click //button[normalize-space()='Login']
+
 
 wait 3
 //`p1`

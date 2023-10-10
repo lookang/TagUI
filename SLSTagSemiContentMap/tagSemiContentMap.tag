@@ -1,9 +1,9 @@
 // how to run
 // first p1 is the url id of the lesson
-// p2 is 3 for thrid content syllabus to add
-//p3 is level of content map
-//p4 is subject
-//tagui tagSemiContentMap.tag 1aff6f7f-5deb-41e3-8389-afc856c5a1fb/page/46993472 3 Secondary_2_Express 21st_Century_Competencies_-_21CC
+// p2 is 3 for third content syllabus to add
+// p3 is level of content map
+// p4 is subject
+// tagui tagSemiContentMap.tag 1aff6f7f-5deb-41e3-8389-afc856c5a1fb/page/46993472 3 Secondary_2_Express 21st_Century_Competencies_-_21CC
 echo p1 is `p1`
 echo p2 is `p2`
 echo p3 is `p3`

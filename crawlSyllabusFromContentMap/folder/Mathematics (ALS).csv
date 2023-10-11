@@ -86,23 +86,23 @@
 86,Odd and Even Numbers
 87,NW13.1 Identifying Odd and Even Numbers PREREQUISITES (1)
 88,Solving Problems Involving 4 Operations
-89,NW14.1 Solving Word Problems - ""more than"" concept (Part 1) PREREQUISITES (2)
+89,
 90,NW14.2 Solving Word Problems - Addition and Subtraction PREREQUISITES (2)
-91,NW14.3 Solving Word Problems - ""more than"" concept (Part 2) PREREQUISITES (3)
-92,NW14.4 Solving Word Problems - ""as many as"" concept (Part 1) PREREQUISITES (2)
-93,NW14.5 Solving Word Problems - ""more than"" and ""as many as"" concept PREREQUISITES (2)
+91,
+92,
+93,
 94,NW14.6 Solving Word Problems - grouping and rate concept PREREQUISITES (3)
-95,NW14.7 Solving Word Problems - ""more than"" and grouping concept (Part 1) PREREQUISITES (3)
-96,NW14.8 Solving Word Problems - ""more than"" and ""as many as"" concept PREREQUISITES (1)
-97,NW14.9 Solving Word Problems - ""as many as"" concept (Part 2) PREREQUISITES (1)
-98,NW14.10 Solving Word Problems - ""more than"" and grouping concept (Part 2) PREREQUISITES (2)
+95,
+96,
+97,
+98,
 99,NW14.11 Solving Word Problems - Set of Items (Part 1)
 100,NW14.12 Solving Word Problems - Set of Items (Part 2) PREREQUISITES (1) Pri 5
-101,NW14.13 Solving Structured Word Problems - ""more than"" and ""as many as"" concept PREREQUISITES (1) Pri 5F
-102,NW14.14 Solving Structured Word Problems - ""as many as"" concept PREREQUISITES (1) Pri 5F
-103,NW14.15 Solving Structured Word Problems - ""more than"" and grouping concept PREREQUISITES (2) Pri 5F
+101,
+102,
+103,
 104,NW14.16 Solving Structured Word Problems - Set of ItemsPri 5F
-105,NW14.17 Solving Word Problems - Set of Items and ""as many as"" concept PREREQUISITES (2) Pri 5
+105,
 106,Fractions
 107,Notation and Representation of Fractions
 108,NF1.1 Fraction of a Whole
@@ -185,16 +185,16 @@
 185,Word Problems Involving Decimals
 186,ND10.1 Solving Decimal Problems -Addition and Subtraction (Part 1) PREREQUISITES (2) Pri 4Pri 5F
 187,ND10.2 Solving Decimal Problems -Addition and Subtraction (Part 2) PREREQUISITES (2) Pri 4Pri 5F
-188,ND10.3 Solving Word Problems Involving Decimals - ""as many as"" concept (Part 1) PREREQUISITES (2) Pri 4Pri 6F
+188,
 189,ND10.4 Solving Problems Involving Decimals - grouping and rate concept PREREQUISITES (2) Pri 4Pri 6F
-190,ND10.5 Solving Word Problems Involving Decimals - ""more than"" and ""as many as"" concept (Part 1) PREREQUISITES (2) Pri 4Pri 6F
+190,
 191,ND10.6 Solving Problems Involving Decimals - Set of ItemsPri 4Pri 6F
-192,ND10.7 Solving Word Problems Involving Decimals - ""as many as"" concept (Part 2) PREREQUISITES (1) Pri 5
-193,ND10.10 Solving Structured Word Problems Involving Decimals - ""more than"" and ""as many as"" concept PREREQUISITES (1) Pri 5Pri 6F
-194,ND10.11 Solving Structured Word Problems Involving Decimals - ""more than"" and grouping concept PREREQUISITES (2) Pri 5Pri 6F
-195,ND10.8 Solving Word Problems Involving Decimals - ""more than"" and ""as many as"" concept (Part 2) PREREQUISITES (1) Pri 5
-196,ND10.9 Solving Word Problems Involving Decimals - ""more than"" and grouping concept PREREQUISITES (1) Pri 5
-197,ND10.12 Solving Structured Word Problems Involving Decimals - ""as many as"" concept PREREQUISITES (1) Pri 6F
+192,
+193,
+194,
+195,
+196,
+197,
 198,Percentage
 199,Interpreting Percentage as Part of a Whole
 200,NP1.1 Introduction to PercentagePri 5Pri 6F
@@ -277,7 +277,7 @@
 277,Comparing Numbers
 278,N1.5.1 Place negative numbers on a number line PREREQUISITES (1)
 279,N1.6.1 Use symbols < and > to describe the relationship between two numbers PREREQUISITES (1)
-280,N1.6.2 Use symbols ≤ and ≥ to describe the relationship between a set of numbers and a given number PREREQUISITES (1)
+280,N1.6.2 Use symbols \u2264 and \u2265 to describe the relationship between a set of numbers and a given number PREREQUISITES (1)
 281,Approximation and Estimation
 282,N1.7.1 Round a number to the required number of decimal places
 283,N1.7.2 Determine the number of significant figures of a number in a given context
@@ -324,7 +324,7 @@
 324,Algebraic Expressions and Formulae
 325,Basic Algebra and Algebraic Manipulation
 326,N5.1.1 **
-327,N5.2.1 Interpret ab as a×b in an algebraic expression
+327,N5.2.1 Interpret ab as a\u00d7b in an algebraic expression
 328,N5.3.1 Evaluate an algebraic expression given the values of the variables or unknowns PREREQUISITES (1)
 329,N5.4.1 Translate simple real-world situations into algebraic expressions PREREQUISITES (1)
 330,N5.6.1 Add or subtract two linear algebraic expressions PREREQUISITES (1)
@@ -346,7 +346,7 @@
 346,N5.12.1 Use an algebraic equation or formula to find the value of a variable or unknown PREREQUISITES (2)
 347,Algebraic Fractions
 348,N5.15.1 Multiply simple algebraic fractions such as: (3a/b^2)(5ab/3) PREREQUISITES (1)
-349,N5.15.2 Divide simple algebraic fractions such as: (3a/4)÷(9a^2/10) PREREQUISITES (1)
+349,N5.15.2 Divide simple algebraic fractions such as: (3a/4)\u00f7(9a^2/10) PREREQUISITES (1)
 350,N5.16.1 Add and subtract algebraic fractions with linear denominator such as: 1/(x-2) + 2/(x-3)
 351,N5.16.2 Add and subtract algebraic fractions with linear or quadratic denominator such as: 1/(x+3) + 2/(x^2+6x+9) PREREQUISITES (3)
 352,N5.16.3 Add and subtract algebraic fractions with linear or quadratic denominator such as: 1/(x-3)+2/(x-3)^2 PREREQUISITES (3)
@@ -384,8 +384,8 @@
 384,N7.3.2 Solve simultaneous linear equations in two variables by graphical method PREREQUISITES (1)
 385,N7.6.4 Solve problems involving the formulation of simultaneous linear equations
 386,Linear Inequalities
-387,"N7.7.1 Solve simple inequalities in the form 𝑎𝑥≤𝑏, 𝑎𝑥≥𝑏, 𝑎𝑥<𝑏, 𝑎𝑥>𝑏,where a is positive PREREQUISITES (2)"
-388,"N7.7.2 Solve simple inequalities in the form 𝑎𝑥≤𝑏, 𝑎𝑥≥𝑏, 𝑎𝑥<𝑏, 𝑎𝑥>𝑏,where a is negative PREREQUISITES (2)"
+387,"N7.7.1 Solve simple inequalities in the form \ud835\udc4e\ud835\udc65\u2264\ud835\udc4f, \ud835\udc4e\ud835\udc65\u2265\ud835\udc4f, \ud835\udc4e\ud835\udc65<\ud835\udc4f, \ud835\udc4e\ud835\udc65>\ud835\udc4f,where a is positive PREREQUISITES (2)"
+388,"N7.7.2 Solve simple inequalities in the form \ud835\udc4e\ud835\udc65\u2264\ud835\udc4f, \ud835\udc4e\ud835\udc65\u2265\ud835\udc4f, \ud835\udc4e\ud835\udc65<\ud835\udc4f, \ud835\udc4e\ud835\udc65>\ud835\udc4f,where a is negative PREREQUISITES (2)"
 389,"Lines, Angles & Polygons"
 390,Lines and Angles
 391,G1.1.1 Determine whether a given angle is reflex visually.

@@ -1,62 +1,31 @@
-1,Interactions
-2,"Interaction of forces (Frictional force, gravitational force, force in springs)"
-3,Identify a force as a push or a pull.
-4,"Show an understanding of the effects of a force.
-
-A force can move a stationary object.
-A force can speed up, slow down or change the direction of motion.
-A force can stop a moving object.
-A force may change the shape of an object."
-5,"Recognise and give examples of the different types of forces.
-
-Magnetic force
-Gravitational force
-Elastic spring force
-Frictional force"
-6,Recognise that objects have weight because of the gravitational force acting on the object.
-7,Investigate the effect of frictional force on the motion of objects.
-8,Investigate the effects of elastic spring force.
-9,Show objectivity by using data and information to validate observations and explanations about forces.
-10,Interaction within the environment
-11,"Identify the factors that affect the survival of an organism.
-
-Physical characteristics of the environment (temperature, light, water)
-Availability of food
-Types of other organisms present (producers, consumers, decomposers)"
-12,Show an understanding of the effect on organisms when the environment becomes unfavourable (organisms adapt and survive; move to other places or die).
-13,"Show an understanding of the energy pathway from the Sun through living things and identify the roles of various organisms (producers, consumers, predators, prey) in a food chain and a food web."
-14,"Differentiate among organism, population and community.
-
-An organism is a living thing.
-A population is a group of organisms of the same kind, living and reproducing at a given place and time.
-A community consists of many populations living together in a particular place."
-15,"Show an understanding that different habitats support different communities ( garden, field, pond, seashore, tree, mangrove swamp)."
-16,"Show an understanding that adaptations serve to enhance survival and can be structural or behavioural.
-
-Cope with physical factors
-Obtain food
-Escape predators
-Reproduce by finding and attracting mates or dispersing seeds/fruits"
-17,"Give examples of man's impact, (both positive and negative) on the environment."
-18,"Observe, collect and record information regarding the interacting factors within an environment."
-19,Show care and concern for Man\u2019s impact on the environment by being respectful and responsible towards the environment.
-20,Energy
-21,Energy Forms and Uses (Photosynthesis)
-22,Recognise that living things need energy from respiration to carry out life processes.
-23,Recognise that the Sun is our primary source of energy (light and heat).
-24,Differentiate between the ways in which plants and animals obtain energy.
-25,"Investigate the requirements (water, light energy and carbon dioxide) for photosynthesis (production of sugar and oxygen)."
-26,Show objectivity by using data and information to validate observations and explanations about photosynthesis.
-27,Energy Conversion
-28,Recognise that energy from most of our energy resources is derived in some ways from the Sun.
-29,"Recognise and give examples of the various forms of energy.
-
-Kinetic energy
-Potential energy
-Light energy
-Electrical energy
-Sound energy
-Heat energy"
-30,Investigate energy conversion from one form to another.
-31,Show care and concern by being responsible in conserving energy in our everyday life.
-32,Enrichment
+[1, 'Interactions']
+[2, 'Interaction of forces (Frictional force, gravitational force, force in springs)']
+[3, 'Identify a force as a push or a pull.']
+[4, 'Show an understanding of the effects of a force.\n\nA force can move a stationary object.\nA force can speed up, slow down or change the direction of motion.\nA force can stop a moving object.\nA force may change the shape of an object.']
+[5, 'Recognise and give examples of the different types of forces.\n\nMagnetic force\nGravitational force\nElastic spring force\nFrictional force']
+[6, 'Recognise that objects have weight because of the gravitational force acting on the object.']
+[7, 'Investigate the effect of frictional force on the motion of objects.']
+[8, 'Investigate the effects of elastic spring force.']
+[9, 'Show objectivity by using data and information to validate observations and explanations about forces.']
+[10, 'Interaction within the environment']
+[11, 'Identify the factors that affect the survival of an organism.\n\nPhysical characteristics of the environment (temperature, light, water)\nAvailability of food\nTypes of other organisms present (producers, consumers, decomposers)']
+[12, 'Show an understanding of the effect on organisms when the environment becomes unfavourable (organisms adapt and survive; move to other places or die).']
+[13, 'Show an understanding of the energy pathway from the Sun through living things and identify the roles of various organisms (producers, consumers, predators, prey) in a food chain and a food web.']
+[14, 'Differentiate among organism, population and community.\n\nAn organism is a living thing.\nA population is a group of organisms of the same kind, living and reproducing at a given place and time.\nA community consists of many populations living together in a particular place.']
+[15, 'Show an understanding that different habitats support different communities ( garden, field, pond, seashore, tree, mangrove swamp).']
+[16, 'Show an understanding that adaptations serve to enhance survival and can be structural or behavioural.\n\nCope with physical factors\nObtain food\nEscape predators\nReproduce by finding and attracting mates or dispersing seeds/fruits']
+[17, "Give examples of man's impact, (both positive and negative) on the environment."]
+[18, 'Observe, collect and record information regarding the interacting factors within an environment.']
+[19, 'Show care and concern for Man’s impact on the environment by being respectful and responsible towards the environment.']
+[20, 'Energy']
+[21, 'Energy Forms and Uses (Photosynthesis)']
+[22, 'Recognise that living things need energy from respiration to carry out life processes.']
+[23, 'Recognise that the Sun is our primary source of energy (light and heat).']
+[24, 'Differentiate between the ways in which plants and animals obtain energy.']
+[25, 'Investigate the requirements (water, light energy and carbon dioxide) for photosynthesis (production of sugar and oxygen).']
+[26, 'Show objectivity by using data and information to validate observations and explanations about photosynthesis.']
+[27, 'Energy Conversion']
+[28, 'Recognise that energy from most of our energy resources is derived in some ways from the Sun.']
+[29, 'Recognise and give examples of the various forms of energy.\n\nKinetic energy\nPotential energy\nLight energy\nElectrical energy\nSound energy\nHeat energy']
+[30, 'Investigate energy conversion from one form to another.']
+[31, 'Show care and concern by being responsible in conserving energy in our everyday life.']

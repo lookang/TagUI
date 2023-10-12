@@ -1,0 +1,92 @@
+1,Algebra and Calculus
+2,Complex numbers
+3,complex numbers expressed in the form
+4,multiplication and division of two complex numbers expressed in polar form and their geometrical interpretations
+5,"Loci of simple equations and inequalities such as , , and  (excluding loci of , where , and )"
+6,"Use of de Moivre's Theorem to find the powers and n-th roots of a complex number, and to derive trigonometric identities"
+7,Polar coordinates
+8,"Simple polar curves (, or , or a subset of either of these intervals) and where r is non-negative throughout the domain"
+9,use of formula  for the area of a sector
+10,arc length of curves defined in polar form
+11,Applications of definite integrals
+12,arc length of curves defined in cartesian form
+13,"volume of revolution about the x- or y-axis for curves defined in cartesian form, using discs or shells as appropriate"
+14,surface area of revolution about the x- or y-axis for curves defined in cartesian form
+15,Functions of two variables
+16,functions of two variables and surfaces
+17,first order and second order partial derivatives
+18,"minimum, maximum and saddle points"
+19,normal and tangent planes and local linearisation
+20,directional derivatives and gradient
+21,quadratic approximations
+22,local maximum and minimum problems
+23,Differential equations
+24,"analytical solution of first order and second order linear differential equations of the form:
+
+. using an integrating factor
+, where a and b are real numbers
+, where a and b are real numbers,  is a polynomial, or , or , including those that can be reduced to the above by means of a given substitution"
+25,relationship between the solution of a non-homogenous equation and the associated homogenous equation
+26,"family of solution curves, phase lines and slope fields"
+27,exponential growth model
+28,"logistic growth model, equilibrium points and their stability, and harvesting"
+29,"Discrete Mathematics, Matrices and Numerical Methods"
+30,Recurrence relations
+31,"behaviour of a sequence, such as the limiting behaviour of a sequence"
+32,"solution of
+(i) First order linear (homogenous and non-homogenous) recurrence relations with constant coefficients of the form 
+(ii) Second order linear homogenous recurrence relations with constant coefficients
+including those that can be transformed to the above by means of a given substitution"
+33,modelling with recurrence relations of the forms above
+34,Matrices and linear spaces
+35,use of matrices to represent a set of linear equations
+36,operations on  matrices
+37,determinant of a square matrix and inverse of a non-singular matrix ( and  matrices only)
+38,"use of matrices to solve a set of linear equations (including row reduction and echelon forms, and geometrical interpretation of the solution)"
+39,"linear transformations and matrices from , where"
+40,"eigenvalues and eigenvectors of square matrices ( and  matrices, restricted to cases where the eigenvalues are real)"
+41,"diagonalisation of a square matrix M by expressing the matrix in the form , where D is a diagonal matrix of eigenvalues, and Q is a matrix whose columns are eigenvectors, and use of this expression such as to find the powers of M"
+42,"linear spaces and subspaces, and the axioms (restricted to spaces of finite dimension over the field of real numbers only)"
+43,linear independence and span
+44,"basis and dimension (in simple cases), including use of terms such as 'column space', 'row space', 'range space' and 'null space'"
+45,"rank of a square matrix and relation between rank, dimension of null space and order of the matrix"
+46,Numerical methods
+47,location of roots of an equation by simple graphical or numerical methods
+48,"approximation of roots of equations using linear interpolation and Newton-Raphson method, with the aid of a computer, including cases where each method fails to converge to the required root"
+49,"iterations involving recurrence relations of the form , including cases where the method fails to converge"
+50,"approximation of integral of a function using the trapezium rule and Simpson's rule, with the aid of a computer"
+51,"approximation of solutions of first order differential equations using Euler method (including the use of the improved Euler formula), with the aid of a computer"
+52,3 Probability and Statistics
+53,Discrete random variables
+54,"Use of Poisson distribution Po() and geometric distribution Geo(p) as probability models, including conditions under which each distribution is a suitable model"
+55,Mean and variance for Poisson and geometric distributions
+56,Additive property of the Poisson distribution
+57,Continuous random variables
+58,Probability density function of a continuous random variable and its mean and variance (includes 'piecewise' probability density function)
+59,Cumulative distribution function and its relationship with the probability density function
+60,Concepts of median and mode of a continuous random variable
+61,"Use of the result  in simple cases, where  is the probability density function of X and  is a function of X"
+62,Uniform distribution and exponential distribution as probability models
+63,Relationship between Poisson and exponential distributions
+64,Hypothesis testing and Confidence intervals
+65,Formulation of hypotheses and testing for a population mean using a small sample drawn from a normal population of unknown variance using a t-test
+66,"Formulation of hypotheses for the difference of population means, and apply, as appropriate:
+
+a paired sample t-test
+a test using normal distribution"
+67,"Contingency tables and -tests of:
+
+goodness of fit
+independence (excluding Yates' correction for continuity)"
+68,Connection between confidence interval and hypothesis test
+69,"Confidence interval for the population mean based on:
+
+a random sample from a normal population of known variance
+a small random sample drawn from a normal population of unknown variance
+a large random sample from any population"
+70,Confidence interval for population proportion (including concept of sample proportion) from a large random sample
+71,Interpretation of confidence intervals and the results of a hypothesis test in the context of the problem
+72,Non-parametric tests
+73,formulation of hypothesis and testing for a population median using Sign test
+74,formulation of hypothesis and testing for identical probability distribution for two sampled populations in a paired difference design using Wilcoxon matched-pair signed rank test
+75,advantages and disadvantages of non-parametric tests

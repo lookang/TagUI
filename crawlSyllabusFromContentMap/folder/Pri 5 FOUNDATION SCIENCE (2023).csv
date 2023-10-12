@@ -1,50 +1,33 @@
-1,Cycles
-2,Cycles in plants and animals (Reproduction)
-3,"State the processes in the sexual reproduction of flowering plants.
-
-Pollination
-Fertilisation (seed production)
-Seed dispersal
-Germination"
-4,State the process of fertilisation in the sexual reproduction of humans.
-5,"Observe and compare the ways in which plants reproduce.
-
-Spores
-Seeds"
-6,Show curiosity by questioning and exploring the surrounding plants and animals.
-7,Show care and concern by being responsible towards plants and animals.
-8,Cycles in matter and water (Water)
-9,Recognise that water can exist in three interchangeable states of matter.
-10,"State how water changes from one state to another.
-
-Melting (solid to liquid)
-Freezing (liquid to solid)
-Boiling/Evaporation (liquid to gas)
-Condensation (gas to liquid)"
-11,State the melting point of ice (or freezing point of water) and boiling point of water.
-12,Recognise the changes in states of water in the water cycle.
-13,Recognise the importance of the water cycle.
-14,Compare water in 3 states.
-15,Show concern for water as a limited natural resource and be responsible in conserving.
-16,Systems
-17,Plant system (Respiratory and circulatory systems)
-18,Recognise how water is transported from the roots to other parts of the plant and how food is transported from the leaves to other parts of the plant.
-19,Observe how food and water are transported in the plant.
-20,Show objectivity by seeking data and information to validate observations and explanations about plant parts and functions.
-21,Show care and concern by being responsible towards plants.
-22,Human system (Respiratory and circulatory systems)
-23,"Recognise that air is a mixture of gases such as nitrogen, carbon dioxide, oxygen and water vapour."
-24,"Identify the parts of the human respiratory (nose, windpipe, lungs) and circulatory systems (heart, blood, blood vessels) and state their functions."
-25,Compare how plants and humans take in oxygen and give out carbon dioxide.
-26,Show objectivity by seeking data and information to validate observations and explanations about the human body.
-27,Electrical system
-28,"Recognise that an electric circuit consisting of an energy source (battery) and other circuit components (wire, bulb, switch) forms an electrical system."
-29,State that a closed circuit allows current to flow.
-30,Identify electrical conductors and insulators.
-31,Construct simple circuits from circuit diagrams.
-32,"Investigate the effect of some variables on the current in a circuit.
-
-Number of batteries (arranged in series)
-Number of bulbs (arranged in series)"
-33,Show concern for the need to conserve and to have proper use and handling of electricity.
-34,Enrichment
+[1, 'Cycles']
+[2, 'Cycles in plants and animals (Reproduction)']
+[3, 'State the processes in the sexual reproduction of flowering plants.\n\nPollination\nFertilisation (seed production)\nSeed dispersal\nGermination']
+[4, 'State the process of fertilisation in the sexual reproduction of humans.']
+[5, 'Observe and compare the ways in which plants reproduce.\n\nSpores\nSeeds']
+[6, 'Show curiosity by questioning and exploring the surrounding plants and animals.']
+[7, 'Show care and concern by being responsible towards plants and animals.']
+[8, 'Cycles in matter and water (Water)']
+[9, 'Recognise that water can exist in three interchangeable states of matter.']
+[10, 'State how water changes from one state to another.\n\nMelting (solid to liquid)\nFreezing (liquid to solid)\nBoiling/Evaporation (liquid to gas)\nCondensation (gas to liquid)']
+[11, 'State the melting point of ice (or freezing point of water) and boiling point of water.']
+[12, 'Recognise the changes in states of water in the water cycle.']
+[13, 'Recognise the importance of the water cycle.']
+[14, 'Compare water in 3 states.']
+[15, 'Show concern for water as a limited natural resource and be responsible in conserving.']
+[16, 'Systems']
+[17, 'Plant system (Respiratory and circulatory systems)']
+[18, 'Recognise how water is transported from the roots to other parts of the plant and how food is transported from the leaves to other parts of the plant.']
+[19, 'Observe how food and water are transported in the plant.']
+[20, 'Show objectivity by seeking data and information to validate observations and explanations about plant parts and functions.']
+[21, 'Show care and concern by being responsible towards plants.']
+[22, 'Human system (Respiratory and circulatory systems)']
+[23, 'Recognise that air is a mixture of gases such as nitrogen, carbon dioxide, oxygen and water vapour.']
+[24, 'Identify the parts of the human respiratory (nose, windpipe, lungs) and circulatory systems (heart, blood, blood vessels) and state their functions.']
+[25, 'Compare how plants and humans take in oxygen and give out carbon dioxide.']
+[26, 'Show objectivity by seeking data and information to validate observations and explanations about the human body.']
+[27, 'Electrical system']
+[28, 'Recognise that an electric circuit consisting of an energy source (battery) and other circuit components (wire, bulb, switch) forms an electrical system.']
+[29, 'State that a closed circuit allows current to flow.']
+[30, 'Identify electrical conductors and insulators.']
+[31, 'Construct simple circuits from circuit diagrams.']
+[32, 'Investigate the effect of some variables on the current in a circuit.\n\nNumber of batteries (arranged in series)\nNumber of bulbs (arranged in series)']
+[33, 'Show concern for the need to conserve and to have proper use and handling of electricity.']

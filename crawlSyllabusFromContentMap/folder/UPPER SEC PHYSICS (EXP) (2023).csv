@@ -1,0 +1,219 @@
+1,Measurements
+2,Physical Quantities Units and Measurement
+3,show an understanding that physical quantities typically consist of a numerical magnitude and a unit
+4,"recall the following base quantities and their units: mass (kg), length (m), time (s), current (A), temperature (K), amount of substance (mol)"
+5,"use the following prefixes and their symbols to indicate decimal sub-multiples and multiples of the SI units: nano (n), micro (), milli (m), centi (c), deci (d), kilo (k), mega (M), giga (G), tera (T)"
+6,show an understanding of the orders of magnitude of the sizes of common objects ranging from a typical atom to the Earth
+7,"select and explain the use of appropriate measuring instruments to measure or determine physical quantities listed in 'Summary of key quantities, symbols and units' taking into consideration the range and precision of the instrument"
+8,state what is meant by scalar and vector quantities and give common examples of each
+9,add two vectors to determine a resultant by a graphical method
+10,Newtonian Mechanics
+11,Kinematics
+12,state what is meant by speed and velocity
+13,calculate average speed = distance travelled / time taken
+14,state what is meant by uniform acceleration and calculate the value of acceleration using change in velocity / time taken
+15,interpret given examples of non-uniform acceleration
+16,plot and interpret a displacement-time graph and a velocity-time graph for motion in one dimension
+17,"deduce from the shape of a displacement-time graph when a body is:
+(i) at rest
+(ii) moving with uniform velocity
+(iii) moving with non-uniform velocity"
+18,"deduce from the shape of a velocity-time graph when a body is:
+(i) at rest
+(ii) moving with uniform velocity
+(iii) moving with uniform acceleration
+(iv) moving with non-uniform acceleration"
+19,"calculate the area under a velocity-time graph to determine the displacement, for motion with uniform velocity or uniform acceleration"
+20,state that the acceleration of free fall for a body near to the Earth is constant and is approximately 10 m/s2
+21,Dynamics
+22,"identify and distinguish between contact forces (e.g. friction, air resistance, tension and normal force) and non-contact forces (e.g. gravitational, electrostatic and magnetic forces)"
+23,state that mass is a measure of the amount of matter in a body
+24,state that a gravitational field is a region in which a mass experiences a force due to gravitational attraction
+25,"define gravitational field strength, g, as gravitational force per unit mass placed at that point"
+26,recall and apply the relationship weight = mass  gravitational field strength to new situations or to solve related problems
+27,distinguish between mass and weight
+28,"apply Newton's Laws to:
+(i) describe the effect of balanced and unbalanced forces on a body
+(ii) describe the ways in which a force may change the motion of a body
+(iii) identify action-reaction pairs acting on two interacting bodies
+(stating of Newton's Laws is not required)"
+29,identify forces acting on a body and draw free body diagram(s) representing the forces acting on the body (for cases involving forces acting in at most two dimensions)
+30,solve problems for a static point mass under the action of three forces for two-dimensional cases by a graphical method
+31,recall and apply the relationship resultant force = mass  acceleration to new situations or to solve related problems
+32,show an understanding that mass is the property of a body which resists change in motion (inertia)
+33,explain the effects of friction on the motion of a body
+34,"describe the motion of bodies with constant mass falling in uniform gravitational field with or without air resistance, including reference to terminal velocity"
+35,Turning Effects of Forces
+36,describe the moment of a force about a pivot in terms of its turning effect and relate this to everyday examples
+37,recall and apply the relationship moment of a force (or torque) = force  perpendicular distance from the pivot to new situations or to solve related problems
+38,state the principle of moments for a body in equilibrium
+39,apply the principle of moments to new situations or to solve related problems
+40,show an understanding that the weight of a body may be taken as acting at a single point known as its centre of gravity
+41,describe qualitatively the effect of the position of the centre of gravity on the stability of objects
+42,Pressure
+43,define pressure in terms of force and area
+44,recall and apply the relationship pressure = force / area to new situations or to solve related problems
+45,describe and explain the transmission of pressure in hydraulic systems with particular reference to the hydraulic press
+46,recall and apply the relationship density = mass / volume to new situations or to solve related problems
+47,recall and apply the relationship pressure due to a liquid column = height of column  density of the liquid  gravitational field strength to new situations or to solve related problems
+48,describe how the height of a liquid column may be used to measure the atmospheric pressure
+49,describe the use of a manometer in the measurement of pressure difference
+50,Energy
+51,"show an understanding that there are energy stores, e.g. kinetic, potential (gravitational, chemical, elastic), nuclear and internal, and that energy can be transferred from one store to another:
+(i) Mechanically (by a force acting over a distance)
+(ii) Electrically (by an electric current)
+(iii) By heating (due to a temperature difference)
+(iv) By propagation of waves (both electromagnetic and mechanical)"
+52,recall and apply the relationships for kinetic energy (Ek = mv2) and gravitational potential energy near the Earth's surface (Ep = mgh) to new situations or to solve related problems
+53,state the principle of the conservation of energy and apply the principle to new situations or to solve related problems
+54,recall and apply the relationship work done = force  distance moved in the direction of the force to new situations or to solve related problems
+55,recall and apply the relationship power = energy transfer / time taken to new situations or to solve related problems
+56,calculate the efficiency of an energy transfer using the formula efficiency = useful energy output / total energy input
+57,"discuss the use of non-renewable energy resources such as fossil fuel and nuclear fuel, and renewable energy resources such as biofuel, wind, tides, hydropower, geothermal reservoirs and solar to generate electricity in terms of efficiency of energy transfer, cost, reliability and their environmental impact"
+58,Thermal Physics
+59,Kinetic Particle Model of Matter
+60,"compare the physical properties of solids, liquids and gases"
+61,"use the kinetic particle model to describe the different states of matter (solids, liquids and gases), relating their physical properties to the arrangement and motion of the particles (e.g. molecules, atoms) and the forces and distances between particles"
+62,infer from a Brownian motion experiment the evidence for the random movement of molecules in a liquid or gas
+63,relate the rise in temperature of a body to the increase in average kinetic energy of all the particles in the body
+64,explain the pressure of a gas in terms of the motion of its particles
+65,Thermal Processes
+66,show an understanding that energy is transferred (by heating) from a region of higher temperature to a region of lower temperature until thermal equilibrium is achieved between the two regions
+67,"describe, in microscopic terms, how conduction occurs in solids (via vibration of atoms/molecules and movement of electrons)"
+68,"describe, in terms of density changes, how convection occurs in fluids"
+69,"explain that energy transfer by electromagnetic radiation does not require a material medium and that this rate of energy transfer to/from a body is affected by its:
+(i) surface colour and texture
+(ii) surface temperature
+(iii) surface area"
+70,"apply the concepts of conduction, convection and radiation in everyday examples"
+71,Thermal Properties of Matter
+72,describe internal energy as an energy store that is made up of the total kinetic energy associated with the random motion of the particles and the total potential energy between the particles in the system
+73,define heat capacity and specific heat capacity
+74,recall and apply the relationship energy transfer (by heating) = mass  specific heat capacity  change in temperature to new situations or to solve related problems
+75,describe melting/solidification and boiling/condensation as processes of energy transfer without a change in temperature
+76,explain the difference between boiling and evaporation
+77,define latent heat and specific latent heat
+78,recall and apply the relationship energy transfer (by heating for a change of state) = mass  specific latent heat to new situations or to solve related problems
+79,explain latent heat in terms of behaviour of particles in a body
+80,sketch and interpret a cooling curve
+81,Waves
+82,General Wave Properties
+83,describe what is meant by wave motion as illustrated by vibrations in ropes and springs and by waves in a ripple tank (including use of the term wavefront)
+84,show an understanding that waves transfer energy without transferring matter
+85,"define and use the terms speed, frequency, wavelength, period and amplitude, including graphical representation"
+86,recall and apply the relationship speed of wave = frequency  wavelength to new situations or to solve related problems
+87,compare transverse and longitudinal waves and give suitable examples of each
+88,show an understanding that sound can be produced by vibrating sources and a medium is required for the transmission of sound
+89,describe the longitudinal nature of sound waves in terms of the processes of compression and rarefaction
+90,relate loudness of a sound wave to its amplitude and pitch to its frequency
+91,"describe how the reflection of sound may produce an echo, and how this may be used for measuring distances"
+92,"describe and explain how ultrasound is used, e.g. in sonar and medical scanning of soft tissue"
+93,Electromagnetic Waves
+94,state that all electromagnetic waves are transverse waves that travel with the same speed in vacuum
+95,describe the main regions of the electromagnetic spectrum in order of wavelength and frequency
+96,"state examples of typical uses of the following regions of the electromagnetic spectrum:
+(i) radio waves
+(ii) microwaves
+(iii) infrared
+(iv) visible light
+(v) ultraviolet
+(vi) X-rays
+(vii) gamma () rays"
+97,describe how over-exposure to electromagnetic waves can have hazardous effects (e.g. heating and ionising effects of radiation) on living cells and tissue
+98,Light
+99,"recall and use the terms normal, angle of incidence and angle of reflection to describe the reflection of light"
+100,"state that, for reflection, the angle of incidence is equal to the angle of reflection and use this principle in constructions, measurements and calculations"
+101,"recall and use the terms normal, angle of incidence and angle of refraction to describe the refraction of light"
+102,recall and apply the relationship sin i / sin r = constant to new situations or to solve related problems
+103,define refractive index of a medium in terms of the ratio of speed of light in vacuum and in the medium
+104,explain the terms critical angle and total internal reflection
+105,"apply total internal reflection to the use of optical fibres in telecommunication and medicine, stating the advantages of such use"
+106,describe the action of a thin converging lens on a beam of light
+107,define the focal length for a converging lens
+108,draw ray diagrams to illustrate the formation of real and virtual images of an object by a thin converging lens
+109,"describe the characteristics of images (e.g. real/virtual, magnified/diminished, and upright/inverted) formed by a thin converging lens"
+110,Electricity and Magnetism
+111,Static Electricity
+112,state that there are positive and negative charges and that charge is measured in coulombs
+113,state that unlike charges attract and like charges repel
+114,describe an electric field as a region in which an electric charge experiences a force
+115,draw the electric field of an isolated point charge and recall that the direction of the field lines gives the direction of the force acting on a positive test charge
+116,draw the electric field pattern between two isolated point charges
+117,show an understanding that electrostatic charging by rubbing involves a transfer of electrons
+118,describe experiments to show electrostatic charging by induction
+119,describe examples where electrostatic charging may be a potential hazard
+120,"describe the use of electrostatic charging in an electrostatic precipitator, and apply the use of electrostatic charging to new situations"
+121,Current of Electricity
+122,state that current is the rate of flow of charge and that it is measured in amperes
+123,distinguish between conventional current and electron flow
+124,recall and apply the relationship charge = current  time to new situations or to solve related problems
+125,state that the electromotive force (e.m.f.) of a source is the work done per unit charge by the source in driving charges around a complete circuit and that it is measured in volts
+126,calculate the total e.m.f. where several sources are arranged in series
+127,state that the potential difference (p.d.) across a component in a circuit is the work done per unit charge in driving charges through the component and that it is measured in volts
+128,state that resistance = p.d. / current
+129,apply the relationship R = V / I to new situations or to solve related problems
+130,recall and apply the relationship of the proportionality between resistance and the length and cross-sectional area of a wire to new situations or to solve related problems
+131,describe the effect of temperature increase on the resistance of a metallic conductor
+132,"sketch and interpret the I-V characteristic graphs for a metallic conductor at constant temperature (ohmic conductor), for a filament lamp and for a semiconductor diode"
+133,D.C. Circuits
+134,"draw circuit diagrams with power sources (cell, battery, d.c. supply or a.c. supply), switches, lamps, resistors (fixed and variable), variable potential divider (potentiometer), fuses, ammeters and voltmeters, bells, light-dependent resistors, thermistors and light-emitting diodes"
+135,state that the current at every point in a series circuit is the same and apply the principle to new situations or to solve related problems
+136,state that the sum of the potential differences in a series circuit is equal to the potential difference across the whole circuit and apply the principle to new situations or to solve related problems
+137,state that the sum of the currents in the separate branches of a parallel circuit is equal to the current from the source and apply the principle to new situations or to solve related problems
+138,state that the potential difference across the separate branches of a parallel circuit is the same and apply the principle to new situations or to solve related problems
+139,recall and apply the formulae for the effective resistance of a number of resistors in series and in parallel to new situations or to solve related problems
+140,"recall and apply the relevant relationships, including R = V / I and those for current, potential differences and resistors in series and in parallel circuits, in calculations involving a whole circuit"
+141,describe the action of a variable potential divider (potentiometer)
+142,describe the action of negative temperature coefficient (NTC) thermistors and light-dependent resistors and explain their use as input transducers in potential dividers
+143,solve simple circuit problems involving NTC thermistors and light-dependent resistors
+144,Practical Electricity
+145,"describe the use of the heating effect of electricity in appliances such as electric kettles, ovens and heaters"
+146,recall and apply the relationships P = V I and E = V I t to new situations or to solve related problems
+147,calculate the cost of using electrical appliances where the energy unit is the kW h
+148,state the hazards of using electricity in the following situations: (i) damaged insulation (ii) overheating of cables (iii) damp conditions
+149,explain the use of fuses and circuit breakers in electrical circuits and of fuse ratings
+150,explain the need for earthing metal casings and for double insulation
+151,"state the meaning of the terms live, neutral and earth"
+152,describe the wiring in a mains plug
+153,"explain why switches, fuses, and circuit breakers are fitted to the live wire"
+154,Magnetism
+155,state the properties of magnets
+156,describe induced magnetism caused by placing magnetic material close to a strong magnet or within a current-carrying solenoid
+157,distinguish between temporary magnets (e.g. iron) and permanent magnets (e.g. steel) in terms of their properties and uses
+158,describe how a bar magnet (e.g. a compass) can be used to determine the direction of a magnetic field
+159,draw the magnetic field pattern around a bar magnet and between the poles of two bar magnets
+160,Electromagnetism
+161,draw the pattern of the magnetic field due to currents in straight wires and in solenoids and state the effect on the magnetic field of changing the magnitude and/or direction of the current
+162,describe the application of the magnetic effect of a current in electromagnets (e.g. circuit breakers)
+163,"describe experiments to show the force on a current-carrying conductor, and on a beam of charged particles, in a magnetic field, including the effect of reversing
+(i) the current
+(ii) the direction of the field"
+164,"deduce the relative directions of force, field and current when any two of these quantities are at right angles to each other using Fleming's left-hand rule"
+165,"explain how a current-carrying coil in a magnetic field (e.g. in a motor) experiences a turning effect and that the effect is increased by increasing
+(i) the number of turns on the coil
+(ii) the current"
+166,"describe the action of a split-ring commutator in a two-pole, single-coil motor and the effect of winding the coil on to a soft-iron cylinder"
+167,Electromagnetic Induction
+168,"deduce from Faraday's experiments on electromagnetic induction or other appropriate experiments:
+(i) that a changing magnetic field can induce an e.m.f. in a circuit
+(ii) that the direction of the induced e.m.f. opposes the change producing it
+(iii) the factors affecting the magnitude of the induced e.m.f."
+169,describe a simple a.c. generator (rotating coil or rotating magnet) and the use of slip rings (where needed)
+170,sketch a graph of voltage output against time for a simple a.c. generator
+171,describe the structure and principle of operation of a simple iron-cored transformer as used for voltage transformations
+172,recall and apply the equations VP/VS = NP/NS and VPIP = VSIS to new situations or to solve related problems (for an ideal transformer)
+173,describe the energy loss in cables and deduce the advantages of high voltage transmission
+174,Radioactivity
+175,Radioactivity
+176,describe the composition of an atom in terms of a positively charged nucleus (with protons and neutrons) and negatively charged electrons
+177,"use the terms proton (atomic) number Z, nucleon (mass) number A and isotope"
+178,use and interpret the term nuclide and use the nuclide notation
+179,show an understanding that nuclear decay is a random and spontaneous process whereby an unstable nucleus loses energy by emitting radiation
+180,"show an understanding of the nature of alpha (), beta (), and gamma () radiation (including ionising effect and penetrating power) [-particles are assumed to be particles only]"
+181,use equations involving nuclide notation to represent changes in the composition of the nucleus when radioactive emissions occur
+182,show an understanding of background radiation
+183,"use the term half-life in simple calculations, which might involve information in tables or decay curves"
+184,"discuss the applications (e.g. medical and industrial uses) and hazards of radioactivity based on:
+(i) half-life of radioactive materials,
+(ii) penetrating abilities and ionising effects of radioactive emissions"
+185,state the meaning of nuclear fusion and nuclear fission and relate these nuclear processes with the release of energy from nuclear fuels (recall of the energy-mass equivalence and details of technologies in nuclear power plants are not required)

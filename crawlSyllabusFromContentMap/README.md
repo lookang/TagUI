@@ -1,12 +1,12 @@
 # crawlSyllabusFromContentMap.py
 
-This repository contains a script that crawls a syllabus learning objectives from a content map.
-It is for educational purposes to allow anyone to learn rpa as r
-It can allow teachers to quickly use the different concept map syllabus learning objectives.
-No one can run this py files as it requires password and additional rights to access the webpages.
-This script always automate on main tab of the browser.
-v2 is in theory more efficient, as the automation is done on the second browser tab. Closed and continue back on main tab. But it doesnt work properly
-see https://github.com/tebelorg/RPA-Python/issues/494
+  This repository contains a script that crawls a syllabus learning objectives from a content map.
+  It is for educational purposes to allow anyone to learn rpa as r.
+  It can allow teachers to quickly use the different concept map syllabus learning objectives.
+  No one can run this py files as it requires password and additional rights to access the webpages.
+  This script always automate on main tab of the browser.
+  v2 is in theory more efficient, as the automation is done on the second browser tab. Closed and continue back on main tab. But it doesnt work properly
+  see https://github.com/tebelorg/RPA-Python/issues/494
 
 ## Usage
 

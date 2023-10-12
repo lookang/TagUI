@@ -1,4 +1,4 @@
-These are just csv of the content map learning objectives that are same as from the SEAB website which is already on the public internet.
+These are just csv of the content map learning objectives that are same as from the SEAB or MOE website which is already on the public internet.
 
 For example
 https://www.moe.gov.sg/-/media/files/primary/mathematics_syllabus_primary_1_to_6.pdf

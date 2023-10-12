@@ -1,3 +1,10 @@
+# To run, type in terminal
+# python crawlSyllabusFromContentMap.py
+
+# To use the folder called folderpython to create the csv files.
+# create it first './folderpython/{}.csv'.format(title))
+
+
 # import tagui python library
 import rpa as r
 

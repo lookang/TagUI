@@ -1,12 +1,10 @@
 # crawlSyllabusFromContentMap.py
 
-  This repository contains a script that crawls a syllabus learning objectives from a content map.
-  It is for educational purposes to allow anyone to learn rpa as r.
-  It can allow teachers to quickly use the different concept map syllabus learning objectives.
-  No one can run this py files as it requires password and additional rights to access the webpages.
-  This script always automate on main tab of the browser.
-  v2 is in theory more efficient, as the automation is done on the second browser tab. Closed and continue back on main tab. But it doesnt work properly
-  see https://github.com/tebelorg/RPA-Python/issues/494
+This repository hosts a script designed for the purpose of extracting learning objectives from a syllabus content map. The script is primarily intended for educational use, enabling individuals to explore RPA (Robotic Process Automation) in the context of 'rpa tagui in python favor'. It also serves as a tool for educators to quickly access and utilize concept map-based syllabus learning objectives.
+
+Please note that running the Python files in this repository requires specific permissions and credentials to access webpages, and therefore, it cannot be executed without the necessary access rights. The script is configured to automate tasks in the main tab of a web browser.
+
+Version 2 (v2) of the script was conceived with the idea of improved efficiency. In this version, automation is performed in a secondary browser tab, and then the script switches back to the main tab. However, it is worth mentioning that v2 is currently experiencing issues and may not work as expected. For more details on the problems and potential solutions, please refer to the following link: https://github.com/tebelorg/RPA-Python/issues/494.
 
 ## Usage
 
@@ -34,17 +32,17 @@ CC-BY
 
 # crawlSyllabusFromContentMap.tag
 
-This repository contains a script that crawls a syllabus learning objectives from a content map.
-it is for educational purposes it allow teachers to quickly now the different concept map syllabus learning objectives
-it is for educational purposes it allow teachers to quickly now the different concept map syllabus learning objectives.
-This script always automate on main tab of the browser.
-v2 is in theory more efficient, as the automation is done on the second browser tab. But it probably cannot work due to chinese and tamil fonts and not more maintainance of TagUI from AI Singapore. https://github.com/aisingapore/TagUI
+This repository hosts a script designed for extracting syllabus learning objectives from a content map, primarily geared towards educational purposes. It provides educators with a convenient means of familiarizing themselves with various concept map-based syllabus learning objectives.
+
+The script is configured to automate tasks exclusively within the main tab of a web browser.
+
+Version 2 (v2) was conceptualized as a potentially more efficient approach, with automation taking place in a secondary browser tab. However, it is likely to encounter issues due to compatibility challenges with Chinese and Tamil fonts, as well as the discontinuation of support for TagUI by AI Singapore. For more information on the challenges faced and possible solutions, please visit: https://github.com/aisingapore/TagUI.
 
 ## Usage
 
 1. Clone the repository.
-2. Install the required dependencies using `pip install -r requirements.txt`.
-3. Run the script using `python crawlSyllabusFromContentMap.py`.
+2. Install https://tagui.readthedocs.io/en/latest/setup.html
+3. Run the script using `tagui crawlSyllabusFromContentMap.tag`.
 
 ## Applications
 

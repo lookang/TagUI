@@ -9,7 +9,7 @@ Version 2 (v2) of the script was conceived with the idea of improved efficiency.
 ## Usage
 
 1. Clone the repository.
-2. Install the required dependencies using `pip install -r requirements.txt`.
+2. Install the required dependencies using `pip install rpa`.
 3. Run the script using `python crawlSyllabusFromContentMap.py`.
 
 ## Applications

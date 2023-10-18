@@ -44,3 +44,5 @@ The script will fill out the following web form:
 And submit it.
 
 ## License
+
+CC-BY nived00015 and lookang

@@ -16,8 +16,8 @@ This script automates the process of posting a message on a website. It uses Tag
 tagui posting2.tag
 
 
-4. Follow the instructions on the screen to complete the process.
-5. currently post to Facebook, Twitter, Linkedin 
+4. Read the Blogger post https://weelookang.blogspot.com/?m=1 and post to different platform via RPA Tagui
+5. Currently post to Facebook, Twitter, Linkedin 
 
 ## License
 CC-BY

@@ -1,8 +1,8 @@
 # MOE4
 
 This script automates the process of extracting data from a website. It uses TagUI, a free and open-source RPA tool by AI Singapore, to interact with the website and perform the necessary actions.
-https://weelookang.blogspot.com/2021/07/using-tagui-to-crawl-publicly-available.html
-https://www.youtube.com/watch?v=yYyYhs4I6Vo explain how the code works for educational purposes
+- https://weelookang.blogspot.com/2021/07/using-tagui-to-crawl-publicly-available.html
+- https://www.youtube.com/watch?v=yYyYhs4I6Vo explain how the code works for educational purposes
 
 FINISH - automation finished - 8531.3s
 about 2.5 hours to extract 858 data of private centres listed

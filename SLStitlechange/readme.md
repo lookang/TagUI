@@ -19,9 +19,7 @@ To use this project, follow these steps:
 1. Open your terminal.
 2. Navigate to the `SLStitlechange` directory.
 3. Run the script.
-
-It seems like you're trying to run a TagUI script from the command line. Here's how you can do it:
-
+Here's how you can do it:
 1. Open your terminal.
 2. Navigate to the directory where your `titlechangefromurl.tag` file is located.
 3. Run the following command: `tagui titlechangefromurl.tag url.csv`

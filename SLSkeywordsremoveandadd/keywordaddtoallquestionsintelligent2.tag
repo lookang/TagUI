@@ -29,61 +29,38 @@ else if ask_result equals to 2
         wait 3
         click (//span[@id='loginButton2'])[1]
 
-// do rest of the steps for every iteration
+// csv data not clean so need to do substring manipulation
 wait 3
 echo p3 is `p3`
-//https://vle.learning.moe.edu.sg/mrv/moe-library/lesson/view/8f68bb0d-a82e-4682-96f2-99a4a3dade6f/cover
-//js temp3 = p3.replace("view","edit")
-
-//echo temp3 = `temp3`
 // this code if else is to address the issue of url inconsistence some have mrv while some don't 
+// Check if p3 contains "mrv"
 if p3 contains "mrv"
     js indexPosition = 47
-    js temp2 = p3.substring(0,indexPosition) + "/admin" + p3.substring(indexPosition)
-    echo temp2 is `temp2`
-    //js temp = p3.substring(8)
-    js temp = temp2.substring(8)
-    echo temp after js substring is `temp`
 else
-    echo running else
     js indexPosition = 43
-    js temp2 = p3.substring(0,indexPosition) + "/admin" + p3.substring(indexPosition)
-    echo temp2 is `temp2`
-    //js temp = p3.substring(8)
-    js temp = temp2.substring(8)
-    echo temp after js substring is `temp`
+js temp2 = p3.substring(0, indexPosition) + "/admin" + p3.substring(indexPosition)
 
-//live
+// Log the value of temp2
+echo Value of temp2:   `temp2`
+// Remove the "https://" from temp2 to get temp
+js temp = temp2.substring(8)
+// Log the value of temp
+echo Value of temp:  + `temp`
 https://`temp` 
 
-//live
 // first Unpublish
 if present("(//*[name()='svg'][@name='Unpublish32'])")
     click (//*[name()='svg'][@name='Unpublish32'])
     click //span[normalize-space()='OK']
     // second open link
     click (//a[contains(text(),'Open')])[`1`]
-//live
-//else 
-
 
 popup lesson/view/
     {
     // in new tab do all the clicks and type
     js temp3 = temp.replace("view","edit")
     https://`temp3` 
-    //live
-    //click Pen32
-    // activate edit mode in SLS
-    //click output-text
-
-    //lesson tag gear icon Settings24
     wait 5
-    //click //button[@class='cv-button icon-button bx--btn bx--btn--ghost']//*[name()='svg']
-    //focus on Tags Keyword Tags
-    //live
-    // first activity tab
-    //live
     numberofA = count("(//div[@class='activity-label editor-mode'])")
     echo numberofA is `numberofA`
     for m from 1 to numberofA
@@ -96,7 +73,6 @@ popup lesson/view/
         start = 2
         for k from start to numberofS
             wait 3
-            //live
             if present("(//*[name()='svg'][@name='Settings24'])[`k`]")
                 click (//*[name()='svg'][@name='Settings24'])[`k`]
                 if present("//input[@placeholder='Add descriptive tags for others to find it']")
@@ -104,20 +80,19 @@ popup lesson/view/
                     for i from 1 to numberofT
                         // reverse the order of clicks to avoid deleting count of stuff
                         js j = numberofT + 1 - i
-                        //read (//span[@class="bx--tag__label"])[`j`] to element
                         read (//span[@title='Clear filter']//span[contains(text(),'')])[`j`] to element
                         echo `j` is `element`
-                        //live
                         // appears to be case sensitive so need more or statements appears to have a limit of 4 "or"
-                        if element contains 'lss nt' or element contains 'LSS NT' or element contains 'nt science' or element contains 'NT Science' or element contains 'G1 science'
+                        if element contains '`p4`' or element contains '`p5`' or element contains '`p6`' or element contains '`p7`'
                             echo found j = `j`
-                            // (//button[@aria-label='Clear filter']) is on the popup page in order 1 to ....
                             click (//button[@aria-label='Clear filter'])[`j`]
-                        //live
+                        if element contains '`p8`' or element contains '`p9`' or element contains '`p10`' or element contains '`p11`'
+                            echo found j = `j`
+                            click (//button[@aria-label='Clear filter'])[`j`]
                     //add blindly
-                    type bx--text-input as G1 Science
+                    type bx--text-input as `add1`
                     click (//*[name()='svg'][@name='Save24'])[1]
-                    type bx--text-input as G1 LSS
+                    type bx--text-input as `aad2`
                     // button is not visible yet, need to wait
                     wait 2
                     //live
@@ -125,10 +100,6 @@ popup lesson/view/
                 // if not found
                 click (//*[name()='svg'][@name='Close24'])
                 // continue to search for more Setting24
-
-
-
-
 
     // active the publish button
     https://`temp` 
@@ -139,4 +110,3 @@ popup lesson/view/
     // close tab
     dom window.close()
     } 
-//live

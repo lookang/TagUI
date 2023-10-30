@@ -7,7 +7,7 @@ https://www.youtube.com/watch?v=9arM1WnHlx8
 
 ## How it works
 
-The script navigates to the SLS login page and logs in using either the SLS or MIMS login, depending on the user's choice. It then iterates over a list of URLs in the url.csv file, each representing a different lesson on the SLS platform. For each lesson, it navigates to the lesson page, enters edit mode, and removes and the  adds keywords to all activities within the lesson. to remove keywords, type inside the url.csv file under the p4 to p11 columns. To add new keywords, add in the add1 and add2 columns.
+The script navigates to the SLS login page and logs in using either the SLS or MIMS login, depending on the user's choice. It then iterates over a list of URLs in the url.csv file, each representing a different lesson on the SLS platform. For each lesson, it navigates to the lesson page, enters edit mode, and removes and  adds keywords to all activities within the lesson. to remove keywords, type inside the url.csv file under the p4 to p11 columns. To add new keywords, add in the add1 and add2 columns.
 
 ## Prerequisites
 

@@ -1,14 +1,22 @@
-// to run on command line
+// This script is designed to be run on the command line.
+// type
 // tagui keywordaddtoallquestionsintelligent.tag url.csv
-// data to prepare is create a xlsx first and export to csv as tagui needs csv to run instead of xlsx
-// third column is used with variable name p3 used in the code
-//p1	p2	p3
-//Forces and Their Effects [LSS] 		https://vle.learning.moe.edu.sg/moe-library/lesson/view/341e6734-7c71-40f6-9a1e-e6ba8dc97fdf/cover
-//Friction [LSS]		https://vle.learning.moe.edu.sg/mrv/moe-library/lesson/view/429087ea-4034-4f4e-8ceb-2f6934169760/cover
-//Simple Machines [LSS]		https://vle.learning.moe.edu.sg/mrv/moe-library/lesson/view/fcf7150b-39b4-422f-a763-a5de1c950cb6/cover
+// The data for this script is prepared in a CSV file, as TagUI requires CSV instead of XLSX.
+// The third column of the CSV file is used with the variable name 'p3' in the code.
 
-//limitation
-// keyword limit could be exhausted that cause error
+// The data in the CSV file should look something like this:
+// p1	p2	p3
+// Forces and Their Effects [LSS]		https://vle.learning.moe.edu.sg/moe-library/lesson/view/341e6734-7c71-40f6-9a1e-e6ba8dc97fdf/cover
+// Friction [LSS]		https://vle.learning.moe.edu.sg/mrv/moe-library/lesson/view/429087ea-4034-4f4e-8ceb-2f6934169760/cover
+// Simple Machines [LSS]		https://vle.learning.moe.edu.sg/mrv/moe-library/lesson/view/fcf7150b-39b4-422f-a763-a5de1c950cb6/cover
+// Columns p4 to p11 are keyword tags to be removed.
+// 'add1' and 'add2' are keywords to be added.
+
+// Please note the following limitations:
+// - The keyword limit could be exhausted, causing an error.
+// - A screen saver can interrupt the flow of the script. If necessary, set your screen saver to 'Never'.
+// - While the script is running, it needs control of the keyboard and screen. Therefore, it's not advisable to multitask.
+// - Sometimes SLS will pop up on the left bottom corner "rate your experience...", just close it manually to prevent it from disturbing the flow
 
 // Navigate to the SLS login page
 https://vle.learning.moe.edu.sg/login
@@ -55,18 +63,23 @@ if present("(//*[name()='svg'][@name='Unpublish32'])")
     // second open link
     click (//a[contains(text(),'Open')])[`1`]
 
+// do all actions on new tab with lesson/view/ in the url
+wait 2
 popup lesson/view/
     {
-    // in new tab do all the clicks and type
+    // cheat code to go edit mode
     js temp3 = temp.replace("view","edit")
     https://`temp3` 
     wait 5
+    //live
+    // determine activity count
     numberofA = count("(//div[@class='activity-label editor-mode'])")
     echo numberofA is `numberofA`
     for m from 1 to numberofA
         click (//div[@class='activity-label editor-mode'])[`m`]
         // check all (//*[name()='svg'][@name='Settings24'])[1] for tags
         wait 3
+        // determine settings count
         numberofS = count ("(//*[name()='svg'][@name='Settings24'])")
         echo numberofS is `numberofS`
         // skip first Setting24 as it is the lesson
@@ -75,10 +88,12 @@ popup lesson/view/
             wait 3
             if present("(//*[name()='svg'][@name='Settings24'])[`k`]")
                 click (//*[name()='svg'][@name='Settings24'])[`k`]
+                wait 1
                 if present("//input[@placeholder='Add descriptive tags for others to find it']")
+                    // determine existing keywordtag count
                     numberofT = count("(//span[@title='Clear filter']//span[contains(text(),'')])")
                     for i from 1 to numberofT
-                        // reverse the order of clicks to avoid deleting count of stuff
+                        // reverse the order of clicks to avoid deleting count of keywordtag
                         js j = numberofT + 1 - i
                         read (//span[@title='Clear filter']//span[contains(text(),'')])[`j`] to element
                         echo `j` is `element`
@@ -87,12 +102,12 @@ popup lesson/view/
                             echo found j = `j`
                             click (//button[@aria-label='Clear filter'])[`j`]
                         if element contains '`p8`' or element contains '`p9`' or element contains '`p10`' or element contains '`p11`'
-                            echo found j = `j`
+                            echo found2 j = `j`
                             click (//button[@aria-label='Clear filter'])[`j`]
-                    //add blindly
+                    //add blindly for modular and ease of scalability
                     type bx--text-input as `add1`
                     click (//*[name()='svg'][@name='Save24'])[1]
-                    type bx--text-input as `aad2`
+                    type bx--text-input as `add2`
                     // button is not visible yet, need to wait
                     wait 2
                     //live

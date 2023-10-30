@@ -1,6 +1,8 @@
-# SLS Keywords Remover and Adder
+# SLS Keywords Remover and Adder in 2 languages TagUI and TagUI-Python
 
 This repository contains a TagUI script, `keywordaddtoallquestionsintelligent2.tag`, which is designed to automate the process of removing as well as adding keywords to all questions in the Singapore Learning Space (SLS) platform.
+Newly added, a TagUI-Python script, `keywordaddtoallquestionsintelligent2.py` which is designed to automate the process of removing as well as adding keywords to all questions in the Singapore Learning Space (SLS) platform, but using python.
+
 
 ## Video Explainer
 https://www.youtube.com/watch?v=9arM1WnHlx8 
@@ -21,6 +23,9 @@ To run this script, you need to have TagUI installed on your machine. You can do
 
 ```bash
 tagui keywordaddtoallquestionsintelligent2.tag url.csv
+```
+```bash
+python keywordaddtoallquestionsintelligent2.py
 ```
 
 Replace `url.csv` with the path to your .csv file.

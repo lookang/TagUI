@@ -2,6 +2,9 @@
 
 This repository contains a TagUI script, `keywordaddtoallquestionsintelligent2.tag`, which is designed to automate the process of adding keywords to all questions in the Singapore Learning Space (SLS) platform.
 
+## Video Explainer
+https://www.youtube.com/watch?v=9arM1WnHlx8 
+
 ## How it works
 
 The script navigates to the SLS login page and logs in using either the SLS or MIMS login, depending on the user's choice. It then iterates over a list of URLs, each representing a different lesson on the SLS platform. For each lesson, it navigates to the lesson page, enters edit mode, and adds keywords to all activities within the lesson.

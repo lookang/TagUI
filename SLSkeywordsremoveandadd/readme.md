@@ -7,7 +7,7 @@ https://www.youtube.com/watch?v=9arM1WnHlx8
 
 ## How it works
 
-The script navigates to the SLS login page and logs in using either the SLS or MIMS login, depending on the user's choice. It then iterates over a list of URLs, each representing a different lesson on the SLS platform. For each lesson, it navigates to the lesson page, enters edit mode, and adds keywords to all activities within the lesson.
+The script navigates to the SLS login page and logs in using either the SLS or MIMS login, depending on the user's choice. It then iterates over a list of URLs in the url.csv file, each representing a different lesson on the SLS platform. For each lesson, it navigates to the lesson page, enters edit mode, and adds keywords to all activities within the lesson. to remove keywords, type inside the url.csv file under the p4 to p11 columns. To add new keywords, add in the add1 and add2 columns.
 
 ## Prerequisites
 
@@ -20,14 +20,18 @@ To run this script, you need to have TagUI installed on your machine. You can do
 2. Run the script from the command line with the following command:
 
 ```bash
-tagui keywordaddtoallquestionsintelligent.tag url.csv
+tagui keywordaddtoallquestionsintelligent2.tag url.csv
 ```
 
 Replace `url.csv` with the path to your .csv file.
 
 ## Limitations
 
-Please note that there is a limit to the number of keywords that can be added to each activity. If this limit is exceeded, an error may occur.
+// Please note the following limitations:
+// - The keyword limit could be exhausted, causing an error.
+// - A screen saver can interrupt the flow of the script. If necessary, set your screen saver to 'Never'.
+// - While the script is running, it needs control of the keyboard and screen. Therefore, it's not advisable to multitask.
+// - Sometimes SLS will pop up on the left bottom corner "rate your experience...", just close it manually to prevent it from disturbing the flow
 
 ## Contributing
 

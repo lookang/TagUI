@@ -15,6 +15,8 @@ The script navigates to the SLS login page and logs in using either the SLS or M
 
 To run this script, you need to have TagUI installed on your machine. You can download it from [here](https://github.com/kelaberetiv/TagUI).
 
+for python, check to install the correct Python-TagUI library, please check the repository for installation steps.
+
 ## Usage
 
 1. Prepare your data in a .csv file. The script expects a .csv file where each row represents a different lesson. The third column should contain the URL of the lesson.

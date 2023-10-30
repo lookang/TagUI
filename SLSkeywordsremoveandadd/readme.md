@@ -15,7 +15,7 @@ The script navigates to the SLS login page and logs in using either the SLS or M
 
 To run this script, you need to have TagUI installed on your machine. You can download it from [here](https://github.com/kelaberetiv/TagUI).
 
-for python, check to install the correct Python-TagUI library, please check the repository for installation steps.
+for Python, check to install the correct Python-TagUI library, please check the repository https://github.com/tebelorg/RPA-Python for installation steps.
 
 ## Usage
 

@@ -97,6 +97,9 @@ popup lesson/view/
                         js j = numberofT + 1 - i
                         read (//span[@title='Clear filter']//span[contains(text(),'')])[`j`] to element
                         echo `j` is `element`
+                        // hoping javascript can lower the case to be compared.
+                        //live
+                        js element = element.toLowerCase()
                         // appears to be case sensitive so need more or statements appears to have a limit of 4 "or"
                         if element contains '`p4`' or element contains '`p5`' or element contains '`p6`' or element contains '`p7`'
                             echo found j = `j`

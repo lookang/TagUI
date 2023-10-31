@@ -10,9 +10,9 @@ https://www.youtube.com/watch?v=9arM1WnHlx8
 ## How it works
 
 The script navigates to the SLS login page and logs in using either the SLS or MIMS login, depending on the user's choice. It then iterates over a list of URLs in the url.csv file, each representing a different lesson on the SLS platform. For each lesson, it navigates to the lesson page, enters edit mode, and removes and  adds keywords to all activities within the lesson. 
-- To remove keywords, type inside the url.csv file under the p4 to p7 using to element.toLowerCase(), to catch different variations of string say NT Sci, nt sci, NT SCI, nt SCI etc.  
-- p8 to p9 uses the word contains, so if "G1 sci" as long as it contains, it like "G1 science" will be removed 
-- p10 to p11 columns uses equals to si must be exact match to remove for example nts
+- For columns p4 to p7, apply element.toLowerCase() to capture various string variations such as "NT Sci," "nt sci," "NT SCI," "nt SCI," and so on.
+- In columns p8 to p9, use the "contains" rule. This means that any entry, for instance, "G1 sci," will be removed as long as it contains the specified keyword, like "G1 science."
+- In columns p10 to p11, use the "equals to" rule. This requires an exact match for removal. For instance, only "nts" will be removed.
 - To add new keywords, add in the add1 and add2 columns.
 
 ## Prerequisites

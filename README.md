@@ -26,10 +26,10 @@ Many thanks to @kensoh, the creator of TagUI¹.
 [3](https://pypi.org/project/tagui/)
 
 
-(1) GitHub - lookang/TagUI: TagUI samples created for increase productivity. https://github.com/lookang/TagUI.
-(2) tagui · PyPI. https://pypi.org/project/tagui/.
-(3) TagUI flow to print the list of your starred repos · GitHub. https://gist.github.com/kensoh/e208789bca4b89e361094dc5aaa11cbc.
-(4) GitHub - lookang/TagUI-1: Free RPA tool by AI Singapore. https://github.com/lookang/TagUI-1.
-(5) TagUI/ReadME at main · lookang/TagUI - GitHub. https://github.com/lookang/TagUI/blob/main/SLS_assessment_automation/ReadME.
+- (1) GitHub - lookang/TagUI: TagUI samples created for increase productivity. https://github.com/lookang/TagUI.
+- (2) tagui · PyPI. https://pypi.org/project/tagui/.
+- (3) TagUI flow to print the list of your starred repos · GitHub. https://gist.github.com/kensoh/e208789bca4b89e361094dc5aaa11cbc.
+- (4) GitHub - lookang/TagUI-1: Free RPA tool by AI Singapore. https://github.com/lookang/TagUI-1.
+- (5) TagUI/ReadME at main · lookang/TagUI - GitHub. https://github.com/lookang/TagUI/blob/main/SLS_assessment_automation/ReadME.
 
 

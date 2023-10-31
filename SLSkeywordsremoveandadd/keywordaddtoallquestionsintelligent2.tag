@@ -21,21 +21,22 @@
 // Navigate to the SLS login page
 https://vle.learning.moe.edu.sg/login
 //ask_result = 1
-ask 1 for SLS 2 for MIMS login
-echo `ask_result`
-if ask_result equals to 1
-    // Click the "Login With SLS" button if present
-    if present('//button[normalize-space()="Login With SLS"]')
-        click //button[normalize-space()='Login With SLS']
-    // Click the "Login" button if present
-    if present("//button[normalize-space()='Login']")
-        click //button[normalize-space()='Login']
-else if ask_result equals to 2
-    // Click the "Login With MIMS" button if present
-    if present("//button[normalize-space()='Login With MIMS']")
-        click //button[normalize-space()='Login With MIMS']
-        wait 3
-        click (//span[@id='loginButton2'])[1]
+if iteration equals to 1
+    ask 1 for SLS 2 for MIMS login
+    echo `ask_result`
+    if ask_result equals to 1
+        // Click the "Login With SLS" button if present
+        if present('//button[normalize-space()="Login With SLS"]')
+            click //button[normalize-space()='Login With SLS']
+        // Click the "Login" button if present
+        if present("//button[normalize-space()='Login']")
+            click //button[normalize-space()='Login']
+    else if ask_result equals to 2
+        // Click the "Login With MIMS" button if present
+        if present("//button[normalize-space()='Login With MIMS']")
+            click //button[normalize-space()='Login With MIMS']
+            wait 3
+            click (//span[@id='loginButton2'])[1]
 
 // csv data not clean so need to do substring manipulation
 wait 3
@@ -62,9 +63,10 @@ if present("(//*[name()='svg'][@name='Unpublish32'])")
     click //span[normalize-space()='OK']
     // second open link
     click (//a[contains(text(),'Open')])[`1`]
+    wait 3
 
 // do all actions on new tab with lesson/view/ in the url
-wait 2
+wait 4
 popup lesson/view/
     {
     // cheat code to go edit mode
@@ -83,13 +85,14 @@ popup lesson/view/
         numberofS = count ("(//*[name()='svg'][@name='Settings24'])")
         echo numberofS is `numberofS`
         // skip first Setting24 as it is the lesson
-        start = 2
+        start = 1
         for k from start to numberofS
             wait 3
             if present("(//*[name()='svg'][@name='Settings24'])[`k`]")
                 click (//*[name()='svg'][@name='Settings24'])[`k`]
                 wait 1
-                if present("//input[@placeholder='Add descriptive tags for others to find it']")
+                //live
+                if present("//input[@placeholder='Add descriptive tags for others to find it']") or present("//div[@class='bx--text-input__field-wrapper']//input[@class='bx--text-input']")
                     // determine existing keywordtag count
                     numberofT = count("(//span[@title='Clear filter']//span[contains(text(),'')])")
                     for i from 1 to numberofT
@@ -99,12 +102,17 @@ popup lesson/view/
                         echo `j` is `element`
                         // hoping javascript can lower the case to be compared.
                         //live
-                        js element = element.toLowerCase()
-                        // appears to be case sensitive so need more or statements appears to have a limit of 4 "or"
-                        if element contains '`p4`' or element contains '`p5`' or element contains '`p6`' or element contains '`p7`'
+                        js elementLowerCase = element.toLowerCase()
+                        // first p4 to p7 are not case sensitive to catch different variations of string to have a limit of 4 "or"
+                        if elementLowerCase contains '`p4`' or elementLowerCase contains '`p5`' or elementLowerCase contains '`p6`' or elementLowerCase contains '`p7`'
                             echo found j = `j`
                             click (//button[@aria-label='Clear filter'])[`j`]
-                        if element contains '`p8`' or element contains '`p9`' or element contains '`p10`' or element contains '`p11`'
+                        // last p8 to p9 contains G1 science  string
+                        if element contains '`p8`' or element contains '`p9`' 
+                            echo found2 j = `j`
+                            click (//button[@aria-label='Clear filter'])[`j`]
+                        // last p10 to p11 for exact match
+                        if element equals to '`p10`' or element equals to '`p11`' 
                             echo found2 j = `j`
                             click (//button[@aria-label='Clear filter'])[`j`]
                     //add blindly for modular and ease of scalability
@@ -116,6 +124,7 @@ popup lesson/view/
                     //live
                     click (//*[name()='svg'][@name='Save24'])[1]
                 // if not found
+                wait 1
                 click (//*[name()='svg'][@name='Close24'])
                 // continue to search for more Setting24
 

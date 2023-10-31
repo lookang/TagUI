@@ -1,4 +1,4 @@
-```markdown
+
 ### Script for Saving Login Credentials
 
 This script is designed to be executed from the command line.

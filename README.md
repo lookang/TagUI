@@ -22,13 +22,4 @@ Many thanks to @kensoh, the creator of TagUI¹.
 Source: Conversation with Bing, 31/10/2023
 (1) GitHub - lookang/TagUI: TagUI samples created for increase productivity. https://github.com/lookang/TagUI.
 (2) GitHub - aisingapore/TagUI: Free RPA tool by AI Singapore. https://github.com/aisingapore/TagUI.
-(3) How can I add a directory tree to my github repo?. https://stackoverflow.com/questions/17457201/how-can-i-add-a-directory-tree-to-my-github-repo.
-(4) undefined. https://tagui.readthedocs.io/en/latest/setup.html.
-(5) undefined. https://tagui.readthedocs.io/en/latest/_images/tagui-logo.png.
-(6) undefined. https://login.xero.com/identity/user/login.
 
-# TagUI
-TagUI samples created for increase productivity
-https://tagui.readthedocs.io/en/latest/setup.html
-many thanks to @kensoh, the creator of TagUI
-https://tagui.readthedocs.io/en/latest/_images/tagui-logo.png

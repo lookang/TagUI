@@ -1,6 +1,6 @@
 // This script is designed to be run on the command line.
 // type
-// tagui keywordaddtoallquestionsintelligent.tag url.csv
+// tagui keywordaddtoallquestionsintelligent2.tag url.csv
 // The data for this script is prepared in a CSV file, as TagUI requires CSV instead of XLSX.
 // The third column of the CSV file is used with the variable name 'p3' in the code.
 
@@ -20,8 +20,8 @@
 
 // Navigate to the SLS login page
 https://vle.learning.moe.edu.sg/login
-ask_result = 1
-//ask 1 for SLS 2 for MIMS login
+//ask_result = 1
+ask 1 for SLS 2 for MIMS login
 echo `ask_result`
 if ask_result equals to 1
     // Click the "Login With SLS" button if present

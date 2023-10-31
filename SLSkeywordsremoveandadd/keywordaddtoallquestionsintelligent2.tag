@@ -103,7 +103,7 @@ popup lesson/view/
                         // hoping javascript can lower the case to be compared.
                         //live
                         js elementLowerCase = element.toLowerCase()
-                        // first p4 to p7 are not case sensitive to catch different variations of string to have a limit of 4 "or"
+                        // first p4 to p7 are to catch different variations of string to have a limit of 4 "or"
                         if elementLowerCase contains '`p4`' or elementLowerCase contains '`p5`' or elementLowerCase contains '`p6`' or elementLowerCase contains '`p7`'
                             echo found j = `j`
                             click (//button[@aria-label='Clear filter'])[`j`]

@@ -15,12 +15,6 @@ TagUI is an open-source and free tool that's designed to automate away repetitiv
 
 The repository also includes a **TagUI-Python** script¹. TagUI-Python is built on AI Singapore’s TagUI open-source RPA tool³. It provides out-of-the-box RPA capabilities including website automation, computer vision automation, optical character recognition, and keyboard & mouse automation³. This makes it a powerful tool for automating repetitive tasks and increasing productivity¹.
 
-## References
-[1](https://github.com/lookang/TagUI)
-[2](https://github.com/aisingapore/TagUI)
-[3](https://pypi.org/project/tagui/)
-
-
 
 ## Acknowledgements
 

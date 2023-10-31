@@ -19,7 +19,7 @@ for Python, check to install the correct Python-TagUI library, please check the 
 
 ## Usage
 
-1. Prepare your data in a .csv file. The script expects a .csv file where each row represents a different lesson. The third column should contain the URL of the lesson.
+1. Prepare your data in a .csv file. The script expects a .csv file where each row represents a different lesson. The third column should contain the URL of the lesson. columns p4 to p11 contains keywords to remove, empty them if there is nothing to change for p8 to p11 for example. Edit add1 and add2 for keywords to add. 
 
 2. Run the script from the command line with the following command:
 

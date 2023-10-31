@@ -7,11 +7,11 @@ This repository contains a collection of **TagUI** samples created to increase p
 - The repository contains various directories, each representing a different project or functionality. Some of the notable ones include `CGform`, `CGpublishcrawl`, `ClassExamPaperGroup`, `DCJarabelo`, `SLS_assessment_automation`, `SLSclass`, `SLSgamification`, `SLSsubjects`, `SLSvle`, `addTag`, `compose_mail`, `crawlSyllabus`, `dataprocessing`, `jenson`, `ken`, `login`, `loginSLSdev`, `moepublicdata`, `posting`, `rpachallenge`, `share`, `table` and `turnonlanguage`¹.
 - The repository also includes a **LICENSE** and a **README.md** file¹.
 
-## About TagUI
+## About TagUI https://tagui.readthedocs.io/en/latest/index.html
 
 TagUI is an open-source and free tool that's designed to automate away repetitive time-consuming tasks on your computer. Tasks include those on websites (native support for Chrome and Edge), desktop apps, or the command line².
 
-## TagUI-Python Script
+## TagUI-Python Script https://github.com/tebelorg/RPA-Python
 
 The repository also includes a **TagUI-Python** script¹. TagUI-Python is built on AI Singapore’s TagUI open-source RPA tool³. It provides out-of-the-box RPA capabilities including website automation, computer vision automation, optical character recognition, and keyboard & mouse automation³. This makes it a powerful tool for automating repetitive tasks and increasing productivity¹.
 

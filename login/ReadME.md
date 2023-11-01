@@ -1,3 +1,36 @@
+# README.md for lookang/TagUI/login
+
+This repository contains a collection of TagUI samples created by lookang for increasing productivity¹. The `login` directory specifically contains scripts related to login automation.
+
+## About TagUI
+
+TagUI is a free, open-source, cross-platform RPA tool that helps you automate your desktop, web, mouse and keyboard actions easily²³. It's designed to interact with identifiers, which include web identifiers, image snapshots, screen coordinates, or even text using OCR².
+
+Here’s what a simple TagUI flow looks like:
+
+```bash
+// Example to login to Xero accounting website
+type email as user@gmail.com
+type password as 12345678
+click Log in
+```
+
+## Files in the Repository
+
+
+
+## Contributing
+
+Contributions are welcome! Feel free to fork the repository and make changes. When you are ready to submit your changes, send a pull request.
+
+## References
+
+- [TagUI Documentation](^5^)
+- [TagUI GitHub Repository](^1^)
+
+Please note that this README is generated based on available information and may not fully represent the actual content of the repository.
+
+
 #Note:
 #Prepare:
 #emails.csv need to be populate with real data

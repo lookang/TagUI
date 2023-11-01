@@ -1,6 +1,5 @@
-Sure, here's an improved version of your README.md file:
 
-```markdown
+
 # SLSTagSemiContentMap
 
 ## Overview

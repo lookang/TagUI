@@ -1,6 +1,6 @@
 # README.md for lookang/TagUI/login
 
-This repository contains a collection of TagUI samples created by lookang for increasing productivity¹. The `login` directory specifically contains scripts related to login automation.
+This repository contains a collection of TagUI samples created by lookang for increasing productivity¹. The `login` directory specifically contains scripts related to login automation. Read # Blog #https://weelookang.blogspot.com/2021/07/almost-full-automation-using-tagui-and.html
 
 ## About TagUI
 

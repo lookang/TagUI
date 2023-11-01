@@ -17,7 +17,23 @@ click Log in
 
 ## Files in the Repository
 
+- 2023 SLS R19 loginslsr19v2wog.tag
+- 2022 SLS WOG loginsls4wog.tag
+- 2021 SLS personal computer with full automation loginsls4.tag
 
+-   test19.py to convert pendingreview_list.csv to output.csv
+
+- 2023 SLS compose_mailwog.tag
+- 2022 SLS compose_mailwog.tag
+- 2021 SLS compose_mail.tag
+
+-   output.csv for use by compose_mailwog.tag
+-   body_template.txt for use by compose_mailwog.tag
+
+-   2023 sheets01wog.tag
+-   2022 sheets01wog.tag
+-   2021 sheets_localwog.tag
+  
 
 ## Contributing
 

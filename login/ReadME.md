@@ -127,5 +127,5 @@ Subject Grps for Tracking_05Feb - emails.csv
 Subject Grps for Tracking_05Feb - 2022_Lessons.csv
 
 
-# emailsearch3.tag also not working, cannot triger search easily, need to debug why probably duw to the weakwe search in wogmail.
+# emailsearch3.tag also not working, cannot triger search easily, need to debug why probably duw to the weak search in wogmail.
 need to use slscgbot@gmail.com as google gmail can find the lessons by URL

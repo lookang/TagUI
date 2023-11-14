@@ -71,6 +71,7 @@ for i from 1 to (total-tableCnt*20)
 	//if (exist('//*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div/div/span'))
 	if (exist('//*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/span/span'))
 		read //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div/div[1]/table/tbody/tr[`rowCnt`]/td[1]/div/div/span/span to title
+		echo `title`
 		read //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div/div[1]/table/tbody/tr[`rowCnt`]/td[2]/div/span to type
 		read //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div/div[1]/table/tbody/tr[`rowCnt`]/td[3]/div/div/div/span to subject
 		read //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div/div[1]/table/tbody/tr[`rowCnt`]/td[4]/div/span to level
@@ -133,14 +134,25 @@ for i from 1 to (total-tableCnt*20)
 		// without the word cover is the URL, changing to use lesson/view/
 		popup lesson/view/
 		{
+		//live
 		wait 1 
 		js link = url()
 		// read the title
-		read output-text to title
-		echo `title`
+		// read output-text to title
+		// echo `title`
 		echo `link`
 		dom window.close()
 		}
+		
+		js link = link.substring(8)
+		https://`link`
+		read output-text to title
+		echo new title is `title`
+		dom window.history.back()
+		//sort back to first in, at the bottom like in R18
+		click Date Submitted
+		click Date Submitted
+
 		//wait 3
 		
 		// 	https://vle.learning.moe.edu.sg/mrv/community-gallery/admin
@@ -150,7 +162,7 @@ for i from 1 to (total-tableCnt*20)
 		echo line 209
 
 		for j from 1 to tableCnt
-			//click //button[@aria-label="Next page"]
+			click //button[@aria-label="Next page"]
 			//wait 3 // assuming WOG is slow, problem reported on 20230814
 			
 		}

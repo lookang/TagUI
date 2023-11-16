@@ -39,10 +39,10 @@ Replace `url.csv` with the path to your .csv file.
 ## Limitations
 
 // Please note the following limitations:
-- The keyword limit could be exhausted, causing an error.
-- A screen saver can interrupt the flow of the script. If necessary, set your screen saver to 'Never'.
+- The keyword limit on SLS is 255 characters and could be exhausted, causing an error.
+- A computer screen saver can interrupt the flow of the script. If necessary, set your screen saver to 'Never'.
 - While the script is running, it needs control of the keyboard and screen. Therefore, it's not advisable to multitask.
-- Sometimes SLS will pop up on the left bottom corner "rate your experience...", just close it manually to prevent it from disturbing the flow
+- Sometimes SLS will pop up on the left bottom corner "rate your experience...", just close it manually to prevent it from disturbing the flow.
 
 ## Contributing
 

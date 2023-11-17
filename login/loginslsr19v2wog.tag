@@ -42,16 +42,20 @@ ask Check SLS CG pending review for the number of lessons. Key in 0 for all less
 echo `ask_result`
 if ask_result equals to '0'
 	rowCnt = 1
+	tableCnt = 0
 else 
-	rowCnt = Math.floor(ask_result,20) 
-	echo checking `rowCnt` 
+	//rowCnt = Math.floor(ask_result,20) 
+	js rowCnt = ask_result % 20
+	echo checking rowCnt `rowCnt` 
+	js tableCnt = Math.floor(ask_result/20)
+	echo checking tableCnt `tableCnt` 
 
 wait 3
 // creating row counter so that it can loop through the table properly
 
 //rowCnt = 1
 // might want to change this to save time crawling all the assigned
-tableCnt = 0
+//tableCnt = 0
 //tableCnt = 1
 //tableCnt = 2
 //tableCnt = 3
@@ -60,12 +64,13 @@ tableCnt = 0
 // loop to skip the specified number of tables
 // due to change in CG page no need to click Next anymore, page stays the same
 for i from 1 to tableCnt
-	// click //button[@aria-label="Next page"]
+	click //button[@aria-label="Next page"]
+	wait 1
 
 pending = []
 
 // always in groups of 20 now in UI
-for i from 1 to (total-tableCnt*20)
+for i from 1 to (total-tableCnt*20-rowCnt+1)
 	
 	// trying to break out if total is not found 
 	//if (exist('//*[@id="pending"]//table/tbody/tr[`rowCnt`]/td[1]/div/div/span'))
@@ -150,7 +155,9 @@ for i from 1 to (total-tableCnt*20)
 		echo new title is `title`
 		dom window.history.back()
 		//sort back to first in, at the bottom like in R18
+		wait 1
 		click Date Submitted
+		wait 1
 		click Date Submitted
 
 		//wait 3
@@ -163,6 +170,7 @@ for i from 1 to (total-tableCnt*20)
 
 		for j from 1 to tableCnt
 			click //button[@aria-label="Next page"]
+			wait 1
 			//wait 3 // assuming WOG is slow, problem reported on 20230814
 			
 		}
@@ -437,8 +445,14 @@ for(var i = 0; i < pending.length; i++){
 		while(!subject_found){
 			// loops through all the available subjects listed in emails.csv
 			for(sub in subject_to_name[level]){
+				// added by lookang 20231117 to address concerns of Making take proirity over Math 
+				if (subject == 'Maker Education'){
+					subject = 'Maker Education'
+					subject_found = true;
+
+				}
 				// unique cases
-				if(sub == 'd&t' && containsSubstring(subject, "design & technology")){
+				else if(sub == 'd&t' && containsSubstring(subject, "design & technology")){
 					subject = 'd&t';
 					subject_found = true;  
 				}
@@ -469,6 +483,7 @@ for(var i = 0; i < pending.length; i++){
 					subject = sub;
 					subject_found = true;
 				}
+
 
 				if(subject_found){
 					break;

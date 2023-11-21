@@ -1,7 +1,7 @@
-
-//pdftext = [/Users/lookang/Desktop/tagui/flows/addSyllabus/9744_y22_sy.pdf]
-//echo `pdftext`
-//dump [`pdftext`] to text.csv
+// Limitations
+// chinese characters are not correctly read , example \u0bb2\u0bcd.\u00a0, solved by doing on main tab of chrome
+// title if contain / it saves as a folder before / and after is the remainder filename.csv, SEC 3 CHINESE LANGUAGE 'B' (EXP / NA) (2021).csv
+// content map learning objective are whole sale copied including some extra characters like PREREQISTE in ALS Math 
 
 
 // Navigate to the SLS login page
@@ -27,14 +27,11 @@ else if ask_result equals to 2
         wait 3
         click (//span[@id='loginButton2'])[1]
 
-//else 
-//do ntg to skip live
-//	echo "do ntg"
-//live
-//crawl syllabus content map assume already know URL
-//https://vle.learning.moe.edu.sg/contentmap/view/90366631-d65f-4ef4-a486-120a7cdd088f?tab=learning-outcomes
 
 https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP
+https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=chem&ownerGroups=ALL&levels=20
+echo do your search and filter now
+//live
 
 wait 2
 // getting total_number of rows
@@ -45,21 +42,25 @@ if present('//div[@class="v-data-footer__pagination"]')
 
 
 wait 2
+//
 // change tableCnt when need
-tableCnt = 1
+// tableCnt = 1
+tableCnt = 0
 // change rowCnt when need
-rowCnt = 13
+rowCnt = 1
+echo rowCnt is `rowCnt`
 
 
-for i from 1 to (total-tableCnt*20)
+for i from 1 to (total)
     for m from 1 to tableCnt
         click //button[@aria-label="Next page"]
+        wait 1
     link = ""
-    //js k = 7 + i%20
-    //echo k = `k`
+
     // click OPEN LINK
     //click (//a[@class='cv-link bx--link'])[`k`]
-    click (//a[contains(text(),'Open')])[`i`]
+    //live
+    click (//a[contains(text(),'Open')])[`rowCnt`]
     popup contentmap/view/
         {
         wait 1 
@@ -79,8 +80,9 @@ for i from 1 to (total-tableCnt*20)
     https://`temp2`
 
 
-    //live
-    click //a[@id='learning-outcomes-link']
+    //in case there is no learning-outcomes-link
+    if present('//a[@id="learning-outcomes-link"]')
+        click //a[@id='learning-outcomes-link']
     wait 1
     read //div[@class='title-wrapper']//h4[@class='title'] to title
 
@@ -94,10 +96,13 @@ for i from 1 to (total-tableCnt*20)
         if present ('(//span[@class="tree-anchor"])')
             read (//span[@class='tree-anchor'])[`j`] to text
             echo `j` is `text`
-            write `csv_row([j, text ])` to /Users/lookang/Desktop/tagui/flows/addSyllabus/folder2/`title`.csv
+            js title = title.replace(/\//g, " ");
+            echo `title`
+            write `csv_row([j, text ])` to ./folderv3/`title`.csv
     
     //return to starting page
     https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP
+    https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=chem&ownerGroups=ALL&levels=20
     js rowCnt++;
     if (rowCnt == 21)
         {

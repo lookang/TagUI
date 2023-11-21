@@ -1,0 +1,77 @@
+1,H3 Chemistry
+2,Introduction
+3,Spectroscopic Techniques
+4,Basic Principles of Spectroscopy
+5,"understand basic molecular orbital (MO) theory, involving (i) atomic and molecular orbitals"
+6,"understand basic molecular orbital (MO) theory, involving (ii) bonding, anti-bonding and non-bonding orbitals"
+7,"understand basic molecular orbital (MO) theory, involving (iii) molecular orbitals with s and p symmetry"
+8,understand that molecular orbitals represent discrete electronic energy levels in molecules [see also e(ii)]
+9,"apply linear combination of atomic orbitals (LCAO) principles to obtain the shape and relative energies of molecular orbitals in the following: (i) simple homonuclear diatomic molecules such as H2, O2, and F2"
+10,apply linear combination of atomic orbitals (LCAO) principles to obtain the shape and relative energies of molecular orbitals in the following: (ii) benzene and linear polyenes (molecular orbitals of ? symmetry only) [quantitative treatment of LCAO is not required]
+11,"construct and interpret molecular orbital diagrams, and identify the highest occupied molecular orbital (HOMO) and lowest unoccupied molecular orbital (LUMO) for the following: (i) simple homonuclear diatomic molecules such as H2, O2, and F2"
+12,"construct and interpret molecular orbital diagrams, and identify the highest occupied molecular orbital (HOMO) and lowest unoccupied molecular orbital (LUMO) for the following: (ii) benzene and linear polyenes (molecular orbitals of p symmetry only) [knowledge of orbital mixing between orbitals of the same symmetry is not required]"
+13,understand the following in relation to the fundamental principles of spectroscopy: (i) properties of electromagnetic radiation - the electromagnetic spectrum (with range of wavelengths for different types of radiation used in spectroscopy)
+14,understand the following in relation to the fundamental principles of spectroscopy: (i) properties of electromagnetic radiation - the photon as a discrete packet (quantum) of electromagnetic energy
+15,"understand the following in relation to the fundamental principles of spectroscopy: (i) properties of electromagnetic radiation - the relationship between wavelength, frequency and speed of light, including the use of the equation, E = hf"
+16,"understand the following in relation to the fundamental principles of spectroscopy: (ii) the quantisation of energy in relation to - electronic, vibrational and rotational energy levels"
+17,understand the following in relation to the fundamental principles of spectroscopy: (ii) the quantisation of energy in relation to - nuclear energy levels in applied magnetic field
+18,energy level transitions associated with the absorption and emission of photons with energy matching the energy gap
+19,Ultraviolet / Visible Spectroscopy
+20,"explain that ultraviolet/visible absorption in organic molecules requires electronic transitions (s -> s*, n -> s*, p -> p*, n -> p* transitions; forbidden and allowed transitions) between energy levels in chromophores which contain a double or triple bond, a delocalised system, or a lone pair of electrons [detailed knowledge of instrumentation is not required]"
+21,predict whether a given organic molecule will absorb in the ultraviolet/visible region by identifying the chromophore
+22,explain qualitatively how increasing conjugation in an organic molecule decreases the gap between energy levels and hence shifts the absorption towards longer wavelength
+23,"use the Beer�Lambert law, absorbance = lg(Io/I) = ecl, where e is taken merely as a constant characteristic of the substance concerned, to calculate the concentration of a given species (either organic or inorganic) in solution"
+24,apply ultraviolet / visible spectroscopy to quantitative analysis of a given species (either organic or inorganic) in solution
+25,Infra-red (IR) Spectroscopy
+26,explain the origin of IR spectroscopy in simple molecules in terms of (i) stretching vibrations
+27,explain the origin of IR spectroscopy in simple molecules in terms of (ii) bending vibrations [detailed knowledge of instrumentation is not required]
+28,"predict the number of IR absorptions for a given simple molecule (e.g. CO2 or SO2), and identify the molecular vibrations which give rise to them"
+29,identify characteristic IR absorptions in the IR spectrum of a compound which may contain different functional groups [Absorptions of common functional groups will be provided in the Data Booklet.]
+30,suggest structures for a compound from its IR spectrum
+31,"predict the characteristic IR absorptions that will be present in the IR spectrum of a compound, given its structure"
+32,Nuclear Magnetic Resonance (NMR) Spectroscopy
+33,outline the basic principles of NMR with reference to (i) nuclear spin
+34,outline the basic principles of NMR with reference to (ii) the process of absorption of energy [quantitative calculations of transitional energy are not required; detailed knowledge of instrumentation is not required]
+35,understand the following features and use them in the interpretation and prediction of 1H NMR spectra: (i) chemical shift
+36,understand the following features and use them in the interpretation and prediction of 1H NMR spectra: (ii) deuterated solvents in the identification of labile protons
+37,understand the following features and use them in the interpretation and prediction of 1H NMR spectra: (iii) the number of 1H NMR signals: equivalent and non-equivalent protons
+38,understand the following features and use them in the interpretation and prediction of 1H NMR spectra: (iv) peak area (integration) and proton counting
+39,understand the following features and use them in the interpretation and prediction of 1H NMR spectra: (v) spin-spin splitting: first order spin-spin coupling; multiplicity
+40,explain the use of the d scale with tetramethylsilane (TMS) as the reference
+41,"explain the factors affecting chemical shift (i) electronegativity: inductive effect of substituents, including shielding and deshielding effects"
+42,explain the factors affecting chemical shift (ii) anisotropic effects
+43,explain the factors affecting chemical shift (iii) hydrogen bonding
+44,Mass Spectrometry
+45,"outline the basic principles of mass spectrometry, with reference to (i) ionisation and fragmentation"
+46,"outline the basic principles of mass spectrometry, with reference to (ii) mass/charge ratio, m/z [detailed knowledge of instrumentation is not required]"
+47,understand the following features and use them in the interpretation and prediction of mass spectra: (i) molecular ion peak
+48,understand the following features and use them in the interpretation and prediction of mass spectra: (ii) isotopic abundances including the use of (M+1) peak caused by 13C and (M+2) and (M+4) peaks for the identification of halogen compounds
+49,understand the following features and use them in the interpretation and prediction of mass spectra: (iii) major fragment ions [fragment ions obtained from rearrangements are not included]
+50,Further Organic Mechanisms
+51,Molecular Stereochemistry
+52,"use stereochemical projections, including Newman projections, to represent molecules"
+53,interpret stereochemical projections of molecules [knowledge of Fischer projections is not required]
+54,"apply their understanding of the following types of isomerism to explain the stereochemistry of molecules, including saturated ring systems: (i) conformational isomerism, including energy barriers to rotation and interconversion"
+55,"apply their understanding of the following types of isomerism to explain the stereochemistry of molecules, including saturated ring systems: (ii) cis-trans isomerism, including E, Z nomenclature"
+56,"apply their understanding of the following types of isomerism to explain the stereochemistry of molecules, including saturated ring systems: (iii) enantiomerism and diastereomerism - R, S configuration"
+57,"apply their understanding of the following types of isomerism to explain the stereochemistry of molecules, including saturated ring systems: (iii) enantiomerism and diastereomerism - optical activity"
+58,"apply their understanding of the following types of isomerism to explain the stereochemistry of molecules, including saturated ring systems: (iii) enantiomerism and diastereomerism - optical purity as the excess of one enantiomer, including calculation of optical purity"
+59,Basic Physical Organic Chemistry
+60,understand and apply the following concepts involving kinetic control and thermodynamic control to the study of reaction mechanisms: (i) the Hammond postulate: relationship between the transition state and the nearest stable species
+61,understand and apply the following concepts involving kinetic control and thermodynamic control to the study of reaction mechanisms: (ii) the Bell�Evans�Polanyi principle - relationship between activation energy and enthalpy change of reaction
+62,understand and apply the following concepts involving kinetic control and thermodynamic control to the study of reaction mechanisms: (ii) the Bell�Evans�Polanyi principle - quantitative calculations based on Ea = A + B?Hr
+63,Nucleophilic Substitution
+64,explain how the relative rate of nucleophilic substitution is affected by the nature of the (i) nucleophile
+65,explain how the relative rate of nucleophilic substitution is affected by the nature of the (ii) leaving group
+66,explain how the relative rate of nucleophilic substitution is affected by the nature of the (iii) substituents
+67,"describe and compare the mechanisms and kinetics of SN1 and SN2 reactions, in terms of (i) the energy profile and rate law, including steady state approximation in SN1 [mathematical treatment of steady state is not required]"
+68,"describe and compare the mechanisms and kinetics of SN1 and SN2 reactions, in terms of (ii) stereochemistry, including ion pair interactions in SN1"
+69,"describe and compare the mechanisms and kinetics of SN1 and SN2 reactions, in terms of (iii) substituent effects"
+70,explain the factors affecting competition between SN1 and SN2 mechanisms [solvent effects are not required]
+71,Elimination
+72,understand and apply the following concepts to the study of elimination reactions: (i) syn- and anti-elimination; and its effect on stereoselectivity
+73,understand and apply the following concepts to the study of elimination reactions: (ii) regioselectivity: Zaitsev (thermodynamic) and Hofmann (kinetic) product(s)
+74,"describe and compare the mechanisms and kinetics of E1 and E2 reactions, in terms of (i) the energy profile and rate law"
+75,"describe and compare the mechanisms and kinetics of E1 and E2 reactions, in terms of (ii) regioselectivity"
+76,"explain the E2/SN2 competition, in terms of (i) substrate effects"
+77,"explain the E2/SN2 competition, in terms of (ii) base effects"

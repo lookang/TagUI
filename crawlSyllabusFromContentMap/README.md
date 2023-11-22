@@ -14,7 +14,11 @@ Version 2 (v2) of the script was conceived with the idea of improved efficiency.
 
 ## Applications
 
-possibly a stepping block of code for automation of tagging of any lessons questions to content map learning objectives.
+Possibly a stepping block of code for automation of tagging of any lessons questions to content map learning objectives.
+
+## Limitations
+
+1. unable to crawl Latex form of equations, might be better to just copy Content Map and work on the new copy and edit it on the webpage.
 
 ## Access Rights
 

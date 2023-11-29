@@ -18,6 +18,7 @@
 // seems to be unable to check on the correct checkbox if there are exisiting checkbox, current version can check on a new conent map question tag
 // with https://chat.openai.com/ the answer integer may be not the best fit compared to an expert teacher.
 
+// Echoing variables
 echo partofURL is `partofURL`
 echo contentMapOrder is `contentMapOrder`
 echo level is `level`
@@ -55,11 +56,11 @@ if iteration equals to 1
 wait 3
 //`partofURL`
 // https://vle.learning.moe.edu.sg/class-group/lesson/view/1aff6f7f-5deb-41e3-8389-afc856c5a1fb/page/46993472
-https://vle.learning.moe.edu.sg/class-group/lesson/edit/`partofURL`
-
+// https://vle.learning.moe.edu.sg/class-group/lesson/edit/`partofURL`
+// Visit the URLs
 https://vle.learning.moe.edu.sg/class-group/lesson/edit/`URLofQuiz`
 // Loop through progressive quiz questions to add content maps
-start = 1
+start = 8
 end = 40
 
 
@@ -68,15 +69,21 @@ for n from start to end
 
     click (//button[normalize-space()='`n`'])
     wait 3
+    
     read //div[@class='output-text mce-content rich-text-content loaded primary-truncation'] to questionText
-    read //div[@class='output-text mce-content rich-text-content loaded secondary-truncation'] to suggestedAnswer
-    echo `questionText`
-
+    echo questionText `questionText`
+    if present("//div[@class='output-text mce-content rich-text-content loaded secondary-truncation']")
+        read //div[@class='output-text mce-content rich-text-content loaded secondary-truncation'] to suggestedAnswer
+        echo suggestedAnswer `suggestedAnswer`
+    if present("//dl[@class='field-set answer-list']//div[@class='answer']")
+        read //dl[@class='field-set answer-list']//div[@class='answer'] to correctAnswer
+        echo correctAnswer `correctAnswer`
 
     //GPT
     dom window.open('https://chat.openai.com/') 
         popup chat.openai
             click //div[contains(text(),'PRE-U PHYSICS (H2) (2016).csv')]
+            //live
             wait 1
             click //*[@id="prompt-textarea"]
             type //*[@id="prompt-textarea"] as Question to determine the best learning objective number is '`questionText`'.[enter]   I expecting the answer to be a integer number only.
@@ -145,6 +152,15 @@ for n from start to end
         click (//i[@class='tree-arrow has-child ltr'])[`m2`]
     // live
     wait 3
+    //checking number in csv is same as SLS content map LOs
+    //expecting 236
+    numberOfLO = count("(//i[@class='tree-checkbox'])")
+    echo numberOfLO is detected as `numberOfLO`
+
+    //load PRE-U PHYSICS (H2) (2016).csv to numberOfLOCSV
+    //ask is the number of LO detected = `numberOfLO` same as the PRE-U PHYSICS (H2) (2016).csv? 
+
+
     if present("(//i[@class='tree-checkbox'])[`chatGPTResponse`]")
         click (//i[@class='tree-checkbox'])[`chatGPTResponse`]
     else
@@ -161,9 +177,8 @@ for n from start to end
         wait 0
     else
         wait 0
-    //  Save and close
+    
+    // Save and close
     click (//*[name()='svg'][@name='Save24'])[1]
     wait 2
-    // live
     click (//*[name()='svg'][@name='Close24'])[1]
-    // live

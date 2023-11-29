@@ -13,11 +13,11 @@ The `tagContentMapChatGPT.tag` file is a part of the TagUI project. This file is
 https://youtu.be/nIYKLy779Eg
 
 ## Role of Human
-prepare the data.csv
-prepare the content map csv by running another TagUI to get the CSV out https://github.com/lookang/TagUI/tree/main/crawlSyllabusFromContentMap
-prepare the https://chat.openai.com/ dataset to 'train' which is the csv file of the content map and the prompt engineering 
-improve the script
-may need to edit some parts of the code to achieve other results and objectives
+- prepare the data.csv
+- prepare the content map csv by running another TagUI to get the CSV out https://github.com/lookang/TagUI/tree/main/crawlSyllabusFromContentMap
+- prepare the https://chat.openai.com/ dataset to 'train' which is the csv file of the content map and the prompt engineering 
+- improve the script
+- may need to edit some parts of the code to achieve other results and objectives
 
 ## Installation
 

@@ -10,7 +10,7 @@ The `tagContentMapChatGPT.tag` file is a part of the TagUI project. This file is
 
 ## YouTube
 
-[![Everything Is AWESOME](https://i.stack.imgur.com/q3ceS.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "Everything Is AWESOME")
+https://youtu.be/nIYKLy779Eg
 
 ## Role of Human
 prepare the data.csv

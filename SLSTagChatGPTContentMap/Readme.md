@@ -8,6 +8,17 @@ The `tagContentMapChatGPT.tag` file is a part of the TagUI project. This file is
 - auto-fills passwords to SLS and may need some configuration for manual key-in password machines.
 - auto-login to https://chat.openai.com/ and has the chatGPT already with pre-training data, copied by human currently. Also need to rename the tab for each content map so that different dataset is used for hopefully better results.
 
+## YouTube
+
+[![Everything Is AWESOME](https://i.stack.imgur.com/q3ceS.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "Everything Is AWESOME")
+
+## Role of Human
+prepare the data.csv
+prepare the content map csv by running another TagUI to get the CSV out https://github.com/lookang/TagUI/tree/main/crawlSyllabusFromContentMap
+prepare the https://chat.openai.com/ dataset to 'train' which is the csv file of the content map and the prompt engineering 
+improve the script
+may need to edit some parts of the code to achieve other results and objectives
+
 ## Installation
 
 1. Clone this repository.

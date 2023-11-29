@@ -6,7 +6,7 @@ This repository contains the `tagContentMapChatGPT.tag` file for the TagUI proje
 
 The `tagContentMapChatGPT.tag` file is a part of the TagUI project. This file is used to automate the process of adding content maps learning objectives to questions in the Singapore Learning Space (SLS) platform. It works best on a computer that 
 - auto-fills passwords to SLS and may need some configuration for manual key-in password machines.
-- auto-login to https://chat.openai.com/ and has the chat tan already with pre-training data.
+- auto-login to https://chat.openai.com/ and has the chatGPT already with pre-training data, copied by human currently. also need to rename the tab for each content map.
 
 ## Installation
 

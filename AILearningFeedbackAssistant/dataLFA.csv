@@ -1,0 +1,21 @@
+Paragraph,Incorrect,Correct,KeywordTag
+"1. Integrity is a value I believe in and practice, though this was not true before a truly fateful day…",,…,SENT:FRAGMENT
+"1. Integrity is a value I believe in and practice, though this was not true before a truly fateful day…",…,...,R:PUNCT
+2. I wished that I was old enough to buy the wallet for myself.,2.,,SENT:FRAGMENT
+2. I wished that I was old enough to buy the wallet for myself.,that,,U:PREP
+2. I wished that I was old enough to buy the wallet for myself.,the,a,R:DET
+"3. As I made my way.  towards the police station to hand over the wallet, pride engulfed me.",3.,,SENT:FRAGMENT
+"3. As I made my way.  towards the police station to hand over the wallet, pride engulfed me.",towards,Towards,R:ORTH
+4. While walking home I heard some boys talking about some of the answers to the queshion.,4.,,SENT:FRAGMENT
+4. While walking home I heard some boys talking about some of the answers to the queshion.,,",",M:PUNCT
+4. While walking home I heard some boys talking about some of the answers to the queshion.,queshion,question,R:SPELL
+5. The soft rays of the sun filled my room as I woke up to the sound of my beeping alarm.,5.,,SENT:FRAGMENT
+6. We were six years apart and his name is Ethan.,6.,,SENT:FRAGMENT
+6. We were six years apart and his name is Ethan.,is,was,R:VERB:TENSE
+7. I was always jealous of Ethan because he gets all of my parents love.,7.,,SENT:FRAGMENT
+7. I was always jealous of Ethan because he gets all of my parents love.,gets,got,R:VERB:TENSE
+7. I was always jealous of Ethan because he gets all of my parents love.,,',M:NOUN:POSS
+8. I went to our second toilet to carry out my morning routine.,8.,,SENT:FRAGMENT
+8. I went to our second toilet to carry out my morning routine.,carry out,,PHRASAL_VERB:FOUND
+"10. I realised that even though I was jealous and upset, it does not mean I can cause so much pain to my brother.",10.,,SENT:FRAGMENT
+"10. I realised that even though I was jealous and upset, it does not mean I can cause so much pain to my brother.",to,for,R:PREP

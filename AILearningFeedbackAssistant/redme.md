@@ -1,4 +1,4 @@
-# SLS Login and Data Extraction
+# SLS Login and Data Extraction for learning feedback assistant LFA
 
 This repository contains a script for logging into the Student Learning Space (SLS) or MIMS, navigating to a specific assignment page, and extracting data to a CSV file.
 

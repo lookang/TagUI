@@ -20,7 +20,7 @@ To run the script, open a terminal or command prompt and navigate to the folder 
 tagui lfacrawlwebsite1.tag -t
 
 
-This will launch the script in test mode in turbo, which means it will show the web browser and the steps it is performing. 
+This will launch the script in test mode in turbo, which means it will show the web browser and the steps it is performing in super fast typing. 
 
 The script will create a CSV file named "dataLFAwebsite1.csv" in the same folder as the script. The CSV file will have four columns: Number, Sentence, issueText, and errant Codes. Number is the sentence number from the Excel file or loop, Sentence is the original sentence, issueText is the feedback text from the LFA website, and errant Codes are the error codes from the LFA website.
 

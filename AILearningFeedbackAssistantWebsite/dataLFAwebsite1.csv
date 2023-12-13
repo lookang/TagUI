@@ -1,1 +1,29 @@
 Number, Sentence, issueText, errant Codes
+1,"Integrity is a value I believe in and practice, though this was not true before a truly fateful day…",…,PUNCT
+2,I wished that I was old enough to buy the wallet for myself.,that,PREP
+2,I wished that I was old enough to buy the wallet for myself.,the,DET
+3,"As I made my way.  towards the police station to hand over the wallet, pride engulfed me.",towards,ORTH
+4,While walking home I heard some boys talking about some of the answers to the queshion.,queshion,SPELL
+4,While walking home I heard some boys talking about some of the answers to the queshion.,"home → home,",PUNCT
+5,The soft rays of the sun filled my room as I woke up to the sound of my beeping alarm.
+6,We were six years apart and his name is Ethan.,is,VERB:TENSE
+7,I was always jealous of Ethan because he gets all of my parents love.,gets,VERB:TENSE
+7,I was always jealous of Ethan because he gets all of my parents love.,parents → parents',NOUN:POSS
+8,I went to our second toilet to carry out my morning routine.,carry out,PHRASAL_VERB:FOUND
+9,This annoying child vandalised it!
+10,"I realised that even though I was jealous and upset, it does not mean I can cause so much pain to my brother.",to,PREP
+11,"Despite this con, he expressed that he feel an overwhelming sense of warmth helping the people and he never regretted his path.",feel,VERB:TENSE
+12,"When I came home, I was greated with an aroma of delicious food.",greated,VERB
+13,After that days incident Evan then remembered to be more careful and responsible.,days,NOUN:POSS
+13,After that days incident Evan then remembered to be more careful and responsible.,"incident → incident,",PUNCT
+14,"Once Evan finished showering, he wanted to play his computer games again but when he tried to turn on his computer, it would not switch on.","again → again,",PUNCT
+15,"Ella was patrified at what was happening so she scurried into the living room, hoping she would not get caught.",patrified,SPELL
+15,"Ella was patrified at what was happening so she scurried into the living room, hoping she would not get caught.","happening → happening,",PUNCT
+16,There are a planthora of educational venues around the neighbourhood for children.,planthora,NOUN
+17,This event revealed to us how tens the neighborhood was and how no one had the intention to interact with one another.,to,PART
+17,This event revealed to us how tens the neighborhood was and how no one had the intention to interact with one another.,interact,VERB
+18,"However, there are times where we dislike having many choices as it may be hard to decide on one.","choices → choices,",PUNCT
+19,"Thus, having many choice to choose from makes one unable to decide which choice to choose from as each of them has different benefits and to choose one of the choices would be hard.",choice,NOUN:NUM
+19,"Thus, having many choice to choose from makes one unable to decide which choice to choose from as each of them has different benefits and to choose one of the choices would be hard.",to choose,VERB:FORM
+19,"Thus, having many choice to choose from makes one unable to decide which choice to choose from as each of them has different benefits and to choose one of the choices would be hard.","from → from,",PUNCT
+20,"Therefore, having too many choices to choose from is disadvantage.",is → is a,DET

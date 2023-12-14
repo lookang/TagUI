@@ -1,6 +1,6 @@
 # Language Feedback Assistant Website Crawler
 
-A script that crawls a website and extracts feedback on language errors from the website https://dev2.literatu.com/api-test-moe.html.
+A script that crawls a website and extracts feedback on language errors from the publicly accessible website https://dev2.literatu.com/api-test-moe.html.
 
 ## Project description
 

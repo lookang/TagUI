@@ -12,7 +12,7 @@
 // Navigate to the page
 https://dev2.literatu.com/api-test-moe.html
 
-// write header of csv
+// write header of csv and start new file
 dump Number, Sentence, issueText, errant Codes to dataLFAwebsite1.csv
 
 // read EXCEL file
@@ -74,7 +74,8 @@ for n from start to data_array.length-1
   
     // no error table
     if writeAnything equals to false
-        write `csv_row([number,sentence])` to dataLFAwebsite1.csv
+        blank = " "
+        write `csv_row([number,sentence,blank,blank])` to dataLFAwebsite1.csv
     
     click //button[contains(text(),'📝 Go back to edit mode')]
     //live

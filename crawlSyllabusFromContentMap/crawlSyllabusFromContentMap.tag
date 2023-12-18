@@ -32,6 +32,10 @@ else if ask_result equals to 2
 // https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=chem&ownerGroups=ALL&levels=20
 //https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=physics&ownerGroups=ALL&levels=20
 https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=science&ownerGroups=ALL&levels=24,25,26,27
+masterURL = url()
+echo `masterURL`
+js masterURL2 = masterURL.substring(8)
+
 echo do your search and filter now
 live
 
@@ -112,7 +116,8 @@ for i from 1 to (total)
     // https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP
     // https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=chem&ownerGroups=ALL&levels=20
     //https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=physics&ownerGroups=ALL&levels=20
-    https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=science&ownerGroups=ALL&levels=24,25,26,27
+    // https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=science&ownerGroups=ALL&levels=24,25,26,27
+    https://`masterURL2`
     js rowCnt++;
     if (rowCnt == 21)
         {

@@ -28,15 +28,19 @@ else if ask_result equals to 2
         click (//span[@id='loginButton2'])[1]
 
 
-https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP
-https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=chem&ownerGroups=ALL&levels=20
+// https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP
+// https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=chem&ownerGroups=ALL&levels=20
+//https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=physics&ownerGroups=ALL&levels=20
+https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=science&ownerGroups=ALL&levels=24,25,26,27
 echo do your search and filter now
-//live
+live
 
 wait 2
 // getting total_number of rows
-if present('//div[@class="v-data-footer__pagination"]')
-    read //div[@class="v-data-footer__pagination"] to pagination
+// if present('//div[@class="v-data-footer__pagination"]')
+if present("//div[@class='v-data-table-footer__info']//div")
+    //read //div[@class="v-data-footer__pagination"] to pagination
+    read //div[@class='v-data-table-footer__info']//div to pagination
     js total = parseInt(pagination.split("of")[1].trim());
     echo There are `total` number of lessons.
 
@@ -60,7 +64,8 @@ for i from 1 to (total)
     // click OPEN LINK
     //click (//a[@class='cv-link bx--link'])[`k`]
     //live
-    click (//a[contains(text(),'Open')])[`rowCnt`]
+    //click (//a[contains(text(),'Open')])[`rowCnt`]
+    click (//a[@class='cv-link bx--link'][normalize-space()='Open'])[`rowCnt`]
     popup contentmap/view/
         {
         wait 1 
@@ -88,21 +93,26 @@ for i from 1 to (total)
 
     //read //*[@id="learning-outcomes"]/div/section[2] to abc
     endNodeText = count ("(//div[@class='node-text'])")
-    endTreeAnchor = count ("(//span[@class='tree-anchor'])")
+    //endTreeAnchor = count ("(//span[@class='tree-anchor'])")
+    endTreeAnchor = count ("(//div[@class='tree-row-item'])")
     echo endTreeAnchor = `endTreeAnchor`
     //live
     for j from 1 to endTreeAnchor
         //if present ('(//div[@class="node-text"])[`j`]')
-        if present ('(//span[@class="tree-anchor"])')
-            read (//span[@class='tree-anchor'])[`j`] to text
+        //if present ('(//span[@class="tree-anchor"])')
+        if present ("(//div[@class='tree-row-item'])")
+            //read (//span[@class='tree-anchor'])[`j`] to text
+            read (//div[@class='tree-row-item'])[`j`] to text
             echo `j` is `text`
             js title = title.replace(/\//g, " ");
             echo `title`
             write `csv_row([j, text ])` to ./folderv3/`title`.csv
     
     //return to starting page
-    https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP
-    https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=chem&ownerGroups=ALL&levels=20
+    // https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP
+    // https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=chem&ownerGroups=ALL&levels=20
+    //https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=physics&ownerGroups=ALL&levels=20
+    https://vle.learning.moe.edu.sg/manage-resource?resource=CONTENTMAP&keyword=science&ownerGroups=ALL&levels=24,25,26,27
     js rowCnt++;
     if (rowCnt == 21)
         {

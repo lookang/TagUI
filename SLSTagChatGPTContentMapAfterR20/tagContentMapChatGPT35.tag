@@ -7,7 +7,7 @@
 // URLofQuiz is the URL id of the progressive quiz page, expecting   1aff6f7f-5deb-41e3-8389-afc856c5a1fb/page/46993472
 
 // How to Run in Command Line tool, type this inside command line
-// tagui tagContentMapChatGPT4.tag data.csv 
+// tagui tagContentMapChatGPT35.tag data.csv 
 
 
 
@@ -21,13 +21,8 @@
 // with https://chat.openai.com/ the answer integer may be not the best fit compared to an expert teacher.
 
 // Echoing variables
-echo partofURL is `partofURL`
-echo contentMapOrder is `contentMapOrder`
-echo level is `level`
-echo subject is `subject`
-echo URLofQuiz is `URLofQuiz`
-echo chatGPTURL is `chatGPTURL`
-echo p7 is `p7`
+echo fulleditableURL `fulleditableURL`
+
 js chatGPTURLshorten = chatGPTURL.substring(8)
 //chatGPTURLshorten = 
 echo current iteration: `iteration`
@@ -63,8 +58,10 @@ wait 3
 //`partofURL`
 // https://vle.learning.moe.edu.sg/class-group/lesson/view/1aff6f7f-5deb-41e3-8389-afc856c5a1fb/page/46993472
 // https://vle.learning.moe.edu.sg/class-group/lesson/edit/`partofURL`
+
 // Visit the URLs
-https://vle.learning.moe.edu.sg/class-group/lesson/edit/`URLofQuiz`
+fulleditableURLsubstring = fulleditableURL.substring(8)
+https://`fulleditableURLsubstring`
 // Loop through progressive quiz questions to add content maps
 
 // to be edited by human manually
@@ -118,23 +115,34 @@ for n from start to end
             //do the rest for all iteration
             //assume it is the first tab, easy to find
             //live
+            //gpt4 assume first
+            wait 3
             click //div[contains(text(),'PRE-U PHYSICS (H2) (2016).csv')]
+            //add the URL for the chatGPT4.
+            //https://chat.openai.com/g/g-KdsQYWiWc-pre-u-physics-h2-2016-csv
             //live
             wait 1
             click //*[@id="prompt-textarea"]
             type //*[@id="prompt-textarea"] as Question to determine the best learning objective number is '`questionText`'.[enter]   I expecting the answer to be a integer number only.
             // type //*[@id="prompt-textarea"] as Question is '`questionText`'. Suggested Answer is '`suggestedAnswer`'. [enter]   I expecting the answer to be a integer number only.
             click //button[@data-testid='send-button']
-            wait 10
+            wait 60
             chatGPTAnswer = count("(//div[@class='markdown prose w-full break-words dark:prose-invert light'])")
             chatGPTAnswer2 = count("(//div[@data-message-author-role='assistant'])")
             echo chatGPTAnswer is `chatGPTAnswer`
             echo chatGPTAnswer2 is `chatGPTAnswer2`
-            live
+            //live
             wait 3
             //chatGPTAnswer2offSetby2 = chatGPTAnswer2 + 2
-            click (//button[@class='flex items-center gap-1.5 rounded-md p-1 pl-0 text-xs hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400 md:invisible md:group-hover:visible md:group-[.final-completion]:visible'])[`chatGPTAnswer2`]
-            chatGPTResponse = clipboard()
+            //click (//button[@class='flex items-center gap-1.5 rounded-md p-1 pl-0 text-xs hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400 md:invisible md:group-hover:visible md:group-[.final-completion]:visible'])[`chatGPTAnswer2`]
+            live
+            if present("(//button[@class='flex items-center gap-1.5 rounded-md p-1 text-xs hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400 md:invisible md:group-hover:visible md:group-[.final-completion]:visible'])[`chatGPTAnswer2`]")
+                click (//button[@class='flex items-center gap-1.5 rounded-md p-1 text-xs hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400 md:invisible md:group-hover:visible md:group-[.final-completion]:visible'])[`chatGPTAnswer2`]
+                chatGPTResponse = clipboard()
+                js numb = chatGPTResponse.match(/\d/g);
+                js numb = numb.join("");
+                echo numb is `numb`
+            //live
             echo chatGPTResponse `chatGPTResponse`
 
             // ability to read was removed on 20241228 for reasons i dont know
@@ -222,7 +230,7 @@ for n from start to end
 
     //load PRE-U PHYSICS (H2) (2016).csv to numberOfLOCSV
     //ask is the number of LO detected = `numberOfLO` same as the PRE-U PHYSICS (H2) (2016).csv? 
-    chatGPTResponsePlusOne = chatGPTResponse + 1
+    js chatGPTResponsePlusOne = Number(chatGPTResponse) + 1
     if present("(//div[@class='input-checkbox input-checkbox-grey'])[`chatGPTResponsePlusOne`]")
         click (//div[@class='input-checkbox input-checkbox-grey'])[`chatGPTResponsePlusOne`]
         //else if present("(//i[@class='tree-checkbox'])[`chatGPTResponse`]")
@@ -230,17 +238,17 @@ for n from start to end
     else
         echo ChatGPT was unsucessful is providing a number.
     
-    ask do you wish to edit the learning objectives? 1 for YES for 60 seconds, 2 for YES for 180 seconds, 3 for YES live, 0 for NO
+    //ask do you wish to edit the learning objectives? 1 for YES for 60 seconds, 2 for YES for 180 seconds, 3 for YES live, 0 for NO
     if ask_result equals to 1
-        wait 60
+        //wait 60
     else if ask_result equals to 2
-        wait 180
+       // wait 180
     else if ask_result equals to 3
-        live
+        //live
     else if ask_result equals to 0
-        wait 0
+       // wait 0
     else
-        wait 0
+       // wait 0
     
     // Save and close
     click (//*[name()='svg'][@name='Save24'])[1]

@@ -37,7 +37,7 @@ This script leverages TagUI to automate the process of logging into the SLS port
      - Owner Group (read to specific element)
      - Link (opens the lesson in a popup window and extracts link using JavaScript)
      - Concept Maps (read to specific element)
-   - Writes the extracted data to a CSV file (`crawldatabase2.csv`) using `dump`.
+   - Writes the extracted data to a CSV file (`crawldatabase2.csv`) using write `csv_row(pending[i - 1])` to crawldatabase.csv
    - If there are 20 lessons on a page, clicks the "Next page" button to proceed.
 
 5. Educational and Productivity Purposes

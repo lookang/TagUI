@@ -1,6 +1,3 @@
-Here's an improved formatting for the README.md:
-
----
 
 # SLS Login and Lesson Data Extraction with TagUI
 
@@ -43,6 +40,7 @@ This script leverages TagUI to automate the process of logging into the SLS port
    - Writes the extracted data to a CSV file (`crawldatabase2.csv`) using `dump`.
    - If there are 20 lessons on a page, clicks the "Next page" button to proceed.
 
----
-
+5. Educational and Productivity Purposes
+   - the script does NOT work if there is no creditials to login to SLS and rights to edit the lessons. The script are meant to help others increase their productivity especially those still manually editing or tagging their SLS lessons.
+   
 This README provides a detailed explanation of the script's functionality, prerequisites, and breakdown of the script's execution steps. Adjustments can be made as needed to further clarify or expand upon any aspect of the script or its usage.

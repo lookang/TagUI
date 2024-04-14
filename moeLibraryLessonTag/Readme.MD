@@ -21,6 +21,7 @@
 
 ## Usage
 
+This script is designed to be useful to help syllabus development retagging of older syllabus lessons to the new syllabus. This is a hybrid (RPA and human) design due to complexity of tagging to several learning objectives in each H1, H2, H3 separate content maps that requires human intelligence. 
 To run the script, use the following command:
 
 ```

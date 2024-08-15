@@ -1,5 +1,5 @@
 // to run type
-// tagui PhysicsLessonContentMapTag.tag crawldatabasebiology.csv
+// tagui BiologyLessonContentMapTag.tag crawldatabasebiology.csv
 // Echoing variables
 echo `i`
 echo `title`
@@ -17,12 +17,12 @@ if iteration equals to 1
     wait 5
 
     //live
-    wait 3
+    //wait 3
     click //button[normalize-space()='Login With SLS']
-    type bx--text-input as [clear]MOE-ID 
+    //type bx--text-input as [clear]MOE-XXXXXX
 
-    click //input[@placeholder='SLS Password'] 
-    type //input[@placeholder='SLS Password'] as [clear]PASSWORD
+    //click //input[@placeholder='SLS Password'] 
+    //type //input[@placeholder='SLS Password'] as [clear]PASSWORD
 
     click //button[normalize-space()='Login']
 
@@ -50,7 +50,8 @@ popup lesson/view/
     // gear
     click //div[@class='card-actions']
 
-    click //button[normalize-space()='Add Lesson Tag']
+    click //button[normalize-space()='Add Module Tag']
+    //click //button[normalize-space()='Add Lesson Tag']
     numberOfExistingLessonTags = count("//li[@class='cv-accordion-item bx--accordion__item resource-tagging-edit-item']")
     echo `numberOfExistingLessonTags`
     //js numberStartTag = Number(`numberOfExistingLessonTags` + 1)
@@ -58,12 +59,13 @@ popup lesson/view/
 
     //live
     // non intelligent click H1 and stop
-    click (//input[@placeholder='Select Subject'])[`numberStartTag`]
-    click (//div[@title='Biology - H1BIO'])[`numberStartTag`]
+    //click (//input[@placeholder='Select Subject'])[`numberStartTag`]
+    //if present("(//div[@title='Biology - H1BIO'])[`numberStartTag`]")
+    //    click (//div[@title='Biology - H1BIO'])[`numberStartTag`]
     
 
-    click (//input[@placeholder='Select Level'])[`numberStartTag`] 
-    click (//div[@title='Pre-U 1'][normalize-space()='Pre-U 1'])[`numberStartTag`]
+    //click (//input[@placeholder='Select Level'])[`numberStartTag`] 
+    //click (//div[@title='Pre-U 1'][normalize-space()='Pre-U 1'])[`numberStartTag`]
 
     
 
@@ -71,7 +73,8 @@ popup lesson/view/
     echo stop here for human read H1,H2,H3 too complex (high effort) to automate as rule, type done to continue
 
 
-    click //button[normalize-space()='Add Lesson Tag']
+    //click //button[normalize-space()='Add Lesson Tag']
+    click //button[normalize-space()='Add Module Tag']
 
     click (//*[name()='svg'][@name='Save24'])[1]
     

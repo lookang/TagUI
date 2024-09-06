@@ -48,6 +48,17 @@ The body of the email is fetched from the file tagui_Email_to_SSEF_TCs.docx and 
 Save Draft
 
 The script saves the composed email as a draft by selecting the "Save draft" option.
-Optional - Schedule Send
+## Optional - Schedule Send
 
 There is an option to schedule the email for sending the next morning, which is currently commented out in the script.
+
+The to, cc, bcc, and subject fields are filled with email details to automate the email composition.
+
+Script Breakdown
+Input Variables
+Recipient Fields: These are loaded from dataEmail.csv and mapped to the appropriate fields (To, Cc, Bcc, Subject) in the WOG Webmail.
+Automation Steps
+Open Webmail: The script opens the WOG Webmail URL.
+Compose Email: It automatically enters the email addresses, subject, and loads the body content from a .docx file.
+Save as Draft: The email is saved as a draft in WOG Webmail.
+Schedule Send: There is a commented section of the code to optionally schedule the email for future delivery.

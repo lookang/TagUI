@@ -1,4 +1,4 @@
-// tagui compose_mailwog.tag dataEmail.csv -t
+// tagui compose_mailwog.tag dataEmail.csv 
 
 ////////////////////////////////////////////////////////
 echo `i`

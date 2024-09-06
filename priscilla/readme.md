@@ -23,6 +23,7 @@ To run the automation:
 
 ```bash
 tagui compose_mailwog.tag dataEmail.csv -t
+```
 
 compose_mailwog.tag: The TagUI script file that contains the automation logic.
 dataEmail.csv: The input file containing email details.

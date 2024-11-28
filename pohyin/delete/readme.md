@@ -1,5 +1,5 @@
 
-# Automated SLS Resource Management Script
+# Automated SLS Resource Management Delete Draft and Unpublished Script
 
 This script automates logging into the SLS (Singapore Learning Space) platform, navigating to specific resources, and performing actions like deleting rejected lessons. The script is written for streamlined handling of draft or rejected lesson resources and assumes use of a browser automation tool like TagUI.
 

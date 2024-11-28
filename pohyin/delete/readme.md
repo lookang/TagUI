@@ -25,9 +25,9 @@ This script automates logging into the SLS (Singapore Learning Space) platform, 
 
 ### Step 2: Run the Script
 Run the script using the TagUI command-line interface:
-```bash
+
 tagui your-script-filename.tag
-Step 3: Monitor Actions
+### Step 3: Monitor Actions
 The script performs actions iteratively over the specified number of resources (end = 20).
 To handle more resources, restart the script after the first batch completes.
 Script Workflow
@@ -38,14 +38,14 @@ Example: Filter rejected lessons for a specific subject.
 Iterate through resources and perform the desired action:
 Open each resource.
 Delete the resource if conditions are met.
-Video Demonstration
+### Video Demonstration
 For a step-by-step visual guide, watch the video tutorial:
 ## Video Demonstration
 For a step-by-step visual guide, watch the video tutorial:  
 [![Watch Video](https://img.youtube.com/vi/qGPfyC2dxHc/0.jpg)](https://www.youtube.com/watch?v=qGPfyC2dxHc)
 
 
-Limitations
+### Limitations
 The script is currently hardcoded to handle only the first 20 items in the filtered results. To process additional pages, restart the script manually.
 Ensure proper error handling and fallback mechanisms to avoid unintended deletions.
 License

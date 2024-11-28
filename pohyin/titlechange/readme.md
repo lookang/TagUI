@@ -1,4 +1,4 @@
-# Posting2 Automate Social Posting
+# Title change in SLS
 
 This script automates interactions with the SLS (Student Learning Space) platform for updating lesson titles and accessing specific URLs. The script uses TagUI, a free and open-source RPA tool by AI Singapore, to perform the necessary actions.
 

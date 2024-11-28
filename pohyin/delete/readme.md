@@ -40,6 +40,9 @@ Open each resource.
 Delete the resource if conditions are met.
 Video Demonstration
 For a step-by-step visual guide, watch the video tutorial:
+## Video Demonstration
+For a step-by-step visual guide, watch the video tutorial:  
+[![Watch Video](https://img.youtube.com/vi/qGPfyC2dxHc/0.jpg)](https://www.youtube.com/watch?v=qGPfyC2dxHc)
 
 
 Limitations

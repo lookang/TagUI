@@ -1,78 +1,49 @@
-SLS TagUI Script README
-This repository contains a TagUI automation script designed to interact with the Singapore Student Learning Space (SLS) platform for managing draft lessons. The script automates login and lesson management, including identifying drafts and deleting selected resources.
 
-Features
-Automates login to the SLS platform.
-Navigates to the draft resources management page.
-Deletes draft lessons based on specified filters.
-Handles repetitive tasks for up to a predefined number of iterations.
-Prerequisites
-TagUI Installation: Ensure you have TagUI installed on your machine. Install TagUI.
-Login Credentials: Replace placeholders in the script (MOE-XXXXXX and PASSWORD) with your SLS login details.
-Supported Browser: Make sure your browser is compatible with TagUI and is set up for automation.
-Usage Instructions
-Clone the Repository:
+# Automated SLS Resource Management Script
 
-bash
-Copy code
-git clone https://github.com/your-repo/sls-tagui-script.git
-cd sls-tagui-script
-Modify the Script:
+This script automates logging into the SLS (Singapore Learning Space) platform, navigating to specific resources, and performing actions like deleting rejected lessons. The script is written for streamlined handling of draft or rejected lesson resources and assumes use of a browser automation tool like TagUI.
 
-Open the script file and update the following:
-Replace MOE-XXXXXX with your SLS username.
-Replace PASSWORD with your SLS password.
-Run the Script: Execute the script using TagUI:
+## Features
+1. **Automated Login**:
+   - Navigates to the SLS login page and performs login with user-provided credentials.
+2. **Resource Filtering**:
+   - Directly navigates to filtered pages for specific subjects and resource statuses (e.g., `DRAFT`, `REJECTED`).
+3. **Bulk Actions**:
+   - Iterates over a defined number of resource entries (default: 20) to perform actions such as opening and deleting resources.
 
-bash
-Copy code
-tagui sls-script.tag
-Process Flow:
+## Prerequisites
+- Install and configure [TagUI](https://tagui.readthedocs.io/en/latest/).
+- Ensure credentials are updated in the script for SLS access.
 
-The script will navigate to the SLS login page.
-Log in using the provided credentials.
-Access the draft lessons page and process drafts up to the specified iteration count (end variable).
-Code Overview
-tagui
-Copy code
-// Navigate to the SLS login page
-https://vle.learning.moe.edu.sg/login
-wait 5
+## Usage
 
-// Login process
-click //button[normalize-space()='Login With SLS']
-type bx--text-input as [clear]MOE-XXXXXX
-click //input[@placeholder='SLS Password'] 
-type //input[@placeholder='SLS Password'] as [clear]PASSWORD
-click //button[normalize-space()='Login']
+### Step 1: Configure Script
+1. Replace placeholders in the script:
+   - `MOE-XXXXXX` with your SLS username.
+   - `PASSWORD` with your SLS password.
+2. Adjust the URL for `manage-resource` to include desired filters for subjects, owner groups, and statuses.
 
-// Iterative process for handling drafts
-end = 20
-for i from 1 to end
-    https://vle.learning.moe.edu.sg/manage-resource?resource=LESSON&location=MOE&ownerGroups=1126,1121,1174,1163&status=DRAFT&subjects=12790
+### Step 2: Run the Script
+Run the script using the TagUI command-line interface:
+```bash
+tagui your-script-filename.tag
+Step 3: Monitor Actions
+The script performs actions iteratively over the specified number of resources (end = 20).
+To handle more resources, restart the script after the first batch completes.
+Script Workflow
+Navigate to the SLS login page: https://vle.learning.moe.edu.sg/login.
+Log in using provided credentials.
+Navigate to the filtered resources page:
+Example: Filter rejected lessons for a specific subject.
+Iterate through resources and perform the desired action:
+Open each resource.
+Delete the resource if conditions are met.
+Video Demonstration
+For a step-by-step visual guide, watch the video tutorial:
 
-    click (//a[@tag='component'][normalize-space()='Open'])[1]
 
-    popup cover
-        {
-        click //button[@aria-controls='lesson-submenu']//*[name()='svg']
-        click //li[@class='delete moe-library']//a[@class='cv-link bx--link']
-        click OK
-        dom window.close()
-        }
-Notes
-Iteration Limit: The script processes up to 20 drafts (end = 20). Modify this variable as needed.
-Error Handling: The script does not include comprehensive error handling. Ensure a stable connection and test on a small dataset before full execution.
-Sensitive Data: Avoid sharing your script publicly with credentials.
-Troubleshooting
-Login Issues:
-
-Ensure the correct username and password are entered.
-Confirm SLS is accessible and not undergoing maintenance.
-Script Errors:
-
-Check browser compatibility and configurations for TagUI.
-Validate that all XPath selectors used in the script align with the current SLS UI.
-Adjust Iterations:
-
-Modify the end variable to control the number of drafts processed.
+Limitations
+The script is currently hardcoded to handle only the first 20 items in the filtered results. To process additional pages, restart the script manually.
+Ensure proper error handling and fallback mechanisms to avoid unintended deletions.
+License
+This script is provided as-is for educational and personal use. Use at your own risk, and ensure compliance with your organization's data and automation policies.

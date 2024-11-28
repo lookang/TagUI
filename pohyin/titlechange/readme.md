@@ -1,8 +1,7 @@
 # Posting2 Automate Social Posting
 
 This script automates interactions with the SLS (Student Learning Space) platform for updating lesson titles and accessing specific URLs. The script uses TagUI, a free and open-source RPA tool by AI Singapore, to perform the necessary actions.
-## Video
-https://www.youtube.com/watch?v=PCO7Xg7clZs
+
 ## Prerequisites
 
 - Install [TagUI](https://github.com/kelaberetiv/TagUI).
@@ -92,6 +91,14 @@ type //input[@class='bx--text-input'] as [clear]`updatedText`
 - Check if the `scienceNT2024.csv` file is correctly formatted.
 - Review the TagUI logs for specific errors.
 
+## Embedded Video
+
+### Watch the Demo
+
+You can watch the demo for this script on YouTube:
+
+[![Demo Video](https://img.youtube.com/vi/PCO7Xg7clZs/0.jpg)](https://www.youtube.com/watch?v=PCO7Xg7clZs)
+
 ## Notes
 
 - This script is customized for the NT syllabus for 2024. Modify as needed for other syllabi or requirements.
@@ -102,6 +109,6 @@ type //input[@class='bx--text-input'] as [clear]`updatedText`
 CC-BY
 
 ## Disclaimer
-This script is provided as-is without warranty. Use it at your own risk.
 
+This script is provided as-is without warranty. Use it at your own risk.
 

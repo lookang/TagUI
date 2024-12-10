@@ -1,4 +1,4 @@
-# ReadMe for Automating Module Management in VLE
+# ReadMe for Automating Module Management in VLE especially to add A Quiz of 5 MCQ and 2 short answers using Authoring Co-Pliot 
 
 This script automates interaction with the **Virtual Learning Environment (VLE)** at `https://vle.learning.moe.edu.sg/`. The automation involves logging in, navigating to specific modules, extracting information, and processing modules efficiently.
 

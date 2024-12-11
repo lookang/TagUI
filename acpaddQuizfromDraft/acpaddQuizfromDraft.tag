@@ -41,8 +41,21 @@ for n from start to end
     {
         click (500,500)
         wait 6
-        keyboard [ctrl]a
-        keyboard [ctrl]c
+        //os = system('uname')
+        os = require('system').os.name
+        if os == 'MacOS' 
+        {
+            echo 'MacOS'
+            keyboard [cmd]a
+            keyboard [cmd]c
+        } 
+        else if os == 'Windows' 
+        {
+            echo 'Windows'
+            keyboard [ctrl]a
+            keyboard [ctrl]c
+        }
+        
         //live
         dom window.close()
     }
@@ -85,7 +98,21 @@ for n from start to end
             wait 3
             click (700,700)
             wait 3
-            keyboard [ctrl]v
+            //os = system('uname')
+            os = require('system').os.name
+            if os == 'MacOS' 
+            {
+                echo 'MacOS'
+                keyboard [cmd]v
+                
+            } 
+            else if os == 'Windows' 
+            {
+                echo 'Windows'
+                keyboard [ctrl]v
+                
+            }
+            
             //live
         
             click //span[normalize-space()='Add']

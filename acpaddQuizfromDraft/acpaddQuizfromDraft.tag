@@ -90,7 +90,7 @@ for n from start to end
         wait 3
         type bx--text-input as [clear]Quiz
         wait 1
-        type bx--text-area as 5 MCQ and 2 short answers
+        type bx--text-area as 5 MCQ with 4 options based on knowledge with understanding and on application of information and 2 short answers based on real life application to inspire joy of learning
 
         //live
         if present("Add Knowledge Base")

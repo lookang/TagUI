@@ -11,7 +11,7 @@ wait 3
 https://vle.learning.moe.edu.sg/manage-resource?resource=LESSON&location=MOE&ownerGroups=1126,1121,1174,1163&status=DRAFT,UNPUBLISHED&subjects=611
 wait 3
 // Navigate and process modules from index 15 to 20
-//live
+
 start = 1
 n = start
 end = 20
@@ -26,22 +26,22 @@ for n from start to end
     popup cover
     {
         // check if quiz exists, if yes, quit.
-        //live
+        
         wait 3
         numberOfQuiz = count ("(//*[name()='svg'][@name='QuizPage32'])")
         echo numberOfQuiz is `numberOfQuiz`
         if numberOfQuiz > 0
             break;
        
-            //live
-            dom window.close()
+            
+        dom window.close()
     }
 
 
     // into module from Manage Modules page
     wait 3
     click //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div/div[1]/table/tbody/tr[`n`]/td[1]/div/div/a
-    //live
+    
     popup cover
     {
         // get knowledge base printout text
@@ -49,7 +49,7 @@ for n from start to end
         click Kebab24
         wait 3
         click View as Print-Friendly Worksheet
-        //live
+        
         dom window.close()
     }
 
@@ -77,7 +77,7 @@ for n from start to end
             echo result is `result`
         }
         
-        //live
+        
         dom window.close()
     }
 
@@ -88,6 +88,7 @@ for n from start to end
     { 
         
         click Pen32
+        
 
         numberOfPages = count ("(//*[name()='svg'][@name='Page32'])")
         echo numberOfPages is `numberOfPages`
@@ -97,7 +98,7 @@ for n from start to end
         wait 2
         click Plus24
 
-        //live
+        
         echo check quiz 
         click //p[normalize-space()='Quiz']
         wait 2
@@ -111,9 +112,9 @@ for n from start to end
         wait 3
         type bx--text-input as [clear]Quiz
         wait 1
-        type bx--text-area as 5 MCQ with 4 options based on knowledge with understanding and on application of information and 2 short answers based on real life application to inspire joy of learning
+        type bx--text-area as 5 MCQ with 4 options with only one correct answer, based on knowledge with understanding and on application of information and 2 short answers based on real life application to inspire joy of learning
 
-        //live
+        
         if present("Add Knowledge Base")
             click Add Knowledge Base
             wait 3
@@ -134,10 +135,10 @@ for n from start to end
                 
             }
             
-            //live
+            
         
             click //span[normalize-space()='Add']
-        //live
+        
 
             click Kebab24
         
@@ -164,6 +165,7 @@ for n from start to end
         click CheckmarkCircle32
 
         live
+        echo check the questions and make edits. when ready to continue, type done.
 
         wait 3
         click Approve32

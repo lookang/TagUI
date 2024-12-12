@@ -21,11 +21,27 @@ for n from start to end
     //click (//a[@tag='component'][normalize-space()='Open'])[`n`]
 
     // into module from Manage Modules page
-    wait 3
     click //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div/div[1]/table/tbody/tr[`n`]/td[1]/div/div/a
     
-    //click (//a[@class='cv-link bx--link'][normalize-space()='Open'])[1]
-    
+    popup cover
+    {
+        // check if quiz exists, if yes, quit.
+        //live
+        wait 3
+        numberOfQuiz = count ("(//*[name()='svg'][@name='QuizPage32'])")
+        echo numberOfQuiz is `numberOfQuiz`
+        if numberOfQuiz > 0
+            break;
+       
+            //live
+            dom window.close()
+    }
+
+
+    // into module from Manage Modules page
+    wait 3
+    click //*[@id="main-content"]/div/div/section/div/div[2]/div[2]/div/div[1]/table/tbody/tr[`n`]/td[1]/div/div/a
+    //live
     popup cover
     {
         // get knowledge base printout text
@@ -43,17 +59,22 @@ for n from start to end
         wait 6
         //os = system('uname')
         os = require('system').os.name
+        echo `os`
         if os == 'MacOS' 
         {
             echo 'MacOS'
             keyboard [cmd]a
             keyboard [cmd]c
+            result =  clipboard()
+            echo result is `result`
         } 
-        else if os == 'Windows' 
+        else if os == 'windows' 
         {
-            echo 'Windows'
+            echo 'windows'
             keyboard [ctrl]a
             keyboard [ctrl]c
+            result =  clipboard()
+            echo result is `result`
         }
         
         //live
@@ -106,9 +127,9 @@ for n from start to end
                 keyboard [cmd]v
                 
             } 
-            else if os == 'Windows' 
+            else if os == 'windows' 
             {
-                echo 'Windows'
+                echo 'windows'
                 keyboard [ctrl]v
                 
             }

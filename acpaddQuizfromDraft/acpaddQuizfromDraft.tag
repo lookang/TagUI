@@ -7,6 +7,9 @@ if present("//button[normalize-space()='Login With SLS']")
     click //button[normalize-space()='Login']
 
 wait 3
+//browsing
+//https://vle.learning.moe.edu.sg/search?location=MOE&keyword=&resource=LESSON&resourceType=&subject=611&level=&syllabus&parentTopic=&topic=&learningOutcome=&area=
+
 //https://vle.learning.moe.edu.sg/manage-resource?resource=LESSON&location=MOE&ownerGroups=1126,1121,1174,1163&status=ALL&subjects=611
 https://vle.learning.moe.edu.sg/manage-resource?resource=LESSON&location=MOE&ownerGroups=1126,1121,1174,1163&status=DRAFT,UNPUBLISHED&subjects=611
 wait 3
@@ -31,9 +34,8 @@ for n from start to end
         numberOfQuiz = count ("(//*[name()='svg'][@name='QuizPage32'])")
         echo numberOfQuiz is `numberOfQuiz`
         if numberOfQuiz > 0
-            break;
-       
-            
+            //break;
+
         dom window.close()
     }
 
@@ -100,6 +102,7 @@ for n from start to end
 
         
         echo check quiz 
+        wait 2
         click //p[normalize-space()='Quiz']
         wait 2
 
@@ -112,8 +115,8 @@ for n from start to end
         wait 3
         type bx--text-input as [clear]Quiz
         wait 1
-        type bx--text-area as 5 MCQ with 4 options with only one correct answer, based on knowledge with understanding and on application of information and 2 short answers based on real life application to inspire joy of learning
-
+        type bx--text-area as 5 MCQ with 4 options with only one correct answer, based on knowledge with understanding and on application of information and 2 short answers based on real life application to inspire joy of learning. add "(1 mark):accept any other reasonable answers" if suitable for question that are open ended questions. If latex is used, enclosed the latex with begin $$ and end with $$ for the equation to appear
+        echo (1 mark): accept any other reasonable answers
         
         if present("Add Knowledge Base")
             click Add Knowledge Base
@@ -149,9 +152,16 @@ for n from start to end
 
         if present("ACPGenerate32")
             click ACPGenerate32
-            wait 60
-            click fetch-data-button button tip-top tip-end btn-add
+            wait 30
+            echo type done to continue
+            live
+            
+            // + ADD button
+            if present("//span[normalize-space()='Add']")
+                click //span[normalize-space()='Add']
+                //fetch-data-button button tip-top tip-end btn-add
         wait 3
+        
         click CheckmarkCircle32
 
         // add Learing progress inclusion
@@ -164,8 +174,9 @@ for n from start to end
         click Close24
         click CheckmarkCircle32
 
-        live
+        // check by human
         echo check the questions and make edits. when ready to continue, type done.
+        live
 
         wait 3
         click Approve32

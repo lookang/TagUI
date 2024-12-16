@@ -3,7 +3,9 @@
 This script automates interaction with the **Virtual Learning Environment (VLE)** at `https://vle.learning.moe.edu.sg/`. The automation involves logging in, navigating to specific modules, extracting information, and processing modules efficiently.
 
 ---
-Example Video: YouTube Link https://www.youtube.com/watch?v=xMvQe0kp068&t=8s
+Example Video: YouTube Link  
+- https://www.youtube.com/watch?v=Wr8rvPG5ByA
+- https://www.youtube.com/watch?v=xMvQe0kp068&t=8s
 
 ## **Prerequisites**
 1. **Environment Setup**: 
@@ -106,7 +108,7 @@ This script automates interactions with the **Virtual Learning Environment (VLE)
 ---
 
 ## Example Video  
-**[Watch Video](https://www.youtube.com/watch?v=xMvQe0kp068&t=8s)**  
+**[Watch Video](https://www.youtube.com/watch?v=Wr8rvPG5ByA)**  
 This video demonstrates how to use this automation effectively.
 
 ---

@@ -2,8 +2,8 @@
 //  SLS VLE Script
 //  ----------------------------------------------------
 //  Purpose: Automate resource management and quiz creation
-//  Author:  [Your Name Here]
-//  Date:    [Date Here]
+//  Author:  [lawrence_wee@moe.gov.sg]
+//  Date:    [20241230]
 //======================================================
 
 //------------------------------------------------------

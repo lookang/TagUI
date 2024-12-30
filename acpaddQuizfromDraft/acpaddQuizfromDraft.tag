@@ -115,7 +115,7 @@ for n from start to end
         wait 3
         type bx--text-input as [clear]Quiz
         wait 1
-        type bx--text-area as 5 MCQ with 4 options with only one correct answer, based on knowledge with understanding and on application of information and 2 short answers based on real life application to inspire joy of learning. add "(1 mark):accept any other reasonable answers" if suitable for question that are open ended questions. If latex is used, enclosed the latex with begin $$ and end with $$ for the equation to appear
+        type bx--text-area as Create 5 multiple-choice questions (MCQs), each with 4 options and only one correct answer. The questions should assess knowledge with understanding and application of information. Additionally, include 2 short-answer questions inspired by real-life applications to spark joy in learning. For open-ended short-answer questions, add the note "(1 mark): accept any other reasonable answers" if applicable. If mathematical equations are used, enclose them in LaTeX syntax with `$$` for proper formatting (e.g., $$ \frac{1}{2} $$).  
         echo (1 mark): accept any other reasonable answers
         
         if present("Add Knowledge Base")

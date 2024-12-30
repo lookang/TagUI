@@ -26,6 +26,10 @@ wait 3
 //https://vle.learning.moe.edu.sg/search?location=MOE&keyword=&resource=LESSON&resourceType=&subject=611&level=&syllabus&parentTopic=&topic=&learningOutcome=&area=
 //https://vle.learning.moe.edu.sg/manage-resource?resource=LESSON&location=MOE&ownerGroups=1126,1121,1174,1163&status=ALL&subjects=611
 https://vle.learning.moe.edu.sg/manage-resource?resource=LESSON&location=MOE&ownerGroups=1126,1121,1174,1163&status=DRAFT,UNPUBLISHED&subjects=611
+
+echo navigate to your status=DRAFT,UNPUBLISHED MOE modules to start adding Quiz
+live
+
 wait 3
 // Navigate and process modules from index 15 to 20
 

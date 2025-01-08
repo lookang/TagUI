@@ -1,9 +1,9 @@
 //live
-start = 269
+start = 413
 counter = 0
 //live
 
-for page = start to 300 
+for page = start to 500 
     //live
     counter = counter +1
     echo counter is  `counter`
@@ -26,13 +26,17 @@ for page = start to 300
         wait 3
     
     if present("//*[@id='content']/div[3]/div[1]/h2")
-        read //*[@id="content"]/div[3]/div[1]/h2 to text
-        echo text as `text`
+        read //*[@id="content"]/div[3]/div[1]/h2 to page_title
+        js page_title_lower = page_title.toLowerCase()
+        echo text as `page_title_lower`
+    else 
+        // assume if no title means not a valid page
+        page_title_lower = "Article not found"
     
-    if page_title_lower contains "404 Article not found"
-        echo found 404 Article not found, going to next page 
+    if page_title_lower contains "Article not found"
+        echo Article not found, going to next page 
         //break
-    else if page_title_lower contains "Phet" 
+    else if page_title_lower contains "phet" 
         echo found Phet Article  going to next page 
         //break
     else if page_title_lower contains "geogebra" 
@@ -44,10 +48,49 @@ for page = start to 300
     else if page_title_lower contains "unpublished"
         echo found unpublished Article  going to next page 
         //break
+    else if page_title_lower contains "tracker"
+        echo found tracker Article  going to next page as user need to use ChatGPT to do the 
+        https://chatgpt.com/c/6773eceb-e1c4-8010-b5bf-99be43ab5a34
+        type prompt-textarea as `page_title_lower` [enter]
+        wait 30
+        //click z-0 flex w-full flex-col items-center
+        click (900,900)
+        wait 2
+        keyboard [ctrl]a
+        wait 2
+        keyboard [ctrl]c
+        wait 2
+        if counter equals to 1 
+            wait 2
+            keyboard [ctrl]t
+            wait 2
+            keyboard [ctrl]l
+            wait 2
+            //keyboard `url`[enter]
+            keyboard https://sg.iwant2study.org/ospsg/index.php/`page`[enter]
+            //live
+            wait 3
+            popup ospsg
+                if present("//button[normalize-space()='Log in']")
+                    click //button[normalize-space()='Log in']
+                //keyboard [ctrl]t
+                wait 2
+                keyboard [ctrl]l
+                wait 2
+                keyboard https://sg.iwant2study.org/ospsg/index.php/`page`[enter]
+                if present("//button[@aria-label='User tools']")
+                    click //button[@aria-label='User tools']
+                    click //a[@title='Edit article']
+                //live
+                //dom window.close()
+        else
+            //do nothing
+        wait 10
+        //break
     else
-        echo found a ejs or tracker page is `page`  
+        echo found a ejs  page is `page`  
         //live
-        https://notebooklm.google.com/?pli=1
+        //https://notebooklm.google.com/?pli=1
         https://notebooklm.google.com/?pli=1&authuser=1
         //live
         click //span[contains(text(),'Create new')]

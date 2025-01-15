@@ -2,6 +2,7 @@
 //  SLS VLE Script
 //  ----------------------------------------------------
 //  Purpose: Automate resource management and quiz creation
+// features: does not copy paste automatically, skip login if login in already, ask user for start of module
 //  Author:  [lawrence_wee@moe.gov.sg]
 //  Date:    [20250116]
 //======================================================

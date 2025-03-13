@@ -28,9 +28,9 @@ wait 3
 if iteration = 1
     if present("//button[normalize-space()='Login With SLS']")
         click //button[normalize-space()='Login With SLS']
-        type bx--text-input as [clear]MOE-09615H
+        type bx--text-input as [clear]MOE-xxxxxx
         click //input[@placeholder='SLS Password'] 
-        type //input[@placeholder='SLS Password'] as [clear]Shanshan1!!!!!!!!
+        type //input[@placeholder='SLS Password'] as [clear]xxxxxxxx
         click //button[normalize-space()='Login']
 
 // do rest of the steps for every iteration

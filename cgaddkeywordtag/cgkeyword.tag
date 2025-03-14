@@ -1,7 +1,11 @@
+// old method using a generic data file
 // tagui cgkeyword.tag SLS_CG_2024_11.csv
+// headless mode using only 1000 exam paper url
+// tagui cgkeyword.tag SLS_CG_2024_11NovExamPApersURL.csv -h -l
+// normal mode using only 1000 exam paper url
+// tagui cgkeyword.tag SLS_CG_2024_11NovExamPApersURL.csv 
 
-//echo `title`
-//echo `url'
+echo `url`
 
 //======================================================
 //  SLS VLE Script
@@ -14,24 +18,20 @@
 //------------------------------------------------------
 // STEP 1 - OPEN SLS AND LOGIN
 //------------------------------------------------------
-https://vle.learning.moe.edu.sg/login
-wait 5
-
-
-
-// Navigate to the SLS login page
-https://vle.learning.moe.edu.sg/login
-//wait 5
 
 //live
-wait 3
+//wait 3
 if iteration = 1
+    // Navigate to the SLS login page
+    https://vle.learning.moe.edu.sg/login
+    //wait 5
     if present("//button[normalize-space()='Login With SLS']")
         click //button[normalize-space()='Login With SLS']
-        type bx--text-input as [clear]MOE-xxxxxx
+        //type bx--text-input as [clear]MOE-XXXXXX
         click //input[@placeholder='SLS Password'] 
-        type //input[@placeholder='SLS Password'] as [clear]xxxxxxxx
+        //type //input[@placeholder='SLS Password'] as [clear]XXXXXXX
         click //button[normalize-space()='Login']
+    //iteration = 494
 
 // do rest of the steps for every iteration
 // Visit the URLs
@@ -42,7 +42,7 @@ echo "i = "`iteration`
 modifiedUrl = url.replace('/mrv', '').replace('/community-gallery/', '/community-gallery/admin/');
 modifiedUrl2 = modifiedUrl.substring(8)
 https://`modifiedUrl2`
-wait 5
+wait 2
 //live
 read //dl[@class='field-set title']//dd[@class='field-value'] to title
 echo `title`
@@ -53,29 +53,19 @@ echo `title`
 
 pattern = /\(\d+\)/;  // Matches (XXXX), e.g., (1227), (2020)
 match_found = title.match(pattern);  // Search only in title
-echo `match_found`
-
-
-// Assign `match_found` from JS to TagUI variable `found`
-found = `match_found`
-
-
-if `found` not equals to ""
-    echo 'Found (XXXX): ' `found`
-else
-    echo 'No (XXXX) found.'
+echo match_found = `match_found`
 
 
 //------------------------------------------------------
 // STEP 3 - RUN ACTIONS IF TITLE CONTAINS "SBA" AND (XXXX) EXISTS
 //------------------------------------------------------
 echo title = `title`
-if  (title contains "SBA") 
-    if (found not equals to "")
+if  (title contains "SBA") // may not be needed since i use a targeted data.csv 
+    if (match_found not equals to "") // // may not be needed since i use a targeted data.csv 
         click (//*[name()='svg'][@name='Pen32'])[1]
         click (//*[name()='svg'][@name='Settings24'])[1]
         wait 3
-        type //div[@class='bx--text-input__field-wrapper']//input[@class='bx--text-input'] as Past paper[enter]
+        type //div[@class='bx--text-input__field-wrapper']//input[@class='bx--text-input'] as Past paper[enter][enter]
         wait 3
         if present("//button[normalize-space()='Cancel']")
             click //button[normalize-space()='Cancel']

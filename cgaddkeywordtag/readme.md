@@ -9,10 +9,12 @@ This TagUI script automates adding keyword tags ("Past paper," "Exam paper," and
 Execute the script using:
 
 ```shell
+tagui cgkeyword.tag SLS_CG_2024_11NovExamPApersURL.csv -h -l
+older command
 tagui cgkeyword.tag SLS_CG_2024_11.csv
 ```
 
-- Ensure that `SLS_CG_2024_11.csv` contains URLs to Community Gallery modules.
+- Ensure that `SLS_CG_2024_11.csv` or `SLS_CG_2024_11NovExamPApersURL` contains URLs to Community Gallery modules.
 
 ## Requirements
 

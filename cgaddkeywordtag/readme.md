@@ -1,5 +1,8 @@
 # SLS Community Gallery Keyword Tagging Automation
 
+# Video
+https://www.youtube.com/shorts/Oh_KzCdyw9s
+
 ## Overview
 
 This TagUI script automates adding keyword tags ("Past paper," "Exam paper," and "Practice paper") to modules in the SLS Community Gallery if the module title contains the keyword "SBA" and a numeric identifier formatted as `(XXXX)`.

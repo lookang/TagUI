@@ -19,57 +19,60 @@ This script automates the process of adding teachers as students to a specific c
 
 This command will execute the `classAddTeachersasStudents.tag` script, using the email addresses provided in the `data.csv` file.
 
-classAddTeachers2.tag – Automate Adding Teachers to SLS Class Groups
-This TagUI script automates the process of logging into the Singapore Student Learning Space (SLS) and adding teachers to a specified class group using data from a CSV file.
+# 📘 SLS Class Group Teacher Adder – `classAddTeachers2.tag`
 
-📌 Features
-Logs into SLS via the "Login With SLS" flow.
+This [TagUI](https://tagui.readthedocs.io/) script automates the process of logging into the **Singapore Student Learning Space (SLS)** and adding teachers to specific class groups using data from a CSV file.
 
-Navigates to the class group management page.
+---
 
-Adds teachers to a class group using details from a provided data.csv.
+## ✅ Features
 
-Designed to run in batch mode for multiple iterations.
+- 🔐 Automated login via **"Login with SLS"** button
+- 📂 Navigates directly to the class group management interface
+- 👩‍🏫 Adds teachers to class groups using entries from a data file
+- 🔁 Supports batch processing with multiple entries in `data.csv`
 
-🗂️ Files Required
-classAddTeachers2.tag — The automation script.
+---
 
-data.csv — The input data file containing teacher information (e.g., email addresses, class group URLs).
+## 📁 Required Files
 
-📋 Usage
-Run the script using TagUI command line:
+| File Name               | Purpose                                   |
+|------------------------|-------------------------------------------|
+| `classAddTeachers2.tag`| TagUI script to perform the automation    |
+| `data.csv`             | CSV file containing teacher and group info|
 
-bash
-Copy
-Edit
+---
+
+## ▶️ How to Run
+
+Open your terminal or command prompt and run:
+
+```bash
 tagui classAddTeachers2.tag data.csv
-Ensure both classAddTeachers2.tag and data.csv are in the same directory.
 
-📑 Structure of data.csv
-csv
-Copy
-Edit
+🧾 data.csv Format
 email,class_group_url
-teacher1@moe.edu.sg,https://vle.learning.moe.edu.sg/studentgroup/...
-teacher2@moe.edu.sg,https://vle.learning.moe.edu.sg/studentgroup/...
-...
-Adjust the columns based on how the script processes inputs.
+teacher1@moe.edu.sg,https://vle.learning.moe.edu.sg/studentgroup/abc123
+teacher2@moe.edu.sg,https://vle.learning.moe.edu.sg/studentgroup/xyz456
 
-🔐 Authentication Flow
-The script performs the following during login:
+## 🔐 Login Flow
+Open SLS login page.
 
-Opens the SLS login page.
+Click "Login with SLS".
 
-Clicks the "Login With SLS" button.
+Authenticate (if needed).
 
-Confirms login and redirects to the Class Group Management interface.
+Redirect to the Class Group Management Page.
 
-🛠️ Customization
-Modify the class group URL in the script to dynamically reflect different class groups.
+## 🛠️ Tips for Customization
+✏️ Update the target URL if your class group changes dynamically.
 
-Adjust XPath or button identifiers if SLS UI changes.
+🔍 Review XPath selectors if the SLS interface updates.
 
-⚠️ Notes
-Ensure proper permissions to access and edit class groups in SLS.
+##📌 Prerequisites
+TagUI installed
 
-TagUI must be installed on your machine. Installation guide
+Valid access permissions for the SLS class groups
+
+
+

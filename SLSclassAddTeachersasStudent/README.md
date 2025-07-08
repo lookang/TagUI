@@ -2,6 +2,9 @@
 
 This script automates the process of adding teachers as students to a specific class group in the MOE Learning VLE.
 
+## Video
+- https://www.youtube.com/shorts/2ECiSIdCV6g
+
 ## Prerequisites
 
 - TagUI installed.

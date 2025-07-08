@@ -51,7 +51,7 @@ This [TagUI](https://tagui.readthedocs.io/) script automates the process of logg
 Open your terminal or command prompt and run:
 
 ```bash
-tagui classAddTeachers2.tag data.csv
+tagui SLSclassAddTeachersasStudent data.csv
 
 🧾 data.csv Format
 email,class_group_url

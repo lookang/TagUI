@@ -1,46 +1,45 @@
 // Specify the TagUI script and the data file to use
 // tagui classAddTeachers.tag data.csv
-
-// --- Login Process ---
-//visit URL
+echo iteration is `iteration`
 if iteration equals to 1
+
+    echo SerialNo is `SerialNo`
+    echo Email is `Email`
+    
     https://vle.learning.moe.edu.sg/login
-    // Wait for the page to load
-    wait 3
-    // Check if the 'Login With SLS' button is present
-    if present ("//button[normalize-space()='Login With SLS']")
-        // Click the 'Login With SLS' button
-        click //button[normalize-space()='Login With SLS']
-        // Wait after clicking
-        wait 3
-        // Click the final 'Login' button
-        click //button[normalize-space()='Login']
-    // Navigate to the class group management page
-    https://vle.learning.moe.edu.sg/mrv/class-group
-    //iteration = 3
-    echo iteration is `iteration`
-    // --- Navigate to Specific Class Group and Add Teacher ---
-    // Navigate directly to the specific class group admin page (replace with dynamic navigation if needed)
-    // live
-    https://vle.learning.moe.edu.sg/studentgroup/2fb7723f-9be1-4050-b995-bbf23a0dbc71?tab=admin
-    // Click the 'EDIT DETAILS' button
-    click //button[normalize-space()='EDIT DETAILS']
+    click //button[normalize-space()='Login With SLS']
+    click //button[normalize-space()='Login for Teaching & Learning']
+    echo navigate to classURL
     //live
+    https://vle.learning.moe.edu.sg/class-group/view/85813c71-2a74-4b4d-af3e-2b5a43883df3?tab=admin
+
+// Click the 'EDIT DETAILS' button
+click //button[normalize-space()='EDIT DETAILS']
+//live
 echo iteration is `iteration`
 // Click the 'Teachers' tab link
-click //a[@id='student-link']
+//live
+// click //a[@id='student-link']
 // Click the 'Add Teacher' button
 click //span[normalize-space()='Add Student']
 click //span[normalize-space()='Teacher as Student']
+
+//  School
+click //input[@placeholder='MOE HQ']
+click //div[@title='All Schools'] 
+
 // Click the input field to find teachers
 click //input[@placeholder='Find Teachers']
 // Type the teacher's email (from data.csv 'Email' column), clear existing text, and press Enter
 type //input[@placeholder='Find Teachers'] as [clear]`Email`[enter]
-// Click at coordinates (adjust if necessary, might be clicking on the search result)
-click (700,400)
+// Click at coordinates (adjust if necessary, might be clicking on the search result) strangely TagUI cannot type enter
+// to trick SLS to accept the [enter] search, click twice works, but not once
+click (200,200)
+click (200,200)
 // Wait for search results or UI update
-wait 3
+wait 10
 // Click the checkbox for the first teacher found (adjust index if needed)
+//live
 click (//div[@class='v-selection-control__input'])[1]
 // Short wait
 wait 1

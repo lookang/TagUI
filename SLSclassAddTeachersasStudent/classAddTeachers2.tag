@@ -24,7 +24,8 @@ if iteration equals to 1
     // Navigate directly to the specific class group admin page (replace with dynamic navigation if needed)
     // live
     //https://vle.learning.moe.edu.sg/class-group/view/f1633302-ec1f-4a15-b651-89a17adc2f4a?tab=admin
-    https://vle.learning.moe.edu.sg/class-group/view/6ccbc90c-5188-44e9-a220-dcc96b6a11fc?tab=admin
+    //https://vle.learning.moe.edu.sg/class-group/view/6ccbc90c-5188-44e9-a220-dcc96b6a11fc?tab=admin
+    https://vle.learning.moe.edu.sg/class-group/view/886de9e9-f4ab-4959-886f-042f889320d6?tab=admin
     // Click the 'EDIT DETAILS' button
     click //button[normalize-space()='EDIT DETAILS']
     //live
@@ -55,38 +56,40 @@ wait 3
 click (700,250)
 wait 2
 //live
-// ---------- SMART FALLBACK SEARCH (email -> username -> swap domain) ----------
+// ---------- SMART FALLBACK SEARCH (email -> alternate email -> name) ----------
 // Detect "no results" by checking if at least 1 selectable checkbox is present.
 // If your UI changes, update the xpath below.
 if present("(//div[@class='v-selection-control__input'])[2]")
     // found using full email, do nothing
 else
     js username = Email.split('@')[0]
-    echo No teacher found using email `Email` - trying username `username`
-    type //input[@placeholder='Find Teachers'] as [clear]`username`[enter]
-    wait 3
+    // try swapping domain between @schools.gov.sg and @moe.edu.sg
+    js swapped = '';
+    js lowerEmail = Email.toLowerCase();
+    if lowerEmail.indexOf('@schools.gov.sg') > -1
+        js swapped = username + '@moe.edu.sg';
+    else if lowerEmail.indexOf('@moe.edu.sg') > -1
+        js swapped = username + '@schools.gov.sg';
+
+    if swapped not equals to ''
+        echo No teacher found using email `Email` - trying alternate email `swapped`
+        type //input[@placeholder='Find Teachers'] as [clear]`swapped`[enter]
+        wait 3
 
     if present("(//div[@class='v-selection-control__input'])[2]")
-        // found using username, do nothing
+        // found using alternate email, do nothing
     else
-        // try swapping domain between @schools.gov.sg and @moe.edu.sg
-        js swapped = '';
-        js lowerEmail = Email.toLowerCase();
-        if lowerEmail.indexOf('@schools.gov.sg') > -1
-            js swapped = username + '@moe.edu.sg';
-        else if lowerEmail.indexOf('@moe.edu.sg') > -1
-            js swapped = username + '@schools.gov.sg';
-
-        if swapped not equals to ''
-            echo No teacher found using username `username` - trying swapped domain `swapped`
-            type //input[@placeholder='Find Teachers'] as [clear]`swapped`[enter]
-            wait 3
+        // final fallback: search by name (remove underscores from email local-part)
+        js name_only = username.replace(/_/g, ' ');
+        echo No teacher found using alternate email `swapped` - trying name `name_only`
+        type //input[@placeholder='Find Teachers'] as [clear]`name_only`[enter]
+        wait 3
 
         // If still no results, skip this entry safely (avoid clicking non-existent UI)
         if present("(//div[@class='v-selection-control__input'])[2]")
-            // found using swapped email, do nothing
+            // found using name, do nothing
         else
-            echo ERROR - cannot find teacher for `Email` (tried email, username, domain swap). Skipping.
+            echo ERROR - cannot find teacher for `Email` (tried email, alternate email, name). Skipping.
             // Optional: take a snapshot for debugging
             // snap page to teacher_not_found_`SerialNo`.png
             continue
